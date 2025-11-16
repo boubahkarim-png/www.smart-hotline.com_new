@@ -3,28 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Services | Smart Hotline Agency</title>
-    <meta name="description" content="Découvrez nos 4 services principaux de communication téléphonique : réception d'appels, émission d'appels, support client et solutions CRM.">
-    <meta name="keywords" content="services téléphoniques, réception d'appels, émission d'appels, support client, CRM PME">
+    <title>Smart Hotline Agency | Services de Communication pour PME</title>
+    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure.">
+    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
+    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com">
+    <meta property="og:image" content="https://smart-hotline.com/images/services-hero.jpg">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e',
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
                         },
                         dark: {
-                            50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a',
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scroll': 'scroll 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
                     }
                 }
             }
@@ -38,12 +83,62 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
         .hover-lift {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        
         .hover-lift:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stats-counter {
+            transition: all 0.5s ease-out;
+        }
+        
+        .marquee {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .marquee-content {
+            display: flex;
+            animation: scroll 20s linear infinite;
         }
     </style>
 </head>
@@ -52,137 +147,355 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">SH</div>
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    SH
+                </div>
                 <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
             </a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
+                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
                 <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
             
             <div class="flex items-center space-x-4">
-                <a href="../en/services.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                    <span>FR</span>
-                    <i class="fas fa-exchange-alt text-xs ml-1"></i>
-                </a>
+                <!-- Language Selector -->
+                <div class="relative">
+                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span id="currentLang">FR</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                        <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                    </div>
+                </div>
+                
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+        </div>
     </header>
-
-    <!-- Services Hero -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                <span class="gradient-text">Nos Solutions Complètes</span>
-            </h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Découvrez notre gamme complète de services de communication téléphonique adaptés aux besoins spécifiques des PME et entrepreneurs
-            </p>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Services de Communication Sur Mesure</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                            Demander une Démo Gratuite
+                        </a>
+                        <a href="services.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                            Découvrir Nos Services
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="../images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold">2 Semaines</div>
+                        <div class="text-sm">Essai Gratuit</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Services Grid -->
-    <section class="py-20 bg-white">
+    
+    <!-- Services Preview -->
+    <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Réception d'Appels -->
-                <a href="reception.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-8 hover-lift h-full">
-                        <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-phone-alt text-primary-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
-                        <p class="text-gray-600 mb-6">
-                            Service professionnel de réception d'appels 24/7. Ne manquez plus aucune opportunité commerciale avec notre équipe dédiée.
-                        </p>
-                        <div class="flex items-center text-primary-600 font-medium">
-                            <span>Découvrir ce service</span>
-                            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
+                </p>
+            </div>
+            
+            <!-- Service 1: Réception d'Appels (Texte Gauche, Image Droite) -->
+            <div class="mb-16 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Réception d'Appels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Ne manquez plus aucun appel important grâce à notre service de réception dédié. Notre équipe professionnelle traite tous vos appels entrants avec le soin et l'attention que vos clients méritent.
+                            </p>
+                            <ul class="text-gray-600 mb-6 space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Disponibilité 24/7</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Scripts personnalisés</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Prise et transmission de messages</li>
+                            </ul>
+                            <a href="reception.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                                En savoir plus →
+                            </a>
                         </div>
                     </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="../images/main-hero.jpg" alt="Service de Réception d'Appels" class="rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2: Émission d'Appels (Image Gauche, Texte Droite) -->
+            <div class="mb-16 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="../images/main-hero.jpg" alt="Service d'Émission d'Appels" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Émission d'Appels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Développez votre clientèle avec nos campagnes d'appels ciblées. Notre équipe expérimentée vous aide à contacter des clients potentiels et à générer des leads qualifiés.
+                            </p>
+                            <ul class="text-gray-600 mb-6 space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Génération de leads</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Prise de rendez-vous</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Campagnes de suivi</li>
+                            </ul>
+                            <a href="emission.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                                En savoir plus →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3: Support Client (Texte Gauche, Image Droite) -->
+            <div class="mb-16 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-headset text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Support Client</h3>
+                            <p class="text-gray-600 mb-4">
+                                Améliorez la satisfaction de vos clients avec un support réactif et professionnel. Notre équipe gère toutes les demandes, réclamations et requêtes de support de manière efficace.
+                            </p>
+                            <ul class="text-gray-600 mb-6 space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Support technique</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Informations produits</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Résolution de problèmes</li>
+                            </ul>
+                            <a href="support.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                                En savoir plus →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="../images/main-hero.jpg" alt="Service de Support Client" class="rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 4: CRM & Listes (Image Gauche, Texte Droite) -->
+            <div class="mb-16 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="../images/main-hero.jpg" alt="Service CRM & Listes" class="rounded-xl shadow-lg">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-database text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">CRM & Listes</h3>
+                            <p class="text-gray-600 mb-4">
+                                CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes. Gérez efficacement vos relations clients avec notre système complet.
+                            </p>
+                            <ul class="text-gray-600 mb-6 space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Gestion des contacts</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Intégration autocomposeur</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Analytiques de ventes</li>
+                            </ul>
+                            <a href="crm-lists.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                                En savoir plus →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-20 bg-dark-900 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Découvrez comment nos services transforment les PME comme la vôtre
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 gradient-text">
+                        <span class="stats-counter" data-target="500">0</span>+
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
+                    <p class="text-gray-400">Nous accompagnons déjà</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 gradient-text">
+                        <span class="stats-counter" data-target="98">0</span>%
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
+                    <p class="text-gray-400">De nos clients</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 gradient-text">
+                        <span class="stats-counter" data-target="40">0</span>%
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Économie de Temps</h3>
+                    <p class="text-gray-400">Pour nos clients</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 gradient-text">
+                        <span class="stats-counter" data-target="24">0</span>/7
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Disponibilité</h3>
+                    <p class="text-gray-400">De nos services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur activité
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Marc Lefebvre</h4>
+                            <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700">
+                        "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sophie Dubois</h4>
+                            <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700">
+                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
+                            <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700">
+                        "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600 text-white scroll-reveal">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Demander une Démo Gratuite
                 </a>
-
-                <!-- Émission d'Appels -->
-                <a href="emission.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-8 hover-lift h-full">
-                        <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-phone-volume text-primary-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">Émission d'Appels</h3>
-                        <p class="text-gray-600 mb-6">
-                            Développez votre clientèle avec nos campagnes d'appels sortants ciblées et personnalisées pour maximiser vos conversions.
-                        </p>
-                        <div class="flex items-center text-primary-600 font-medium">
-                            <span>Découvrir ce service</span>
-                            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Support Client -->
-                <a href="support.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-8 hover-lift h-full">
-                        <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-headset text-primary-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">Support Client</h3>
-                        <p class="text-gray-600 mb-6">
-                            Améliorez la satisfaction client avec un support réactif, professionnel et disponible selon vos horaires d'ouverture.
-                        </p>
-                        <div class="flex items-center text-primary-600 font-medium">
-                            <span>Découvrir ce service</span>
-                            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- CRM & Listes -->
-                <a href="crm-lists.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-8 hover-lift h-full">
-                        <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-database text-primary-600 text-3xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
-                        <p class="text-gray-600 mb-6">
-                            Solution CRM complète avec listes qualifiées et outils pour maximiser vos ventes et gérer vos relations clients.
-                        </p>
-                        <div class="flex items-center text-primary-600 font-medium">
-                            <span>Découvrir ce service</span>
-                            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </div>
-                    </div>
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                    Découvrir Nos Offres
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Améliorer Votre Communication?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Contactez-nous pour une démonstration gratuite et découvrez la solution adaptée à votre entreprise.
-            </p>
-            <a href="contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Demander une Démo Gratuite
-            </a>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer class="bg-dark-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">SH</div>
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            SH
+                        </div>
                         <span class="text-xl font-bold">Smart Hotline Agency</span>
                     </div>
                     <p class="text-gray-400">
@@ -193,7 +506,6 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Tous les Services</a></li>
                         <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
                         <li><a href="emission.html" class="hover:text-white transition-colors">Émission d'Appels</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
@@ -207,14 +519,27 @@
                         <li><a href="about.html" class="hover:text-white transition-colors">À Propos</a></li>
                         <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
                     <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
                     <p class="text-gray-400">📧 direction@smart-hotline.com</p>
                     <p class="text-gray-400">🌐 smart-hotline.com</p>
+                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
                 </div>
             </div>
             
@@ -223,19 +548,185 @@
             </div>
         </div>
     </footer>
-
+    
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
+        // DOM Elements
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        const currentLangSpan = document.getElementById('currentLang');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const chatButton = document.getElementById('chatButton');
+        const statsCounters = document.querySelectorAll('.stats-counter');
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        
+        // State
+        let currentLang = 'fr';
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Detect user's language based on geolocation
+            detectUserLanguage();
             
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
+            // Initialize counters
+            initCounters();
+            
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
         });
+        
+        // Detect user language based on geolocation
+        function detectUserLanguage() {
+            // Check browser language first
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Check if it's a French-speaking region
+            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
+            
+            if (frenchRegions.includes(browserLang)) {
+                setLanguage('fr');
+            } else {
+                // Try to get geolocation (this requires user permission)
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => {
+                            // In a real implementation, you would send coordinates to a geocoding service
+                            // For this demo, we'll just use browser language detection
+                        },
+                        error => {
+                            // If geolocation is denied, fall back to browser language
+                            console.log('Geolocation denied:', error);
+                        }
+                    );
+                }
+            }
+        }
+        
+        // Set language
+        function setLanguage(lang) {
+            currentLang = lang;
+            currentLangSpan.textContent = lang.toUpperCase();
+        }
+        
+        // Initialize counters
+        function initCounters() {
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); // 60fps
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Language selector
+            langToggle.addEventListener('click', () => {
+                langDropdown.classList.toggle('hidden');
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = option.getAttribute('data-lang');
+                    if (lang === 'en') {
+                        window.location.href = '../en/index.html';
+                    }
+                    langDropdown.classList.add('hidden');
+                });
+            });
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Chat functionality
+            chatButton.addEventListener('click', () => {
+                // Detect if mobile or desktop
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // Open WhatsApp on mobile
+                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                } else {
+                    // Open email client on desktop
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                }
+            });
+        }
     </script>
 </body>
 </html>
