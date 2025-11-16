@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Smart Hotline | Sales & Marketing Insights</title>
+    <meta name="description" content="Discover expert insights on CRM, sales automation, telephony solutions, and lead generation strategies. Stay updated with the latest trends in sales technology.">
+    <meta name="keywords" content="sales blog, CRM tips, telephony solutions, lead generation, sales automation, cold calling, prospecting strategies">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog - Smart Hotline | Sales & Marketing Insights">
+    <meta property="og:description" content="Discover expert insights on CRM, sales automation, telephony solutions, and lead generation strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/blog">
+    <meta property="og:image" content="https://smart-hotline.com/images/blog-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/blog">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .article-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .article-modal.active {
+            display: flex;
+        }
+        
+        .article-content {
+            background: white;
+            border-radius: 10px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 100%;
+        }
+        
+        .chat-popup {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 998;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chat-popup.active {
+            display: flex;
+        }
+        
+        .whatsapp-corner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .article-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    SH
+                </div>
+                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector with Auto Detection -->
+                <div class="relative">
+                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                    </div>
+                </div>
+                
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">Sales & Marketing Insights</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert tips, strategies, and trends to help you master sales automation and grow your business
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Article -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-8 md:p-12 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm inline-block mb-4">Featured</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">The Ultimate Guide to CRM Autodialers in 2024</h2>
+                        <p class="text-lg mb-6 text-primary-100">
+                            Discover how modern autodialers are revolutionizing sales processes and why your business needs one to stay competitive.
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Author" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Michael Chen</p>
+                                <p class="text-primary-200 text-sm">November 15, 2024 • 8 min read</p>
+                            </div>
+                        </div>
+                        <button onclick="openArticle('featured')" class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Read Full Article
+                        </button>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1558629163-f6b3f3945ab?w=600&h=400&fit=crop" alt="CRM Autodialer" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Articles Grid -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Articles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stay updated with the latest sales strategies and technology insights
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1: Technology -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1573497019929-2a6321e2ef0?w=400&h=250&fit=crop" alt="Answering Machine Detection" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Technology</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">How Answering Machine Detection Boosts Sales Efficiency</h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn how AI-powered answering machine detection can save your sales team hours of wasted time and increase productivity by 300%.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1494790108757-4c85d8f102d?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Sarah Johnson</span>
+                            </div>
+                            <button onclick="openArticle('article1')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2: Strategy -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1552664730-a3072ad35f5?w=400&h=250&fit=crop" alt="Lead Generation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Strategy</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">10 Lead Generation Strategies That Actually Work in 2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover proven techniques to generate high-quality leads consistently and fill your sales pipeline with prospects ready to buy.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">David Martinez</span>
+                            </div>
+                            <button onclick="openArticle('article2')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3: Sales Tips -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1460925858430-0b5d4f54793?w=400&h=250&fit=crop" alt="Cold Calling" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Sales Tips</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Cold Calling in Digital Age: Best Practices</h3>
+                        <p class="text-gray-600 mb-4">
+                            Master the art of cold calling with modern techniques that respect prospects' time while maximizing your conversion rates.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506794778202-be95480cbbd3?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Emily Rodriguez</span>
+                            </div>
+                            <button onclick="openArticle('article3')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 4: Automation -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1551280807-ce1a023f302?w=400&h=250&fit=crop" alt="Sales Automation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Automation</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Automate Your Sales Process: A Complete Guide</h3>
+                        <p class="text-gray-600 mb-4">
+                            Step-by-step guide to implementing sales automation that reduces manual work and increases conversion rates.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">James Wilson</span>
+                            </div>
+                            <button onclick="openArticle('article4')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 5: Technology -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1560472357950-fa78a4a5483?w=400&h=250&fit=crop" alt="Telephony Solutions" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Technology</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">SIP Trunk vs Traditional Phone Lines: Which is Better?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Compare modern SIP trunk solutions with traditional phone systems to make the best choice for your business.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Lisa Anderson</span>
+                            </div>
+                            <button onclick="openArticle('article5')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 6: Management -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1551432670743-82db6dbd3f1?w=400&h=250&fit=crop" alt="Sales Team" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Management</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">How to Motivate Your Sales Team for Maximum Performance</h3>
+                        <p class="text-gray-600 mb-4">
+                            Proven strategies to keep your sales team motivated, engaged, and consistently exceeding their targets.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506764778097-2f8e2d2cf07?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Robert Taylor</span>
+                            </div>
+                            <button onclick="openArticle('article6')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-dark-900 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Get the latest sales tips and insights delivered to your inbox weekly
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <button type="submit" class="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="article-content">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold"></h2>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            SH
+                        </div>
+                        <span class="text-xl font-bold">Smart Hotline</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Advanced CRM and telephony solutions for modern sales teams.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#crm-autodialer" class="hover:text-white transition-colors">CRM Autodialer</a></li>
+                        <li><a href="services.html#teleprospecting" class="hover:text-white transition-colors">Teleprospecting Solution</a></li>
+                        <li><a href="services.html#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">info@smart-hotline.com</p>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2023 Smart Hotline Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="bg-primary-600 text-white p-4 flex justify-between items-center">
+            <h3 class="font-semibold">Chat with us</h3>
+            <button id="closeChat" class="text-white hover:text-gray-200">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex-1 p-4 overflow-y-auto">
+            <div class="bg-gray-100 rounded-lg p-3 mb-3">
+                <p class="text-sm">Hello! How can I help you today? Are you interested in our CRM autodialer or teleprospecting solutions?</p>
+            </div>
+            <div id="chatMessages"></div>
+        </div>
+        <div class="border-t p-4">
+            <div class="flex">
+                <input type="text" id="chatInput" placeholder="Type your message..." class="flex-1 border rounded-l-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                <button id="sendMessage" class="bg-primary-600 text-white px-4 py-2 rounded-r-lg hover:bg-primary-700">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- WhatsApp Corner -->
+    <div class="whatsapp-corner">
+        <a href="https://wa.me/15551234567?text=Hello,%20I'm%20reading%20your%20blog%20and%20have%20some%20questions.%20Can%20you%20help%20me?" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
+    <script>
+        // Article content data
+        const articles = {
+            featured: {
+                title: "The Ultimate Guide to CRM Autodialers in 2024",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1558629163-f6b3f3945ab?w=800&h=400&fit=crop" alt="CRM Autodialer" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">In today's competitive sales landscape, efficiency isn't just an advantage—it's a necessity. CRM autodialers have emerged as powerful tools that can transform your sales process, dramatically increase call volumes, and boost conversion rates.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is a CRM Autodialer?</h3>
+                    <p class="mb-4">A CRM autodialer is an automated dialing system that integrates with your Customer Relationship Management (CRM) software to streamline the calling process. Instead of manually dialing numbers, the system automatically dials from a predefined list, connecting agents only when a live person answers.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Key Benefits</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>300% Increase in Call Volume:</strong> Agents can make 3-4 times more calls compared to manual dialing</li>
+                        <li><strong>Answering Machine Detection:</strong> AI-powered technology filters out voicemails with 85% accuracy</li>
+                        <li><strong>Auto Follow-up:</strong> Automated sequences ensure no lead falls through the cracks</li>
+                        <li><strong>Real-time Analytics:</strong> Track performance and optimize campaigns on the fly</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">How to Choose the Right Autodialer</h3>
+                    <p class="mb-4">When selecting a CRM autodialer, consider these factors:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Integration capabilities with your existing CRM</li>
+                        <li>Compliance features (TCPA, GDPR)</li>
+                        <li>Scalability for your team size</li>
+                        <li>Reporting and analytics features</li>
+                        <li>Customer support quality</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Implementation Best Practices</h3>
+                    <p class="mb-4">Successful implementation requires careful planning:</p>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Start with a pilot program to test the system</li>
+                        <li>Train your team thoroughly on the new technology</li>
+                        <li>Monitor key metrics closely in the first month</li>
+                        <li>Continuously optimize based on performance data</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to transform your sales process? <a href="pricing.html" class="text-primary-600 hover:underline">Start your free trial today</a> and experience the power of automated dialing.</p>
+                `
+            },
+            article1: {
+                title: "How Answering Machine Detection Boosts Sales Efficiency",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1573497019929-2a6321e2ef0?w=800&h=400&fit=crop" alt="Answering Machine Detection" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Every sales team knows the frustration of connecting to voicemail after voicemail. Answering Machine Detection (AMD) technology is revolutionizing how sales teams operate, saving countless hours and dramatically improving productivity.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is Answering Machine Detection?</h3>
+                    <p class="mb-4">Answering Machine Detection uses advanced AI algorithms to analyze the first few seconds of a call to determine whether it's connected to a live person or an answering machine. This technology can identify patterns in speech, tone, and timing to make accurate predictions.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">The Impact on Sales Teams</h3>
+                    <p class="mb-4">Studies show that sales teams using AMD technology experience:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>85% Accuracy Rate:</strong> Modern AMD systems correctly identify machines 85% of the time</li>
+                        <li><strong>60% Time Savings:</strong> Agents spend less time on unproductive calls</li>
+                        <li><strong>40% Higher Conversion:</strong> More time talking to live prospects means better results</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">How It Works</h3>
+                    <p class="mb-4">The technology analyzes multiple factors:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Speech patterns and cadence</li>
+                        <li>Background noise levels</li>
+                        <li>Response timing</li>
+                        <li>Voice characteristics</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Implement AMD in your sales process with <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline's CRM autodialer</a> and watch your team's efficiency soar.</p>
+                `
+            },
+            article2: {
+                title: "10 Lead Generation Strategies That Actually Work in 2024",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1552664730-a3072ad35f5?w=800&h=400&fit=crop" alt="Lead Generation" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Generating high-quality leads consistently is the lifeblood of any successful business. Here are 10 proven strategies that are delivering exceptional results in 2024.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">1. Account-Based Marketing (ABM)</h3>
+                    <p class="mb-4">Focus your efforts on high-value accounts that match your ideal customer profile. Personalized outreach to these targets yields 40% higher conversion rates.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">2. LinkedIn Sales Navigator</h3>
+                    <p class="mb-4">Leverage LinkedIn's powerful platform to identify and connect with decision-makers in your target industry.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">3. Content Marketing with Lead Magnets</h3>
+                    <p class="mb-4">Create valuable content (eBooks, webinars, templates) that addresses your audience's pain points and captures their information.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">4. Referral Programs</h3>
+                    <p class="mb-4">Your happiest customers are your best salespeople. Implement a structured referral program with incentives.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">5. SEO-Optimized Landing Pages</h3>
+                    <p class="mb-4">Create dedicated landing pages for each service or product, optimized for search engines and conversion.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">6. Webinar Series</h3>
+                    <p class="mb-4">Host educational webinars that showcase your expertise and capture qualified leads.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">7. Cold Email Campaigns</h3>
+                    <p class="mb-4">Personalized, value-driven cold emails can still work when done right.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">8. Social Media Advertising</h3>
+                    <p class="mb-4">Use targeted ads on platforms where your prospects spend their time.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">9. Strategic Partnerships</h3>
+                    <p class="mb-4">Partner with complementary businesses to tap into their customer base.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">10. Automated Prospecting</h3>
+                    <p class="mb-4">Use CRM autodialers and automation tools to scale your outreach efforts.</p>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to implement these strategies? <a href="contact.html" class="text-primary-600 hover:underline">Contact us</a> for a personalized lead generation plan.</p>
+                `
+            },
+            article3: {
+                title: "Cold Calling in Digital Age: Best Practices",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1460925858430-0b5d4f54793?w=800&h=400&fit=crop" alt="Cold Calling" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Despite the rise of digital marketing, cold calling remains one of the most effective ways to reach decision-makers directly. Here's how to master it in 2024.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Preparation is Key</h3>
+                    <p class="mb-4">Before picking up the phone:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Research your prospect and their company</li>
+                        <li>Prepare a clear value proposition</li>
+                        <li>Have talking points, not a rigid script</li>
+                        <li>Set clear objectives for each call</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">The First 30 Seconds</h3>
+                    <p class="mb-4">Your opening determines whether you'll be heard or hung up on:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>State your name and company clearly</li>
+                        <li>Mention a relevant insight about their business</li>
+                        <li>Get straight to the value proposition</li>
+                        <li>Ask for permission to continue</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Handling Objections</h3>
+                    <p class="mb-4">Common objections and how to handle them:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>"Not interested":</strong> "I understand. May I ask what you're currently using for [problem]?"</li>
+                        <li><strong>"Too busy":</strong> "I appreciate that. When would be a better time for a 2-minute conversation?"</li>
+                        <li><strong>"Send me an email":</strong> "I'd be happy to. What specific information would be most helpful?"</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Follow-Up Strategy</h3>
+                    <p class="mb-4">The fortune is in the follow-up:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Send a personalized email within 24 hours</li>
+                        <li>Connect on LinkedIn with a personalized note</li>
+                        <li>Set reminders for follow-up calls</li>
+                        <li>Use a CRM to track all interactions</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Supercharge your cold calling with <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline's autodialer</a> and make 3x more calls every day.</p>
+                `
+            },
+            article4: {
+                title: "Automate Your Sales Process: A Complete Guide",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1551280807-ce1a023f302?w=800&h=400&fit=crop" alt="Sales Automation" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Sales automation isn't about replacing humans—it's about empowering them to focus on what matters most: building relationships and closing deals.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What Can You Automate?</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Lead Scoring:</strong> Automatically rank leads based on engagement</li>
+                        <li><strong>Email Sequences:</strong> Nurture leads with personalized drip campaigns</li>
+                        <strong>Meeting Scheduling:</strong> Let prospects book time directly on your calendar</li>
+                        <strong>Follow-Up Reminders:</strong> Never miss a follow-up opportunity</li>
+                        <li><strong>CRM Updates:</strong> Automatically log activities and update records</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Implementation Steps</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li><strong>Map Your Current Process:</strong> Document every step of your sales cycle</li>
+                        <li><strong>Identify Automation Opportunities:</strong> Find repetitive, time-consuming tasks</li>
+                        <li><strong>Choose the Right Tools:</strong> Select software that integrates with your existing stack</li>
+                        <li><strong>Start Small:</strong> Automate one process at a time</li>
+                        <li><strong>Measure and Optimize:</strong> Track the impact on your metrics</li>
+                    </ol>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Best Tools for Sales Automation</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>CRM with automation capabilities</li>
+                        <li>Email marketing platforms</li>
+                        <li>Sales engagement tools</li>
+                        <li>Meeting scheduling software</li>
+                        <li>Analytics and reporting tools</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Measuring Success</h3>
+                    <p class="mb-4">Track these KPIs to measure automation impact:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Time saved per rep</li>
+                        <li>Lead response time</li>
+                        <li>Conversion rates</li>
+                        <li>Customer acquisition cost</li>
+                        <li>Sales cycle length</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to automate? <a href="pricing.html" class="text-primary-600 hover:underline">Start your free trial</a> and see the difference automation makes.</p>
+                `
+            },
+            article5: {
+                title: "SIP Trunk vs Traditional Phone Lines: Which is Better?",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1560472357950-fa78a4a5483?w=800&h=400&fit=crop" alt="Telephony Solutions" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Choosing the right phone system is crucial for sales teams. Let's compare SIP trunking with traditional phone lines to help you make the best decision.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is SIP Trunking?</h3>
+                    <p class="mb-4">SIP (Session Initiation Protocol) trunking uses the internet to make and receive calls, replacing traditional phone lines with a more flexible, scalable solution.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Cost Comparison</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Traditional Lines:</strong> $50-100 per line per month</li>
+                        <li><strong>SIP Trunk:</strong> $20-50 per channel per month</li>
+                        <li><strong>Setup Costs:</strong> Traditional requires hardware, SIP needs only internet</li>
+                        <li><strong>Long Distance:</strong> SIP includes unlimited calling, traditional charges per minute</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Feature Comparison</h3>
+                    <p class="mb-4">SIP trunking offers advantages:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Scalability - Add or remove channels instantly</li>
+                        <li>Number porting - Keep your existing numbers</li>
+                        <li>Advanced features - Call recording, IVR, auto-attendant included</li>
+                        <li>Disaster recovery - Automatic failover and redundancy</li>
+                        <li>Geographic flexibility - Use local numbers anywhere</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Quality and Reliability</h3>
+                    <p class="mb-4">Modern SIP trunking provides HD voice quality and 99.99% uptime when properly configured with reliable internet service.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Making the Switch</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Audit your current usage and needs</li>
+                        <li>Ensure adequate internet bandwidth</li>
+                        <li>Choose a reputable SIP provider</li>
+                        <li>Plan migration carefully</li>
+                        <li>Train your team on new features</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Looking to upgrade your phone system? <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline</a> offers integrated SIP trunking solutions.</p>
+                `
+            },
+            article6: {
+                title: "How to Motivate Your Sales Team for Maximum Performance",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1551432670743-82db6dbd3f1?w=800&h=400&fit=crop" alt="Sales Team" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">A motivated sales team is your greatest asset. Here are proven strategies to keep your team engaged, productive, and consistently exceeding targets.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">1. Clear Goals and Expectations</h3>
+                    <p class="mb-4">Set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) and ensure every team member understands their role in achieving them.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">2. Competitive Compensation</h3>
+                    <p class="mb-4">Design a compensation plan that rewards both individual performance and team collaboration. Include accelerators for overachievement.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">3. Regular Recognition</h3>
+                    <p class="mb-4">Celebrate wins publicly and frequently. Recognition doesn't always have to be monetary—sometimes acknowledgment is more powerful.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">4. Continuous Training</h3>
+                    <p class="mb-4">Invest in ongoing training to keep skills sharp and show you're committed to their growth.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">5. Positive Work Environment</h3>
+                    <p class="mb-4">Create a culture of support, collaboration, and healthy competition. Your team should feel safe to take risks and learn from failures.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">6. Lead Generation Support</h3>
+                    <p class="mb-4">Provide quality leads and tools to manage them effectively. Nothing demotivates faster than chasing bad leads.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">7. Work-Life Balance</h3>
+                    <p class="mb-4">Respect personal time and encourage boundaries. Burnout kills motivation and performance.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">8. Empowerment and Autonomy</h3>
+                    <p class="mb-4">Trust your team to make decisions and own their territory. Micromanagement kills motivation.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">9. Career Path Planning</h3>
+                    <p class="mb-4">Show clear advancement opportunities. People stay when they see a future with your company.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">10. Regular Feedback</h3>
+                    <p class="mb-4">Provide constructive feedback regularly, not just during annual reviews. Help them improve continuously.</p>
+                    
+                    <p class="text-lg font-semibold mt-6">Equip your motivated team with <a href="services.html" class="text-primary-600 hover:underline">the best tools</a> and watch them exceed all expectations.</p>
+                `
+            }
+        };
+        
+        // DOM Elements
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        const currentLangSpan = document.getElementById('currentLang');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const chatButton = document.getElementById('chatButton');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeChat = document.getElementById('closeChat');
+        const chatInput = document.getElementById('chatInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatMessages = document.getElementById('chatMessages');
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        const articleModal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        
+        // State
+        let currentLang = 'en';
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Detect user's language based on geolocation
+            detectUserLanguage();
+            
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
+        });
+        
+        // Detect user language based on geolocation
+        function detectUserLanguage() {
+            // Check browser language first
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Check if it's a French-speaking region
+            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
+            
+            if (frenchRegions.includes(browserLang)) {
+                setLanguage('fr');
+            } else {
+                // Try to get geolocation (this requires user permission)
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => {
+                            // In a real implementation, you would send coordinates to a geocoding service
+                            // For this demo, we'll just use browser language detection
+                        },
+                        error => {
+                            // If geolocation is denied, fall back to browser language
+                            console.log('Geolocation denied:', error);
+                        }
+                    );
+                }
+            }
+        }
+        
+        // Set language
+        function setLanguage(lang) {
+            currentLang = lang;
+            currentLangSpan.textContent = lang.toUpperCase();
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update WhatsApp message based on language
+            updateWhatsAppLink(lang);
+        }
+        
+        // Update WhatsApp link based on language
+        function updateWhatsAppLink(lang) {
+            const whatsappButton = document.querySelector('.whatsapp-corner a');
+            if (whatsappButton) {
+                const message = lang === 'fr' 
+                    ? "Bonjour, je lis votre blog et j'ai quelques questions. Pouvez-vous m'aider?"
+                    : "Hello, I'm reading your blog and have some questions. Can you help me?";
+                
+                whatsappButton.href = `https://wa.me/15551234567?text=${encodeURIComponent(message)}`;
+            }
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Language selector
+            langToggle.addEventListener('click', () => {
+                langDropdown.classList.toggle('hidden');
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = option.getAttribute('data-lang');
+                    setLanguage(lang);
+                    langDropdown.classList.add('hidden');
+                });
+            });
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Chat functionality
+            chatButton.addEventListener('click', () => {
+                chatPopup.classList.toggle('active');
+            });
+            
+            closeChat.addEventListener('click', () => {
+                chatPopup.classList.remove('active');
+            });
+            
+            sendMessage.addEventListener('click', () => {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // Add user message to chat
+                    const userMessage = document.createElement('div');
+                    userMessage.className = 'bg-gray-100 rounded-lg p-3 mb-3 ml-auto max-w-xs';
+                    userMessage.innerHTML = `<p class="text-sm">${message}</p>`;
+                    chatMessages.appendChild(userMessage);
+                    
+                    // Clear input
+                    chatInput.value = '';
+                    
+                    // Simulate bot response
+                    setTimeout(() => {
+                        const botMessage = document.createElement('div');
+                        botMessage.className = 'bg-gray-100 rounded-lg p-3 mb-3 max-w-xs';
+                        botMessage.innerHTML = `<p class="text-sm">Thank you for your message! Our team will get back to you shortly. In the meantime, would you like to learn more about our CRM autodialer or teleprospecting solutions?</p>`;
+                        chatMessages.appendChild(botMessage);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+                    
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            });
+            
+            // Send message on Enter key
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage.click();
+                }
+            });
+        }
+        
+        // Open article modal
+        function openArticle(articleId) {
+            const article = articles[articleId];
+            if (article) {
+                modalTitle.textContent = article.title;
+                modalContent.innerHTML = article.content;
+                articleModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Close article modal
+        function closeArticle() {
+            articleModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal on background click
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeArticle();
+            }
+        });
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleModal.classList.contains('active')) {
+                closeArticle();
+            }
+        });
+    </script>
+</body>
+</html>
