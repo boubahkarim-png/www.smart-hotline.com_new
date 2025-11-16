@@ -1,653 +1,1442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Hotline Agency | Communication Services for SMEs</title>
-    <meta name="description" content="Customized phone communication solutions for entrepreneurs and SMEs. Remote receptionist, telemarketing, customer support, and bespoke CRM.">
-    <meta name="keywords" content="remote receptionist, virtual assistant, telemarketing, outsourced customer support, SME CRM, outsourced call center">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Smart Hotline Agency | Communication Services for SMEs">
-    <meta property="og:description" content="Customized phone communication solutions for entrepreneurs and SMEs.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/en/">
-    <meta property="og:image" content="/images/hero/main-hero.jpg">
-
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/index.html" />
-    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/index.html" />
-    
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RTKKH1R9FB');
-    </script>
-
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* SCROLL REVEAL CSS FIX: REMOVED HIDING RULES */
-        .scroll-reveal {
-            opacity: 1; 
-            transform: translateY(0); 
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed; bottom: 20px; right: 20px; z-index: 999; width: 60px; height: 60px; border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stats-counter {
-            transition: all 0.5s ease-out;
-        }
-        
-        .marquee {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .marquee-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Smart Hotline | Sales & Marketing Insights</title>
+    <meta name="description" content="Discover expert insights on CRM, sales automation, telephony solutions, and lead generation strategies. Stay updated with the latest trends in sales technology.">
+    <meta name="keywords" content="sales blog, CRM tips, telephony solutions, lead generation, sales automation, cold calling, prospecting strategies">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Blog - Smart Hotline | Sales & Marketing Insights">
+    <meta property="og:description" content="Discover expert insights on CRM, sales automation, telephony solutions, and lead generation strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/blog">
+    <meta property="og:image" content="https://smart-hotline.com/images/blog-hero.jpg">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - Smart Hotline | Sales & Marketing Insights">
+    <meta name="twitter:description" content="Discover expert insights on CRM, sales automation, telephony solutions, and lead generation strategies.">
+    <meta name="twitter:image" content="https://smart-hotline.com/images/blog-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/blog">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .chat-popup {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 998;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chat-popup.active {
+            display: flex;
+        }
+        
+        .article-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .article-modal.active {
+            display: flex;
+        }
+        
+        .article-content {
+            background: white;
+            border-radius: 10px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 100%;
+            padding: 2rem;
+        }
+        
+        .whatsapp-corner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        
+        /* Article card styling */
+        .article-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .article-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .article-card:hover .article-image {
+            transform: scale(1.05);
+        }
+        
+        /* Category badge styling */
+        .category-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(14, 165, 233, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Newsletter styling */
+        .newsletter-form {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .article-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-800">
-        <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/fr/index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="/fr/index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <a href="/fr/services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="/fr/price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="/fr/about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="/fr/blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="/fr/contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">FR</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="/fr/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="/en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-                <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="/fr/index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <a href="/fr/services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="/fr/price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="/fr/about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="/fr/blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="/fr/contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
-    
-        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Services de Communication Sur Mesure</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/fr/contact.html" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Demander une Démo Gratuite
-                        </a>
-                        <a href="/fr/services.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Découvrir Nos Services
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="/images/hero/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Semaines</div>
-                        <div class="text-sm">Essai Gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a href="/fr/services.html#reception" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
-                        <p class="text-gray-600 mb-4">
-                            Ne manquez plus aucun appel important grâce à notre service de réception dédié.
-                        </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
-                    </div>
-                </a>
-                
-                <a href="/fr/services.html#emission" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Émission d'Appels</h3>
-                        <p class="text-gray-600 mb-4">
-                            Développez votre clientèle avec nos campagnes d'appels ciblées.
-                        </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
-                    </div>
-                </a>
-                
-                <a href="/fr/services.html#support" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-headset text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Support Client</h3>
-                        <p class="text-gray-600 mb-4">
-                            Améliorez la satisfaction de vos clients avec un support réactif et professionnel.
-                        </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
-                    </div>
-                </a>
-                
-                <a href="/fr/services.html#crmdata" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-database text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
-                        <p class="text-gray-600 mb-4">
-                            CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes.
-                        </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
-                    </div>
-                </a>
-                
-            </div>
-        </div>
-    </section>
-    
-        <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="500">0</span>+
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="98">0</span>%
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
-            </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="40">0</span>%
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Économie de Temps</h3>
-            </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="24">0</span>/7
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Disponibilité</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="/images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Marc Lefebvre</h4>
-                            <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="/images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sophie Dubois</h4>
-                            <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="/images/team/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
-                            <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/fr/contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Demander une Démo Gratuite
-                </a>
-                <a href="/fr/price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Découvrir Nos Offres
-                </a>
-            </div>
-        </div>
-    </section>
-    
-        <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés aux entrepreneurs et PME.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/fr/services.html#reception" class="hover:text-white transition-colors">Réception d'Appels</a></li>
-                        <li><a href="/fr/services.html#emission" class="hover:text-white transition-colors">Émission d'Appels</a></li>
-                        <li><a href="/fr/services.html#support" class="hover:text-white transition-colors">Support Client</a></li>
-                        <li><a href="/fr/services.html#crmdata" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/fr/about.html" class="hover:text-white transition-colors">À Propos</a></li>
-                        <li><a href="/fr/blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="/fr/contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
-                </div>
-                
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-    
-        <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
-    
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'fr';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize counters
-            initCounters();
-            
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's a French-speaking region
-            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
-            
-            if (frenchRegions.includes(browserLang)) {
-                setLanguage('fr');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize counters
-        function initCounters() {
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    // Actual language switch logic (Reloading to the correct folder/file)
-                    if (lang === 'fr') {
-                        window.location.href = '/fr/index.html';
-                    } else {
-                        window.location.href = '/en/index.html';
-                    }
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-            1968                     window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
-                }
-            });
-        }
-    </script>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    SH
+                </div>
+                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector with Auto Detection -->
+                <div class="relative">
+                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span id="currentLang">EN</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                        <a href="../fr/blog.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                    </div>
+                </div>
+                
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">Sales & Marketing Insights</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert tips, strategies, and trends to help you master sales automation and grow your business
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Article -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-8 md:p-12 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm inline-block mb-4">Featured</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">The Ultimate Guide to CRM Autodialers in 2024</h2>
+                        <p class="text-lg mb-6 text-primary-100">
+                            Discover how modern autodialers are revolutionizing sales processes and why your business needs one to stay competitive.
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <img src="https://images.unsplash.com/photo-15734961612-2d828b1f1b?w=100&h=100&fit=crop&crop=face" alt="Author" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Michael Chen</p>
+                                <p class="text-primary-200 text-sm">November 15, 2024 • 8 min read</p>
+                            </div>
+                        </div>
+                        <button onclick="openArticle('featured')" class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Read Full Article
+                        </button>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1556761175-4d2363d23c3?w=600&h=400&fit=crop&crop=center" alt="CRM Autodialer" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Categories -->
+    <section class="py-16 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Browse by Category</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#technology" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-200 transition-colors">
+                            <i class="fas fa-microchip text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold">Technology</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Latest tools and innovations</p>
+                </a>
+                
+                <a href="#strategy" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-200 transition-colors">
+                            <i class="fas fa-chess text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold">Strategy</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Sales techniques and approaches</p>
+                </a>
+                
+                <a href="#automation" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-200 transition-colors">
+                            <i class="fas fa-robot text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold">Automation</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Workflow optimization tips</p>
+                </a>
+                
+                <a href="#management" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-200 transition-colors">
+                            <i class="fas fa-users text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold">Management</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Team leadership insights</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Articles Grid -->
+    <section id="articles" class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Articles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stay updated with the latest sales strategies and technology insights
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1: Answering Machine Detection -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="technology">
+                    <img src="https://images.unsplash.com/photo-1558628155-9b0d55b0f42?w=600&h=400&fit=crop&crop=center" alt="Answering Machine Detection" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Technology</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">How Answering Machine Detection Boosts Sales Efficiency</h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn how AI-powered answering machine detection can save your sales team hours of wasted time and increase productivity by 300%.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1494790108757-5d8ebf8e6cd?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Sarah Johnson</span>
+                            </div>
+                            <button onclick="openArticle('article1')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2: Lead Generation Strategies -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="strategy">
+                    <img src="https://images.unsplash.com/photo-146099840376-5b3d5b73c8a?w=600&h=400&fit=crop&crop=center" alt="Lead Generation" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Strategy</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">10 Lead Generation Strategies That Actually Work in 2024</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover proven techniques to generate high-quality leads consistently and fill your sales pipeline with prospects ready to buy.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">David Martinez</span>
+                            </div>
+                            <button onclick="openArticle('article2')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3: Cold Calling Best Practices -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="strategy">
+                    <img src="https://images.unsplash.com/photo-157349704229-9b0d55b0f42?w=600&h=400&fit=crop&crop=center" alt="Cold Calling" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Strategy</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Cold Calling in Digital Age: Best Practices</h3>
+                        <p class="text-gray-600 mb-4">
+                            Master the art of cold calling with modern techniques that respect prospects' time while maximizing your conversion rates.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506761175-4d2363d23c3?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Emily Rodriguez</span>
+                            </div>
+                            <button onclick="openArticle('article3')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 4: Sales Automation Guide -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="automation">
+                    <img src="https://images.unsplash.com/photo-15512808017-ce5e2f5f90f?w=600&h=400&fit=crop&crop=center" alt="Sales Automation" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Automation</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Automate Your Sales Process: A Complete Guide</h3>
+                        <p class="text-gray-600 mb-4">
+                            Step-by-step guide to implementing sales automation that reduces manual work and increases conversion rates.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">James Wilson</span>
+                            </div>
+                            <button onclick="openArticle('article4')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 5: IP Trunk vs Traditional Phone Lines -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="technology">
+                    <img src="https://images.unsplash.com/photo-1556761175-4d2363d23c3?w=600&h=400&fit=crop&crop=center" alt="Telephony Solutions" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Technology</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">SIP Trunk vs Traditional Phone Lines: Which is Better?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Compare modern SIP trunk solutions with traditional phone systems to make the best choice for your business.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Lisa Anderson</span>
+                            </div>
+                            <button onclick="openArticle('article5')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 6: Sales Team Management -->
+                <article class="article-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="management">
+                    <img src="https://images.unsplash.com/photo-1552674605-f8d8fbd6a5f?w=600&h=400&fit=crop&crop=center" alt="Sales Team" class="article-image">
+                    <div class="p-6">
+                        <span class="category-badge">Management</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">How to Motivate Your Sales Team for Maximum Performance</h3>
+                        <p class="text-gray-600 mb-4">
+                            Proven strategies to keep your sales team motivated, engaged, and consistently exceeding their targets.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506761175-4d2363d23c3?w=30&h=30&fit=crop&crop=face" alt="Author" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Robert Taylor</span>
+                            </div>
+                            <button onclick="openArticle('article6')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button onclick="loadMoreArticles()" class="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Insights for Industries</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tailored advice for specific business sectors and entrepreneur types
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Retail & E-commerce -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-shopping-cart text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Retail & E-commerce</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Strategies for online retailers and e-commerce businesses to increase customer lifetime value and reduce cart abandonment.
+                    </p>
+                    <a href="#retail" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- B2B Services -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-briefcase text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">B2B Services</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Effective sales approaches for business-to-business services and professional services firms.
+                    </p>
+                    <a href="#b2b" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Healthcare -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-heartbeat text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Healthcare</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Sales strategies for medical practices, clinics, and healthcare providers navigating complex regulatory environments.
+                    </p>
+                    <a href="#healthcare" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Real Estate -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-home text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Real Estate</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Modern techniques for real estate agents and agencies to close more deals in competitive markets.
+                    </p>
+                    <a href="#realestate" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Startups & Entrepreneurs -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-rocket text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Startups & Entrepreneurs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Growth strategies and sales tactics for new businesses and solo entrepreneurs with limited resources.
+                    </p>
+                    <a href="#startups" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Professional Services -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-user-tie text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Professional Services</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Client acquisition and relationship management strategies for consultants, lawyers, accountants, and other service providers.
+                    </p>
+                    <a href="#professional" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Entrepreneurs Section -->
+    <section id="entrepreneurs" class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">For Entrepreneurs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Practical advice and resources tailored for entrepreneurs and small business owners
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Time Management -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-clock text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Time Management</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Productivity techniques and tools to help entrepreneurs maximize their limited time and focus on high-impact activities.
+                    </p>
+                    <a href="#timemanagement" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Bootstrapping -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-seedling text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Bootstrapping</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Smart strategies for starting and growing a business with minimal external funding and maximum resource efficiency.
+                    </p>
+                    <a href="#bootstrapping" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Networking -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-network-wired text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Networking</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Building meaningful connections and leveraging relationships to create opportunities and grow your business.
+                    </p>
+                    <a href="#networking" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Digital Marketing -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-laptop text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Digital Marketing</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Cost-effective digital marketing strategies for entrepreneurs with limited budgets but big ambitions.
+                    </p>
+                    <a href="#digitalmarketing" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Funding & Investment -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Funding & Investment</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Navigating the complex world of business financing, from bootstrapping to venture capital.
+                    </p>
+                    <a href="#funding" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Scaling Your Business -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Scaling Your Business</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Strategies and systems for growing your business beyond the startup phase without losing your culture.
+                    </p>
+                    <a href="#scaling" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+                
+                <!-- Work-Life Balance -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-lg transition-all">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-balance-scale text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Work-Life Balance</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Maintaining personal wellbeing while building a successful business as an entrepreneur.
+                    </p>
+                    <a href="#worklifebalance" class="inline-block text-primary-600 font-semibold hover:text-primary-700">
+                        Explore Articles →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-dark-900 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
+                <p class="text-xl mb-8 text-gray-300">
+                    Get the latest sales tips and insights delivered to your inbox weekly
+                </p>
+                <form id="newsletterForm" class="newsletter-form flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <button type="submit" class="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-sm text-gray-400 mt-4">Join 5,000+ subscribers. No spam, unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            SH
+                        </div>
+                        <span class="text-xl font-bold">Smart Hotline</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Advanced CRM and telephony solutions for modern sales teams.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#technology" class="hover:text-white transition-colors">Technology</a></li>
+                        <li><a href="#strategy" class="hover:text-white transition-colors">Strategy</a></li>
+                        <li><a href="#automation" class="hover:text-white transition-colors">Automation</a></li>
+                        <li><a href="#management" class="hover:text-white transition-colors">Management</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">info@smart-hotline.com</p>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2023 Smart Hotline. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="article-content">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold"></h2>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
+    <!-- WhatsApp Corner -->
+    <div class="whatsapp-corner">
+        <a href="https://wa.me/15551234567?text=Hello, I'm reading your blog and have some questions. Can you help me?" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
+    <script>
+        // Article content data
+        const articles = {
+            featured: {
+                title: "The Ultimate Guide to CRM Autodialers in 2024",
+                content: `
+                    <img src="https://images.unsplash.com/photo-15734961612-2d828b1f1b?w=800&h=400&fit=crop&crop=center" alt="CRM Autodialer" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">In today's competitive sales landscape, efficiency isn't just an advantage—it's a necessity. CRM autodialers have emerged as powerful tools that can transform your sales process, dramatically increase call volumes, and boost conversion rates.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is a CRM Autodialer?</h3>
+                    <p class="mb-4">A CRM autodialer is an automated dialing system that integrates with your Customer Relationship Management (CRM) software to streamline the calling process. Instead of manually dialing numbers, the system automatically dials from a predefined list, connecting agents only when a live person answers.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Key Benefits</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>300% Increase in Call Volume:</strong> Agents can make 3-4 times more calls compared to manual dialing</li>
+                        <li><strong>Answering Machine Detection:</strong> AI-powered technology filters out voicemails with 85% accuracy</li>
+                        <li><strong>Auto Follow-up:</strong> Automated sequences ensure no lead falls through the cracks</li>
+                        <li><strong>Real-time Analytics:</strong> Track performance and optimize campaigns on the fly</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">How to Choose the Right Autodialer</h3>
+                    <p class="mb-4">When selecting a CRM autodialer, consider these factors:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Integration capabilities with your existing CRM</li>
+                        <li>Compliance features (TCPA, GDPR)</li>
+                        <li>Scalability for your team size</li>
+                        <li>Reporting and analytics features</li>
+                        <li>Customer support quality</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Implementation Best Practices</h3>
+                    <p class="mb-4">Successful implementation requires careful planning:</p>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Start with a pilot program to test the system</li>
+                        <li>Train your team thoroughly on the new technology</li>
+                        <li>Monitor key metrics closely in the first month</li>
+                        <li>Continuously optimize based on performance data</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to transform your sales process? <a href="services.html" class="text-primary-600 hover:underline">Start your free trial today</a> and experience the power of automated dialing.</p>
+                `
+            },
+            article1: {
+                title: "How Answering Machine Detection Boosts Sales Efficiency",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1558628155-9b0d55b0f42?w=800&h=400&fit=crop&crop=center" alt="Answering Machine Detection" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Every sales team knows the frustration of connecting to voicemail after voicemail. Answering Machine Detection (AMD) technology is revolutionizing how sales teams operate, saving countless hours and dramatically improving productivity.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is Answering Machine Detection?</h3>
+                    <p class="mb-4">Answering Machine Detection uses advanced AI algorithms to analyze the first few seconds of a call to determine whether it's connected to a live person or an answering machine. This technology can identify patterns in speech, tone, and timing to make accurate predictions.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">The Impact on Sales Teams</h3>
+                    <p class="mb-4">Studies show that sales teams using AMD technology experience:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>85% Accuracy Rate:</strong> Modern AMD systems correctly identify machines 85% of the time</li>
+                        <li><strong>60% Time Savings:</strong> Agents spend less time on unproductive calls</li>
+                        <li><strong>40% Higher Conversion:</strong> More time talking to live prospects means better results</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">How It Works</h3>
+                    <p class="mb-4">The technology analyzes multiple factors:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Speech patterns and cadence</li>
+                        <li>Background noise levels</li>
+                        <li>Response timing</li>
+                        <li>Voice characteristics</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Implement AMD in your sales process with <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline's CRM autodialer</a> and watch your team's efficiency soar.</p>
+                `
+            },
+            article2: {
+                title: "10 Lead Generation Strategies That Actually Work in 2024",
+                content: `
+                    <img src="https://images.unsplash.com/photo-146099840376-5b3d5b73c8a?w=800&h=400&fit=crop&crop=center" alt="Lead Generation" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Generating high-quality leads consistently is the lifeblood of any successful business. Here are 10 proven strategies that are delivering exceptional results in 2024.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">1. Account-Based Marketing (ABM)</h3>
+                    <p class="mb-4">Focus your efforts on high-value accounts that match your ideal customer profile. Personalized outreach to these targets yields 40% higher conversion rates.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">2. LinkedIn Sales Navigator</h3>
+                    <p class="mb-4">Leverage LinkedIn's powerful platform to identify and connect with decision-makers in your target industry.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">3. Content Marketing with Lead Magnets</h3>
+                    <p class="mb-4">Create valuable content (eBooks, webinars, templates) that addresses your audience's pain points and captures their information.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">4. Referral Programs</h3>
+                    <p class="mb-4">Your happiest customers are your best salespeople. Implement a structured referral program with incentives.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">5. SEO-Optimized Landing Pages</h3>
+                    <p class="mb-4">Create dedicated landing pages for each service or product, optimized for search engines and conversion.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">6. Webinar Series</h3>
+                    <p class="mb-4">Host educational webinars that showcase your expertise and capture qualified leads.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">7. Strategic Partnerships</h3>
+                    <p class="mb-4">Partner with complementary businesses to tap into their customer base.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">8. Cold Email Campaigns</h3>
+                    <p class="mb-4">Personalized, value-driven cold emails can still work when done right.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">9. Social Media Advertising</h3>
+                    <p class="mb-4">Use targeted ads on platforms where your prospects spend their time.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">10. Automated Prospecting</h3>
+                    <p class="mb-4">Use CRM autodialers and automation tools to scale your outreach efforts.</p>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to implement these strategies? <a href="contact.html" class="text-primary-600 hover:underline">Contact us</a> for a personalized lead generation plan.</p>
+                `
+            },
+            article3: {
+                title: "Cold Calling in Digital Age: Best Practices",
+                content: `
+                    <img src="https://images.unsplash.com/photo-15734961612-2d828b1f1b?w=800&h=400&fit=crop&crop=center" alt="Cold Calling" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Despite the rise of digital marketing, cold calling remains one of the most effective ways to reach decision-makers directly. Here's how to master it in 2024.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Preparation is Key</h3>
+                    <p class="mb-4">Before picking up the phone:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Research your prospect and their company</li>
+                        <li>Prepare a clear value proposition</li>
+                        <li>Have talking points, not a rigid script</li>
+                        <li>Set clear objectives for each call</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">The First 30 Seconds</h3>
+                    <p class="mb-4">Your opening determines whether you'll be heard or hung up on:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>State your name and company clearly</li>
+                        <li>Mention a relevant insight about their business</li>
+                        <li>Get straight to the value proposition</li>
+                        <li>Ask for permission to continue</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Handling Objections</h3>
+                    <p class="mb-4">Common objections and how to handle them:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>"Not interested":</strong> "I understand. May I ask what you're currently using for [problem]?"</li>
+                        <li><strong>"Too busy":</strong> "I appreciate that. When would be a better time for a 2-minute conversation?"</li>
+                        <li><strong>"Send me an email":</strong> "I'd be happy to. What specific information would be most helpful?"</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Follow-Up Strategy</h3>
+                    <p class="mb-4">The fortune is in the follow-up:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Send a personalized email within 24 hours</li>
+                        <li>Connect on LinkedIn with a personalized note</li>
+                        <li>Set reminders for follow-up calls</li>
+                        <li>Use a CRM to track all interactions</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Supercharge your cold calling with <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline's autodialer</a> and make 3x more calls every day.</p>
+                `
+            },
+            article4: {
+                title: "Automate Your Sales Process: A Complete Guide",
+                content: `
+                    <img src="https://images.unsplash.com/photo-15512808017-ce5e2f5f90f?w=800&h=400&fit=crop&crop=center" alt="Sales Automation" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Sales automation isn't about replacing humans—it's about empowering them to focus on what matters most: building relationships and closing deals.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What Can You Automate?</h3>
+                    <p class="mb-4">Sales automation can handle repetitive tasks, nurture leads, and provide valuable insights to your team. Here's what you can automate:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Lead Scoring:</strong> Automatically rank leads based on engagement</li>
+                        <li><strong>Email Sequences:</strong> Nurture leads with personalized drip campaigns</li>
+                        <li><strong>Meeting Scheduling:</strong> Let prospects book time directly on your calendar</li>
+                        <li><strong>Follow-Up Reminders:</strong> Never miss a follow-up opportunity</li>
+                        <li><strong>CRM Updates:</strong> Automatically log activities and update records</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Implementation Steps</h3>
+                    <p class="mb-4">Successful implementation requires careful planning:</p>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li><strong>Map Your Current Process:</strong> Document every step of your sales cycle</li>
+                        <li><strong>Identify Automation Opportunities:</strong> Find repetitive, time-consuming tasks</li>
+                        <li><strong>Choose the Right Tools:</strong> Select software that integrates with your existing stack</li>
+                        <li><strong>Start Small:</strong> Automate one process at a time</li>
+                        <li><strong>Measure and Optimize:</strong> Track the impact on your metrics</li>
+                    </ol>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Best Tools for Sales Automation</h3>
+                    <p class="mb-4">The right tools make all the difference:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>CRM with automation capabilities</li>
+                        <li>Email marketing platforms</li>
+                        <li>Sales engagement tools</li>
+                        <li>Meeting scheduling software</li>
+                        <li>Analytics and reporting tools</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Measuring Success</h3>
+                    <p class="mb-4">Track these KPIs to measure automation impact:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Time saved per rep</li>
+                        <li>Lead response time</li>
+                        <li>Conversion rates</li>
+                        <li>Customer acquisition cost</li>
+                        <li>Sales cycle length</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Ready to automate? <a href="pricing.html" class="text-primary-600 hover:underline">Start your free trial</a> and see the difference automation makes.</p>
+                `
+            },
+            article5: {
+                title: "SIP Trunk vs Traditional Phone Lines: Which is Better?",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1556761175-4d2363d23c3?w=800&h=400&fit=crop&crop=center" alt="Telephony Solutions" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Choosing the right phone system is crucial for sales teams. Let's compare SIP trunking with traditional phone lines to help you make the best decision.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">What is SIP Trunking?</h3>
+                    <p class="mb-4">SIP (Session Initiation Protocol) trunking uses the internet to make and receive calls, replacing traditional phone lines with a more flexible, scalable solution.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Cost Comparison</h3>
+                    <p class="mb-4">SIP trunking offers significant cost advantages:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Traditional Lines:</strong> $50-100 per line per month</li>
+                        <li><strong>SIP Trunk:</strong> $20-50 per channel per month</li>
+                        <li><strong>Setup Costs:</strong> Traditional requires hardware, SIP needs only internet</li>
+                        <li><strong>Long Distance:</strong> SIP includes unlimited calling, traditional charges per minute</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Feature Comparison</h3>
+                    <p class="mb-4">SIP trunking offers these advantages:</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Scalability - Add or remove channels instantly</li>
+                        <li>Number porting - Keep your existing numbers</li>
+                        <li>Advanced features - Call recording, IVR, auto-attendant included</li>
+                        <li>Disaster recovery - Automatic failover and redundancy</li>
+                        <li>Geographic flexibility - Use local numbers anywhere</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Quality and Reliability</h3>
+                    <p class="mb-4">Modern SIP trunking provides HD voice quality and 99.99% uptime when properly configured with reliable internet service.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Making the Switch</h3>
+                    <p class="mb-4">Planning your migration carefully:</p>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Audit your current usage and needs</li>
+                        <li>Ensure adequate internet bandwidth</li>
+                        <li>Choose a reputable SIP provider</li>
+                        <li>Plan migration carefully</li>
+                        <li>Train your team on new features</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Looking to upgrade your phone system? <a href="services.html" class="text-primary-600 hover:underline">Smart Hotline</a> offers integrated SIP trunking solutions.</p>
+                `
+            },
+            article6: {
+                title: "How to Motivate Your Sales Team for Maximum Performance",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1552674605-f8d8fbd6a5f?w=800&h=400&fit=crop&crop=center" alt="Sales Team" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">A motivated sales team is your greatest asset. Here are proven strategies to keep your team engaged, productive, and consistently exceeding targets.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">1. Clear Goals and Expectations</h3>
+                    <p class="mb-4">Set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) and ensure every team member understands their role in achieving them.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">2. Competitive Compensation</h3>
+                    <p class="mb-4">Design a compensation plan that rewards both individual performance and team collaboration. Include accelerators for overachievement.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">3. Regular Recognition</h3>
+                    <p class="mb-4">Celebrate wins publicly and frequently. Recognition doesn't always have to be monetary—sometimes acknowledgment is more powerful.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">4. Continuous Training</h3>
+                    <p class="mb-4">Invest in ongoing training to keep skills sharp and show you're committed to their growth.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">5. Positive Work Environment</h3>
+                    <p class="mb-4">Create a culture of support, collaboration, and healthy competition. Your team should feel safe to take risks and learn from failures.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">6. Lead Generation Support</h3>
+                    <p class="mb-4">Provide quality leads and tools to manage them effectively. Nothing demotivates faster than chasing bad leads.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">7. Work-Life Balance</h3>
+                    <p class="mb-4">Respect personal time and encourage boundaries. Burnout kills motivation and performance.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">8. Empowerment and Autonomy</h3>
+                    <p class="mb-4">Trust your team to make decisions and own their territory. Micromanagement kills motivation.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">9. Career Path Planning</h3>
+                    <p class="mb-4">Show clear advancement opportunities. People stay when they see a future with your company.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">10. Regular Feedback</h3>
+                    <p class="mb-4">Provide constructive feedback regularly, not just during annual reviews. Help them improve continuously.</p>
+                    
+                    <p class="text-lg font-semibold mt-6">Equip your motivated team with <a href="services.html" class="text-primary-600 hover:underline">the best tools</a> and watch them exceed all expectations.</p>
+                `
+            }
+        };
+        
+        // DOM Elements
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        const currentLangSpan = document.getElementById('currentLang');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const chatButton = document.getElementById('chatButton');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeChat = document.getElementById('closeChat');
+        const chatInput = document.getElementById('chatInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatMessages = document.getElementById('chatMessages');
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        const articleModal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const newsletterForm = document.getElementById('newsletterForm');
+        
+        // State
+        let currentLang = 'en';
+        let articlesLoaded = 6;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Detect user's language based on geolocation
+            detectUserLanguage();
+            
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
+        });
+        
+        // Detect user language based on geolocation
+        function detectUserLanguage() {
+            // Check browser language first
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Check if it's a French-speaking region
+            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
+            
+            if (frenchRegions.includes(browserLang)) {
+                setLanguage('fr');
+            } else {
+                // Try to get geolocation (this requires user permission)
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => {
+                            // In a real implementation, you would send coordinates to a geocoding service
+                            // For this demo, we'll just use browser language detection
+                        },
+                        error => {
+                            // If geolocation is denied, fall back to browser language
+                            console.log('Geolocation denied:', error);
+                        }
+                    );
+                }
+            }
+        }
+        
+        // Set language
+        function setLanguage(lang) {
+            currentLang = lang;
+            currentLangSpan.textContent = lang.toUpperCase();
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update WhatsApp message based on language
+            updateWhatsAppLink(lang);
+        }
+        
+        // Update WhatsApp link based on language
+        function updateWhatsAppLink(lang) {
+            const whatsappButton = document.querySelector('.whatsapp-corner a');
+            if (whatsappButton) {
+                const message = lang === 'fr' 
+                    ? "Bonjour, je lis votre blog et j'ai quelques questions. Pouvez-vous m'aider?"
+                    : "Hello, I'm reading your blog and have some questions. Can you help me?";
+                
+                whatsappButton.href = `https://wa.me/15551234567?text=${encodeURIComponent(message)}`;
+            }
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Language selector
+            langToggle.addEventListener('click', () => {
+                langDropdown.classList.toggle('hidden');
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = option.getAttribute('data-lang');
+                    setLanguage(lang);
+                    langDropdown.classList.add('hidden');
+                    
+                    // If French is selected, redirect to French version
+                    if (lang === 'fr') {
+                        window.location.href = '../fr/blog.html';
+                    }
+                });
+            });
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Chat functionality
+            chatButton.addEventListener('click', () => {
+                chatPopup.classList.toggle('active');
+            });
+            
+            closeChat.addEventListener('click', () => {
+                chatPopup.classList.remove('active');
+            });
+            
+            sendMessage.addEventListener('click', () => {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // Add user message to chat
+                    const userMessage = document.createElement('div');
+                    userMessage.className = 'bg-primary-100 rounded-lg p-3 mb-3 ml-auto max-w-xs';
+                    userMessage.innerHTML = `<p class="text-sm">${message}</p>`;
+                    chatMessages.appendChild(userMessage);
+                    
+                    // Clear input
+                    chatInput.value = '';
+                    
+                    // Simulate bot response
+                    setTimeout(() => {
+                        const botMessage = document.createElement('div');
+                        botMessage.className = 'bg-gray-100 rounded-lg p-3 mb-3 max-w-xs';
+                        botMessage.innerHTML = `<p class="text-sm">Thank you for your message! Our team will get back to you shortly. In the meantime, would you like to learn more about our CRM autodialer or teleprospecting solutions?</p>`;
+                        chatMessages.appendChild(botMessage);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+                    
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            });
+            
+            // Send message on Enter key
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage.click();
+                }
+            });
+            
+            // Newsletter form
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = newsletterForm.querySelector('input[type="email"]').value;
+                
+                if (email) {
+                    // In a real implementation, you would send this to your backend
+                    alert(`Thank you for subscribing with email: ${email}`);
+                    newsletterForm.reset();
+                }
+            });
+            
+            // Open article modal
+            function openArticle(articleId) {
+                const article = articles[articleId];
+                if (article) {
+                    modalTitle.textContent = article.title;
+                    modalContent.innerHTML = article.content;
+                    articleModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+            
+            // Close article modal
+            function closeArticle() {
+                articleModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Close modal on background click
+            articleModal.addEventListener('click', (e) => {
+                if (e.target === articleModal) {
+                    closeArticle();
+                }
+            });
+            
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && articleModal.classList.contains('active')) {
+                    closeArticle();
+                }
+            });
+            
+            // Load more articles
+            function loadMoreArticles() {
+                articlesLoaded += 6;
+                
+                // In a real implementation, you would fetch more articles from your API
+                // For this demo, we'll just show a loading indicator
+                
+                const button = event.target;
+                button.textContent = 'Loading...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    button.textContent = 'Load More Articles';
+                    button.disabled = false;
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 </html>
