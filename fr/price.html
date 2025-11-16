@@ -133,6 +133,29 @@
             color: #94a3b8;
         }
         
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
         /* Horizontal scroll for pricing cards on mobile */
         @media (max-width: 768px) {
             .pricing-container {
@@ -239,7 +262,7 @@
             <div class="flex items-center space-x-4">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <a href="../en/price.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                    <a href="../en/index.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
                         <span>FR</span>
                         <i class="fas fa-exchange-alt text-xs ml-1"></i>
                     </a>
@@ -276,27 +299,36 @@
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">Tarifs Compétitifs</span>
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Des formules flexibles adaptées aux besoins des PME avec essai gratuit et promotions avantageuses
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <div class="bg-primary-100 rounded-lg p-4 flex items-center">
-                        <i class="fas fa-gift text-primary-600 mr-3 text-xl"></i>
-                        <div class="text-left">
-                            <div class="font-semibold text-primary-800">7 Jours Gratuit</div>
-                            <div class="text-sm text-primary-600">Premier mois pour tous les services</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Tarifs Compétitifs</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Des formules flexibles adaptées aux besoins des PME avec essai gratuit et promotions avantageuses
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="bg-primary-100 rounded-lg p-4 flex items-center">
+                            <i class="fas fa-gift text-primary-600 mr-3 text-xl"></i>
+                            <div class="text-left">
+                                <div class="font-semibold text-primary-800">7 Jours Gratuit</div>
+                                <div class="text-sm text-primary-600">Premier mois pour tous les services</div>
+                            </div>
+                        </div>
+                        <div class="bg-primary-100 rounded-lg p-4 flex items-center">
+                            <i class="fas fa-percentage text-primary-600 mr-3 text-xl"></i>
+                            <div class="text-left">
+                                <div class="font-semibold text-primary-800">10% de Réduction</div>
+                                <div class="text-sm text-primary-600">Pour un engagement de 3 mois</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-primary-100 rounded-lg p-4 flex items-center">
-                        <i class="fas fa-percentage text-primary-600 mr-3 text-xl"></i>
-                        <div class="text-left">
-                            <div class="font-semibold text-primary-800">10% de Réduction</div>
-                            <div class="text-sm text-primary-600">Pour un engagement de 3 mois</div>
-                        </div>
+                </div>
+                <div class="relative">
+                    <img src="../images/pricing-hero.jpg" alt="Plans Tarifaires" class="rounded-xl shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold">7 Jours</div>
+                        <div class="text-sm">Essai Gratuit</div>
                     </div>
                 </div>
             </div>
@@ -316,7 +348,7 @@
             <!-- Appels Sortants Pricing -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Appels Sortants</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-3 gap-8 pb-4">
+                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- 20h/week Plan -->
                     <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
                         <h4 class="text-xl font-bold mb-4 text-center">Starter</h4>
@@ -419,20 +451,45 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Custom Quote Option -->
-                <div class="text-center mt-8">
-                    <a href="contact.html?plan=outgoing-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fas fa-calculator mr-2"></i> Demander un Devis Personnalisé
-                    </a>
+                    
+                    <!-- Sur Devis Plan -->
+                    <div class="pricing-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-8 border-2 border-dashed border-gray-300">
+                        <h4 class="text-xl font-bold mb-4 text-center">Sur Devis</h4>
+                        <div class="text-center mb-6">
+                            <i class="fas fa-calculator text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-600">Solution sur mesure pour vos besoins spécifiques</p>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Horaires flexibles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Fonctionnalités personnalisées</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Support personnalisé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Gestionnaire de compte dédié</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <a href="contact.html?plan=outgoing-custom" class="inline-block px-6 py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                                Demander un Devis
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Appels Entrants Pricing -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Appels Entrants</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-3 gap-8 pb-4">
+                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- Basic Plan -->
                     <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
                         <h4 class="text-xl font-bold mb-4 text-center">Basic</h4>
@@ -523,20 +580,45 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Custom Quote Option -->
-                <div class="text-center mt-8">
-                    <a href="contact.html?plan=incoming-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fas fa-calculator mr-2"></i> Demander un Devis Personnalisé
-                    </a>
+                    
+                    <!-- Sur Devis Plan -->
+                    <div class="pricing-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-8 border-2 border-dashed border-gray-300">
+                        <h4 class="text-xl font-bold mb-4 text-center">Sur Devis</h4>
+                        <div class="text-center mb-6">
+                            <i class="fas fa-calculator text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-600">Solution sur mesure pour vos besoins spécifiques</p>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Volume d'appels flexible</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Flux IVR personnalisés</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Intégrations avancées</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Gestionnaire de compte dédié</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <a href="contact.html?plan=incoming-custom" class="inline-block px-6 py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                                Demander un Devis
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- CRM & Support Pricing -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">CRM & Support</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-3 gap-8 pb-4">
+                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- Starter CRM -->
                     <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
                         <h4 class="text-xl font-bold mb-4 text-center">CRM Starter</h4>
@@ -627,13 +709,38 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Custom Quote Option -->
-                <div class="text-center mt-8">
-                    <a href="contact.html?plan=crm-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fas fa-calculator mr-2"></i> Demander un Devis Personnalisé
-                    </a>
+                    
+                    <!-- Sur Devis Plan -->
+                    <div class="pricing-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-8 border-2 border-dashed border-gray-300">
+                        <h4 class="text-xl font-bold mb-4 text-center">Sur Devis</h4>
+                        <div class="text-center mb-6">
+                            <i class="fas fa-calculator text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-600">Solution sur mesure pour vos besoins spécifiques</p>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Modules personnalisés</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Options en marque blanche</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Intégrations personnalisées</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Gestionnaire de compte dédié</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <a href="contact.html?plan=crm-custom" class="inline-block px-6 py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                                Demander un Devis
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -649,100 +756,37 @@
                 </p>
             </div>
             
-            <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 mb-16 text-white">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold mb-4">Package Complet</h2>
-                    <p class="text-xl mb-6">Tous nos services pour un prix avantageux</p>
-                    <div class="text-5xl font-bold mb-4">899€<span class="text-lg font-normal">/mois</span></div>
-                    <p class="text-lg mb-6">Au lieu de 1 297€</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="contact.html?package=complete" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                            Profiter de l'Offre
-                        </a>
-                        <a href="contact.html?package=custom" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                            Demander un Package Personnalisé
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Hourly Rates -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tarification Horaires</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Services complémentaires avec tarification horaire pour vos besoins spécifiques
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white rounded-xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Appels Sortants</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Standard:</span>
-                            <span class="price-highlight">0,25€</span>
-                            <span class="price-period">/appel</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Heures de pointe:</span>
-                            <span class="price-highlight">0,35€</span>
-                            <span class="price-period">/heure</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Soir/Weekend:</span>
-                            <span class="price-highlight">0,45€</span>
-                            <span class="price-period">/heure</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Complete Package -->
+                <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-white">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">Package Complet</h2>
+                        <p class="text-xl mb-6">Tous nos services pour un prix avantageux</p>
+                        <div class="text-5xl font-bold mb-4">899€<span class="text-lg font-normal">/mois</span></div>
+                        <p class="text-lg mb-6">Au lieu de 1 297€</p>
+                        <div class="text-center">
+                            <a href="contact.html?package=complete" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Profiter de l'Offre
+                            </a>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-600 mb-4">Minimum 100 appels/mois</p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Appels Entrants</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Standard:</span>
-                            <span class="price-highlight">0,20€</span>
-                            <span class="price-period">/appel</span>
+                <!-- Custom Package -->
+                <div class="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-8 text-white">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-4">Package Personnalisé</h2>
+                        <p class="text-xl mb-6">Créez votre propre package</p>
+                        <div class="text-5xl font-bold mb-4">
+                            <i class="fas fa-cogs text-6xl mb-4"></i>
                         </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Heures de pointe:</span>
-                            <span class="price-highlight">0,30€</span>
-                            <span class="price-period">/heure</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Soir/Weekend:</span>
-                            <span class="price-highlight">0,40€</span>
-                            <span class="price-period">/heure</span>
+                        <p class="text-lg mb-6">Adapté à vos besoins exacts</p>
+                        <div class="text-center">
+                            <a href="contact.html?package=custom" class="inline-block px-8 py-4 bg-white text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Créer votre Package
+                            </a>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-600 mb-4">Minimum 100 appels/mois</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Support Client</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Standard:</span>
-                            <span class="price-highlight">0,50€</span>
-                            <span class="price-period">/heure</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">Heures de pointe:</span>
-                            <span class="price-highlight">0,60€</span>
-                            <span class="price-period">/heure</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-lg font-semibold">24/7:</span>
-                            <span class="price-highlight">0,80€</span>
-                            <span class="price-period">/heure</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-4">Minimum 40 heures/mois</p>
                 </div>
             </div>
         </div>
@@ -892,4 +936,72 @@
         
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
+        });
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Chat functionality
+            chatButton.addEventListener('click', () => {
+                // Detect if mobile or desktop
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // Open WhatsApp on mobile
+                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20tarifs.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                } else {
+                    // Open email client on desktop
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Tarifs&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20tarifs.%20Pouvez-vous%20m\'aider%3F';
+                }
+            });
+        }
+        
+        // FAQ toggle function
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+    </script>
+</body>
+</html>
