@@ -1,3 +1,6 @@
-# Language-specific redirects
-/fr/ /fr/
-/en/ /en/
+# Redirection des dossiers vers index.html pour charger le site
+/fr /fr/index.html 200
+/en /en/index.html 200
+
+# Redirection de la racine vers la langue par défaut (FR)
+/ /fr/index.html 302
