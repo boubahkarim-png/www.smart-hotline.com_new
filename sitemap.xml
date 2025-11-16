@@ -1,224 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+    
+    <!-- French Homepage -->
     <url>
         <loc>https://smart-hotline.com/fr/index.html</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/index.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/index.html"/>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/hero-banner.jpg</image:loc>
-            <image:title>Accueil - Services de Communication Smart Hotline</image:title>
+            <image:loc>https://smart-hotline.com/images/main-hero.jpg</image:loc>
+            <image:title>Services de Communication Smart Hotline</image:title>
+            <image:caption>Solutions de communication téléphonique adaptées aux entrepreneurs et PME</image:caption>
         </image:image>
     </url>
+    
+    <!-- English Homepage -->
     <url>
         <loc>https://smart-hotline.com/en/index.html</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/index.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/index.html"/>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/hero-banner.jpg</image:loc>
-            <image:title>Home - Smart Hotline Communication Services</image:title>
+            <image:loc>https://smart-hotline.com/images/main-hero.jpg</image:loc>
+            <image:title>Smart Hotline Communication Services</image:title>
+            <image:caption>Telephone communication solutions tailored for entrepreneurs and SMEs</image:caption>
         </image:image>
     </url>
-
+    
+    <!-- French Services Pages -->
     <url>
         <loc>https://smart-hotline.com/fr/services.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services.html"/>
         <image:image>
             <image:loc>https://smart-hotline.com/images/services-hero.jpg</image:loc>
-            <image:title>Vue d'ensemble des 4 services principaux</image:title>
+            <image:title>Nos Solutions Complètes</image:title>
+            <image:caption>Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique</image:caption>
         </image:image>
     </url>
+    
+    <!-- English Services Pages -->
     <url>
         <loc>https://smart-hotline.com/en/services.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html"/>
         <image:image>
             <image:loc>https://smart-hotline.com/images/services-hero.jpg</image:loc>
-            <image:title>Overview of 4 core services</image:title>
+            <image:title>Our Complete Solutions</image:title>
+            <image:caption>A comprehensive range of services to meet all your telephone communication needs</image:caption>
         </image:image>
     </url>
-
+    
+    <!-- Service 1: Réception d'Appels / Call Reception -->
     <url>
         <loc>https://smart-hotline.com/fr/reception.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html"/>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/call-reception.jpg</image:loc>
-            <image:title>Service de réception d'appels 24/7</image:title>
+            <image:loc>https://smart-hotline.com/images/reception.jpg</image:loc>
+            <image:title>Réception d'Appels</image:title>
+            <image:caption>Ne manquez plus aucun appel important grâce à notre service de réception dédié</image:caption>
         </image:image>
     </url>
+    
     <url>
         <loc>https://smart-hotline.com/en/reception.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html"/>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/call-reception.jpg</image:loc>
-            <image:title>24/7 Call Reception Service</image:title>
+            <image:loc>https://smart-hotline.com/images/reception.jpg</image:loc>
+            <image:title>Call Reception</image:title>
+            <image:caption>Never miss an important call with our dedicated reception service</image:caption>
         </image:image>
     </url>
     
+    <!-- Service 2: Émission d'Appels / Outbound Calls -->
     <url>
         <loc>https://smart-hotline.com/fr/emission.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/emission.html"/>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/outbound-calls.jpg</image:loc>
-            <image:title>Agent de téléprospection commercial</image:title>
-        </image:image>
-    </url>
-    <url>
-        <loc>https://smart-hotline.com/en/emission.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/emission.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html"/>
-        <image:image>
-            <image:loc>https://smart-hotline.com/images/outbound-calls.jpg</image:loc>
-            <image:title>Commercial Telemarketing Agent</image:title>
+            <image:loc>https://smart-hotline.com/images/emission.jpg</image:loc>
+            <image:title>Émission d'Appels</image:title>
+            <image:caption>Développez votre clientèle avec nos campagnes d'appels ciblées</image:caption>
         </image:image>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/support.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html"/>
+        <loc>https://smart-hotline.com/en/emission.html</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/customer-support.jpg</image:loc>
-            <image:title>Service de support client avec agent au casque</image:title>
+            <image:loc>https://smart-hotline.com/images/emission.jpg</image:loc>
+            <image:title>Outbound Calls</image:title>
+            <image:caption>Develop your customer base with our targeted call campaigns</image:caption>
         </image:image>
     </url>
+    
+    <!-- Service 3: Support Client / Customer Support -->
+    <url>
+        <loc>https://smart-hotline.com/fr/support.html</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://smart-hotline.com/images/support.jpg</image:loc>
+            <image:title>Support Client</image:title>
+            <image:caption>Améliorez la satisfaction de vos clients avec un support réactif et professionnel</image:caption>
+        </image:image>
+    </url>
+    
     <url>
         <loc>https://smart-hotline.com/en/support.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html"/>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/customer-support.jpg</image:loc>
-            <image:title>Customer Support Agent</image:title>
+            <image:loc>https://smart-hotline.com/images/support.jpg</image:loc>
+            <image:title>Customer Support</image:title>
+            <image:caption>Improve customer satisfaction with responsive and professional support</image:caption>
         </image:image>
     </url>
-
+    
+    <!-- Service 4: CRM & Listes / CRM & Data -->
     <url>
         <loc>https://smart-hotline.com/fr/crm-lists.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html"/>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/crm-dashboard.jpg</image:loc>
-            <image:title>Tableau de bord CRM et gestion des listes</image:title>
+            <image:loc>https://smart-hotline.com/images/crm-data.jpg</image:loc>
+            <image:title>CRM & Listes</image:title>
+            <image:caption>CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes</image:caption>
         </image:image>
     </url>
+    
     <url>
-        <loc>https://smart-hotline.com/en/crm-lists.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html"/>
+        <loc>https://smart-hotline.com/en/crm-data.html</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
         <image:image>
-            <image:loc>https://smart-hotline.com/images/crm-dashboard.jpg</image:loc>
-            <image:title>CRM Dashboard and List Management</image:title>
+            <image:loc>https://smart-hotline.com/images/crm-data.jpg</image:loc>
+            <image:title>CRM & Data</image:title>
+            <image:caption>Complete CRM with qualified lists and autodialer to maximize your sales</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Other Important Pages -->
+    <url>
+        <loc>https://smart-hotline.com/fr/contact.html</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://smart-hotline.com/images/contact-hero.jpg</image:loc>
+            <image:title>Contactez Smart Hotline</image:title>
+            <image:caption>Choisissez le moyen de contact qui vous convient le mieux</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://smart-hotline.com/en/contact.html</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://smart-hotline.com/images/contact-hero.jpg</image:loc>
+            <image:title>Contact Smart Hotline</image:title>
+            <image:caption>Choose contact method that works best for you</image:caption>
         </image:image>
     </url>
     
     <url>
         <loc>https://smart-hotline.com/fr/price.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/price.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/price.html"/>
+        <priority>0.8</priority>
     </url>
+    
     <url>
         <loc>https://smart-hotline.com/en/price.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/price.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/price.html"/>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://smart-hotline.com/fr/about.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html"/>
+        <priority>0.7</priority>
     </url>
+    
     <url>
         <loc>https://smart-hotline.com/en/about.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html"/>
-    </url>
-
-    <url>
-        <loc>https://smart-hotline.com/fr/contact.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html"/>
     </url>
-    <url>
-        <loc>https://smart-hotline.com/en/contact.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html"/>
-    </url>
-
+    
     <url>
         <loc>https://smart-hotline.com/fr/blog.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html"/>
+        <priority>0.6</priority>
     </url>
+    
     <url>
         <loc>https://smart-hotline.com/en/blog.html</loc>
-        <lastmod>2025-11-16T00:00:00Z</lastmod>
+        <lastmod>2023-12-01</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html"/>
+        <priority>0.6</priority>
     </url>
-
+    
+    <!-- Team Images for Testimonials -->
+    <url>
+        <loc>https://smart-hotline.com/images/operator-1.jpg</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://smart-hotline.com/images/operator-2.jpg</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://smart-hotline.com/images/operator-3.jpg</loc>
+        <lastmod>2023-12-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
 </urlset>
