@@ -165,14 +165,10 @@
             <div class="flex items-center space-x-4">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
+                    <a href="../fr/index.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span>EN</span>
+                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                    </a>
                 </div>
                 
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
@@ -215,7 +211,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/hero/main-hero.jpg" alt="Communication Services" class="rounded-xl shadow-lg">
+                    <img src="../images/main-hero.jpg" alt="Communication Services" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">2 Weeks</div>
                         <div class="text-sm">Free Trial</div>
@@ -350,7 +346,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">Mark Johnson</h4>
                             <p class="text-sm text-gray-600">Founder, TechInnov Canada</p>
@@ -370,7 +366,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">Sophie Smith</h4>
                             <p class="text-sm text-gray-600">Director, Smith Accounting Firm</p>
@@ -390,7 +386,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">John Tremblay</h4>
                             <p class="text-sm text-gray-600">Owner, Le Gourmet Restaurant</p>
@@ -448,6 +444,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">All Services</a></li>
                         <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
                         <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
@@ -498,24 +495,14 @@
     
     <script>
         // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const chatButton = document.getElementById('chatButton');
         const statsCounters = document.querySelectorAll('.stats-counter');
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
         
-        // State
-        let currentLang = 'en';
-        
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
             // Initialize counters
             initCounters();
             
@@ -525,39 +512,6 @@
             // Set up event listeners
             setupEventListeners();
         });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
         
         // Initialize counters
         function initCounters() {
@@ -619,33 +573,6 @@
         
         // Set up event listeners
         function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'index-fr.html';
-                    }
-                });
-            });
-            
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
@@ -675,4 +602,3 @@
     </script>
 </body>
 </html>
-
