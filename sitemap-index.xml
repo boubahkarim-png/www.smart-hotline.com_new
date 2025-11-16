@@ -2,28 +2,12 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>https://smart-hotline.com/fr/sitemap-main.xml</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://smart-hotline.com/fr/sitemap-services.xml</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://smart-hotline.com/fr/sitemap-blog.xml</loc>
+        <loc>https://smart-hotline.com/fr/sitemap-fr.xml</loc>
         <lastmod>2025-11-16T00:00:00+00:00</lastmod>
     </sitemap>
     
     <sitemap>
-        <loc>https://smart-hotline.com/en/sitemap-main.xml</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://smart-hotline.com/en/sitemap-services.xml</loc>
-        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://smart-hotline.com/en/sitemap-blog.xml</loc>
+        <loc>https://smart-hotline.com/en/sitemap-en.xml</loc>
         <lastmod>2025-11-16T00:00:00+00:00</lastmod>
     </sitemap>
     
