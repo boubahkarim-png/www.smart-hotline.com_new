@@ -3,7 +3,7 @@
 
 # Redirect from index-fr.html to index.html
 [[redirects]]
-  from = "/fr/index-fr.html"
+  from = "/fr/index.html"
   to = "/fr/index.html"
   status = 301
 
@@ -19,3 +19,4 @@
   to = "/:splat"
   status = 301
   conditions = {query = {"_new": "true"}}
+
