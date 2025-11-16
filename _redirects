@@ -1,6 +1,18 @@
-# Redirection des dossiers vers index.html pour charger le site
+# FIX LANGUAGE SWITCHER SUFFIX ISSUES - ADD THESE LINES
+/*-fr.html /fr/:splat.html 301
+/*-en.html /en/:splat.html 301
+/fr/*-fr.html /fr/:splat.html 301
+/en/*-en.html /en/:splat.html 301
+/fr/*-en.html /en/:splat.html 301
+/en/*-fr.html /fr/:splat.html 301
+
+# Clean up any double suffixes
+/*-fr-fr.html /fr/:splat.html 301
+/*-en-en.html /en/:splat.html 301
+/*-fr-en.html /fr/:splat.html 301
+/*-en-fr.html /en/:splat.html 301
+
+# Your existing redirects - KEEP THESE
 /fr /fr/index.html 200
 /en /en/index.html 200
-
-# Redirection de la racine vers la langue par défaut (FR)
 / /fr/index.html 302
