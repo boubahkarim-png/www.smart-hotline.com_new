@@ -1,0 +1,86 @@
+[build]
+  base = "public"
+  command = "npm run build"
+  publish = "netlify deploy --prod"
+
+# Language-specific redirects
+[[redirects]]
+  from = "/fr/index.html"
+  to = "/index-fr.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/index.html"
+  to = "/index.html"
+  status = 301
+  force = true
+
+# Service-specific redirects
+[[redirects]]
+  from = "/fr/reception.html"
+  to = "/en/reception.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/emission.html"
+  to = "/en/emission.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/support.html"
+  to = "/en/support.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/crm-lists.html"
+  to = "/en/crm-lists.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/price.html"
+  to = "/en/price.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/about.html"
+  to = "/en/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/contact.html"
+  to = "/en/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/blog.html"
+  to = "/en/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index-fr.html"
+  to = "/index-fr.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Root redirect (French to English)
+  from = "/index.html"
+  to = "/index-fr.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Root redirect (English to French)
+  from = "/index.html"
+  to = "/index-fr.html"
+  status = 301
+  force = true

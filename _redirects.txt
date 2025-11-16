@@ -1,0 +1,3 @@
+# Language-specific redirects
+/fr/ /fr/
+/en/ /en/

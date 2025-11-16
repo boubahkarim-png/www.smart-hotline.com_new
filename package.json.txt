@@ -1,0 +1,20 @@
+{
+  "name": "smart-hotline-website",
+  "version": "1.0.0",
+  "description": "Smart Hotline Agency - Communication Services for SMEs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build",
+    "deploy": "npm run deploy",
+    "preview": "npm run preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
