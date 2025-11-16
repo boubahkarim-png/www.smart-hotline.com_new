@@ -97,7 +97,7 @@
         .pricing-card {
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
         
         .pricing-card:hover {
@@ -107,14 +107,16 @@
         
         .popular-badge {
             position: absolute;
-            top: -15px;
+            top: -10px;
             right: 20px;
             background: linear-gradient(135deg, #f59e0b, #d97706);
             color: white;
-            padding: 5px 15px;
+            padding: 8px 20px;
             border-radius: 20px;
             font-size: 14px;
             font-weight: 600;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
         }
         
         .price-highlight {
@@ -154,6 +156,23 @@
         .chat-button:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .service-tab.active {
+            background: #0ea5e9;
+            color: white;
+        }
+        
+        .service-content {
+            display: none;
+        }
+        
+        .service-content.active {
+            display: block;
         }
         
         /* Horizontal scroll for pricing cards on mobile */
@@ -335,6 +354,26 @@
         </div>
     </section>
     
+    <!-- Service Selector -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button onclick="showService('outbound')" class="service-tab active px-6 py-3 rounded-lg font-semibold transition-colors" data-service="outbound">
+                    <i class="fas fa-phone-volume mr-2"></i>Outbound Calls
+                </button>
+                <button onclick="showService('inbound')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="inbound">
+                    <i class="fas fa-phone-alt mr-2"></i>Inbound Calls
+                </button>
+                <button onclick="showService('crm')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="crm">
+                    <i class="fas fa-database mr-2"></i>CRM & Support
+                </button>
+                <button onclick="showService('all')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="all">
+                    <i class="fas fa-th mr-2"></i>All Services
+                </button>
+            </div>
+        </div>
+    </section>
+    
     <!-- Pricing Tables -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
@@ -346,7 +385,7 @@
             </div>
             
             <!-- Outbound Calls Pricing -->
-            <div class="mb-16">
+            <div id="outbound-content" class="service-content active mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Outbound Calls</h3>
                 <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- 20h/week Plan -->
@@ -484,10 +523,17 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Custom Quote Option -->
+                <div class="text-center mt-8">
+                    <a href="contact.html?plan=outgoing-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-calculator mr-2"></i> Request Custom Quote
+                    </a>
+                </div>
             </div>
             
             <!-- Inbound Calls Pricing -->
-            <div class="mb-16">
+            <div id="inbound-content" class="service-content mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Inbound Calls</h3>
                 <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- Basic Plan -->
@@ -521,6 +567,7 @@
                     
                     <!-- Advanced Plan -->
                     <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
+                        <div class="popular-badge">Most Popular</div>
                         <h4 class="text-xl font-bold mb-4 text-center">Advanced</h4>
                         <div class="text-center mb-6">
                             <div class="text-4xl font-bold text-primary-600">$249</div>
@@ -613,10 +660,17 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Custom Quote Option -->
+                <div class="text-center mt-8">
+                    <a href="contact.html?plan=incoming-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-calculator mr-2"></i> Request Custom Quote
+                    </a>
+                </div>
             </div>
             
             <!-- CRM & Support Pricing -->
-            <div class="mb-16">
+            <div id="crm-content" class="service-content mb-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">CRM & Support</h3>
                 <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
                     <!-- Starter CRM -->
@@ -650,6 +704,7 @@
                     
                     <!-- Professional CRM -->
                     <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
+                        <div class="popular-badge">Most Popular</div>
                         <h4 class="text-xl font-bold mb-4 text-center">CRM Professional</h4>
                         <div class="text-center mb-6">
                             <div class="text-4xl font-bold text-primary-600">$299</div>
@@ -742,51 +797,129 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Custom Quote Option -->
+                <div class="text-center mt-8">
+                    <a href="contact.html?plan=crm-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-calculator mr-2"></i> Request Custom Quote
+                    </a>
+                </div>
+            </div>
+            
+            <!-- All Services -->
+            <div id="all-content" class="service-content mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                    <!-- Complete Package -->
+                    <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-white">
+                        <div class="text-center">
+                            <h2 class="text-3xl font-bold mb-4">Complete Package</h2>
+                            <p class="text-xl mb-6">All our services for an advantageous price</p>
+                            <div class="text-5xl font-bold mb-4">$899<span class="text-lg font-normal">/month</span></div>
+                            <p class="text-lg mb-6">Instead of $1,297</p>
+                            <div class="text-center">
+                                <a href="contact.html?package=complete" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                    Take Advantage of Offer
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Package -->
+                    <div class="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-8 text-white">
+                        <div class="text-center">
+                            <h2 class="text-3xl font-bold mb-4">Custom Package</h2>
+                            <p class="text-xl mb-6">Build your own package</p>
+                            <div class="text-5xl font-bold mb-4">
+                                <i class="fas fa-cogs text-6xl mb-4"></i>
+                            </div>
+                            <p class="text-lg mb-6">Tailored to your exact needs</p>
+                            <div class="text-center">
+                                <a href="contact.html?package=custom" class="inline-block px-8 py-4 bg-white text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                    Build Your Package
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <!-- Package Deal -->
+    <!-- Hourly Rates -->
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Special Offer</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hourly Rates</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Combine multiple services and save up to 20%
+                    Additional services with hourly rates for your specific needs
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <!-- Complete Package -->
-                <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-white">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold mb-4">Complete Package</h2>
-                        <p class="text-xl mb-6">All our services for an advantageous price</p>
-                        <div class="text-5xl font-bold mb-4">$899<span class="text-lg font-normal">/month</span></div>
-                        <p class="text-lg mb-6">Instead of $1,297</p>
-                        <div class="text-center">
-                            <a href="contact.html?package=complete" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Take Advantage of Offer
-                            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Outbound Calls</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Standard:</span>
+                            <span class="price-highlight">$0.25</span>
+                            <span class="price-period">/call</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Peak hours:</span>
+                            <span class="price-highlight">$0.35</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Evening/Weekend:</span>
+                            <span class="price-highlight">$0.45</span>
+                            <span class="price-period">/hour</span>
                         </div>
                     </div>
+                    <p class="text-sm text-gray-600 mb-4">Minimum 100 calls/month</p>
                 </div>
                 
-                <!-- Custom Package -->
-                <div class="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-8 text-white">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold mb-4">Custom Package</h2>
-                        <p class="text-xl mb-6">Build your own package</p>
-                        <div class="text-5xl font-bold mb-4">
-                            <i class="fas fa-cogs text-6xl mb-4"></i>
+                <div class="bg-white rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Inbound Calls</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Standard:</span>
+                            <span class="price-highlight">$0.20</span>
+                            <span class="price-period">/call</span>
                         </div>
-                        <p class="text-lg mb-6">Tailored to your exact needs</p>
-                        <div class="text-center">
-                            <a href="contact.html?package=custom" class="inline-block px-8 py-4 bg-white text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Build Your Package
-                            </a>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Peak hours:</span>
+                            <span class="price-highlight">$0.30</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Evening/Weekend:</span>
+                            <span class="price-highlight">$0.40</span>
+                            <span class="price-period">/hour</span>
                         </div>
                     </div>
+                    <p class="text-sm text-gray-600 mb-4">Minimum 100 calls/month</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Customer Support</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Standard:</span>
+                            <span class="price-highlight">$0.50</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Peak hours:</span>
+                            <span class="price-highlight">$0.60</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">24/7:</span>
+                            <span class="price-highlight">$0.80</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">Minimum 40 hours/month</p>
                 </div>
             </div>
         </div>
@@ -942,6 +1075,35 @@
             // Set up event listeners
             setupEventListeners();
         });
+        
+        // Show specific service content
+        function showService(service) {
+            // Hide all service contents
+            document.querySelectorAll('.service-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.service-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.add('bg-gray-200', 'text-gray-700');
+                tab.classList.remove('bg-primary-600', 'text-white');
+            });
+            
+            // Show selected service content
+            const selectedContent = document.getElementById(service + '-content');
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+            
+            // Add active class to selected tab
+            const selectedTab = document.querySelector(`[data-service="${service}"]`);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+                selectedTab.classList.remove('bg-gray-200', 'text-gray-700');
+                selectedTab.classList.add('bg-primary-600', 'text-white');
+            }
+        }
         
         // Initialize scroll reveal
         function initScrollReveal() {
