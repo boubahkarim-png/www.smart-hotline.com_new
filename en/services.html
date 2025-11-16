@@ -144,6 +144,34 @@
             display: flex;
             animation: scroll 20s linear infinite;
         }
+        
+        /* Service image styling */
+        .service-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .service-section {
+                padding: 2rem 0;
+            }
+            
+            .service-content {
+                padding: 1.5rem;
+            }
+            
+            .service-image img {
+                min-height: 200px;
+                object-fit: cover;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -298,15 +326,15 @@
             </div>
             
             <!-- Service 1: Call Reception (Text Left, Image Right) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Call Reception</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Never miss an important call again with our dedicated reception service. Our professional team handles all your incoming calls with the care and attention your customers deserve.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -314,30 +342,39 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Customized Scripts</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Message Taking & Forwarding</li>
                             </ul>
-                            <a href="reception.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                Learn more →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="reception.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    Learn More
+                                </a>
+                                <a href="contact.html?service=reception" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Get Started
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <img src="../images/operator-1.jpg" alt="Call Reception Service" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/call-reception-service.jpg" alt="Call Reception Service" class="w-full h-auto">
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 2: Outbound Calls (Image Left, Text Right) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="../images/operator-2.jpg" alt="Outbound Calls Service" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/outbound-calls-service.jpg" alt="Outbound Calls Service" class="w-full h-auto">
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Outbound Calls</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Grow your customer base with our targeted calling campaigns. Our experienced team helps you contact potential customers and generate qualified leads.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -345,24 +382,29 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Appointment Setting</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Follow-up Campaigns</li>
                             </ul>
-                            <a href="emission.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                Learn more →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="emission.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    Learn More
+                                </a>
+                                <a href="contact.html?service=outbound" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Get Started
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 3: Customer Support (Text Left, Image Right) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-headset text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Customer Support</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Improve your customer satisfaction with responsive and professional support. Our team handles all inquiries, complaints and support requests efficiently.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -370,30 +412,39 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Product Information</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Problem Resolution</li>
                             </ul>
-                            <a href="support.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                Learn more →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="support.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    Learn More
+                                </a>
+                                <a href="contact.html?service=support" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Get Started
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <img src="../images/operator-3.jpg" alt="Customer Support Service" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/customer-support-service.jpg" alt="Customer Support Service" class="w-full h-auto">
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 4: CRM & Lists (Image Left, Text Right) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="../images/crm-interface.jpg" alt="CRM & Lists Service" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/crm-lists-service.jpg" alt="CRM & Lists Service" class="w-full h-auto">
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-database text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">CRM & Lists</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Complete CRM with qualified lists and auto-dialer to maximize your sales. Efficiently manage your customer relationships with our comprehensive system.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -401,9 +452,14 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Auto-dialer Integration</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Sales Analytics</li>
                             </ul>
-                            <a href="crm-lists.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                Learn more →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="crm-lists.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    Learn More
+                                </a>
+                                <a href="contact.html?service=crm" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Get Started
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
