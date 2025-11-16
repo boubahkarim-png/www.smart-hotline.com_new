@@ -1,6 +1,21 @@
 [build]
-  # Supprime les scripts de build inutiles
-  publish = "."  # Le dossier racine est le dossier de publication
+  publish = "."
 
-# Note: Toutes les redirections (redirects) sont déplacées dans le fichier _redirects
-# Netlify.toml n'est pas l'endroit idéal pour les redirects complexes.
+# Redirect from index-fr.html to index.html
+[[redirects]]
+  from = "/fr/index-fr.html"
+  to = "/fr/index.html"
+  status = 301
+
+# Language-based redirects
+[[redirects]]
+  from = "/"
+  to = "/fr/index.html"
+  status = 302
+
+# Remove _new from URLs
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 301
+  conditions = {query = {"_new": "true"}}
