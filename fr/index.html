@@ -10,19 +10,26 @@
     <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
     <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com">
-    <meta property="og:image" content="https://smart-hotline.com/images/hero/main-hero.jpg">
+    <meta property="og:url" content="https://smart-hotline.com/fr/">
+    <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
     
-    <!-- Tailwind CSS -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -171,7 +178,7 @@
                     </button>
                     <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
                         <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                        <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
                     </div>
                 </div>
                 
@@ -215,7 +222,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/hero/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
+                    <img src="../images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">2 Semaines</div>
                         <div class="text-sm">Essai Gratuit</div>
@@ -350,7 +357,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">Marc Lefebvre</h4>
                             <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
@@ -370,7 +377,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">Sophie Dubois</h4>
                             <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
@@ -390,7 +397,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
                             <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
@@ -636,7 +643,9 @@
                 option.addEventListener('click', (e) => {
                     e.preventDefault();
                     const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
+                    if (lang === 'en') {
+                        window.location.href = '../en/index.html';
+                    }
                     langDropdown.classList.add('hidden');
                 });
             });
