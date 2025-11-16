@@ -4,8 +4,8 @@
   "description": "Smart Hotline Agency - Communication Services for SMEs",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build",
-    "deploy": "npm run deploy",
+    "build": "echo 'No build step required for static HTML'",
+    "deploy": "echo 'Deployment handled by Netlify'",
     "preview": "npm run preview"
   },
   "devDependencies": {
