@@ -144,51 +144,113 @@
 </head>
 <body class="font-sans text-gray-800">
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-primary-600 font-semibold">Home</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                SH
             </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <a href="../fr/index.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span>EN</span>
-                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+            <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-primary-600 font-semibold">Home</a>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                    Services
+                    <i class="fas fa-chevron-down text-xs ml-1"></i>
+                </button>
+                <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                        <div class="flex items-center">
+                            <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                            <div>
+                                <div class="font-medium">All Services</div>
+                                <div class="text-xs text-gray-500">Discover our complete range</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                            <div>
+                                <div class="font-medium">Call Reception</div>
+                                <div class="text-xs text-gray-500">Never miss a call</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                            <div>
+                                <div class="font-medium">Outbound Calls</div>
+                                <div class="text-xs text-gray-500">Grow your customer base</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                        <div class="flex items-center">
+                            <i class="fas fa-headset text-primary-600 mr-3"></i>
+                            <div>
+                                <div class="font-medium">Customer Support</div>
+                                <div class="text-xs text-gray-500">Improve satisfaction</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                        <div class="flex items-center">
+                            <i class="fas fa-database text-primary-600 mr-3"></i>
+                            <div>
+                                <div class="font-medium">CRM & Lists</div>
+                                <div class="text-xs text-gray-500">Maximize your sales</div>
+                            </div>
+                        </div>
                     </a>
                 </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-primary-600 font-semibold">Home</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
         </div>
-    </header>
+        
+        <div class="flex items-center space-x-4">
+            <!-- Language Selector -->
+            <div class="relative">
+                <a href="../fr/index.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                    <span>EN</span>
+                    <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                </a>
+            </div>
+            
+            <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+            <a href="index.html" class="text-primary-600 font-semibold">Home</a>
+            <div class="border-t pt-3">
+                <div class="font-medium text-gray-700 mb-2">Services</div>
+                <div class="pl-4 space-y-2">
+                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">All Services</a>
+                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Call Reception</a>
+                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Outbound Calls</a>
+                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Customer Support</a>
+                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
+                </div>
+            </div>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+        </div>
+    </div>
+</header>
     
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
@@ -602,3 +664,4 @@
     </script>
 </body>
 </html>
+
