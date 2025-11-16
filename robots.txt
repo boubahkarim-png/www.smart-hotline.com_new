@@ -1,31 +1,3 @@
 User-agent: *
 Allow: /
-
-# Disallow
-/temp/
-/*.log
-/private/
-
-# Allow
-/images/
-/css/
-/js/
-/*.css
-/*.js
-/*.json
-/*.xml
-/*.txt
-/*.webp
-/*.svg
-
-# Sitemaps
-/sitemap.xml
-/sitemap-index.xml
-/sitemap-services.xml
-/sitemap-blog.xml
-
-# Crawl Delay
-Crawl-delay: 1
-
-# Host
-Host: smart-hotline.com
+Sitemap: /sitemap-index.xml
