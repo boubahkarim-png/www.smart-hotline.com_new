@@ -10,8 +10,12 @@
     <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
     <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com">
+    <meta property="og:url" content="https://smart-hotline.com/fr/services">
     <meta property="og:image" content="https://smart-hotline.com/images/services-hero.jpg">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -140,6 +144,34 @@
             display: flex;
             animation: scroll 20s linear infinite;
         }
+        
+        /* Service image styling */
+        .service-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .service-section {
+                padding: 2rem 0;
+            }
+            
+            .service-content {
+                padding: 1.5rem;
+            }
+            
+            .service-image img {
+                min-height: 200px;
+                object-fit: cover;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -154,8 +186,61 @@
             </a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-primary-600 font-semibold flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="services.html" class="block px-4 py-3 bg-primary-50 transition-colors border-b">
+                            <div class="flex items-center">
+                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Tous nos services</div>
+                                    <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Réception d'Appels</div>
+                                    <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Émission d'Appels</div>
+                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Support Client</div>
+                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">CRM & Listes</div>
+                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -165,14 +250,10 @@
             <div class="flex items-center space-x-4">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">FR</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
+                    <a href="../en/services.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span>FR</span>
+                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                    </a>
                 </div>
                 
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
@@ -184,8 +265,17 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-primary-600 mb-2">Services</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="services.html" class="block text-primary-600 font-medium">Tous nos services</a>
+                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
+                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
+                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
+                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -209,7 +299,7 @@
                         <a href="contact.html" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
                             Demander une Démo Gratuite
                         </a>
-                        <a href="services.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                        <a href="#services" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
                             Découvrir Nos Services
                         </a>
                     </div>
@@ -226,7 +316,7 @@
     </section>
     
     <!-- Services Preview -->
-    <section class="py-20 bg-white scroll-reveal">
+    <section id="services" class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
@@ -236,15 +326,15 @@
             </div>
             
             <!-- Service 1: Réception d'Appels (Texte Gauche, Image Droite) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Réception d'Appels</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Ne manquez plus aucun appel important grâce à notre service de réception dédié. Notre équipe professionnelle traite tous vos appels entrants avec le soin et l'attention que vos clients méritent.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -252,30 +342,39 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Scripts personnalisés</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Prise et transmission de messages</li>
                             </ul>
-                            <a href="reception.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                En savoir plus →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="reception.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    En Savoir Plus
+                                </a>
+                                <a href="contact.html?service=reception" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Commencer
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <img src="../images/operator-1.jpg" alt="Service de Réception d'Appels" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/call-reception-service.jpg" alt="Service de Réception d'Appels" class="w-full h-auto">
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 2: Émission d'Appels (Image Gauche, Texte Droite) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="../images/operator-2.jpg" alt="Service d'Émission d'Appels" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/outbound-calls-service.jpg" alt="Service d'Émission d'Appels" class="w-full h-auto">
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Émission d'Appels</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Développez votre clientèle avec nos campagnes d'appels ciblées. Notre équipe expérimentée vous aide à contacter des clients potentiels et à générer des leads qualifiés.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -283,24 +382,29 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Prise de rendez-vous</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Campagnes de suivi</li>
                             </ul>
-                            <a href="emission.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                En savoir plus →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="emission.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    En Savoir Plus
+                                </a>
+                                <a href="contact.html?service=outbound" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Commencer
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 3: Support Client (Texte Gauche, Image Droite) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-headset text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Support Client</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 Améliorez la satisfaction de vos clients avec un support réactif et professionnel. Notre équipe gère toutes les demandes, réclamations et requêtes de support de manière efficace.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -308,30 +412,39 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Informations produits</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Résolution de problèmes</li>
                             </ul>
-                            <a href="support.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                En savoir plus →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="support.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    En Savoir Plus
+                                </a>
+                                <a href="contact.html?service=support" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Commencer
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <img src="../images/operator-3.jpg" alt="Service de Support Client" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/customer-support-service.jpg" alt="Service de Support Client" class="w-full h-auto">
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Service 4: CRM & Listes (Image Gauche, Texte Droite) -->
-            <div class="mb-16 scroll-reveal">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="service-section mb-16 lg:mb-24 scroll-reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="../images/crm-interface.jpg" alt="Service CRM & Listes" class="rounded-xl shadow-lg">
+                        <div class="service-image rounded-xl overflow-hidden">
+                            <img src="../images/crm-lists-service.jpg" alt="Service CRM & Listes" class="w-full h-auto">
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="bg-gray-50 rounded-xl p-8 hover-lift">
+                        <div class="bg-gray-50 rounded-xl p-6 lg:p-8 hover-lift service-content">
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-database text-primary-600 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">CRM & Listes</h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600 mb-6">
                                 CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes. Gérez efficacement vos relations clients avec notre système complet.
                             </p>
                             <ul class="text-gray-600 mb-6 space-y-2">
@@ -339,9 +452,14 @@
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Intégration autocomposeur</li>
                                 <li class="flex items-center"><i class="fas fa-check text-primary-600 mr-2"></i> Analytiques de ventes</li>
                             </ul>
-                            <a href="crm-lists.html" class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                                En savoir plus →
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="crm-lists.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                    En Savoir Plus
+                                </a>
+                                <a href="contact.html?service=crm" class="inline-block px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                                    Commencer
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -506,6 +624,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Tous nos services</a></li>
                         <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
                         <li><a href="emission.html" class="hover:text-white transition-colors">Émission d'Appels</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
@@ -556,24 +675,14 @@
     
     <script>
         // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const chatButton = document.getElementById('chatButton');
         const statsCounters = document.querySelectorAll('.stats-counter');
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
         
-        // State
-        let currentLang = 'fr';
-        
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
             // Initialize counters
             initCounters();
             
@@ -583,39 +692,6 @@
             // Set up event listeners
             setupEventListeners();
         });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's a French-speaking region
-            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
-            
-            if (frenchRegions.includes(browserLang)) {
-                setLanguage('fr');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
         
         // Initialize counters
         function initCounters() {
@@ -677,30 +753,6 @@
         
         // Set up event listeners
         function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    if (lang === 'en') {
-                        window.location.href = '../en/index.html';
-                    }
-                    langDropdown.classList.add('hidden');
-                });
-            });
-            
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
@@ -730,7 +782,3 @@
     </script>
 </body>
 </html>
-
-
-
-
