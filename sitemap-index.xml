@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- English URLs -->
-    <url>
-        <loc>https://smart-hotline.com/</loc>
-        <lastmod>2023-12-01T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-            <loc>https://smart-hotline.com/images/hero/main-hero.jpg</loc>
-            <title>Smart Hotline Agency - Communication Services</title>
-            <alt>Professional communication services for SMEs</alt>
-        </image:image>
-    </url>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <sitemap>
+        <loc>https://smart-hotline.com/fr/sitemap-main.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://smart-hotline.com/fr/sitemap-services.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://smart-hotline.com/fr/sitemap-blog.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
     
-    <!-- French URLs -->
-    <url>
-        <loc>https://smart-hotline.com/index-fr.html</loc>
-        <lastmod>2023-12-01T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+    <sitemap>
+        <loc>https://smart-hotline.com/en/sitemap-main.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://smart-hotline.com/en/sitemap-services.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://smart-hotline.com/en/sitemap-blog.xml</loc>
+        <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+    </sitemap>
     
-    <!-- All service pages -->
-    <url>
-        <loc>https://smart-hotline.com/en/services.html</loc>
-        <lastmod>2023-12-01T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://smart-hotline.com/fr/services.html</loc>
-        <lastmod>2023-12-01T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <!-- ... continue for all pages -->
-</urlset>
+</sitemapindex>
