@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Smart Hotline Agency</title>
-    <meta name="description" content="Discover Smart Hotline Agency, your trusted partner for telephony services adapted for SMEs.">
-    <meta name="keywords" content="telephony agency, SME services, call reception, telemarketing, customer support, communication company">
+    <meta name="description" content="Discover Smart Hotline Agency, your trusted partner for telephone communication services tailored for entrepreneurs and SMEs.">
+    <meta name="keywords" content="telephone agency, SME services, call reception, telemarketing, customer support, communication company">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About | Smart Hotline Agency">
+    <meta property="og:description" content="Discover Smart Hotline Agency, your trusted partner for telephone communication services tailored for entrepreneurs and SMEs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/about.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/about-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/about.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -117,31 +131,98 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .timeline-dot {
+        .whatsapp-corner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        
+        .timeline-container {
             position: relative;
         }
         
-        .timeline-dot::after {
-            content: '';
+        .timeline-line-vertical {
             position: absolute;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #0ea5e9;
-            top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #e0f2fe, #0284c7);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
             z-index: 2;
         }
         
-        .timeline-line {
+        .timeline-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .timeline-number::before {
+            content: '';
             position: absolute;
-            height: 2px;
-            background-color: #e2e8f0;
+            width: 60px;
+            height: 60px;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 50%;
             top: 50%;
-            left: 0;
-            right: 0;
-            z-index: 1;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .timeline-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line-vertical {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline-number {
+                position: absolute;
+                left: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     </style>
 </head>
@@ -158,7 +239,60 @@
             
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                            <div class="flex items-center">
+                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">All Services</div>
+                                    <div class="text-xs text-gray-500">Discover our complete range</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Call Reception</div>
+                                    <div class="text-xs text-gray-500">Never miss a call</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Outbound Calls</div>
+                                    <div class="text-xs text-gray-500">Grow your customer base</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Customer Support</div>
+                                    <div class="text-xs text-gray-500">Improve satisfaction</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">CRM & Lists</div>
+                                    <div class="text-xs text-gray-500">Maximize your sales</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
                 <a href="about.html" class="text-primary-600 font-semibold">About</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -168,14 +302,10 @@
             <div class="flex items-center space-x-4">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="about-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="about.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
+                    <a href="../fr/about.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span>EN</span>
+                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                    </a>
                 </div>
                 
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
@@ -188,7 +318,16 @@
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
                 <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-gray-700 mb-2">Services</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">All Services</a>
+                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Call Reception</a>
+                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Outbound Calls</a>
+                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Customer Support</a>
+                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
                 <a href="about.html" class="text-primary-600 font-semibold">About</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -206,11 +345,19 @@
                         <span class="gradient-text">About Smart Hotline</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Your trusted partner for telephony services adapted for entrepreneurs and SMEs
+                        Your trusted partner for telephone communication services tailored for entrepreneurs and SMEs
                     </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                            Contact Us
+                        </a>
+                        <a href="services.html" class="inline-block px-6 py-3 bg-transparent text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+                            Discover Our Services
+                        </a>
+                    </div>
                 </div>
                 <div class="relative">
-                    <img src="images/misc/office-building.jpg" alt="Our Office" class="rounded-xl shadow-lg">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Our Office" class="rounded-xl shadow-lg">
                 </div>
             </div>
         </div>
@@ -220,24 +367,112 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission & Vision</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    To enable entrepreneurs and SMEs to access professional communication services without the constraints of an internal team
+                    Empowering entrepreneurs and SMEs with professional communication services without constraints of an in-house team
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Our Vision</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        To become the undisputed leader in communication solutions for SMEs by continuously innovating and putting our clients at the center of everything we do.
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary-600">Our Mission</h3>
+                    <p class="text-lg text-gray-600 mb-4">
+                        To provide high-quality telephone communication services that enable SMEs to focus on their core business while delivering exceptional customer experiences.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>Customized services tailored to each industry</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>Continuous training of our operators</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>State-of-the-art technological solutions</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary-600">Our Vision</h3>
+                    <p class="text-lg text-gray-600 mb-4">
+                        To become undisputed leader in communication solutions for SMEs by continuously innovating and putting our clients at center of everything we do.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>Sustainable growth based on customer satisfaction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>Progressive international expansion</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
+                            <span>Constant innovation in our services</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    The principles that guide our daily operations and decisions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                    <p class="text-gray-600">
+                        We act with honesty and transparency in all our interactions with clients and partners.
                     </p>
                 </div>
                 
-                <div>
-                    <h3 class="text-2xl font-bold mb-6 text-primary-600">Our Values</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Transparency, excellence and commitment to our clients and partners guide every decision and action we take.
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excellence</h3>
+                    <p class="text-gray-600">
+                        We are committed to delivering highest quality services that exceed our clients' expectations.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Collaboration</h3>
+                    <p class="text-gray-600">
+                        We work closely with our clients to understand their unique needs and develop customized solutions.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-gray-600">
+                        We constantly explore new technologies and approaches to improve our services and stay at forefront of industry.
                     </p>
                 </div>
             </div>
@@ -245,7 +480,7 @@
     </section>
     
     <!-- Team Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
+    <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
@@ -255,28 +490,49 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <img src="images/team/operator-1.jpg" alt="Boubah Karim" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Boubah Karim</h3>
-                    <p class="text-gray-600">Founder & CEO</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                    <p class="text-gray-600 mb-2">Founder & CEO</p>
                     <p class="text-sm text-gray-500 mb-4">15 years of experience in communication services</p>
-                </div>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <img src="images/team/operator-2.jpg" alt="Sophie Smith" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Sophie Smith</h3>
-                    <p class="text-gray-600">Operations Director</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+                    <p class="text-gray-600 mb-2">Operations Director</p>
                     <p class="text-sm text-gray-500 mb-4">12 years of experience in team management and process optimization</p>
-                </div>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <img src="images/team/operator-3.jpg" alt="Mark Johnson" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Mark Johnson</h3>
-                    <p class="text-gray-600">Technical Director</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="James Wilson" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">James Wilson</h3>
+                    <p class="text-gray-600 mb-2">Technical Director</p>
                     <p class="text-sm text-gray-500 mb-4">10 years of experience in telecommunications and CRM systems</p>
-                </div>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,7 +544,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Achievements</h2>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Numbers that speak for themselves
+                    Numbers that speak to our commitment
                 </p>
             </div>
             
@@ -298,7 +554,7 @@
                         <span class="stats-counter" data-target="500">0</span>+
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Satisfied Clients</h3>
-                    <p class="text-gray-400">Accompanies</p>
+                    <p class="text-gray-400">Companies served</p>
                 </div>
                 
                 <div class="text-center">
@@ -306,7 +562,7 @@
                         <span class="stats-counter" data-target="98">0</span>%
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Satisfaction Rate</h3>
-                    <p class="text-gray-400">Average clients</p>
+                    <p class="text-gray-400">Client average</p>
                 </div>
                 
                 <div class="text-center">
@@ -322,7 +578,7 @@
                         <span class="stats-counter" data-target="15">0</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Years of Experience</h3>
-                    <p class="text-gray-400">Average team</p>
+                    <p class="text-gray-400">Team average</p>
                 </div>
             </div>
         </div>
@@ -332,61 +588,130 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our History</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    From idea to realization, our journey
+                    From idea to realization, our journey of innovation
                 </p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="timeline-line"></div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="text-center">
-                            <div class="timeline-dot w-12 h-12 bg-white border-4 border-primary-500 rounded-full mx-auto mb-4">
-                                <div class="text-lg font-bold text-primary-600">2018</div>
-                            </div>
-                            <h3 class="text-lg font-semibold mb-2">Foundation</h3>
-                            <p class="text-sm text-gray-600">Launch of Smart Hotline</p>
-                        </div>
-                        </div>
+                    <!-- Timeline Container -->
+                    <div class="relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-200 to-primary-600"></div>
                         
-                        <div class="text-center">
-                            <div class="timeline-dot w-12 h-12 bg-white border-4 border-primary-500 rounded-full mx-auto mb-4">
-                                <div class="text-lg font-bold text-primary-600">2020</div>
+                        <!-- Timeline Items -->
+                        <div class="space-y-12">
+                            <!-- 2018 - Foundation -->
+                            <div class="flex items-center">
+                                <div class="w-full md:w-5/12 text-right pr-8">
+                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2018</h3>
+                                        <h4 class="text-lg font-semibold mb-3">Foundation</h4>
+                                        <p class="text-gray-600 mb-4">Launch of Smart Hotline with a clear vision: revolutionize communication for SMEs.</p>
+                                        <div class="flex justify-end">
+                                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Foundation" class="w-20 h-20 rounded-lg object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/12 flex justify-center">
+                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-5/12 pl-8">
+                                    <div class="hidden md:block"></div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-semibold mb-2">First Client</h3>
-                            <p class="text-sm text-gray-600">100 satisfied clients</p>
-                        </div>
-                        </div>
-                        
-                        <div class="text-center">
-                            <div class="timeline-dot w-12 h-12 bg-white border-4 border-primary-500 rounded-full mx-auto mb-4">
-                                <div class="text-lg font-bold text-primary-600">2021</div>
+                            
+                            <!-- 2019 - First Client -->
+                            <div class="flex items-center">
+                                <div class="w-full md:w-5/12 pr-8">
+                                    <div class="hidden md:block"></div>
+                                </div>
+                                <div class="w-2/12 flex justify-center">
+                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-5/12 text-left pl-8">
+                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2019</h3>
+                                        <h4 class="text-lg font-semibold mb-3">First Successes</h4>
+                                        <p class="text-gray-600 mb-4">Reached our first 100 clients with a 95% satisfaction rate.</p>
+                                        <div class="flex">
+                                            <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Success" class="w-20 h-20 rounded-lg object-cover">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-semibold mb-2">Expansion</h3>
-                            <p class="text-sm text-gray-600">Opening of Montreal office</p>
-                        </div>
-                        </div>
-                        
-                        <div class="text-center">
-                            <div class="timeline-dot w-12 h-12 bg-white border-4 border-primary-500 rounded-full mx-auto mb-4">
-                                <div class="text-lg font-bold text-primary-600">2022</div>
+                            
+                            <!-- 2020 - Expansion -->
+                            <div class="flex items-center">
+                                <div class="w-full md:w-5/12 text-right pr-8">
+                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2020</h3>
+                                        <h4 class="text-lg font-semibold mb-3">Expansion</h4>
+                                        <p class="text-gray-600 mb-4">Opening of our Montreal office and hiring of 10 new specialists.</p>
+                                        <div class="flex justify-end">
+                                            <img src="https://images.pexels.com/photos/1497485/pexels-photo-1497485.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Expansion" class="w-20 h-20 rounded-lg object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/12 flex justify-center">
+                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-5/12 pl-8">
+                                    <div class="hidden md:block"></div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-semibold mb-2">Innovation</h3>
-                            <p class="text-sm text-gray-600">Launch of CRM & Lists</p>
-                        </div>
-                        </div>
-                        
-                        <div class="text-center">
-                            <div class="timeline-dot w-12 h-12 bg-white border-4 border-primary-500 rounded-full mx-auto mb-4">
-                                <div class="text-lg font-bold text-primary-600">2023</div>
+                            
+                            <!-- 2021 - Innovation -->
+                            <div class="flex items-center">
+                                <div class="w-full md:w-5/12 pr-8">
+                                    <div class="hidden md:block"></div>
+                                </div>
+                                <div class="w-2/12 flex justify-center">
+                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-5/12 text-left pl-8">
+                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2021</h3>
+                                        <h4 class="text-lg font-semibold mb-3">Technological Innovation</h4>
+                                        <p class="text-gray-600 mb-4">Launch of our CRM & Lists services with AI integration.</p>
+                                        <div class="flex">
+                                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Innovation" class="w-20 h-20 rounded-lg object-cover">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-semibold mb-2">Growth</h3>
-                            <p class="text-sm text-gray-600">500+ clients and 20 employees</p>
-                        </div>
+                            
+                            <!-- 2023 - Growth -->
+                            <div class="flex items-center">
+                                <div class="w-full md:w-5/12 text-right pr-8">
+                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2023</h3>
+                                        <h4 class="text-lg font-semibold mb-3">Exceptional Growth</h4>
+                                        <p class="text-gray-600 mb-4">Over 500 satisfied clients and a team of 20 passionate professionals.</p>
+                                        <div class="flex justify-end">
+                                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Growth" class="w-20 h-20 rounded-lg object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-2/12 flex justify-center">
+                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                        5
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-5/12 pl-8">
+                                    <div class="hidden md:block"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -403,10 +728,10 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Join Our Team
+                    Contact Us
                 </a>
-                <a href="services.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Discover Our Services
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                    Discover Our Pricing
                 </a>
             </div>
         </div>
@@ -431,6 +756,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">All Services</a></li>
                         <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
                         <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
@@ -479,105 +805,32 @@
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
+    <!-- WhatsApp Corner -->
+    <div class="whatsapp-corner">
+        <a href="https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20Smart%20Hotline.%20Can%20you%20help%20me%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
     <script>
         // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const chatButton = document.getElementById('chatButton');
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
         const statsCounters = document.querySelectorAll('.stats-counter');
         
-        // State
-        let currentLang = 'en';
-        
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize counters
-            initCounters();
-            
             // Initialize scroll reveal
             initScrollReveal();
+            
+            // Initialize stats counters
+            initStatsCounters();
             
             // Set up event listeners
             setupEventListeners();
         });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize counters
-        function initCounters() {
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
         
         // Initialize scroll reveal
         function initScrollReveal() {
@@ -600,35 +853,43 @@
             });
         }
         
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
+        // Initialize stats counters
+        function initStatsCounters() {
+            const observerOptions = {
+                threshold: 0.5
+            };
             
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'about-fr.html';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const increment = target / 100;
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            if (current < target) {
+                                current += increment;
+                                counter.textContent = Math.ceil(current);
+                                setTimeout(updateCounter, 20);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
                     }
                 });
-            });
+            }, observerOptions);
             
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
