@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Agence Smart Hotline | Expertise Communication PME</title>
+    <meta name="description" content="Découvrez des stratégies avancées en réception d'appels, support client, solutions CRM et communication B2B. Optimisez votre relation client avec nos guides experts pour PME.">
+    <meta name="keywords" content="blog réception d'appels, support client PME, solutions CRM, télémarketing B2B, centre d'appels externalisé, communication professionnelle">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog - Agence Smart Hotline | Expertise Communication PME">
+    <meta property="og:description" content="Stratégies avancées en réception d'appels, support client et CRM pour PME. Guides exclusifs pour optimiser votre communication.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/fr/blog.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/blog-hero-fr.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/fr/blog.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .article-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .article-modal.active {
+            display: flex;
+        }
+        
+        .article-content {
+            background: white;
+            border-radius: 10px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 100%;
+        }
+        
+        .whatsapp-corner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .article-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    SH
+                </div>
+                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                            <div class="flex items-center">
+                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Tous les services</div>
+                                    <div class="text-xs text-gray-500">Découvrez notre gamme complète</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Réception d'appels</div>
+                                    <div class="text-xs text-gray-500">Ne manquez jamais un appel</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Appels sortants</div>
+                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Support client</div>
+                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">CRM & Listes</div>
+                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector -->
+                <div class="relative">
+                    <a href="../en/blog.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span>FR</span>
+                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                    </a>
+                </div>
+                
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-gray-700 mb-2">Services</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous les services</a>
+                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'appels</a>
+                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Appels sortants</a>
+                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support client</a>
+                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+                    </div>
+                </div>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
+                <a href="blog.html" class="text-primary-600 font-semibold">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">Expertise Communication pour PME</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stratégies avancées, conseils d'experts et tendances pour maîtriser la communication client et accélérer votre croissance
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Article -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-8 md:p-12 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm inline-block mb-4">À la une</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Le Guide Complet de la Réception d'Appels Externalisée pour PME</h2>
+                        <p class="text-lg mb-6 text-primary-100">
+                            Transformez votre entreprise avec une gestion professionnelle des appels. Économisez du temps et ne manquez jamais une opportunité commerciale.
+                        </p>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Auteur" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Michel Dubois</p>
+                                <p class="text-primary-200 text-sm">15 novembre 2024 • 8 min de lecture</p>
+                            </div>
+                        </div>
+                        <button onclick="openArticle('featured')" class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Lire l'article complet
+                        </button>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop" alt="Réception d'appels" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Articles Grid -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Derniers Articles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Restez à jour avec les dernières stratégies de communication et innovations technologiques
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1: Call Reception -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1573497019929-2a6321e2ef0?w=400&h=250&fit=crop" alt="Réceptionniste virtuel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Réception d'appels</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Comment les Réceptionnistes Virtuels Transforment les PME</h3>
+                        <p class="text-gray-600 mb-4">
+                            Découvrez comment les services de réception virtuelle offrent une gestion professionnelle des appels à coût réduit.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1494790108757-4c85d8f102d?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Sophie Martin</span>
+                            </div>
+                            <button onclick="openArticle('article1')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2: Outbound Calls -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1552664730-a3072ad35f5?w=400&h=250&fit=crop" alt="Télémarketing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Appels sortants</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Stratégies de Télémarketing Efficaces pour PME</h3>
+                        <p class="text-gray-600 mb-4">
+                            Techniques avancées pour générer des leads qualifiés et augmenter vos ventes par téléphone.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">David Bernard</span>
+                            </div>
+                            <button onclick="openArticle('article2')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3: Customer Support -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1460925858430-0b5d4f54793?w=400&h=250&fit=crop" alt="Support client" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Support client</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Pourquoi le Support Externalisé Améliore la Rétention</h3>
+                        <p class="text-gray-600 mb-4">
+                            Optimisez la satisfaction client et réduisez vos coûts avec un support professionnel externalisé.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506794778202-be95480cbbd3?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Émilie Rousseau</span>
+                            </div>
+                            <button onclick="openArticle('article3')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 4: CRM Solutions -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1551280807-ce1a023f302?w=400&h=250&fit=crop" alt="Solutions CRM" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Solutions CRM</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Choisir le CRM Idéal pour Votre Croissance</h3>
+                        <p class="text-gray-600 mb-4">
+                            Guide complet pour sélectionner et implémenter un système CRM qui évolue avec vos besoins.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Jean Moreau</span>
+                            </div>
+                            <button onclick="openArticle('article4')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 5: Healthcare Industry -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop" alt="Communication santé" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Focus secteur</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Améliorer l'Expérience Patient avec la Réception Virtuelle</h3>
+                        <p class="text-gray-600 mb-4">
+                            Optimisez les soins patients et la gestion des rendez-vous avec des services de réception virtuelle.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Dr. Marie Laurent</span>
+                            </div>
+                            <button onclick="openArticle('article5')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 6: Legal Industry -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d5fae82f3?w=400&h=250&fit=crop" alt="Services juridiques" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Focus secteur</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Réception Virtuelle pour Cabinets d'Avocats</h3>
+                        <p class="text-gray-600 mb-4">
+                            Maintenez une image professionnelle tout en optimisant l'intégration des nouveaux clients.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1506764778097-2f8e2d2cf07?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Me. Robert Petit</span>
+                            </div>
+                            <button onclick="openArticle('article6')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 7: Real Estate -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop" alt="Immobilier" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Focus secteur</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Ne Manquez Jamais un Lead en Immobilier</h3>
+                        <p class="text-gray-600 mb-4">
+                            Capturez plus de prospects et concluez davantage de ventes avec une réception 24/7.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Julie Lefebvre</span>
+                            </div>
+                            <button onclick="openArticle('article7')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 8: E-commerce -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="Support e-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Focus secteur</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Scalabilité du Support Client E-commerce</h3>
+                        <p class="text-gray-600 mb-4">
+                            Gérez efficacement les demandes clients sans compromettre la qualité de service.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1494790108757-4c85d8f102d?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Alex Chen</span>
+                            </div>
+                            <button onclick="openArticle('article8')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 9: Financial Services -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=250&fit=crop" alt="Services financiers" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Focus secteur</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Bâtir la Confiance en Finance avec un Appel Professionnel</h3>
+                        <p class="text-gray-600 mb-4">
+                            Renforcez vos relations clients avec une gestion téléphonique experte et sécurisée.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Michel Brown</span>
+                            </div>
+                            <button onclick="openArticle('article9')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 10: Technology Integration -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" alt="Intégration technologique" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-primary-600 text-sm font-semibold">Technologie</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">IA et Humain : L'Alliance Parfaite pour le Support Client</h3>
+                        <p class="text-gray-600 mb-4">
+                            Découvrez comment combiner IA et intervention humaine pour une expérience client optimale.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=30&h=30&fit=crop&crop=face" alt="Auteur" class="w-8 h-8 rounded-full">
+                                <span class="text-sm text-gray-600">Daniel Park</span>
+                            </div>
+                            <button onclick="openArticle('article10')" class="text-primary-600 font-semibold hover:text-primary-700">
+                                Lire la suite →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industry Solutions Section -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Solutions Sectorielles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Solutions de communication spécialisées adaptées à votre secteur d'activité
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Santé</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gestion d'appels conforme HIPAA, planification de rendez-vous et support patient.
+                    </p>
+                    <button onclick="openIndustryArticle('healthcare')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Services Juridiques</h3>
+                    <p class="text-gray-600 mb-4">
+                        Intégration client professionnelle, prise de rendez-vous et messages confidentiels.
+                    </p>
+                    <button onclick="openIndustryArticle('legal')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Immobilier</h3>
+                    <p class="text-gray-600 mb-4">
+                        Capture de leads 24/7, planification de visites et réponse aux demandes de propriétés.
+                    </p>
+                    <button onclick="openIndustryArticle('realestate')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Services Financiers</h3>
+                    <p class="text-gray-600 mb-4">
+                        Communication client sécurisée, prise de rendez-vous et gestion professionnelle.
+                    </p>
+                    <button onclick="openIndustryArticle('financial')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <!-- New Industry Solutions -->
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Éducation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gestion des demandes étudiants, assistance aux inscriptions et communication parents.
+                    </p>
+                    <button onclick="openIndustryArticle('education')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Services à Domicile</h3>
+                    <p class="text-gray-600 mb-4">
+                        Planification de rendez-vous, dispatch d'urgence et service client pour artisans.
+                    </p>
+                    <button onclick="openIndustryArticle('homeservices')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-dumbbell text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fitness & Bien-être</h3>
+                    <p class="text-gray-600 mb-4">
+                        Réservation de cours, demandes d'adhésion et gestion pour centres de bien-être.
+                    </p>
+                    <button onclick="openIndustryArticle('fitness')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-utensils text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hôtellerie</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gestion des réservations, demandes clients et support 24/7 pour restaurants et hôtels.
+                    </p>
+                    <button onclick="openIndustryArticle('hospitality')" class="text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-dark-900 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Restez Informé</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Recevez chaque semaine les derniers conseils et stratégies de communication directement dans votre boîte mail
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Entrez votre email" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <button type="submit" class="px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="article-content">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold"></h2>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            SH
+                        </div>
+                        <span class="text-xl font-bold">Smart Hotline Agency</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Services de communication téléphonique adaptés pour entrepreneurs et PME.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Tous les services</a></li>
+                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'appels</a></li>
+                        <li><a href="emission.html" class="hover:text-white transition-colors">Appels sortants</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Support client</a></li>
+                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
+                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
+                    <p class="text-gray-400">🌐 smart-hotline.com</p>
+                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
+    <!-- WhatsApp Corner -->
+    <div class="whatsapp-corner">
+        <a href="https://wa.me/15148190559?text=Bonjour,%20je%20lis%20votre%20blog%20et%20j'ai%20quelques%20questions.%20Pouvez-vous%20m'aider%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
+    <script>
+        // Article content data - French version
+        const articles = {
+            featured: {
+                title: "Le Guide Complet de la Réception d'Appels Externalisée pour PME",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=400&fit=crop" alt="Réception d'appels" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Dans le paysage concurrentiel actuel, chaque appel compte. Pour les PME, manquer un seul appel peut signifier perdre un client précieux. Les services de réception d'appels externalisés offrent une solution rentable pour garantir que vous ne manquiez jamais une opportunité.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Qu'est-ce que la Réception d'Appels Externalisée ?</h3>
+                    <p class="mb-4">La réception d'appels externalisée implique de faire appel à un service tiers pour gérer vos appels entrants. Ces réceptionnistes professionnels sont formés pour représenter votre entreprise, répondre aux questions, planifier des rendez-vous et prendre des messages selon vos instructions spécifiques.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages Clés pour les PME</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Économies de Coûts:</strong> Obtenez des services de réception professionnels à une fraction du coût du personnel interne</li>
+                        <li><strong>Disponibilité 24/7:</strong> Ne manquez jamais un appel, même en dehors des heures de bureau</li>
+                        <li><strong>Image Professionnelle:</strong> Présentez une image d'entreprise établie et soignée aux appelants</li>
+                        <li><strong>Focus sur le Cœur de Métier:</strong> Libérez votre temps pour vous concentrer sur la croissance de votre entreprise</li>
+                        <li><strong>Scalabilité:</strong> Augmentez ou réduisez facilement en fonction du volume d'appels</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Comment Ça Marche</h3>
+                    <p class="mb-4">Le processus est simple :</p>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Configurez le transfert d'appels vers votre numéro de réception dédié</li>
+                        <li>Fournissez des instructions détaillées sur la manière dont les appels doivent être gérés</li>
+                        <li>Les réceptionnistes répondent aux appels au nom de votre entreprise</li>
+                        <li>Les messages vous sont immédiatement relayés par votre méthode préférée</li>
+                    </ol>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Choisir le Bon Service</h3>
+                    <p class="mb-4">Lors de la sélection d'un service de réception d'appels, considérez :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>L'expérience sectorielle</li>
+                        <li>Les processus de formation et d'assurance qualité</li>
+                        <li>L'intégration avec vos systèmes existants</li>
+                        <li>La structure tarifaire</li>
+                        <li>Les options de personnalisation</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Prêt à transformer votre gestion des appels ? <a href="reception.html" class="text-primary-600 hover:underline">Découvrez nos services de réception d'appels</a> et ne manquez plus jamais d'opportunité.</p>
+                `
+            },
+            article1: {
+                title: "Comment les Réceptionnistes Virtuels Transforment les PME",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1573497019929-2a6321e2ef0?w=800&h=400&fit=crop" alt="Réceptionniste virtuel" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">En tant que propriétaire de PME, vous portez de nombreux chapeaux. Répondre au téléphone tout en essayant de développer votre entreprise peut être un défi. Les réceptionnistes virtuels offrent une solution qui peut transformer votre gestion des interactions clients.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Qu'est-ce qu'un Réceptionniste Virtuel ?</h3>
+                    <p class="mb-4">Un réceptionniste virtuel est un professionnel à distance qui gère vos appels entrants, planifie des rendez-vous, répond aux questions et effectue bon nombre des mêmes tâches qu'un réceptionniste interne, mais à une fraction du coût.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages Clés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Première Impression Professionnelle:</strong> Chaque appel est répondu professionnellement au nom de votre entreprise</li>
+                        <li><strong>Efficacité des Coûts:</strong> Économisez 60-80% par rapport à l'embauche d'un réceptionniste interne</li>
+                        <li><strong>Productivité Accrue:</strong> Concentrez-vous sur votre cœur de métier sans interruptions</li>
+                        <li><strong>Heures Étendues:</strong> Offrez une disponibilité 24/7 sans coûts supplémentaires</li>
+                        <li><strong>Scalabilité:</strong> Ajustez facilement les niveaux de service à mesure que votre entreprise grandit</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Créez des scripts détaillés et des FAQ pour les demandes courantes</li>
+                        <li>Établissez des protocoles clairs pour les appels urgents</li>
+                        <li>Mettez en place des systèmes efficaces de transmission de messages</li>
+                        <li>Examinez régulièrement les journaux d'appels et les retours clients</li>
+                        <li>Maintenez une communication ouverte avec votre équipe de réception virtuelle</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Transformez votre expérience client avec <a href="reception.html" class="text-primary-600 hover:underline">les services de réception virtuelle de Smart Hotline</a>.</p>
+                `
+            },
+            article2: {
+                title: "Stratégies de Télémarketing Efficaces pour PME",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1552664730-a3072ad35f5?w=800&h=400&fit=crop" alt="Télémarketing" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Le télémarketing reste l'un des moyens les plus efficaces pour les PME de générer des leads et de stimuler les ventes. Avec les bonnes stratégies, vous pouvez créer des connexions significatives avec des clients potentiels et développer votre entreprise.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Construire une Liste d'Appels de Qualité</h3>
+                    <p class="mb-4">La base du télémarketing réussi est une liste d'appels de haute qualité :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Achetez des listes auprès de fournisseurs réputés avec des contacts vérifiés</li>
+                        <li>Segmentez votre liste selon les données démographiques, les intérêts ou l'historique d'achat</li>
+                        <li>Mettez à jour et nettoyez régulièrement votre liste pour supprimer les numéros déconnectés</li>
+                        <li>Conformez-vous à toutes les réglementations pertinentes (listes DNC, etc.)</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Rédiger un Script Efficace</h3>
+                    <p class="mb-4">Un bon script guide la conversation sans paraître robotique :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Commencez par une accroche forte qui capte l'attention</li>
+                        <li>Concentrez-vous sur les avantages, pas seulement sur les caractéristiques</li>
+                        <li>Préparez des réponses aux objections communes</li>
+                        <li>Incluez des appels à l'action clairs</li>
+                        <li>Permettez la flexibilité pour une conversation naturelle</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Former Votre Équipe</h3>
+                    <p class="mb-4">Les télévendeurs bien formés sont plus efficaces :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Effectuez régulièrement des exercices de jeu de rôle</li>
+                        <li>Fournissez une formation sur les produits</li>
+                        <li>Enseignez les techniques d'écoute active</li>
+                        <li>Développez des compétences de gestion des objections</li>
+                        <li>Établissez des normes de qualité et des métriques</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Mesurer le Succès</h3>
+                    <p class="mb-4">Suivez ces métriques clés pour évaluer vos efforts de télémarketing :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Taux de conversion des appels</li>
+                        <li>Coût par acquisition</li>
+                        <li>Retour sur investissement</li>
+                        <li>Valeur vie client</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Améliorez vos résultats d'appels sortants avec <a href="emission.html" class="text-primary-600 hover:underline">les solutions de télémarketing de Smart Hotline</a>.</p>
+                `
+            },
+            article3: {
+                title: "Pourquoi le Support Externalisé Améliore la Rétention",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1460925858430-0b5d4f54793?w=800&h=400&fit=crop" alt="Support client" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">La rétention client est cruciale pour la croissance de l'entreprise, et un support de qualité est la clé pour garder les clients satisfaits. L'externalisation de votre support client peut fournir un service professionnel qui améliore la satisfaction tout en réduisant les coûts.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Lien avec la Rétention</h3>
+                    <p class="mb-4">Un support client excellent impacte directement la rétention :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>67% des clients citent de mauvaises expériences comme raison de départ</li>
+                        <li>Il coûte 5-25 fois plus cher d'acquérir de nouveaux clients que d'en conserver</li>
+                        <li>Une augmentation de 5% de la rétention peut augmenter les profits de 25-95%</li>
+                        <li>Les clients satisfaits sont 4 fois plus susceptibles de recommander</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages du Support Externalisé</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Disponibilité 24/7:</strong> Supportez les clients chaque fois qu'ils ont besoin d'aide</li>
+                        <li><strong>Expertise:</strong> Accès à des professionnels formés avec expérience en service client</li>
+                        <li><strong>Scalabilité:</strong> Ajustez facilement les niveaux de support selon la demande</li>
+                        <li><strong>Efficacité des Coûts:</strong> Réduisez les frais généraux tout en maintenant la qualité</li>
+                        <li><strong>Focus:</strong> Permettez à votre équipe de se concentrer sur les activités principales</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Développez des bases de connaissances et des FAQ complètes</li>
+                        <li>Établissez des chemins d'escalade clairs pour les problèmes complexes</li>
+                        <li>Créez des standards de service client détaillés</li>
+                        <li>Mettez en œuvre des processus robustes d'assurance qualité</li>
+                        <li>Examinez régulièrement les métriques de performance et les retours clients</li>
+                    </ol>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Mesurer le Succès</h3>
+                    <p class="mb-4">Suivez ces métriques clés pour évaluer vos efforts de support :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Scores de satisfaction client (CSAT)</li>
+                        <li>Taux de résolution au premier contact</li>
+                        <li>Temps de traitement moyen</li>
+                        <li>Taux de rétention client</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Améliorez votre expérience client avec <a href="support.html" class="text-primary-600 hover:underline">les solutions de support client de Smart Hotline</a>.</p>
+                `
+            },
+            article4: {
+                title: "Choisir le CRM Idéal pour Votre Croissance",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1551280807-ce1a023f302?w=800&h=400&fit=crop" alt="Solutions CRM" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">À mesure que votre entreprise grandit, la gestion des relations clients devient de plus en plus complexe. Un système de Gestion de la Relation Client (CRM) peut vous aider à organiser, automatiser et synchroniser les ventes, le marketing, le service client et le support technique.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Évaluer Vos Besoins</h3>
+                    <p class="mb-4">Avant de sélectionner un CRM, évaluez vos exigences spécifiques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Défis actuels de gestion des données clients</li>
+                        <li>Taille de l'équipe et croissance attendue</li>
+                        <li>Besoins d'intégration avec les systèmes existants</li>
+                        <li>Contraintes budgétaires</li>
+                        <li>Expertise technique de votre équipe</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Fonctionnalités Clés à Considérer</h3>
+                    <p class="mb-4">Recherchez ces fonctionnalités CRM essentielles :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Gestion des contacts et des leads</li>
+                        <li>Suivi du pipeline des ventes</li>
+                        <li>Intégration et automatisation des emails</li>
+                        <li>Rapports et analyses</li>
+                        <li>Accessibilité mobile</li>
+                        <li>Options de personnalisation</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Types de Systèmes CRM</h3>
+                    <p class="mb-4">Choisissez le bon type selon vos besoins commerciaux :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Sur site:</strong> Installé sur vos serveurs, contrôle total mais maintenance plus élevée</li>
+                        <li><strong>Cloud:</strong> Hébergé par le fournisseur, coût initial plus faible et plus facile à scaler</li>
+                        <li><strong>Spécifique au secteur:</strong> Fonctionnalités adaptées à des industries spécifiques</li>
+                        <li><strong>Tout-en-un:</strong> Solutions complètes avec marketing, ventes et service</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Commencez avec des objectifs clairs et des métriques de succès</li>
+                        <li>Impliquez les parties prenantes de tous les départements</li>
+                        <li>Assurez la qualité des données avant la migration</li>
+                        <li>Fournissez une formation complète à tous les utilisateurs</li>
+                        <li>Planifiez la maintenance et les mises à jour continues</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Trouvez la solution CRM parfaite pour votre entreprise avec <a href="crm-lists.html" class="text-primary-600 hover:underline">les services CRM de Smart Hotline</a>.</p>
+                `
+            },
+            article5: {
+                title: "Améliorer l'Expérience Patient avec la Réception Virtuelle",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop" alt="Communication santé" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Dans le domaine de la santé, l'expérience patient commence par ce premier appel téléphonique. Les services de réception virtuelle peuvent aider les prestataires de santé à offrir des soins exceptionnels dès la première interaction, améliorant ainsi la satisfaction et les résultats.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Défi de la Communication Santé</h3>
+                    <p class="mb-4">Les prestataires de santé font face à des défis de communication uniques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Volume d'appels élevé, surtout pendant les heures de pointe</li>
+                        <li>Besoin de communication conforme HIPAA</li>
+                        <li>Appels d'urgence nécessitant une attention immédiate</li>
+                        <li>Besoins complexes de planification de rendez-vous</li>
+                        <li>Gestion d'informations patient sensibles</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages de la Réception Virtuelle en Santé</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Amélioration de la Satisfaction Patient:</strong> Temps d'attente réduits et gestion professionnelle</li>
+                        <li><strong>Disponibilité 24/7:</strong> Les patients peuvent vous joindre à tout moment, y compris les urgences</li>
+                        <li><strong>Efficacité des Coûts:</strong> Réduisez les frais généraux tout en maintenant une qualité de service</li>
+                        <li><strong>Meilleure Allocation des Ressources:</strong> Libérez le personnel clinique pour les soins patients</li>
+                        <li><strong>Réduction des Absences:</strong> Rappels et confirmations automatisés</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Considérations de Conformité HIPAA</h3>
+                    <p class="mb-4">Lors de la sélection d'un service de réception virtuelle pour la santé :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Assurez-vous que le service est conforme HIPAA</li>
+                        <li>Vérifiez la formation du personnel sur les réglementations de confidentialité</li>
+                        <li>Confirmez les méthodes de transmission sécurisées des messages</li>
+                        <li>Établissez des protocoles clairs pour la gestion des informations de santé protégées</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Développez des scripts détaillés pour les scénarios courants</li>
+                        <li>Créez des protocoles pour les appels d'urgence</li>
+                        <li>Établissez des chemins d'escalade clairs</li>
+                        <li>Mettez en place des systèmes sécurisés de transmission de messages</li>
+                        <li>Examinez régulièrement les journaux d'appels et les retours patients</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Améliorez votre expérience patient avec <a href="reception.html" class="text-primary-600 hover:underline">les services de réception santé de Smart Hotline</a>.</p>
+                `
+            },
+            article6: {
+                title: "Réception Virtuelle pour Cabinets d'Avocats",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d5fae82f3?w=800&h=400&fit=crop" alt="Services juridiques" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Pour les cabinets d'avocats, les premières impressions comptent énormément. Les services de réception virtuelle peuvent aider à maintenir une image professionnelle tout en garantissant que chaque client potentiel reçoive une attention rapide et courtoise.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Défi de la Réception Juridique</h3>
+                    <p class="mb-4">Les cabinets d'avocats font face à des défis de réception uniques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Besoin de confidentialité et de discrétion</li>
+                        <li>Volume élevé d'appels pendant les heures de bureau</li>
+                        <li>Exigence de comportement professionnel</li>
+                        <li>Processus d'intégration complexes</li>
+                        <li>Avocats fréquemment indisponibles pour les appels immédiats</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages de la Réception Virtuelle pour Cabinets Juridiques</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Première Impression Professionnelle:</strong> Gestion d'appels constamment professionnelle</li>
+                        <li><strong>Amélioration de l'Intégration Client:</strong> Processus structuré pour recueillir les informations initiales</li>
+                        <li><strong>Confidentialité Renforcée:</strong> Les professionnels formés comprennent les besoins de confidentialité juridique</li>
+                        <li><strong>Efficacité des Coûts:</strong> Réduisez les frais généraux par rapport à la réception interne</li>
+                        <li><strong>Disponibilité 24/7:</strong> Ne manquez jamais un client potentiel, même après les heures</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Fonctionnalités Clés pour Services Juridiques</h3>
+                    <p class="mb-4">Recherchez ces fonctionnalités spécialisées dans un service de réception virtuelle :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Complétion de formulaires d'intégration juridique</li>
+                        <li>Processus de détection de conflits</li>
+                        <li>Planification de rendez-vous avec les avocats</li>
+                        <li>Protocoles d'appel d'urgence</li>
+                        <li>Transmission sécurisée des messages</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Développez des scripts détaillés pour différents types d'appels</li>
+                        <li>Créez des formulaires d'intégration client complets</li>
+                        <li>Établissez des protocoles clairs pour les questions urgentes</li>
+                        <li>Mettez en place des systèmes sécurisés de livraison de messages</li>
+                        <li>Fournissez une formation sur les domaines de pratique spécifiques de votre cabinet</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Élevez l'image professionnelle de votre cabinet avec <a href="reception.html" class="text-primary-600 hover:underline">les services de réception juridique de Smart Hotline</a>.</p>
+                `
+            },
+            article7: {
+                title: "Ne Manquez Jamais un Lead en Immobilier",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop" alt="Immobilier" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">En immobilier, le timing est tout. Un appel manqué peut signifier une vente manquée. Les services de réception virtuelle garantissent que chaque lead est capturé, nourri et converti, vous aidant à développer votre entreprise.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Défi des Leads Immobiliers</h3>
+                    <p class="mb-4">Les agents immobiliers font face à des défis de communication uniques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Volume élevé d'appels des annonces et du marketing</li>
+                        <li>Besoin de réponse immédiate aux nouveaux leads</li>
+                        <li>Agents fréquemment en déplacement pour visiter des propriétés</li>
+                        <li>Demandes après les heures et le week-end</li>
+                        <li>Besoin de qualifier les leads avant d'investir du temps</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages de la Réception Virtuelle pour l'Immobilier</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Capture de Leads:</strong> Ne manquez jamais un acheteur ou vendeur potentiel</li>
+                        <li><strong>Disponibilité 24/7:</strong> Répondez aux demandes à tout moment, jour et nuit</li>
+                        <li><strong>Qualification de Leads:</strong> Pré-sélectionnez les leads pour vous concentrer sur les prospects sérieux</li>
+                        <li><strong>Planification de Rendez-vous:</strong> Planifiez efficacement les visites de propriétés</li>
+                        <li><strong>Image Professionnelle:</strong> Présentez une image d'entreprise établie et soignée</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Fonctionnalités Clés pour l'Immobilier</h3>
+                    <p class="mb-4">Recherchez ces fonctionnalités spécialisées dans un service de réception virtuelle :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Scripts d'informations sur les propriétés</li>
+                        <li>Questions de qualification de leads</li>
+                        <li>Planification de rendez-vous avec intégration calendrier</li>
+                        <li>Intégration CRM pour le suivi des leads</li>
+                        <li>Notification immédiate des leads par SMS ou email</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Créez des fiches d'informations détaillées sur les propriétés</li>
+                        <li>Développez des critères de qualification de leads</li>
+                        <li>Établissez des protocoles clairs pour les demandes urgentes</li>
+                        <li>Mettez en place des systèmes de notification immédiate</li>
+                        <li>Examinez régulièrement les métriques de conversion</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Capturez plus de leads et concluez plus de ventes avec <a href="reception.html" class="text-primary-600 hover:underline">les services de réception immobilière de Smart Hotline</a>.</p>
+                `
+            },
+            article8: {
+                title: "Scalabilité du Support Client E-commerce",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop" alt="Support e-commerce" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">À mesure que votre entreprise e-commerce grandit, le volume de demandes clients augmente également. La mise à l'échelle efficace de vos opérations de support est cruciale pour maintenir la satisfaction et la fidélité des clients.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Défi du Support E-commerce</h3>
+                    <p class="mb-4">Les entreprises e-commerce font face à des défis de support uniques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Volume élevé de demandes, surtout pendant les promotions</li>
+                        <li>Large gamme de questions sur les produits, commandes et politiques</li>
+                        <li>Besoin de support multi-canal (téléphone, email, chat, réseaux sociaux)</li>
+                        <li>Fluctuations saisonnières des besoins de support</li>
+                        <li>Attentes 24/7 des acheteurs en ligne</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages du Support E-commerce Externalisé</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Scalabilité:</strong> Ajustez facilement les niveaux de support selon la demande</li>
+                        <li><strong>Disponibilité 24/7:</strong> Supportez les clients dans différents fuseaux horaires</li>
+                        <li><strong>Efficacité des Coûts:</strong> Réduisez les frais généraux tout en maintenant la qualité</li>
+                        <li><strong>Expertise:</strong> Accès à des professionnels du support formés</li>
+                        <li><strong>Support Multi-canal:</strong> Gérez les demandes sur toutes les plateformes</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Fonctionnalités Clés pour le Support E-commerce</h3>
+                    <p class="mb-4">Recherchez ces fonctionnalités spécialisées dans un service de support :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Intégration avec votre plateforme e-commerce</li>
+                        <li>Assistance statut et suivi des commandes</li>
+                        <li>Informations et recommandations sur les produits</li>
+                        <li>Traitement des retours et échanges</li>
+                        <li>Support technique pour les problèmes du site web</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Créez des bases de connaissances complètes sur les produits</li>
+                        <li>Développez des FAQ et modèles de réponse détaillés</li>
+                        <li>Établissez des chemins d'escalade clairs pour les problèmes complexes</li>
+                        <li>Mettez en œuvre des processus robustes d'assurance qualité</li>
+                        <li>Examinez régulièrement les retours clients et les métriques de satisfaction</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Mettez à l'échelle votre support e-commerce avec <a href="support.html" class="text-primary-600 hover:underline">les solutions spécialisées de Smart Hotline</a>.</p>
+                `
+            },
+            article9: {
+                title: "Bâtir la Confiance en Finance avec un Appel Professionnel",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&h=400&fit=crop" alt="Services financiers" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Dans l'industrie des services financiers, la confiance est votre atout le plus précieux. Une gestion d'appels professionnelle est essentielle pour construire et maintenir cette confiance avec les clients et prospects.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Défi de la Communication Financière</h3>
+                    <p class="mb-4">Les professionnels des services financiers font face à des défis de communication uniques :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Besoin de confidentialité et de sécurité</li>
+                        <li>Produits et services financiers complexes</li>
+                        <li>Exigences de conformité réglementaire</li>
+                        <li>Attentes élevées de professionnalisme</li>
+                        <li>Gestion d'informations client sensibles</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages de la Gestion d'Appels Professionnelle en Finance</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Professionnalisme Renforcé:</strong> Interactions client constamment soignées</li>
+                        <li><strong>Amélioration de l'Expérience Client:</strong> Réponses rapides et compétentes aux demandes</li>
+                        <li><strong>Efficacité Accrue:</strong> Concentrez-vous sur le service client plutôt que les tâches administratives</li>
+                        <li><strong>Meilleure Conversion de Leads:</strong> Gestion professionnelle des demandes de nouveaux prospects</li>
+                        <li><strong>Conformité Réglementaire:</strong> Les professionnels formés comprennent les exigences sectorielles</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Fonctionnalités Clés pour Services Financiers</h3>
+                    <p class="mb-4">Recherchez ces fonctionnalités spécialisées dans un service de gestion d'appels :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Transmission sécurisée des messages</li>
+                        <li>Planification de rendez-vous avec intégration calendrier</li>
+                        <li>Réponses de base sur les produits</li>
+                        <li>Protocoles de vérification client</li>
+                        <li>Formation à la conformité pour tous les représentants</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Développez des scripts détaillés pour différents types de demandes</li>
+                        <li>Créez des protocoles clairs pour les informations sensibles</li>
+                        <li>Établissez des systèmes sécurisés de livraison de messages</li>
+                        <li>Fournissez une formation complète sur vos services spécifiques</li>
+                        <li>Examinez régulièrement les appels pour la qualité et la conformité</li>
+                    </ol>
+                    
+                    <p class="text-lg font-semibold mt-6">Bâtissez la confiance et améliorez vos relations clients avec <a href="reception.html" class="text-primary-600 hover:underline">les solutions services financiers de Smart Hotline</a>.</p>
+                `
+            },
+            article10: {
+                title: "IA et Humain : L'Alliance Parfaite pour le Support Client",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop" alt="Intégration technologique" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Dans le paysage numérique actuel, l'intégration de l'intelligence artificielle avec le support humain révolutionne le service client. Cette approche hybride combine l'efficacité de l'IA avec l'empathie et les capacités de résolution de problèmes des agents humains.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Le Modèle de Support IA-Humain</h3>
+                    <p class="mb-4">Les systèmes de service client les plus efficaces utilisent une approche par niveaux :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>L'IA gère les demandes simples et répétitives instantanément</li>
+                        <li>Les problèmes complexes ou sensibles sont escaladés vers des agents humains</li>
+                        <li>L'IA fournit aux agents des informations pertinentes pendant les interactions</li>
+                        <li>L'apprentissage continu des interactions améliore les deux systèmes</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages de l'Intégration IA-Humain</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Disponibilité 24/7:</strong> L'IA fournit des réponses instantanées à tout moment</li>
+                        <li><strong>Efficacité des Coûts:</strong> Réduction des coûts de main-d'œuvre pour les demandes de routine</li>
+                        <li><strong>Temps de Réponse Améliorés:</strong> L'IA gère immédiatement les requêtes simples</li>
+                        <li><strong>Satisfaction Client Accrue:</strong> Résolution plus rapide des problèmes</li>
+                        <li><strong>Meilleure Allocation des Ressources:</strong> Les agents humains se concentrent sur les interactions complexes et à forte valeur</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Stratégies d'Implémentation</h3>
+                    <ol class="list-decimal pl-6 mb-4 space-y-2">
+                        <li>Identifiez quelles demandes peuvent être gérées par l'IA</li>
+                        <li>Mettez en œuvre des chemins d'escalade clairs pour l'intervention humaine</li>
+                        <li>Formez l'IA sur vos produits, services et voix de marque spécifiques</li>
+                        <li>Assurez une transition fluide entre l'IA et les agents humains</li>
+                        <li>Examinez et optimisez régulièrement les deux systèmes basés sur les retours</li>
+                    </ol>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Meilleures Pratiques pour le Succès</h3>
+                    <p class="mb-4">Suivez ces directives pour des résultats optimaux :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Soyez transparent avec les clients sur quand ils interagissent avec l'IA</li>
+                        <li>Fournissez toujours une option pour parler à un agent humain</li>
+                        <li>Mettez à jour régulièrement les bases de connaissances de l'IA avec de nouvelles informations</li>
+                        <li>Formez les agents humains à travailler efficacement avec les outils IA</li>
+                        <li>Surveillez la satisfaction client sur tous les points de contact</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Découvrez comment Smart Hotline peut vous aider à mettre en œuvre l'équilibre parfait entre technologie et touche humaine avec nos <a href="support.html" class="text-primary-600 hover:underline">solutions de support intégrées</a>.</p>
+                `
+            }
+        };
+        
+        // Industry articles content
+        const industryArticles = {
+            healthcare: {
+                title: "Solutions de Communication pour le Secteur Santé",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop" alt="Santé" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Le secteur de la santé exige une communication précise, empathique et sécurisée. Nos solutions spécialisées répondent aux besoins uniques des prestataires de santé tout en maintenant la conformité réglementaire.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Spécialisés Santé</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Réception d'appels 24/7:</strong> Gestion professionnelle de tous les appels patients</li>
+                        <li><strong>Planification de rendez-vous:</strong> Système optimisé pour réduire les absences</li>
+                        <li><strong>Support multilingue:</strong> Service dans plusieurs langues pour la diversité patient</li>
+                        <li><strong>Gestion d'urgences:</strong> Protocoles clairs pour les situations critiques</li>
+                        <li><strong>Conformité HIPAA:</strong> Formation continue sur la protection des données</li>
+                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Pratique</h3>
+                    <p class="mb-4">Transformez votre communication patient avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Réduction de 40% du temps d'attente téléphonique</li>
+                        <li>Amélioration de 35% du taux de présence aux rendez-vous</li>
+                        <li>Satisfaction patient augmentée de 50%</li>
+                        <li>Libération de 20 heures/semaine pour votre personnel clinique</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Intégration Technologique</h3>
+                    <p class="mb-4">Nos solutions s'intègrent parfaitement avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Systèmes de gestion de pratique médicale</li>
+                        <li>Plateformes de télémédecine</li>
+                        <li>Portails patients</li>
+                        <li>Systèmes de facturation</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Optimisez votre pratique médicale avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions santé spécialisées</a>.</p>
+                `
+            },
+            legal: {
+                title: "Solutions de Communication pour Cabinets Juridiques",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d5fae82f3?w=800&h=400&fit=crop" alt="Juridique" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Les cabinets d'avocats nécessitent une communication discrète, professionnelle et précise. Nos solutions juridiques spécialisées garantissent que chaque interaction client renforce votre réputation et votre efficacité.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Juridiques Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Intégration Client Structurée:</strong> Processus standardisé pour recueillir les informations essentielles</li>
+                        <li><strong>Détection de Conflits:</strong> Vérification préliminaire avant engagement</li>
+                        <li><strong>Planification de Consultations:</strong> Gestion optimisée des calendriers d'avocats</li>
+                        <li><strong>Messages Prioritaires:</strong> Transmission immédiate des communications urgentes</li>
+                        <li><strong>Confidentialité Absolue:</strong> Formation continue sur l'éthique juridique</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Cabinet</h3>
+                    <p class="mb-4">Améliorez votre efficacité avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Augmentation de 30% du taux de conversion de prospects</li>
+                        <li>Réduction de 25% du temps administratif</li>
+                        <li>Amélioration de 40% de la satisfaction client</li>
+                        <li>Présence professionnelle constante, même en dehors des heures de bureau</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Adaptation par Spécialité</h3>
+                    <p class="mb-4">Nos services sont personnalisés selon votre domaine :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Droit familial et successions</li>
+                        <li>Droit des affaires et corporatif</li>
+                        <li>Droit immobilier</li>
+                        <li>Droit pénal</li>
+                        <li>Propriété intellectuelle</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Renforcez l'image professionnelle de votre cabinet avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions juridiques spécialisées</a>.</p>
+                `
+            },
+            realestate: {
+                title: "Solutions de Communication pour Professionnels Immobiliers",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop" alt="Immobilier" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Dans l'immobilier, chaque appel représente une opportunité potentielle. Nos solutions spécialisées garantissent que vous ne manquez jamais un lead, tout en présentant une image professionnelle qui inspire confiance.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Immobiliers Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Capture de Leads 24/7:</strong> Disponibilité constante pour les acheteurs et vendeurs</li>
+                        <li><strong>Qualification Automatisée:</strong> Filtrage des prospects selon vos critères</li>
+                        <li><strong>Planification de Visites:</strong> Coordination efficace des rendez-vous</li>
+                        <li><strong>Suivi Proactif:</strong> Rappels automatiques pour les prospects tièdes</li>
+                        <li><strong>Intégration CRM:</strong> Synchronisation avec vos systèmes existants</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Activité</h3>
+                    <p class="mb-4">Maximisez votre potentiel avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Augmentation de 45% du taux de conversion de leads</li>
+                        <li>Réponse à 100% des appels en moins de 3 sonneries</li>
+                        <li>Libération de 15 heures/semaine pour vos agents</li>
+                        <li>Amélioration de 35% de l'expérience client</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Solutions par Type d'Immobilier</h3>
+                    <p class="mb-4">Nous adaptons nos services selon votre spécialité :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Immobilier résidentiel</li>
+                        <li>Immobilier commercial</li>
+                        <li>Gestion immobilière</li>
+                        <li>Développement de projets</li>
+                        <li>Conseil en investissement</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Optimisez votre pipeline de ventes avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions immobilières spécialisées</a>.</p>
+                `
+            },
+            financial: {
+                title: "Solutions de Communication pour Services Financiers",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&h=400&fit=crop" alt="Financier" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Le secteur financier exige une communication sécurisée, précise et conforme. Nos solutions spécialisées renforcent la confiance de vos clients tout en optimisant vos opérations quotidiennes.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Financiers Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Authentification Sécurisée:</strong> Protocoles de vérification client robustes</li>
+                        <li><strong>Gestion de Rendez-vous:</strong> Planification efficace des consultations</li>
+                        <li><strong>Support Multi-canal:</strong> Assistance par téléphone, email et chat sécurisé</li>
+                        <li><strong>Conformité Réglementaire:</strong> Formation continue sur les normes sectorielles</li>
+                        <li><strong>Escalade Intelligente:</strong> Orientation vers les bons experts internes</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Institution</h3>
+                    <p class="mb-4">Renforcez votre relation client avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Réduction de 50% du temps d'attente client</li>
+                        <li>Amélioration de 40% du taux de résolution au premier contact</li>
+                        <li>Augmentation de 30% de la satisfaction client</li>
+                        <li>Conformité garantie à 100% avec les réglementations</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Adaptation par Sous-secteur</h3>
+                    <p class="mb-4">Nos services sont personnalisés selon votre spécialité :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Gestion de patrimoine</li>
+                        <li>Services bancaires</li>
+                        <li>Assurance</li>
+                        <li>Investissement</li>
+                        <li>Technologie financière (FinTech)</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Renforcez la confiance de vos clients avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions financières spécialisées</a>.</p>
+                `
+            },
+            education: {
+                title: "Solutions de Communication pour le Secteur Éducatif",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=400&fit=crop" alt="Éducation" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Les établissements éducatifs jonglent avec de multiples communications : étudiants, parents, personnel et prospects. Nos solutions spécialisées rationalisent ces interactions pour améliorer l'expérience globale.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Éducatifs Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Gestion des Inscriptions:</strong> Support complet pour les nouveaux étudiants</li>
+                        <li><strong>Communication Parents-École:</strong> Filtrage et transmission des messages importants</li>
+                        <li><strong>Support Étudiant:</strong> Assistance pour les questions académiques et administratives</li>
+                        <li><strong>Gestion des Absences:</strong> Suivi et notification automatisés</li>
+                        <li><strong>Planification d'Événements:</strong> Coordination des activités scolaires</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Établissement</h3>
+                    <p class="mb-4">Améliorez votre efficacité avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Réduction de 35% du temps administratif</li>
+                        <li>Amélioration de 40% du taux de satisfaction parentale</li>
+                        <li>Augmentation de 25% du taux de conversion des inscriptions</li>
+                        <li>Disponibilité 24/7 pendant les périodes critiques (rentrée, examens)</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Solutions par Type d'Établissement</h3>
+                    <p class="mb-4">Nous adaptons nos services selon votre structure :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Écoles primaires et secondaires</li>
+                        <li>Établissements d'enseignement supérieur</li>
+                        <li>Centres de formation professionnelle</li>
+                        <li>Écoles de langues</li>
+                        <li>Plateformes d'apprentissage en ligne</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Optimisez la communication de votre établissement avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions éducatives spécialisées</a>.</p>
+                `
+            },
+            homeservices: {
+                title: "Solutions de Communication pour Services à Domicile",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop" alt="Services à domicile" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Les entreprises de services à domicile gèrent des demandes variées, des urgences aux planifications. Nos solutions spécialisées garantissent une réponse rapide et professionnelle à chaque appel client.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services à Domicile Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Dispatch d'Urgences:</strong> Triage et attribution rapide des interventions critiques</li>
+                        <li><strong>Planification de Rendez-vous:</strong> Optimisation des calendriers des techniciens</li>
+                        <li><strong>Support Client:</strong> Assistance pour les questions de service et facturation</li>
+                        <li><strong>Suivi de Demandes:</strong> Notifications automatiques de statut</li>
+                        <li><strong>Intégration Technique:</strong> Synchronisation avec vos systèmes de gestion</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Entreprise</h3>
+                    <p class="mb-4">Améliorez votre efficacité opérationnelle avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Réduction de 45% du temps de réponse aux urgences</li>
+                        <li>Augmentation de 30% du taux de prise de rendez-vous</li>
+                        <li>Amélioration de 40% de la satisfaction client</li>
+                        <li>Optimisation de 25% des itinéraires des techniciens</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Solutions par Type de Service</h3>
+                    <p class="mb-4">Nous adaptons nos services selon votre spécialité :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Services de plomberie et électricité</li>
+                        <li>Entretien CVC</li>
+                        <li>Services de nettoyage</li>
+                        <li>Réparation d'appareils ménagers</li>
+                        <li>Jardinage et aménagement paysager</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Optimisez votre service client avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions pour services à domicile</a>.</p>
+                `
+            },
+            fitness: {
+                title: "Solutions de Communication pour Fitness et Bien-être",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop" alt="Fitness" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">Les centres de fitness et de bien-être gèrent un flux constant de communications : inscriptions, réservations de cours, questions sur les abonnements. Nos solutions spécialisées améliorent l'expérience membre et libèrent votre personnel.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Fitness Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Gestion des Inscriptions:</strong> Support complet pour les nouveaux membres</li>
+                        <li><strong>Réservation de Cours:</strong> Planification et confirmation des sessions</li>
+                        <li><strong>Support Abonnement:</strong> Assistance pour les questions de facturation</li>
+                        <li><strong>Rappels Automatisés:</strong> Notifications pour cours et événements</li>
+                        <li><strong>Enquêtes de Satisfaction:</strong> Collecte de retours membres</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Établissement</h3>
+                    <p class="mb-4">Améliorez votre efficacité avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Augmentation de 35% du taux de rétention des membres</li>
+                        <li>Réduction de 40% des absences aux cours</li>
+                        <li>Amélioration de 45% de l'expérience membre</li>
+                        <li>Libération de 20 heures/semaine pour votre personnel</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Solutions par Type d'Établissement</h3>
+                    <p class="mb-4">Nous adaptons nos services selon votre spécialité :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Salles de sport traditionnelles</li>
+                        <li>Studios de yoga et pilates</li>
+                        <li>Centres de crossfit</li>
+                        <li>Clubs de natation</li>
+                        <li>Centres de spa et bien-être</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Optimisez la gestion de votre centre avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions fitness spécialisées</a>.</p>
+                `
+            },
+            hospitality: {
+                title: "Solutions de Communication pour l'Hôtellerie",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop" alt="Hôtellerie" class="w-full rounded-lg mb-6">
+                    <p class="text-lg mb-4">L'industrie hôtelière vit de l'excellence du service client. Nos solutions spécialisées garantissent que chaque interaction, de la réservation au départ, renforce votre réputation et fidélise vos clients.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Services Hôtellerie Spécialisés</h3>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li><strong>Gestion des Réservations:</strong> Support 24/7 pour les demandes de chambres</li>
+                        <li><strong>Service Client:</strong> Assistance pour les questions avant et pendant le séjour</li>
+                        <li><strong>Gestion des Groupes:</strong> Coordination pour événements et réservations multiples</li>
+                        <li><strong>Support Multilingue:</strong> Service dans plusieurs langues pour les voyageurs internationaux</li>
+                        <li><strong>Intégration PMS:</strong> Synchronisation avec vos systèmes de gestion</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Avantages pour Votre Établissement</h3>
+                    <p class="mb-4">Améliorez votre performance avec :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Augmentation de 30% du taux de conversion des réservations</li>
+                        <li>Réduction de 50% du temps de réponse aux demandes</li>
+                        <li>Amélioration de 40% du score de satisfaction client</li>
+                        <li>Augmentation de 25% des réservations répétées</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Solutions par Type d'Établissement</h3>
+                    <p class="mb-4">Nous adaptons nos services selon votre structure :</p>
+                    <ul class="list-disc pl-6 mb-4 space-y-2">
+                        <li>Hôtels indépendants et chaînes</li>
+                        <li>Établissements de restauration</li>
+                        <li>Destinations de villégiature</li>
+                        <li>Locations de vacances</li>
+                        <li>Événements et conférences</li>
+                    </ul>
+                    
+                    <p class="text-lg font-semibold mt-6">Élevez la qualité de votre service client avec <a href="reception.html" class="text-primary-600 hover:underline">nos solutions hôtellerie spécialisées</a>.</p>
+                `
+            }
+        };
+        
+        // DOM Elements
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const chatButton = document.getElementById('chatButton');
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        const articleModal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
+        });
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Chat functionality
+            chatButton.addEventListener('click', () => {
+                // Detect if mobile or desktop
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // Open WhatsApp on mobile
+                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                } else {
+                    // Open email client on desktop
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                }
+            });
+        }
+        
+        // Open article modal
+        function openArticle(articleId) {
+            const article = articles[articleId];
+            if (article) {
+                modalTitle.textContent = article.title;
+                modalContent.innerHTML = article.content;
+                articleModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Open industry article modal
+        function openIndustryArticle(industryId) {
+            const article = industryArticles[industryId];
+            if (article) {
+                modalTitle.textContent = article.title;
+                modalContent.innerHTML = article.content;
+                articleModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Close article modal
+        function closeArticle() {
+            articleModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal on background click
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeArticle();
+            }
+        });
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleModal.classList.contains('active')) {
+                closeArticle();
+            }
+        });
+    </script>
+</body>
+</html>
