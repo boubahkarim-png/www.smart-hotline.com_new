@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Smart Hotline Agency | Communication Services for SMEs</title>
-    <meta name="description" content="Contact Smart Hotline Agency for communication solutions adapted to entrepreneurs and SMEs. Request a free demo or schedule a meeting.">
-    <meta name="keywords" content="contact smart hotline, outsourced call center, remote receptionist, telemarketing, customer support">
+    <title>Contact | Smart Hotline Agency | Professional Communication Services</title>
+    <meta name="description" content="Contact Smart Hotline Agency for professional communication solutions. Get 2 weeks FREE trial + FREE CRM with qualified lists. Call +1 514 819 0559">
+    <meta name="keywords" content="contact smart hotline, virtual receptionist, call center services, business communication, customer support">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact | Smart Hotline Agency">
-    <meta property="og:description" content="Contact us for communication solutions adapted to your business.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact | Smart Hotline Agency | Professional Communication Services">
+    <meta property="og:description" content="Get 2 weeks FREE trial + FREE CRM with qualified lists. Professional communication solutions for businesses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/en/contact.html">
-    <meta property="og:image" content="https://smart-hotline.com/images/hero/contact-hero.jpg">
+    <meta property="og:image" content="https://smart-hotline.com/images/contact-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/contact.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html" />
+    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/en/contact.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -71,16 +81,11 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'scroll': 'scroll 20s linear infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
                             '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
                         }
                     }
                 }
@@ -167,6 +172,17 @@
             left: 20px;
             z-index: 999;
         }
+        
+        /* Success message styling */
+        .form-success {
+            display: none;
+            background: #d1fae5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -192,14 +208,10 @@
             <div class="flex items-center space-x-6">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50">
-                        <span id="currentLang">EN</span>
+                    <a href="../fr/contact.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50">
+                        <span>EN</span>
                         <i class="fas fa-exchange-alt text-xs ml-1"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="contact-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="contact.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
+                    </a>
                 </div>
                 
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
@@ -227,17 +239,17 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Contact Us for Your Project</span>
+                        <span class="gradient-text">Contact Us Today</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Choose contact method that works best for you. Our team is available to answer your questions and help you implement your communication solutions.
+                        Get started with 2 weeks FREE trial on all communication services + FREE CRM with qualified lists. Our team is ready to help transform your business communication.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact-form" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Send a Message
+                            Start Free Trial
                         </a>
                         <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Call Now
+                            Call Now: +1 514 819 0559
                         </a>
                     </div>
                 </div>
@@ -255,22 +267,22 @@
     <!-- Special Offers Banner -->
     <section class="py-8 bg-gradient-to-r from-orange-400 to-orange-500 scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Limited Time Offers</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Limited Time Special Offers</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">🎁</div>
                     <h3 class="font-bold text-lg text-white mb-1">2 Weeks FREE Trial</h3>
-                    <p class="text-white">For all our communication services</p>
+                    <p class="text-white">All communication services - no commitment</p>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">📊</div>
                     <h3 class="font-bold text-lg text-white mb-1">FREE CRM + Lists</h3>
-                    <p class="text-white">100% up-to-date qualified lists</p>
+                    <p class="text-white">Professional CRM with qualified contact lists</p>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">💰</div>
                     <h3 class="font-bold text-lg text-white mb-1">10% Discount</h3>
-                    <p class="text-white">For 3+ month commitment</p>
+                    <p class="text-white">For 3+ month commitment after trial</p>
                 </div>
             </div>
         </div>
@@ -280,9 +292,9 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Choose Your Contact Method</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Multiple Ways to Reach Us</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    We're available by phone, WhatsApp, email or in-person meeting to answer all your questions
+                    Choose the contact method that works best for you. We're available by phone, WhatsApp, email, or schedule a meeting.
                 </p>
             </div>
             
@@ -291,44 +303,44 @@
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-phone text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Phone</h3>
+                    <h3 class="text-xl font-bold mb-3">Phone Call</h3>
                     <p class="text-gray-600 mb-4">
-                        Talk immediately with one of our experts about your communication needs
+                        Speak directly with our experts about your communication needs and free trial
                     </p>
                     <span class="text-primary-600 font-medium">+1 514 819 0559</span>
                 </a>
                 
-                <a href="https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
+                <a href="https://wa.me/15148190559?text=Hello,%20I'm%20interested%20in%20your%202%20weeks%20FREE%20trial%20and%20FREE%20CRM.%20Can%20you%20provide%20more%20information%3F" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fab fa-whatsapp text-primary-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">WhatsApp</h3>
                     <p class="text-gray-600 mb-4">
-                        Exchange messages quickly with our team for quick answers to your questions
+                        Quick messaging with our team. Perfect for initial inquiries and quick questions.
                     </p>
-                    <span class="text-primary-600 font-medium">Chat on WhatsApp</span>
+                    <span class="text-primary-600 font-medium">Start Chat</span>
                 </a>
                 
-                <a href="mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Smart%20Hotline&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
+                <a href="mailto:direction@smart-hotline.com?subject=Free%20Trial%20Inquiry%20-%20Smart%20Hotline&body=Hello,%20I'm%20interested%20in%20your%202%20weeks%20FREE%20trial%20and%20FREE%20CRM%20offer.%20Please%20send%20me%20more%20information." class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-envelope text-primary-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Email</h3>
                     <p class="text-gray-600 mb-4">
-                        Send us your detailed project requirements and we'll respond within 24 hours
+                        Send detailed requirements. We respond within 2 hours during business days.
                     </p>
-                    <span class="text-primary-600 font-medium">Send an email</span>
+                    <span class="text-primary-600 font-medium">direction@smart-hotline.com</span>
                 </a>
                 
                 <a href="https://calendly.com/boubah-karim/30min" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-calendar-alt text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Meeting</h3>
+                    <h3 class="text-xl font-bold mb-3">Video Meeting</h3>
                     <p class="text-gray-600 mb-4">
-                        Schedule a dedicated consultation with one of our experts to discuss your specific needs
+                        30-minute consultation to discuss your specific needs and demo our services.
                     </p>
-                    <span class="text-primary-600 font-medium">Book a meeting</span>
+                    <span class="text-primary-600 font-medium">Schedule Meeting</span>
                 </a>
             </div>
         </div>
@@ -339,73 +351,88 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Send Us a Message</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Start Your Free Trial Today</h2>
                     <p class="text-xl text-gray-600">
-                        Fill out the form below and we'll get back to you within 24 hours
+                        Fill out the form below to claim your 2 weeks FREE trial + FREE CRM with qualified lists
                     </p>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg p-8">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Success Message -->
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Thank you! Your message has been sent successfully. We'll contact you within 2 hours to set up your free trial.
+                    </div>
+                    
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
                         <input type="hidden" name="form-name" value="contact">
                         <div class="hidden">
-                            <label>Don't fill out if you're a robot: <input name="bot-field"></label>
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
-                                <input type="text" id="name" name="name" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                             <div>
-                                <label for="company" class="block text-gray-700 font-medium mb-2">Company</label>
+                                <label for="company" class="block text-gray-700 font-medium mb-2">Company Name</label>
                                 <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
-                                <input type="email" id="email" name="email" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                             <div>
-                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                         </div>
                         
-                        <div class="md:col-span-2">
-                            <label for="service" class="block text-gray-700 font-medium mb-2">Service you're interested in *</label>
-                            <select id="service" name="service" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                                <option value="">Select a service</option>
-                                <option value="reception">Call Reception</option>
-                                <option value="emission">Outbound Calls</option>
-                                <option value="support">Customer Support</option>
-                                <option value="crm">CRM & Lists</option>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Services You're Interested In *</label>
+                            <select id="service" name="service" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <option value="">Select services</option>
+                                <option value="call-answering">Call Answering & Virtual Receptionist</option>
+                                <option value="outbound-calls">Outbound Calls & Telemarketing</option>
+                                <option value="customer-support">Customer Support</option>
+                                <option value="crm-lists">CRM + Qualified Lists</option>
                                 <option value="multiple">Multiple Services</option>
-                                <option value="other">Other</option>
+                                <option value="not-sure">Not Sure - Need Consultation</option>
                             </select>
                         </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
-                        <textarea id="message" name="message" rows="5" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none"></textarea>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex items-start">
-                            <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-2">
-                            <label for="newsletter" class="text-gray-700">I want to receive information about special offers and new services</label>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message or Specific Requirements</label>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" placeholder="Tell us about your business and communication needs..."></textarea>
                         </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="free-trial" name="free-trial" class="mt-1 mr-2" checked>
+                                <label for="free-trial" class="text-gray-700">Yes, I want to claim my 2 weeks FREE trial + FREE CRM with qualified lists</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-2">
+                                <label for="newsletter" class="text-gray-700">Send me updates about new services and special offers</label>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors w-full md:w-auto">
+                                <i class="fas fa-gift mr-2"></i>
+                                Claim Free Trial
+                            </button>
+                            <p class="text-sm text-gray-600 mt-3">No credit card required. No commitment.</p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -416,7 +443,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
                 <p class="text-xl text-gray-600">
-                    Answers to common questions about our communication services
+                    Common questions about our free trial and services
                 </p>
             </div>
             
@@ -424,48 +451,48 @@
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Are your services suitable for small businesses?</h3>
+                            <h3 class="font-semibold text-lg">What's included in the 2 weeks FREE trial?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Absolutely! Our services are specifically designed for small and medium businesses. We offer flexible plans that scale with your growth without requiring significant upfront investment.
+                                The free trial includes full access to your chosen communication services (call answering, customer support, or outbound calls) with dedicated agents, plus our professional CRM system with qualified contact lists. No limitations during the trial period.
                             </p>
                         </div>
                     </div>
                     
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">How quickly can you implement your services?</h3>
+                            <h3 class="font-semibold text-lg">Is there any commitment required for the free trial?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Most of our services can be implemented within 3-5 business days. We provide complete training and support to ensure a smooth transition with minimal disruption to your operations.
+                                Absolutely no commitment required. The free trial is completely obligation-free. If you're satisfied after 2 weeks, you can continue with our monthly plans. If not, there's no charge and no hard feelings.
                             </p>
                         </div>
                     </div>
                     
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Do you offer bilingual services?</h3>
+                            <h3 class="font-semibold text-lg">How quickly can you start the free trial?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Yes, we offer fully bilingual services in both French and English. Our team is proficient in both languages and can seamlessly switch between them based on your customer preferences.
+                                We can typically get your free trial started within 24-48 hours after our initial consultation. The setup process is quick and we provide full training to ensure you get the most out of your trial period.
                             </p>
                         </div>
                     </div>
                     
                     <div>
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">What industries do you specialize in?</h3>
+                            <h3 class="font-semibold text-lg">What happens after the free trial ends?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                We have experience across multiple industries including technology, professional services, retail, healthcare, and more. Our solutions are customized to address the specific communication needs of each sector.
+                                After your 2-week trial, we'll schedule a review call to discuss your experience. If you decide to continue, we'll transition you to our regular monthly plans. As a trial participant, you'll receive a 10% discount if you commit to 3+ months of service.
                             </p>
                         </div>
                     </div>
@@ -477,16 +504,16 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Communication?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business Communication?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Join hundreds of entrepreneurs and SMEs who have already optimized their customer relations with our solutions.
+                Join hundreds of businesses that have improved customer satisfaction and increased revenue with our professional communication solutions.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact-form" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Request a Free Demo
+                    Start Free Trial
                 </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    See Our Pricing
+                <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                    Call Now: +1 514 819 0559
                 </a>
             </div>
         </div>
@@ -504,14 +531,14 @@
                         <span class="text-xl font-bold">Smart Hotline Agency</span>
                     </div>
                     <p class="text-gray-400">
-                        Phone communication services adapted for entrepreneurs and SMEs.
+                        Professional communication services tailored for entrepreneurs and SMEs.
                     </p>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
+                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Answering</a></li>
                         <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
                         <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
@@ -544,7 +571,7 @@
                     <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
                     <p class="text-gray-400">📧 direction@smart-hotline.com</p>
                     <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+                    <p class="text-gray-400">🗓️ Meeting: calendly.com/boubah-karim/30min</p>
                 </div>
             </div>
             
@@ -561,26 +588,21 @@
     
     <!-- WhatsApp Corner -->
     <div class="whatsapp-corner">
-        <a href="https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+        <a href="https://wa.me/15148190559?text=Hello,%20I'm%20interested%20in%20your%202%20weeks%20FREE%20trial%20and%20FREE%20CRM.%20Can%20you%20provide%20more%20information%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
     </div>
     
     <script>
         // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const chatButton = document.getElementById('chatButton');
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
         const faqToggles = document.querySelectorAll('.faq-toggle');
-        
-        // State
-        let currentLang = 'en';
-        
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('form-success');
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize scroll reveal
@@ -613,33 +635,6 @@
         
         // Set up event listeners
         function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'contact-fr.html';
-                    }
-                });
-            });
-            
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
@@ -671,12 +666,26 @@
                 
                 if (isMobile) {
                     // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F', '_blank');
+                    window.open('https://wa.me/15148190559?text=Hello,%20I%27m%20interested%20in%20your%202%20weeks%20FREE%20trial%20and%20FREE%20CRM.%20Can%20you%20provide%20more%20information%3F', '_blank');
                 } else {
                     // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Smart%20Hotline&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F';
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Free%20Trial%20Inquiry%20-%20Smart%20Hotline&body=Hello,%20I%27m%20interested%20in%20your%202%20weeks%20FREE%20trial%20and%20FREE%20CRM%20offer.%20Please%20send%20me%20more%20information.';
                 }
             });
+            
+            // Form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // In a real implementation, this would be handled by Netlify
+                    // For demo purposes, we'll show success message
+                    e.preventDefault();
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
         }
     </script>
 </body>
