@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Smart Hotline Agency | Communication Services for SMEs</title>
-    <meta name="description" content="Contact Smart Hotline Agency for communication solutions adapted to entrepreneurs and SMEs. Request a free demo or schedule a meeting.">
-    <meta name="keywords" content="contact smart hotline, outsourced call center, remote receptionist, telemarketing, customer support">
+    <title>Contact | Agence Smart Hotline | Services de Communication Professionnels</title>
+    <meta name="description" content="Contactez l'Agence Smart Hotline pour des solutions de communication professionnelles. Obtenez 2 semaines d'essai GRATUIT + CRM GRATUIT avec listes qualifiées. Appelez +1 514 819 0559">
+    <meta name="keywords" content="contact smart hotline, réceptionniste virtuel, services centre d'appels, communication d'entreprise, support client">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact | Smart Hotline Agency">
-    <meta property="og:description" content="Contact us for communication solutions adapted to your business.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact | Agence Smart Hotline | Services de Communication Professionnels">
+    <meta property="og:description" content="Obtenez 2 semaines d'essai GRATUIT + CRM GRATUIT avec listes qualifiées. Solutions de communication professionnelles pour entreprises.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/contact.html">
-    <meta property="og:image" content="https://smart-hotline.com/images/hero/contact-hero.jpg">
+    <meta property="og:url" content="https://smart-hotline.com/fr/contact.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/contact-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/fr/contact.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
+    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/fr/contact.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,6 +61,18 @@
                             700: '#334155',
                             800: '#1e293b',
                             900: '#0f172a',
+                        },
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fbbf24',
+                            400: '#f59e0b',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
                         }
                     },
                     fontFamily: {
@@ -59,16 +81,11 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'scroll': 'scroll 20s linear infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
                             '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
                         }
                     }
                 }
@@ -148,13 +165,31 @@
         .offer-badge {
             animation: pulse-slow 3s infinite;
         }
+        
+        .whatsapp-corner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        
+        /* Success message styling */
+        .form-success {
+            display: none;
+            background: #d1fae5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
+            <a href="index.html" class="flex items-center space-x-3">
                 <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
                     SH
                 </div>
@@ -162,25 +197,21 @@
             </a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
                 <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-primary-600 font-semibold">About</a>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
                 <a href="contact.html" class="text-primary-600 font-semibold">Contact</a>
             </div>
             
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-6">
                 <!-- Language Selector -->
                 <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="contact-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="contact.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
+                    <a href="../en/contact.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50">
+                        <span>FR</span>
+                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
+                    </a>
                 </div>
                 
                 <button id="mobileMenuToggle" class="md:hidden text-gray-700">
@@ -192,10 +223,10 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
                 <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-primary-600 font-semibold">About</a>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
                 <a href="contact.html" class="text-primary-600 font-semibold">Contact</a>
             </div>
@@ -208,25 +239,25 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Contact Us for Your Project</span>
+                        <span class="gradient-text">Contactez-Nous Aujourd'hui</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Choose the contact method that works best for you. Our team is available to answer your questions and help you implement your communication solutions.
+                        Commencez avec 2 semaines d'essai GRATUIT sur tous nos services de communication + CRM GRATUIT avec listes qualifiées. Notre équipe est prête à transformer votre communication d'entreprise.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact-form" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Send a Message
+                            Essai Gratuit
                         </a>
                         <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Call Now
+                            Appelez: +1 514 819 0559
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/hero/contact-hero.jpg" alt="Contact Smart Hotline" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">24/7</div>
-                        <div class="text-sm">Support Available</div>
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contactez Smart Hotline" class="rounded-xl shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-orange-500 text-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl mb-2">24/7</div>
+                        <div class="text-sm">Support Disponible</div>
                     </div>
                 </div>
             </div>
@@ -234,24 +265,24 @@
     </section>
     
     <!-- Special Offers Banner -->
-    <section class="py-8 bg-gradient-to-r from-yellow-400 to-orange-500 scroll-reveal">
+    <section class="py-8 bg-gradient-to-r from-orange-400 to-orange-500 scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Limited Time Offers</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Offres Spéciales Limitées</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">🎁</div>
-                    <h3 class="font-bold text-lg text-white">2 Weeks FREE Trial</h3>
-                    <p class="text-white">For all our communication services</p>
+                    <h3 class="font-bold text-lg text-white mb-1">2 Semaines ESSAI GRATUIT</h3>
+                    <p class="text-white">Tous services de communication - sans engagement</p>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">📊</div>
-                    <h3 class="font-bold text-lg text-white">FREE CRM + Lists</h3>
-                    <p class="text-white">100% up-to-date qualified lists</p>
+                    <h3 class="font-bold text-lg text-white mb-1">CRM GRATUIT + Listes</h3>
+                    <p class="text-white">CRM professionnel avec listes de contacts qualifiés</p>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
                     <div class="text-3xl mb-2">💰</div>
-                    <h3 class="font-bold text-lg text-white">10% Discount</h3>
-                    <p class="text-white">For 3+ month commitment</p>
+                    <h3 class="font-bold text-lg text-white mb-1">10% de Réduction</h3>
+                    <p class="text-white">Pour engagement de 3+ mois après l'essai</p>
                 </div>
             </div>
         </div>
@@ -261,9 +292,9 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Choose Your Contact Method</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Plusieurs Façons de Nous Contacter</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    We're available by phone, WhatsApp, email or in-person meeting to answer all your questions
+                    Choisissez la méthode de contact qui vous convient le mieux. Nous sommes disponibles par téléphone, WhatsApp, email ou réunion programmée.
                 </p>
             </div>
             
@@ -272,44 +303,44 @@
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-phone text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Phone</h3>
+                    <h3 class="text-xl font-bold mb-3">Appel Téléphonique</h3>
                     <p class="text-gray-600 mb-4">
-                        Talk immediately with one of our experts about your communication needs
+                        Parlez directement avec nos experts de vos besoins en communication et de l'essai gratuit
                     </p>
                     <span class="text-primary-600 font-medium">+1 514 819 0559</span>
                 </a>
                 
-                <a href="https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
+                <a href="https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20votre%20offre%20de%202%20semaines%20d'essai%20GRATUIT%20et%20le%20CRM%20GRATUIT.%20Pouvez-vous%20me%20donner%20plus%20d'informations%20%3F" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fab fa-whatsapp text-primary-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">WhatsApp</h3>
                     <p class="text-gray-600 mb-4">
-                        Exchange messages quickly with our team for quick answers to your questions
+                        Échangez rapidement avec notre équipe. Idéal pour les demandes initiales et questions rapides.
                     </p>
-                    <span class="text-primary-600 font-medium">Chat on WhatsApp</span>
+                    <span class="text-primary-600 font-medium">Démarrer le Chat</span>
                 </a>
                 
-                <a href="mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Smart%20Hotline&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
+                <a href="mailto:direction@smart-hotline.com?subject=Demande%20d'information%20-%20Essai%20Gratuit%20Smart%20Hotline&body=Bonjour,%20je%20suis%20intéressé(e)%20par%20votre%20offre%20de%202%20semaines%20d'essai%20GRATUIT%20et%20le%20CRM%20GRATUIT.%20Pouvez-vous%20me%20donner%20plus%20d'informations%20%3F" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-envelope text-primary-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Email</h3>
                     <p class="text-gray-600 mb-4">
-                        Send us your detailed project requirements and we'll respond within 24 hours
+                        Envoyez vos besoins détaillés. Nous répondons dans les 2 heures pendant les jours ouvrables.
                     </p>
-                    <span class="text-primary-600 font-medium">Send an email</span>
+                    <span class="text-primary-600 font-medium">direction@smart-hotline.com</span>
                 </a>
                 
                 <a href="https://calendly.com/boubah-karim/30min" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-calendar-alt text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Meeting</h3>
+                    <h3 class="text-xl font-bold mb-3">Réunion Vidéo</h3>
                     <p class="text-gray-600 mb-4">
-                        Schedule a dedicated consultation with one of our experts to discuss your specific needs
+                        Consultation de 30 minutes pour discuter de vos besoins spécifiques et démo de nos services.
                     </p>
-                    <span class="text-primary-600 font-medium">Book a meeting</span>
+                    <span class="text-primary-600 font-medium">Planifier une Réunion</span>
                 </a>
             </div>
         </div>
@@ -320,75 +351,88 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Send Us a Message</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Commencez Votre Essai Gratuit Aujourd'hui</h2>
                     <p class="text-xl text-gray-600">
-                        Fill out the form below and we'll get back to you within 24 hours
+                        Remplissez le formulaire ci-dessous pour bénéficier de 2 semaines d'essai GRATUIT + CRM GRATUIT avec listes qualifiées
                     </p>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg p-8">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Success Message -->
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Merci ! Votre message a été envoyé avec succès. Nous vous contacterons dans les 2 heures pour configurer votre essai gratuit.
+                    </div>
+                    
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
                         <input type="hidden" name="form-name" value="contact">
                         <div class="hidden">
-                            <label>Don't fill out if you're a robot: <input name="bot-field"></label>
+                            <label>Ne remplissez pas ceci si vous êtes humain: <input name="bot-field"></label>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
-                                <input type="text" id="name" name="name" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom Complet *</label>
+                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                             <div>
-                                <label for="company" class="block text-gray-700 font-medium mb-2">Company</label>
+                                <label for="company" class="block text-gray-700 font-medium mb-2">Nom de l'Entreprise</label>
                                 <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
-                                <input type="email" id="email" name="email" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Adresse Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                             <div>
-                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Numéro de Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
                             </div>
                         </div>
                         
-                        <div class="md:col-span-2">
-                            <label for="service" class="block text-gray-700 font-medium mb-2">Service you're interested in *</label>
-                                <select id="service" name="service" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                                    <option value="">Select a service</option>
-                                    <option value="reception">Call Reception</option>
-                                    <option value="emission">Outbound Calls</option>
-                                    <option value="support">Customer Support</option>
-                                    <option value="crm">CRM & Lists</option>
-                                    <option value="multiple">Multiple Services</option>
-                                    <option value="other">Other</option>
-                                </select>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Services Qui Vous Intéressent *</label>
+                            <select id="service" name="service" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
+                                <option value="">Sélectionnez les services</option>
+                                <option value="reception-appels">Réception d'Appels & Réceptionniste Virtuel</option>
+                                <option value="appels-sortants">Appels Sortants & Télémarketing</option>
+                                <option value="support-client">Support Client</option>
+                                <option value="crm-listes">CRM + Listes Qualifiées</option>
+                                <option value="multiple">Plusieurs Services</option>
+                                <option value="pas-sure">Pas Sûr - Besoin de Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Votre Message ou Exigences Spécifiques</label>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" placeholder="Parlez-nous de votre entreprise et de vos besoins en communication..."></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="free-trial" name="free-trial" class="mt-1 mr-2" checked>
+                                <label for="free-trial" class="text-gray-700">Oui, je souhaite bénéficier de mes 2 semaines d'essai GRATUIT + CRM GRATUIT avec listes qualifiées</label>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
-                        <textarea id="message" name="message" rows="5" required="" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none"></textarea>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex items-start">
-                            <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-2">
-                            <label for="newsletter" class="text-gray-700">I want to receive information about special offers and new services</label>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-2">
+                                <label for="newsletter" class="text-gray-700">Envoyez-moi des mises à jour sur les nouveaux services et offres spéciales</label>
+                            </div>
                         </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors w-full md:w-auto">
+                                <i class="fas fa-gift mr-2"></i>
+                                Profiter de l'Essai Gratuit
+                            </button>
+                            <p class="text-sm text-gray-600 mt-3">Aucune carte de crédit requise. Aucun engagement.</p>
                         </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -397,9 +441,9 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquemment Posées</h2>
                 <p class="text-xl text-gray-600">
-                    Answers to common questions about our communication services
+                    Questions courantes sur notre essai gratuit et services
                 </p>
             </div>
             
@@ -407,48 +451,48 @@
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Are your services suitable for small businesses?</h3>
+                            <h3 class="font-semibold text-lg">Qu'est-ce qui est inclus dans les 2 semaines d'essai GRATUIT ?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Absolutely! Our services are specifically designed for small and medium businesses. We offer flexible plans that scale with your growth without requiring significant upfront investment.
+                                L'essai gratuit comprend un accès complet à vos services de communication choisis (réception d'appels, support client ou appels sortants) avec des agents dédiés, plus notre système CRM professionnel avec des listes de contacts qualifiés. Aucune limitation pendant la période d'essai.
                             </p>
                         </div>
                     </div>
                     
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">How quickly can you implement your services?</h3>
+                            <h3 class="font-semibold text-lg">Y a-t-il un engagement requis pour l'essai gratuit ?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Most of our services can be implemented within 3-5 business days. We provide complete training and support to ensure a smooth transition with minimal disruption to your operations.
+                                Absolument aucun engagement requis. L'essai gratuit est complètement sans obligation. Si vous êtes satisfait après 2 semaines, vous pouvez continuer avec nos forfaits mensuels. Sinon, aucun frais et aucun sentiment blessé.
                             </p>
                         </div>
                     </div>
                     
                     <div class="border-b">
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Do you offer bilingual services?</h3>
+                            <h3 class="font-semibold text-lg">Combien de temps faut-il pour commencer l'essai gratuit ?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                Yes, we offer fully bilingual services in both French and English. Our team is proficient in both languages and can seamlessly switch between them based on your customer preferences.
+                                Nous pouvons généralement démarrer votre essai gratuit dans les 24-48 heures après notre consultation initiale. Le processus de configuration est rapide et nous fournissons une formation complète pour vous assurer de tirer le meilleur parti de votre période d'essai.
                             </p>
                         </div>
                     </div>
                     
                     <div>
                         <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">What industries do you specialize in?</h3>
+                            <h3 class="font-semibold text-lg">Que se passe-t-il après la fin de l'essai gratuit ?</h3>
                             <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-4">
                             <p class="text-gray-600">
-                                We have experience across multiple industries including technology, professional services, retail, healthcare, and more. Our solutions are customized to address the specific communication needs of each sector.
+                                Après vos 2 semaines d'essai, nous planifierons un appel de bilan pour discuter de votre expérience. Si vous décidez de continuer, nous vous ferons passer à nos forfaits mensuels réguliers. En tant que participant à l'essai, vous recevrez une réduction de 10% si vous vous engagez pour 3+ mois de service.
                             </p>
                         </div>
                     </div>
@@ -460,16 +504,16 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Communication?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication d'Entreprise ?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Join hundreds of entrepreneurs and SMEs who have already optimized their customer relations with our solutions.
+                Rejoignez des centaines d'entreprises qui ont amélioré la satisfaction client et augmenté leurs revenus avec nos solutions de communication professionnelles.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact-form" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Request a Free Demo
+                    Essai Gratuit
                 </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    See Our Pricing
+                <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                    Appelez: +1 514 819 0559
                 </a>
             </div>
         </div>
@@ -484,30 +528,30 @@
                         <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
                             SH
                         </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
+                        <span class="text-xl font-bold">Agence Smart Hotline</span>
                     </div>
                     <p class="text-gray-400">
-                        Phone communication services adapted for entrepreneurs and SMEs.
+                        Services de communication téléphonique adaptés pour entrepreneurs et PME.
                     </p>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
+                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
+                        <li><a href="emission.html" class="hover:text-white transition-colors">Appels Sortants</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
+                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">À propos</a></li>
                         <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
                     </ul>
                 </div>
                 
@@ -527,12 +571,12 @@
                     <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
                     <p class="text-gray-400">📧 direction@smart-hotline.com</p>
                     <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+                    <p class="text-gray-400">🗓️ Réunion: calendly.com/boubah-karim/30min</p>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. All rights reserved.</p>
+                <p>© 2023 Agence Smart Hotline. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -542,65 +586,31 @@
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
+    <!-- WhatsApp Corner -->
+    <div class="whatsapp-corner">
+        <a href="https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20votre%20offre%20de%202%20semaines%20d'essai%20GRATUIT%20et%20le%20CRM%20GRATUIT.%20Pouvez-vous%20me%20donner%20plus%20d'informations%20%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
     <script>
         // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const chatButton = document.getElementById('chatButton');
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
         const faqToggles = document.querySelectorAll('.faq-toggle');
-        
-        // State
-        let currentLang = 'en';
-        
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('form-success');
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
             // Initialize scroll reveal
             initScrollReveal();
             
             // Set up event listeners
             setupEventListeners();
         });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
         
         // Initialize scroll reveal
         function initScrollReveal() {
@@ -625,33 +635,6 @@
         
         // Set up event listeners
         function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'contact-fr.html';
-                    }
-                });
-            });
-            
             // Mobile menu toggle
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
@@ -683,12 +666,26 @@
                 
                 if (isMobile) {
                     // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F', '_blank');
+                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20votre%20offre%20de%202%20semaines%20d\'essai%20GRATUIT%20et%20le%20CRM%20GRATUIT.%20Pouvez-vous%20me%20donner%20plus%20d\'informations%20%3F', '_blank');
                 } else {
                     // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Smart%20Hotline&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20communication%20solutions.%20Can%20you%20help%20me%3F';
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Essai%20Gratuit%20Smart%20Hotline&body=Bonjour,%20je%20suis%20intéressé(e)%20par%20votre%20offre%20de%202%20semaines%20d\'essai%20GRATUIT%20et%20le%20CRM%20GRATUIT.%20Pouvez-vous%20me%20donner%20plus%20d\'informations%20%3F';
                 }
             });
+            
+            // Form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // In a real implementation, this would be handled by Netlify
+                    // For demo purposes, we'll show success message
+                    e.preventDefault();
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
         }
     </script>
 </body>
