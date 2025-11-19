@@ -147,121 +147,142 @@
             display: flex;
             animation: scroll 20s linear infinite;
         }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #0284c7);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
     <!-- Header Navigation -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                SH
-            </div>
-            <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-        </a>
-        
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-            <!-- Services Dropdown -->
-            <div class="relative group">
-                <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                    Services
-                    <i class="fas fa-chevron-down text-xs ml-1"></i>
-                </button>
-                <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                        <div class="flex items-center">
-                            <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Tous nos services</div>
-                                <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Réception d'Appels</div>
-                                <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Émission d'Appels</div>
-                                <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-headset text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Support Client</div>
-                                <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-database text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">CRM & Listes</div>
-                                <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                            </div>
-                        </div>
-                    </a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                    SH
                 </div>
-            </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-            <!-- Language Selector -->
-            <div class="relative">
-                <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                    <span id="currentLang">FR</span>
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </button>
-                <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                    <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                            <div class="flex items-center">
+                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Tous nos services</div>
+                                    <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Réception d'Appels</div>
+                                    <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Émission d'Appels</div>
+                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Support Client</div>
+                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">CRM & Listes</div>
+                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
             
-            <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-        <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-            <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-            <div class="border-t pt-3">
-                <div class="font-medium text-gray-700 mb-2">Services</div>
-                <div class="pl-4 space-y-2">
-                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
-                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector -->
+                <div class="relative">
+                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span id="currentLang">FR</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                        <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                    </div>
                 </div>
+                
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-gray-700 mb-2">Services</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
+                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
+                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
+                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
+                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+                    </div>
+                </div>
+                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
+                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
     
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
@@ -287,8 +308,35 @@
                     <img src="../images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">2 Semaines</div>
-                        <div class="text-sm">Essai Gratuit</div>
+                        <div class="text-sm">Essai Sans Engagement</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trust Badges Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <p class="text-gray-600 font-medium">De confiance pour 500+ PME et entreprises en croissance</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Sécurisé & Confidentiel</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Disponibilité 24/7</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Agents Professionnels</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Rentable</span>
                 </div>
             </div>
         </div>
@@ -360,7 +408,91 @@
         </div>
     </section>
     
-    <!-- Stats Section -->
+    <!-- Dark Section: How It Works -->
+    <section class="py-20 bg-dark-800 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Démarrez avec nos services en seulement 4 étapes simples
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-3">Consultation</h3>
+                    <p class="text-gray-400">
+                        Nous analysons vos besoins commerciaux et défis de communication
+                    </p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-3">Personnalisation</h3>
+                    <p class="text-gray-400">
+                        Nous adaptons nos services à votre marque et exigences
+                    </p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-3">Mise en Œuvre</h3>
+                    <p class="text-gray-400">
+                        Nous configurons votre solution de communication dédiée
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-bold mb-3">Support</h3>
+                    <p class="text-gray-400">
+                        Nous fournissons un support continu et un suivi des performances
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Splash Image Section -->
+    <section class="py-16 bg-gradient-to-r from-primary-50 to-primary-100 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Essayez Nos Services Sans Risque</h2>
+                    <p class="text-xl text-gray-700 mb-6">
+                        Découvrez les avantages des services de communication professionnels avec notre essai de 2 semaines. Aucun engagement requis.
+                    </p>
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-bold mb-3 text-primary-600">Ce qui est inclus dans l'essai:</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Accès complet à notre service de réception d'appels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Gestion professionnelle du support client</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Gestionnaire de compte dédié</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Rapports de performance et insights</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="../images/communication-splash.jpg" alt="Communication Professionnelle" class="rounded-xl shadow-lg max-w-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dark Section: Stats -->
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -419,7 +551,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/testimonial-1.jpg" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Marc Lefebvre</h4>
                             <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
@@ -439,7 +571,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/testimonial-2.jpg" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Sophie Dubois</h4>
                             <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
@@ -459,7 +591,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="../images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="../images/testimonial-3.jpg" alt="Jean-Pierre Tremblay" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
                             <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
@@ -741,4 +873,3 @@
     </script>
 </body>
 </html>
-
