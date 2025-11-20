@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outbound Calls | Smart Hotline Agency</title>
-    <meta name="description" content="Outbound calls and telemarketing service for SMEs. Grow your customer base with our targeted calling campaigns.">
-    <meta name="keywords" content="telemarketing, outbound calls, telephone prospecting, lead generation, telephone sales">
+    <title>Phone Prospecting | Smart Hotline Agency</title>
+    <meta name="description" content="Phone prospecting and appointment setting service for SMEs. Grow your customer base with our telemarketing experts.">
+    <meta name="keywords" content="phone prospecting, appointment setting, telemarketing, lead generation, telephone sales, lead qualification">
     <meta name="robots" content="index, follow">
     
     <!-- Tailwind CSS -->
@@ -131,7 +131,60 @@
             
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                            <div class="flex items-center">
+                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">All Services</div>
+                                    <div class="text-xs text-gray-500">Discover our complete range</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Call Reception</div>
+                                    <div class="text-xs text-gray-500">Never miss a call</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Phone Prospecting</div>
+                                    <div class="text-xs text-gray-500">Grow your customer base</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">Customer Support</div>
+                                    <div class="text-xs text-gray-500">Improve satisfaction</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-database text-primary-600 mr-3"></i>
+                                <div>
+                                    <div class="font-medium">CRM & Lists</div>
+                                    <div class="text-xs text-gray-500">Maximize your sales</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -146,7 +199,7 @@
                         <i class="fas fa-chevron-down text-xs"></i>
                     </button>
                     <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="emission-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                        <a href="../fr/emission.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
                         <a href="emission.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
                     </div>
                 </div>
@@ -161,7 +214,16 @@
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
                 <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-gray-700 mb-2">Services</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">All Services</a>
+                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Call Reception</a>
+                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Phone Prospecting</a>
+                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Customer Support</a>
+                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
+                    </div>
+                </div>
                 <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
                 <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
@@ -176,10 +238,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Outbound Calls</span>
+                        <span class="gradient-text">Phone Prospecting</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Grow your customer base with our targeted calling campaigns. Our outbound calling service is designed for entrepreneurs who want to increase their sales without investing in an internal team.
+                        Grow your customer base with our phone prospecting experts. Appointment setting, lead qualification and telephone sales to boost your growth.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
@@ -191,7 +253,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/services/emission-service.jpg" alt="Outbound Calling Service" class="rounded-xl shadow-lg">
+                    <img src="images/services/emission-service.jpg" alt="Phone Prospecting Service" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">1 Week</div>
                         <div class="text-sm">Free Trial</div>
@@ -201,65 +263,109 @@
         </div>
     </section>
     
-    <!-- Features Section -->
+    <!-- Trust Badges Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <div class="flex items-center">
+                    <i class="fas fa-bullseye text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Precise Targeting</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-calendar-check text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Appointment Setting</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Measurable Results</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Qualified Experts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Offered Section -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Effective Telemarketing</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Prospecting Services</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    All the tools you need to grow your customer base and increase your sales
+                    Complete solutions to grow your customer portfolio
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/crm-dashboard.jpg" alt="Telemarketing Dashboard" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Qualified Lead Generation</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Access our constantly updated database with qualified prospects in your industry.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-calendar-plus text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Appointment Setting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Our teleprospectors qualify your leads and set appointments directly in your calendar.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Lists targeted to your industry</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Calendar synchronization</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Advanced demographic filters</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Automatic confirmation</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Daily information updates</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>GDPR and CAN-SPAM compliance</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>SMS and email reminders</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div>
-                    <img src="images/ui/mobile-app.jpg" alt="Mobile Application" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Telephone Sales</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Experienced telemarketers trained in sales techniques and knowledge of your business to convert prospects into customers.
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-filter text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Lead Qualification</h3>
+                    <p class="text-gray-600 mb-6">
+                        We contact your prospects to verify their interest and purchasing capacity.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Complete training on your products/services</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Qualification scoring</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Customized sales scripts</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Detailed prospect profiles</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Handling common objections</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>CRM integration</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-bar text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Telephone Sales</h3>
+                    <p class="text-gray-600 mb-6">
+                        Our sales experts close deals directly over the phone to maximize your revenue.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Customized scripts</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Real-time performance tracking</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Objection handling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Performance tracking</span>
                         </li>
                     </ul>
                 </div>
@@ -267,54 +373,54 @@
         </div>
     </section>
     
-    <!-- Process Section -->
+    <!-- How It Works Section -->
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Telemarketing Approach</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    A proven methodology for optimal results
+                    A simple and effective process for quick results
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         1
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Market Analysis</h3>
+                    <h3 class="text-xl font-semibold mb-3">Briefing</h3>
                     <p class="text-gray-600">
-                        In-depth study of your industry to identify the best opportunities.
+                        We study your objectives and target to create a customized strategy.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         2
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Campaign Preparation</h3>
+                    <h3 class="text-xl font-semibold mb-3">Launch</h3>
                     <p class="text-gray-600">
-                        Creation of scripts and arguments adapted to your target and your objectives.
+                        Our teleprospectors contact your prospects according to the established plan.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         3
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Execution and Follow-up</h3>
+                    <h3 class="text-xl font-semibold mb-3">Follow-up</h3>
                     <p class="text-gray-600">
-                        Launching campaigns with rigorous monitoring and continuous adjustments.
+                        You receive detailed reports and can track progress in real time.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         4
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Optimization</h3>
                     <p class="text-gray-600">
-                        Analysis of results and continuous performance improvement.
+                        We adjust the strategy based on results to maximize ROI.
                     </p>
                 </div>
             </div>
@@ -325,63 +431,120 @@
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Measurable Results</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us?</h2>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Concrete improvements for your business
+                    Concrete benefits for your business
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        300%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">More Contacts</h3>
+                    <h3 class="text-xl font-semibold mb-3">Cost-Effective</h3>
                     <p class="text-gray-400">
-                        Compared to traditional manual prospecting
+                        60% cheaper than an internal team with better results
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        45%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Conversion Rate</h3>
+                    <h3 class="text-xl font-semibold mb-3">Fast</h3>
                     <p class="text-gray-400">
-                        Higher than industry average
+                        Launch in 48h and first results within 7 days
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        60%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Cost Reduction</h3>
+                    <h3 class="text-xl font-semibold mb-3">Flexible</h3>
                     <p class="text-gray-400">
-                        Compared to an internal team
+                        Adjust call volume according to your needs and budget
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Secure</h3>
+                    <p class="text-gray-400">
+                        GDPR compliant with protection of your data and your prospects' data
                     </p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Testimonials Section -->
+    <!-- Industries Section -->
     <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We support businesses in all sectors
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">B2B Services</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Home Services</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Health & Wellness</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Education</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-cogs text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Technology</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-hand-holding-usd text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Finance</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-hammer text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Construction</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                    <i class="fas fa-truck text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold">Logistics</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover how our telemarketing service transformed their business
+                    Discover how our service transformed their business
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mark Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">John Tremblay</h4>
-                            <p class="text-sm text-gray-600">Owner, Le Gourmet Restaurant</p>
+                            <h4 class="font-semibold">Mark Johnson</h4>
+                            <p class="text-sm text-gray-600">Sales Director, TechSolutions</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -392,16 +555,16 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "I started my business 18 months ago and Smart Hotline has been one of my best investments. They handled all my calls while I focused on developing my business."
+                        "In 3 months, we multiplied our qualified appointments by 5. The Smart Hotline team perfectly understands our needs and adapts to our very technical sector."
                     </p>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Smith" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Mark Johnson</h4>
-                            <p class="text-sm text-gray-600">Founder, TechInnov Canada</p>
+                            <h4 class="font-semibold">Sophie Smith</h4>
+                            <p class="text-sm text-gray-600">Founder, Wellness Plus</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -412,7 +575,7 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "The telemarketing service allowed us to reach our sales targets 3 months earlier than planned. The return on investment is exceptional."
+                        "Automated appointment setting has revolutionized our business. We now devote our time to what we do best: our consultations."
                     </p>
                 </div>
             </div>
@@ -422,7 +585,7 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your Customer Base?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Boost Your Revenue?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
                 Start today with 1 week free trial and discover the impact on your sales.
             </p>
@@ -457,7 +620,7 @@
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
+                        <li><a href="emission.html" class="hover:text-white transition-colors">Phone Prospecting</a></li>
                         <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
                         <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
                     </ul>
@@ -520,48 +683,12 @@
         
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
             // Initialize scroll reveal
             initScrollReveal();
             
             // Set up event listeners
             setupEventListeners();
         });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
         
         // Initialize scroll reveal
         function initScrollReveal() {
@@ -603,13 +730,10 @@
                 option.addEventListener('click', (e) => {
                     e.preventDefault();
                     const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
                     if (lang === 'fr') {
-                        window.location.href = 'emission-fr.html';
+                        window.location.href = '../fr/emission.html';
                     }
+                    langDropdown.classList.add('hidden');
                 });
             });
             
@@ -632,10 +756,10 @@
                 
                 if (isMobile) {
                     // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20telemarketing%20service.%20Can%20you%20help%20me%3F', '_blank');
+                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20phone%20prospecting%20service.%20Can%20you%20help%20me%3F', '_blank');
                 } else {
                     // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Telemarketing%20Service&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20telemarketing%20service.%20Can%20you%20help%20me%3F';
+                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Phone%20Prospecting&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20phone%20prospecting%20service.%20Can%20you%20help%20me%3F';
                 }
             });
         }
