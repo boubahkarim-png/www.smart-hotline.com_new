@@ -2,114 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
-    <!-- MAIN DOMAIN - Highest Priority -->
+    <!-- French Homepage (Highest Priority) -->
     <url>
         <loc>https://smart-hotline.com/</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/"/>
     </url>
     
-    <!-- ========== FRENCH PAGES (Higher Priority) ========== -->
-    
-    <!-- French Homepage -->
+    <!-- French Service Pages -->
     <url>
-        <loc>https://smart-hotline.com/fr/</loc>
+        <loc>https://smart-hotline.com/services.html</loc>
         <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
-    </url>
-    
-    <!-- French Services Parent -->
-    <url>
-        <loc>https://smart-hotline.com/fr/services.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/services.html"/>
     </url>
     
-    <!-- French Individual Services -->
     <url>
-        <loc>https://smart-hotline.com/fr/reception.html</loc>
+        <loc>https://smart-hotline.com/reception.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/reception.html"/>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/emission.html</loc>
+        <loc>https://smart-hotline.com/emission.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/emission.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/emission.html"/>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/support.html</loc>
+        <loc>https://smart-hotline.com/support.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/support.html"/>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/crm-lists.html</loc>
+        <loc>https://smart-hotline.com/crm-lists.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/crm-lists.html"/>
     </url>
     
-    <!-- Other French Pages -->
+    <!-- French Other Pages -->
     <url>
-        <loc>https://smart-hotline.com/fr/price.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/price.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/price.html" />
-    </url>
-    
-    <url>
-        <loc>https://smart-hotline.com/fr/about.html</loc>
+        <loc>https://smart-hotline.com/pricing.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/pricing.html"/>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/contact.html</loc>
+        <loc>https://smart-hotline.com/about.html</loc>
         <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/about.html"/>
     </url>
     
     <url>
-        <loc>https://smart-hotline.com/fr/blog.html</loc>
+        <loc>https://smart-hotline.com/blog.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html" />
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/blog.html"/>
     </url>
     
-    <!-- ========== ENGLISH PAGES (Slightly Lower Priority) ========== -->
+    <url>
+        <loc>https://smart-hotline.com/contact.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/contact.html"/>
+    </url>
     
     <!-- English Homepage -->
     <url>
@@ -117,28 +101,27 @@
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/"/>
     </url>
     
-    <!-- English Services Parent -->
+    <!-- English Service Pages -->
     <url>
         <loc>https://smart-hotline.com/en/services.html</loc>
         <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/services.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/services.html"/>
     </url>
     
-    <!-- English Individual Services -->
     <url>
         <loc>https://smart-hotline.com/en/reception.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/reception.html"/>
     </url>
     
     <url>
@@ -146,8 +129,8 @@
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/emission.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/emission.html"/>
     </url>
     
     <url>
@@ -155,8 +138,8 @@
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/support.html"/>
     </url>
     
     <url>
@@ -164,45 +147,45 @@
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/crm-lists.html"/>
     </url>
     
-    <!-- Other English Pages -->
+    <!-- English Other Pages -->
     <url>
-        <loc>https://smart-hotline.com/en/price.html</loc>
+        <loc>https://smart-hotline.com/en/pricing.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/price.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/price.html" />
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/pricing.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/pricing.html"/>
     </url>
     
     <url>
         <loc>https://smart-hotline.com/en/about.html</loc>
         <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html" />
-    </url>
-    
-    <url>
-        <loc>https://smart-hotline.com/en/contact.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html" />
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/about.html"/>
     </url>
     
     <url>
         <loc>https://smart-hotline.com/en/blog.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/blog.html"/>
+    </url>
+    
+    <url>
+        <loc>https://smart-hotline.com/en/contact.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/blog.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/blog.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smart-hotline.com/contact.html"/>
     </url>
     
 </urlset>
