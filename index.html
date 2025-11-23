@@ -2,28 +2,329 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=fr/">
-    <title>Smart Hotline - Redirection</title>
-    <link rel="canonical" href="https://smart-hotline.com/fr/" />
-    <script>
-        // Primary redirect
-        window.location.href = 'fr/';
-        
-        // Fallback for slow JavaScript
-        setTimeout(function() {
-            window.location.href = 'fr/';
-        }, 100);
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hotline Agency | Services de Communication pour PME</title>
+    <meta name="description" content="Solutions de communication téléphonique adaptées pour les entrepreneurs et PME. Réceptionniste à distance, télémarketing, support client et CRM personnalisé.">
+    <meta name="keywords" content="réceptionniste à distance, services de secrétariat à distance, télémarketing, support client externalisé, CRM PME, centre d'appels externalisé">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
+    <meta property="og:description" content="Solutions de communication téléphonique adaptées pour les entrepreneurs et PME.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com">
+    <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
-    <noscript>
-        <p>JavaScript est désactivé. Redirection vers <a href="fr/">la version française</a>...</p>
-    </noscript>
+    <!-- Header Container -->
+    <div id="header-container"></div>
     
-    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-        <h1>Smart Hotline Agency</h1>
-        <p>Redirection vers la version française...</p>
-        <p>Si la redirection ne fonctionne pas, <a href="fr/">cliquez ici</a>.</p>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Services de Communication Personnalisés</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Externalisez vos relations clients et concentrez-vous sur votre croissance avec nos solutions adaptées pour les entrepreneurs et PME.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html" class="btn btn-primary">
+                                Demander une Démo Gratuite
+                            </a>
+                            <a href="services.html" class="btn btn-secondary">
+                                Découvrir Nos Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold">2 Semaines</div>
+                            <div class="text-sm">Essai Gratuit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Preview -->
+        <section class="py-20 bg-white">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Une gamme complète de services pour répondre à tous vos besoins de communication téléphonique
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="reception.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Ne manquez jamais un appel important avec notre service de réception dédié.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="emission.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Appels Sortants</h3>
+                            <p class="text-gray-600 mb-4">
+                                Développez votre clientèle avec nos campagnes d'appels ciblées.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="support.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-headset text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Support Client</h3>
+                            <p class="text-gray-600 mb-4">
+                                Améliorez la satisfaction de vos clients avec un support réactif et professionnel.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="crm-lists.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-database text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
+                            <p class="text-gray-600 mb-4">
+                                CRM complet avec listes qualifiées et composeur automatique pour maximiser vos ventes.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="py-20 bg-dark-900 text-white">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Résultats Prouvés</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Découvrez comment nos services transforment les PME comme la vôtre
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="500">0</span>+
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
+                        <p class="text-gray-400">Nous soutenons déjà</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="98">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
+                        <p class="text-gray-400">De nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="40">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Gain de Temps</h3>
+                        <p class="text-gray-400">Pour nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="24">0</span>/7
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Disponibilité</h3>
+                        <p class="text-gray-400">De nos services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur entreprise
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Marc Johnson</h4>
+                                <p class="text-sm text-gray-600">Fondateur, TechInnov Canada</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne le sommes, avec un service professionnel qui a impressionné nos clients."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Sophie Smith</h4>
+                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Smith</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne jamais manquer une opportunité d'affaires."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Jean Tremblay</h4>
+                                <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon entreprise."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leurs relations clients avec nos solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-white text-primary-600">
+                        Demander une Démo Gratuite
+                    </a>
+                    <a href="pricing.html" class="btn bg-transparent text-white border-2 border-white">
+                        Découvrir Nos Offres
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/main.js"></script>
+    
+    <!-- Localization JavaScript -->
+    <script src="assets/localization.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Stats counter animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); // 60fps
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+    </script>
 </body>
 </html>
