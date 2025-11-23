@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Hotline Agency | Services de Communication pour PME</title>
-    <meta name="description" content="Solutions de communication téléphonique adaptées pour les entrepreneurs et PME. Réceptionniste à distance, télémarketing, support client et CRM personnalisé.">
-    <meta name="keywords" content="réceptionniste à distance, services de secrétariat à distance, télémarketing, support client externalisé, CRM PME, centre d'appels externalisé">
+    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure.">
+    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
-    <meta property="og:description" content="Solutions de communication téléphonique adaptées pour les entrepreneurs et PME.">
+    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com">
+    <meta property="og:url" content="https://smart-hotline.com/">
     <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com">
-    
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -34,7 +38,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/main.css">
 </head>
-<body>
+<body class="font-sans text-gray-800">
     <!-- Header Container -->
     <div id="header-container"></div>
     
@@ -42,14 +46,14 @@
     <main>
         <!-- Hero Section -->
         <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                            <span class="gradient-text">Services de Communication Personnalisés</span>
+                            <span class="gradient-text">Services de Communication Sur Mesure</span>
                         </h1>
                         <p class="text-xl text-gray-600 mb-8">
-                            Externalisez vos relations clients et concentrez-vous sur votre croissance avec nos solutions adaptées pour les entrepreneurs et PME.
+                            Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="contact.html" class="btn btn-primary">
@@ -64,20 +68,47 @@
                         <img src="images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
                         <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                             <div class="text-3xl font-bold">2 Semaines</div>
-                            <div class="text-sm">Essai Gratuit</div>
+                            <div class="text-sm">Essai Sans Engagement</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
+        <!-- Trust Badges Section -->
+        <section class="py-12 bg-white border-b">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-8">
+                    <p class="text-gray-600 font-medium">De confiance pour 500+ PME et entreprises en croissance</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Sécurisé & Confidentiel</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Disponibilité 24/7</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Agents Professionnels</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Rentable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Services Preview -->
-        <section class="py-20 bg-white">
-            <div class="container">
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Une gamme complète de services pour répondre à tous vos besoins de communication téléphonique
+                        Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
                     </p>
                 </div>
                 
@@ -89,7 +120,7 @@
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
                             <p class="text-gray-600 mb-4">
-                                Ne manquez jamais un appel important avec notre service de réception dédié.
+                                Ne manquez plus aucun appel important grâce à notre service de réception dédié.
                             </p>
                             <span class="text-primary-600 font-medium">En savoir plus →</span>
                         </div>
@@ -100,7 +131,7 @@
                             <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
                                 <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Appels Sortants</h3>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Émission d'Appels</h3>
                             <p class="text-gray-600 mb-4">
                                 Développez votre clientèle avec nos campagnes d'appels ciblées.
                             </p>
@@ -128,7 +159,7 @@
                             </div>
                             <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
                             <p class="text-gray-600 mb-4">
-                                CRM complet avec listes qualifiées et composeur automatique pour maximiser vos ventes.
+                                CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes.
                             </p>
                             <span class="text-primary-600 font-medium">En savoir plus →</span>
                         </div>
@@ -137,11 +168,57 @@
             </div>
         </section>
         
-        <!-- Stats Section -->
-        <section class="py-20 bg-dark-900 text-white">
-            <div class="container">
+        <!-- How It Works Section -->
+        <section class="py-20 bg-dark-800 text-white scroll-reveal">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Résultats Prouvés</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Démarrez avec nos services en seulement 4 étapes simples
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-bold mb-3">Consultation</h3>
+                        <p class="text-gray-400">
+                            Nous analysons vos besoins commerciaux et défis de communication
+                        </p>
+                    </div>
+                    
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-bold mb-3">Personnalisation</h3>
+                        <p class="text-gray-400">
+                            Nous adaptons nos services à votre marque et exigences
+                        </p>
+                    </div>
+                    
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-bold mb-3">Mise en Œuvre</h3>
+                        <p class="text-gray-400">
+                            Nous configurons votre solution de communication dédiée
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
+                        <h3 class="text-xl font-bold mb-3">Support</h3>
+                        <p class="text-gray-400">
+                            Nous fournissons un support continu et un suivi des performances
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="py-20 bg-dark-900 text-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
                     <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                         Découvrez comment nos services transforment les PME comme la vôtre
                     </p>
@@ -153,7 +230,7 @@
                             <span class="stats-counter" data-target="500">0</span>+
                         </div>
                         <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
-                        <p class="text-gray-400">Nous soutenons déjà</p>
+                        <p class="text-gray-400">Nous accompagnons déjà</p>
                     </div>
                     
                     <div class="text-center">
@@ -168,7 +245,7 @@
                         <div class="text-5xl font-bold mb-2 gradient-text">
                             <span class="stats-counter" data-target="40">0</span>%
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Gain de Temps</h3>
+                        <h3 class="text-xl font-semibold mb-2">Économie de Temps</h3>
                         <p class="text-gray-400">Pour nos clients</p>
                     </div>
                     
@@ -184,22 +261,22 @@
         </section>
         
         <!-- Testimonials Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container">
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur entreprise
+                        Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur activité
                     </p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-center mb-4">
-                            <img src="images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
                             <div>
-                                <h4 class="font-semibold">Marc Johnson</h4>
-                                <p class="text-sm text-gray-600">Fondateur, TechInnov Canada</p>
+                                <h4 class="font-semibold">Marc Lefebvre</h4>
+                                <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
                             </div>
                         </div>
                         <div class="flex mb-3">
@@ -210,16 +287,16 @@
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="text-gray-700">
-                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne le sommes, avec un service professionnel qui a impressionné nos clients."
+                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
                         </p>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-center mb-4">
-                            <img src="images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
                             <div>
-                                <h4 class="font-semibold">Sophie Smith</h4>
-                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Smith</p>
+                                <h4 class="font-semibold">Sophie Dubois</h4>
+                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
                             </div>
                         </div>
                         <div class="flex mb-3">
@@ -230,15 +307,15 @@
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="text-gray-700">
-                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne jamais manquer une opportunité d'affaires."
+                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
                         </p>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-center mb-4">
-                            <img src="images/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean-Pierre Tremblay" class="w-12 h-12 rounded-full mr-4 object-cover">
                             <div>
-                                <h4 class="font-semibold">Jean Tremblay</h4>
+                                <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
                                 <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
                             </div>
                         </div>
@@ -250,7 +327,7 @@
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="text-gray-700">
-                            "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon entreprise."
+                            "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
                         </p>
                     </div>
                 </div>
@@ -258,17 +335,17 @@
         </section>
         
         <!-- CTA Section -->
-        <section class="py-20 bg-primary-600 text-white">
-            <div class="container text-center">
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto">
-                    Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leurs relations clients avec nos solutions.
+                    Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="contact.html" class="btn bg-white text-primary-600">
                         Demander une Démo Gratuite
                     </a>
-                    <a href="pricing.html" class="btn bg-transparent text-white border-2 border-white">
+                    <a href="price.html" class="btn bg-transparent text-white border-2 border-white">
                         Découvrir Nos Offres
                     </a>
                 </div>
@@ -279,6 +356,11 @@
     <!-- Footer Container -->
     <div id="footer-container"></div>
     
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
     <!-- Custom JavaScript -->
     <script src="assets/main.js"></script>
     
@@ -287,44 +369,7 @@
     
     <!-- Page-specific JavaScript -->
     <script>
-        // Stats counter animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const statsCounters = document.querySelectorAll('.stats-counter');
-            
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        });
+        // Page-specific functionality here
     </script>
 </body>
 </html>
