@@ -1,65 +1,59 @@
-/**
- * Main JavaScript functionality for Smart Hotline Agency
- */
-
 // DOM Elements
 const langToggle = document.getElementById('langToggle');
 const langDropdown = document.getElementById('langDropdown');
+const currentLangSpan = document.getElementById('currentLang');
+const langOptions = document.querySelectorAll('.lang-option');
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const chatButton = document.getElementById('chatButton');
 const statsCounters = document.querySelectorAll('.stats-counter');
-const currentLang = document.body.getAttribute('data-lang') || 'fr';
 
-/**
- * Sets the 'active' class on navigation links based on the current page path.
- */
+// Set active navigation based on current page
 function setActiveNavigation() {
-    // Determine the current page filename (e.g., 'index.html', 'services.html')
-    const pathSegments = window.location.pathname.split('/');
-    const currentPage = pathSegments.pop() || 'index.html'; // Gets filename or 'index.html' for trailing /
-
-    // Get the page name without extension for comparison (e.g., 'index')
-    const pageName = currentPage.split('.')[0];
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
-    // Define a map of page names to their corresponding nav link IDs
-    const navMap = {
-        'index': 'nav-home',
-        'pricing': 'nav-pricing',
-        'faq': 'nav-faq',
-        'blog': 'nav-blog',
-        'contact': 'nav-contact',
-        'services': 'nav-services',
-        'reception': 'nav-services', // Sub-page falls under the main service link
-        'emission': 'nav-services',
-        'support': 'nav-services'
-    };
-    
-    const activeId = navMap[pageName] || (pageName === 'index' ? 'nav-home' : null);
-
     // Remove active class from all nav links
     document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
         link.classList.remove('active');
     });
     
-    // Set active class on the determined ID
+    // Set active class based on current page
+    let activeId = '';
+    switch(currentPage) {
+        case 'index.html':
+        case '':
+            activeId = 'nav-home';
+            break;
+        case 'services.html':
+            activeId = 'nav-services';
+            break;
+        case 'pricing.html':
+            activeId = 'nav-pricing';
+            break;
+        case 'faq.html':
+            activeId = 'nav-faq';
+            break;
+        case 'blog.html':
+            activeId = 'nav-blog';
+            break;
+        case 'contact.html':
+            activeId = 'nav-contact';
+            break;
+        case 'reception.html':
+        case 'emission.html':
+        case 'support.html':
+            activeId = 'nav-services';
+            break;
+    }
+    
+    // Set active class
     if (activeId) {
-        // Desktop nav link/button
         document.getElementById(activeId)?.classList.add('active');
-        
-        // Mobile nav link (requires a separate selector as the nav structure is different)
-        document.querySelector(`.mobile-nav-link[data-nav-link="${pageName}"]`)?.classList.add('active');
-        
-        // Ensure the main 'Services' link is active for sub-pages in mobile view
-        if (['reception', 'emission', 'support'].includes(pageName)) {
-            document.querySelector(`.mobile-nav-link[data-nav-link="services"]`)?.classList.add('active');
-        }
+        document.getElementById(`mobile-${activeId}`)?.classList.add('active');
     }
 }
 
-/**
- * Initializes the counter animation when the stats section is in view.
- */
+// Initialize counters
 function initCounters() {
     if (!statsCounters.length) return;
     
@@ -98,9 +92,7 @@ function initCounters() {
     });
 }
 
-/**
- * Initializes the scroll reveal animation for elements with class .scroll-reveal.
- */
+// Initialize scroll reveal
 function initScrollReveal() {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     if (!scrollRevealElements.length) return;
@@ -124,11 +116,9 @@ function initScrollReveal() {
     });
 }
 
-/**
- * Sets up all general event listeners (menu toggles, chat button).
- */
+// Set up event listeners
 function setupEventListeners() {
-    // Language selector dropdown toggle
+    // Language selector
     if (langToggle) {
         langToggle.addEventListener('click', () => {
             langDropdown.classList.toggle('hidden');
@@ -143,7 +133,22 @@ function setupEventListeners() {
     });
     
     // Language options
-    // Note: The actual redirection is handled by the anchor's href attribute in header.html
+    if (langOptions) {
+        langOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                if (lang === 'en') {
+                    window.location.href = '/en/';
+                } else if (lang === 'fr') {
+                    window.location.href = '/fr/';
+                }
+                if (langDropdown) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+        });
+    }
     
     // Mobile menu toggle
     if (mobileMenuToggle) {
@@ -161,37 +166,32 @@ function setupEventListeners() {
         });
     }
     
-    // Chat functionality (WhatsApp/Email)
+    // Chat functionality
     if (chatButton) {
         chatButton.addEventListener('click', () => {
+            // Detect if mobile or desktop
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             
-            const whatsappMessageFR = "Bonjour, je souhaite en savoir plus sur vos services. Pouvez-vous m'aider?";
-            const whatsappMessageEN = "Hello, I would like to know more about your services. Can you help me?";
-            const emailSubjectFR = "Demande d'information - Smart Hotline";
-            const emailSubjectEN = "Information Request - Smart Hotline";
-            const emailBodyFR = "Bonjour, je souhaite en savoir plus sur vos services. Pouvez-vous m'aider?";
-            const emailBodyEN = "Hello, I would like to know more about your services. Can you help me?";
-
-            const message = currentLang === 'fr' ? whatsappMessageFR : whatsappMessageEN;
-            const subject = currentLang === 'fr' ? emailSubjectFR : emailSubjectEN;
-            const body = currentLang === 'fr' ? emailBodyFR : emailBodyEN;
-            
             if (isMobile) {
-                window.open(`https://wa.me/15148190559?text=${encodeURIComponent(message)}`, '_blank');
+                // Open WhatsApp on mobile
+                window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
             } else {
-                window.location.href = `mailto:direction@smart-hotline.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                // Open email client on desktop
+                window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
             }
         });
     }
 }
 
-
-// Initialize when the DOM is fully loaded
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialise animations and interactive components
+    // Set active navigation
     setActiveNavigation();
+    
+    // Initialize animations
     initCounters();
     initScrollReveal();
+    
+    // Set up event listeners
     setupEventListeners();
 });
