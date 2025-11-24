@@ -1,3 +1,4 @@
+/* Base styles */
 .gradient-text {
     background: linear-gradient(135deg, #0ea5e9, #0284c7);
     -webkit-background-clip: text;
