@@ -1,52 +1,52 @@
 <header>
     <div class="container">
         <nav class="nav-container">
-            <a href="/fr/index.html" class="logo">
+            <a href="#" class="logo" data-nav-link="home">
                 <div class="logo-icon">SH</div>
                 <span class="logo-text">Smart Hotline</span>
             </a>
             
             <div class="desktop-nav">
-                <a href="/fr/index.html" class="nav-link active" id="nav-home">Accueil</a>
+                <a href="#" class="nav-link active" id="nav-home" data-i18n="nav.home" data-nav-link="home">Accueil</a>
                 <div class="nav-dropdown">
                     <button class="nav-link dropdown-toggle" id="nav-services">
-                        Services <i class="fas fa-chevron-down"></i>
+                        <span data-i18n="nav.services_main">Services</span> <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="/fr/services.html" class="dropdown-item">
+                        <a href="#" class="dropdown-item" data-nav-link="services">
                             <i class="fas fa-th-large"></i>
                             <div>
-                                <div class="dropdown-title">Tous nos services</div>
-                                <div class="dropdown-desc">Découvrir notre gamme complète</div>
+                                <div class="dropdown-title" data-i18n="nav.all_services">Tous nos services</div>
+                                <div class="dropdown-desc" data-i18n="nav.all_services_desc">Découvrir notre gamme complète</div>
                             </div>
                         </a>
-                        <a href="/fr/reception.html" class="dropdown-item">
+                        <a href="#" class="dropdown-item" data-nav-link="reception">
                             <i class="fas fa-phone-alt"></i>
                             <div>
-                                <div class="dropdown-title">Réception d'Appels</div>
-                                <div class="dropdown-desc">Ne manquez aucun appel</div>
+                                <div class="dropdown-title" data-i18n="nav.reception">Réception d'Appels</div>
+                                <div class="dropdown-desc" data-i18n="nav.reception_desc">Ne manquez aucun appel</div>
                             </div>
                         </a>
-                        <a href="/fr/emission.html" class="dropdown-item">
+                        <a href="#" class="dropdown-item" data-nav-link="emission">
                             <i class="fas fa-phone-volume"></i>
                             <div>
-                                <div class="dropdown-title">Émission d'Appels</div>
-                                <div class="dropdown-desc">Développez votre clientèle</div>
+                                <div class="dropdown-title" data-i18n="nav.emission">Émission d'Appels</div>
+                                <div class="dropdown-desc" data-i18n="nav.emission_desc">Développez votre clientèle</div>
                             </div>
                         </a>
-                        <a href="/fr/support.html" class="dropdown-item">
+                        <a href="#" class="dropdown-item" data-nav-link="support">
                             <i class="fas fa-headset"></i>
                             <div>
-                                <div class="dropdown-title">Support Client</div>
-                                <div class="dropdown-desc">Améliorez la satisfaction</div>
+                                <div class="dropdown-title" data-i18n="nav.support">Support Client</div>
+                                <div class="dropdown-desc" data-i18n="nav.support_desc">Améliorez la satisfaction</div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <a href="/fr/pricing.html" class="nav-link" id="nav-pricing">Tarifs</a>
-                <a href="/fr/faq.html" class="nav-link" id="nav-faq">FAQ</a>
-                <a href="/fr/blog.html" class="nav-link" id="nav-blog">Blog</a>
-                <a href="/fr/contact.html" class="nav-link" id="nav-contact">Contact</a>
+                <a href="#" class="nav-link" id="nav-pricing" data-i18n="nav.pricing" data-nav-link="pricing">Tarifs</a>
+                <a href="#" class="nav-link" id="nav-faq" data-i18n="nav.faq" data-nav-link="faq">FAQ</a>
+                <a href="#" class="nav-link" id="nav-blog" data-i18n="nav.blog" data-nav-link="blog">Blog</a>
+                <a href="#" class="nav-link" id="nav-contact" data-i18n="nav.contact" data-nav-link="contact">Contact</a>
             </div>
             
             <div class="nav-actions">
@@ -70,18 +70,18 @@
     
     <div id="mobileMenu" class="mobile-menu hidden">
         <div class="container">
-            <a href="/fr/index.html" class="mobile-nav-link active" id="mobile-nav-home">Accueil</a>
+            <a href="#" class="mobile-nav-link active" id="mobile-nav-home" data-i18n="nav.home" data-nav-link="home">Accueil</a>
             <div class="mobile-nav-group">
-                <div class="mobile-nav-title">Services</div>
-                <a href="/fr/services.html" class="mobile-nav-link">Tous nos services</a>
-                <a href="/fr/reception.html" class="mobile-nav-link">Réception d'Appels</a>
-                <a href="/fr/emission.html" class="mobile-nav-link">Émission d'Appels</a>
-                <a href="/fr/support.html" class="mobile-nav-link">Support Client</a>
+                <div class="mobile-nav-title" data-i18n="nav.services_main">Services</div>
+                <a href="#" class="mobile-nav-link" data-i18n="nav.all_services" data-nav-link="services">Tous nos services</a>
+                <a href="#" class="mobile-nav-link" data-i18n="nav.reception" data-nav-link="reception">Réception d'Appels</a>
+                <a href="#" class="mobile-nav-link" data-i18n="nav.emission" data-nav-link="emission">Émission d'Appels</a>
+                <a href="#" class="mobile-nav-link" data-i18n="nav.support" data-nav-link="support">Support Client</a>
             </div>
-            <a href="/fr/pricing.html" class="mobile-nav-link" id="mobile-nav-pricing">Tarifs</a>
-            <a href="/fr/faq.html" class="mobile-nav-link" id="mobile-nav-faq">FAQ</a>
-            <a href="/fr/blog.html" class="mobile-nav-link" id="mobile-nav-blog">Blog</a>
-            <a href="/fr/contact.html" class="mobile-nav-link" id="mobile-nav-contact">Contact</a>
+            <a href="#" class="mobile-nav-link" id="mobile-nav-pricing" data-i18n="nav.pricing" data-nav-link="pricing">Tarifs</a>
+            <a href="#" class="mobile-nav-link" id="mobile-nav-faq" data-i18n="nav.faq" data-nav-link="faq">FAQ</a>
+            <a href="#" class="mobile-nav-link" id="mobile-nav-blog" data-i18n="nav.blog" data-nav-link="blog">Blog</a>
+            <a href="#" class="mobile-nav-link" id="mobile-nav-contact" data-i18n="nav.contact" data-nav-link="contact">Contact</a>
         </div>
     </div>
 </header>
