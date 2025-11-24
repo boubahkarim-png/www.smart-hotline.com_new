@@ -1,12 +1,99 @@
 // DOM Elements
-const langToggle = document.getElementById('langToggle');
-const langDropdown = document.getElementById('langDropdown');
-const currentLangSpan = document.getElementById('currentLang');
-const langOptions = document.querySelectorAll('.lang-option');
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const chatButton = document.getElementById('chatButton');
-const statsCounters = document.querySelectorAll('.stats-counter');
+let langToggle, langDropdown, currentLangSpan, langOptions, mobileMenuToggle, mobileMenu, chatButton, statsCounters;
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    // Load components
+    loadComponents();
+});
+
+// Load header and footer
+function loadComponents() {
+    // Load header
+    fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+            
+            // Set up event listeners for header after it's loaded
+            setupHeaderEventListeners();
+            
+            // Set active navigation
+            setActiveNavigation();
+        })
+        .catch(error => console.error('Error loading header:', error));
+    
+    // Load footer
+    fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+}
+
+// Set up event listeners for header
+function setupHeaderEventListeners() {
+    langToggle = document.getElementById('langToggle');
+    langDropdown = document.getElementById('langDropdown');
+    currentLangSpan = document.getElementById('currentLang');
+    langOptions = document.querySelectorAll('.lang-option');
+    mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    mobileMenu = document.getElementById('mobileMenu');
+    
+    // Language selector
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            langDropdown.classList.toggle('hidden');
+        });
+    }
+    
+    // Close language dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
+    
+    // Language options
+    if (langOptions) {
+        langOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                if (lang === 'en') {
+                    window.location.href = '../en/';
+                }
+                if (langDropdown) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+        });
+    }
+    
+    // Mobile menu toggle
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+    
+    // Close mobile menu when clicking a link
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+    
+    // Set up chat button
+    setupChatButton();
+    
+    // Initialize animations
+    initCounters();
+    initScrollReveal();
+}
 
 // Set active navigation based on current page
 function setActiveNavigation() {
@@ -21,7 +108,6 @@ function setActiveNavigation() {
     let activeId = '';
     switch(currentPage) {
         case 'index.html':
-        case '':
             activeId = 'nav-home';
             break;
         case 'services.html':
@@ -55,6 +141,7 @@ function setActiveNavigation() {
 
 // Initialize counters
 function initCounters() {
+    statsCounters = document.querySelectorAll('.stats-counter');
     if (!statsCounters.length) return;
     
     const observerOptions = {
@@ -116,57 +203,10 @@ function initScrollReveal() {
     });
 }
 
-// Set up event listeners
-function setupEventListeners() {
-    // Language selector
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            langDropdown.classList.toggle('hidden');
-        });
-    }
+// Set up event listeners for chat button
+function setupChatButton() {
+    chatButton = document.getElementById('chatButton');
     
-    // Close language dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
-            langDropdown.classList.add('hidden');
-        }
-    });
-    
-    // Language options
-    if (langOptions) {
-        langOptions.forEach(option => {
-            option.addEventListener('click', (e) => {
-                e.preventDefault();
-                const lang = option.getAttribute('data-lang');
-                if (lang === 'en') {
-                    window.location.href = '/en/';
-                } else if (lang === 'fr') {
-                    window.location.href = '/fr/';
-                }
-                if (langDropdown) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-        });
-    }
-    
-    // Mobile menu toggle
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-    
-    // Close mobile menu when clicking a link
-    if (mobileMenu) {
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-    
-    // Chat functionality
     if (chatButton) {
         chatButton.addEventListener('click', () => {
             // Detect if mobile or desktop
@@ -182,16 +222,3 @@ function setupEventListeners() {
         });
     }
 }
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    // Set active navigation
-    setActiveNavigation();
-    
-    // Initialize animations
-    initCounters();
-    initScrollReveal();
-    
-    // Set up event listeners
-    setupEventListeners();
-});
