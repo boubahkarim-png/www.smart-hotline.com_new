@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Smart Hotline Agency</title>
+    <meta name="description" content="Contactez Smart Hotline Agency pour une consultation gratuite sur nos services de communication téléphonique pour PME.">
+    <meta name="keywords" content="contact, consultation, services téléphoniques, PME, réception d'appels, support client">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact | Smart Hotline Agency">
+    <meta property="og:description" content="Contactez Smart Hotline Agency pour une consultation gratuite">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/contact.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/contact-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/contact.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contactez Smart Hotline Agency",
+        "description": "Page de contact pour les services de communication téléphonique",
+        "url": "https://smart-hotline.com/contact.html",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com",
+            "logo": "https://smart-hotline.com/images/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-514-819-0559",
+                "email": "direction@smart-hotline.com",
+                "contactType": "customer service",
+                "availableLanguage": ["French", "English"],
+                "hoursAvailable": "Mo-Fr 09:00-18:00"
+            }
+        }
+    }
+    </script>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Contactez-Nous</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Prêt à transformer votre communication ? Contactez-nous dès aujourd'hui pour une consultation gratuite et sans engagement.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-8">Envoyez-nous un Message</h2>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom Complet *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Jean Dupont">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Professionnel *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="jean@entreprise.com">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="+33 1 23 45 67 89">
+                            </div>
+                            
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
+                                <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Nom de votre entreprise">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Intéressé *</label>
+                                <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="reception">Réception d'Appels</option>
+                                    <option value="emission">Émission d'Appels</option>
+                                    <option value="support">Support Client</option>
+                                    <option value="crm">CRM & Listes</option>
+                                    <option value="multiple">Services Multiples</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Décrivez vos besoins..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="consent" name="consent" required class="mt-1 mr-2">
+                                <label for="consent" class="text-sm text-gray-600">
+                                    J'accepte que mes données soient traitées conformément à la politique de confidentialité.
+                                </label>
+                            </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-full">
+                                Envoyer le Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-8">Autres Moyens de Contact</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-phone-alt text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Téléphone</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="tel:+15148190559" class="text-primary-600 font-semibold hover:underline">+1 514 819 0559</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Du lundi au vendredi, 9h-18h</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-envelope text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Email</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="mailto:direction@smart-hotline.com" class="text-primary-600 font-semibold hover:underline">direction@smart-hotline.com</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Réponse sous 24h</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fab fa-whatsapp text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">WhatsApp</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m'aider%3F" target="_blank" class="text-primary-600 font-semibold hover:underline">+1 514 819 0559</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Disponible 24/7</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-calendar text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Prise de Rendez-vous</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="https://calendly.com/boubah-karim/30min" target="_blank" class="text-primary-600 font-semibold hover:underline">Planifier une réunion</a>
+                                </p>
+                                <p class="text-sm text-gray-500">30 minutes gratuites</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquentes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Réponses aux questions les plus courantes sur nos services
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Combien de temps faut-il pour mettre en place les services ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                La mise en place prend généralement entre 24 et 48 heures après validation de vos besoins et signature du contrat.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Proposez-vous un essai gratuit ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Oui, nous proposons un essai gratuit de 2 semaines sans engagement pour tous nos services afin que vous puissiez évaluer notre qualité.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Quelles sont les modalités de paiement ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Nous acceptons les paiements par carte bancaire, virement bancaire et prélèvement automatique mensuel.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Puis-je changer mon offre à tout moment ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Oui, vous pouvez adapter votre offre à tout moment avec un préavis de 30 jours. Les changements
