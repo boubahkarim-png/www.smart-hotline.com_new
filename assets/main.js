@@ -1,5 +1,6 @@
 // Function to load HTML content from external files
 function loadHTML(elementId, filePath, callback) {
+    console.log(`Loading ${filePath} into ${elementId}`);
     fetch(filePath)
         .then(response => {
             if (!response.ok) {
@@ -11,12 +12,15 @@ function loadHTML(elementId, filePath, callback) {
             const element = document.getElementById(elementId);
             if (element) {
                 element.innerHTML = data;
+                console.log(`Successfully loaded ${filePath}`);
                 if (callback) callback();
+            } else {
+                console.error(`Element ${elementId} not found`);
             }
         })
         .catch(error => {
             console.error('Error loading HTML:', error);
-            // Fallback: try to load from cache or show error
+            // Fallback: show error message
             const element = document.getElementById(elementId);
             if (element) {
                 element.innerHTML = '<div style="color: red; padding: 20px;">Error loading content. Please refresh the page.</div>';
@@ -32,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadHTML('header-container', 'includes/header.html', function() {
         console.log('Header loaded successfully');
         setupHeader();
+        setupLanguageSelector();
     });
     
     loadHTML('footer-container', 'includes/footer.html', function() {
@@ -44,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setupArticleModal();
     initScrollReveal();
     initCounters();
+    
+    console.log('Page initialization complete');
 });
 
 // Setup header functionality
@@ -54,6 +61,7 @@ function setupHeader() {
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
+            console.log('Mobile menu toggled');
         });
         
         // Close mobile menu when clicking a link
@@ -66,9 +74,42 @@ function setupHeader() {
     }
 }
 
+// Setup language selector
+function setupLanguageSelector() {
+    const langToggle = document.getElementById('langToggle');
+    const langDropdown = document.getElementById('langDropdown');
+    const currentLangSpan = document.getElementById('currentLang');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', function() {
+            langDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.add('hidden');
+            }
+        });
+    }
+    
+    if (langOptions) {
+        langOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                if (lang === 'en') {
+                    window.location.href = 'en/index.html';
+                }
+                langDropdown.classList.add('hidden');
+            });
+        });
+    }
+}
+
 // Setup footer functionality
 function setupFooter() {
-    // Footer functionality
     console.log('Footer setup complete');
 }
 
@@ -103,6 +144,7 @@ function setupArticleModal() {
             modalContent.innerHTML = article.content;
             articleModal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            console.log('Article modal opened');
         }
     }
     
@@ -111,6 +153,7 @@ function setupArticleModal() {
         if (articleModal) {
             articleModal.classList.remove('active');
             document.body.style.overflow = 'auto';
+            console.log('Article modal closed');
         }
     }
     
@@ -136,6 +179,8 @@ function initCounters() {
     const statsCounters = document.querySelectorAll('.stats-counter');
     
     if (statsCounters.length === 0) return;
+    
+    console.log(`Initializing ${statsCounters.length} counters`);
     
     const observerOptions = {
         threshold: 0.7,
@@ -163,6 +208,7 @@ function initCounters() {
                 
                 updateCounter();
                 observer.unobserve(counter);
+                console.log(`Counter animated to ${target}`);
             }
         });
     }, observerOptions);
@@ -178,6 +224,8 @@ function initScrollReveal() {
     
     if (scrollRevealElements.length === 0) return;
     
+    console.log(`Initializing ${scrollRevealElements.length} scroll reveal elements`);
+    
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -188,6 +236,7 @@ function initScrollReveal() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 observer.unobserve(entry.target);
+                console.log('Scroll reveal activated');
             }
         });
     }, observerOptions);
