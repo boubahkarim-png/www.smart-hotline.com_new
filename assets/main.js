@@ -1,13 +1,12 @@
 // Function to load HTML content from external files
 function loadHTML(elementId, filePath, callback) {
-    // Utiliser la fonction pour s'assurer que le chemin commence par un /
+    // Utilisation d'un chemin absolu
     const absolutePath = filePath.startsWith('/') ? filePath : `/${filePath}`;
     
     console.log(`Loading ${absolutePath} into ${elementId}`);
     fetch(absolutePath)
         .then(response => {
             if (!response.ok) {
-                // Pour le débogage si un chemin absolu ne fonctionne pas
                 throw new Error(`HTTP error! status: ${response.status} for path: ${absolutePath}`);
             }
             return response.text();
@@ -15,7 +14,6 @@ function loadHTML(elementId, filePath, callback) {
         .then(data => {
             const element = document.getElementById(elementId);
             if (element) {
-                // Pour les pages de contenu, nous mettons le HTML dans le main-content-container
                 element.innerHTML = data;
                 console.log(`Successfully loaded ${absolutePath}`);
                 if (callback) callback();
@@ -37,24 +35,23 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing page...');
     
     // CORRECTION: Charger le header et le footer en utilisant des chemins absolus
-    loadHTML('header-container', 'includes/header.html', function() {
+    loadHTML('header-container', '/includes/header.html', function() { // Chemin absolu
         console.log('Header loaded successfully');
         setupHeader();
         setupLanguageSelector();
     });
     
-    loadHTML('footer-container', 'includes/footer.html', function() {
+    loadHTML('footer-container', '/includes/footer.html', function() { // Chemin absolu
         console.log('Footer loaded successfully');
         setupFooter();
+        // Déplace l'initialisation des compteurs et scroll ici, car ils pourraient se trouver dans le footer
+        initCounters();
+        initScrollReveal(); 
     });
     
-    // Initialisation des composants dynamiques
+    // Initialisation des composants statiques (hors includes)
     setupChatButton();
     setupArticleModal();
-    initScrollReveal();
-    initCounters();
-    
-    // Le chargement du contenu spécifique à la page sera fait par un script inline dans le gabarit HTML
     
     console.log('Page initialization complete');
 });
@@ -71,19 +68,24 @@ function setupLanguageSelector() {
             const currentPath = window.location.pathname;
             let newPath = '';
 
+            // Retire l'extension .html pour la comparaison
+            let baseName = currentPath.split('/').pop().replace('.html', '');
+            if (baseName === '') baseName = 'index'; // Si c'est /, c'est l'index
+
             if (currentPath.startsWith('/en/')) {
-                // De EN vers FR : Supprimer /en/ et rediriger
-                newPath = currentPath.replace('/en/', '/');
-            } else if (currentPath.startsWith('/fr/')) {
-                // De FR vers EN : Remplacer /fr/ par /en/
-                newPath = currentPath.replace('/fr/', '/en/');
+                // De EN vers FR : Rediriger vers la racine ou /fr/page.html
+                newPath = (baseName === 'index' || baseName === '') ? '/' : `/fr/${baseName}.html`;
+            } else if (currentPath === '/' || currentPath.startsWith('/fr/')) {
+                // De FR vers EN : Rediriger vers /en/page.html
+                newPath = `/en/${baseName}.html`;
             } else {
-                // De la racine (index.html) vers EN ou FR (si non spécifié, on bascule vers /en/)
-                newPath = '/en' + currentPath;
+                // Gestion de la racine index.html (cas où l'URL n'a pas de /fr/)
+                newPath = `/en/${baseName}.html`;
             }
-            
-            // Assurez-vous que l'index.html de la racine reste '/' pour la version FR principale
-            if (newPath === '/index.html') newPath = '/';
+
+            // Simplification de la racine: /en/index.html -> /en/
+            if (newPath === '/en/index.html') newPath = '/en/';
+            if (newPath === '/fr/index.html') newPath = '/';
 
             // Redirection
             window.location.href = newPath;
@@ -100,8 +102,31 @@ function setupLanguageSelector() {
         }
     }
 }
+// Le reste des fonctions (setupHeader, setupFooter, setupChatButton, setupArticleModal, initCounters, initScrollReveal)
+// doit être conservé tel quel (sauf les modifications dans setupLanguageSelector et loadHTML ci-dessus).
 
-// ... (Gardez le reste des fonctions comme setupHeader, setupFooter, etc.)
+// Function to set up the mobile menu toggle (from your original code)
+function setupHeader() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    // ... (rest of setupHeader logic)
+}
+
+function setupFooter() {
+    // ... (rest of setupFooter logic)
+}
+function setupChatButton() {
+    // ... (rest of setupChatButton logic)
+}
+function setupArticleModal() {
+    // ... (rest of setupArticleModal logic)
+}
+function initCounters() {
+    // ... (rest of initCounters logic)
+}
+function initScrollReveal() {
+    // ... (rest of initScrollReveal logic)
+}
 
 // Make functions globally available
 window.loadHTML = loadHTML;
