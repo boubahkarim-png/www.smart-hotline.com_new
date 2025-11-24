@@ -1,138 +1,229 @@
-// Function to load HTML content from external files
-function loadHTML(elementId, filePath, callback) {
-    // Utilisation d'un chemin absolu
-    const absolutePath = filePath.startsWith('/') ? filePath : `/${filePath}`;
-    
-    console.log(`Loading ${absolutePath} into ${elementId}`);
-    fetch(absolutePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} for path: ${absolutePath}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.innerHTML = data;
-                console.log(`Successfully loaded ${absolutePath}`);
-                if (callback) callback();
-            } else {
-                console.error(`Element ${elementId} not found`);
-            }
-        })
-        .catch(error => {
-            console.error('Error loading HTML:', error);
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.innerHTML = '<div style="color: red; padding: 20px;">Error loading content from ' + absolutePath + '. Check your server configuration or path.</div>';
-            }
-        });
-}
+// DOM Elements
+let langToggle, langDropdown, currentLangSpan, langOptions, mobileMenuToggle, mobileMenu, chatButton, statsCounters, scrollRevealElements;
 
-// Initialisation de la page
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing page...');
+// State
+let currentLang = 'fr';
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize elements after DOM is loaded
+    langToggle = document.getElementById('langToggle');
+    langDropdown = document.getElementById('langDropdown');
+    currentLangSpan = document.getElementById('currentLang');
+    langOptions = document.querySelectorAll('.lang-option');
+    mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    mobileMenu = document.getElementById('mobileMenu');
+    chatButton = document.getElementById('chatButton');
+    statsCounters = document.querySelectorAll('.stats-counter');
+    scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     
-    // CORRECTION: Charger le header et le footer en utilisant des chemins absolus
-    loadHTML('header-container', '/includes/header.html', function() { // Chemin absolu
-        console.log('Header loaded successfully');
-        setupHeader();
-        setupLanguageSelector();
-    });
+    // Detect user's language based on geolocation
+    detectUserLanguage();
     
-    loadHTML('footer-container', '/includes/footer.html', function() { // Chemin absolu
-        console.log('Footer loaded successfully');
-        setupFooter();
-        // Déplace l'initialisation des compteurs et scroll ici, car ils pourraient se trouver dans le footer
-        initCounters();
-        initScrollReveal(); 
-    });
+    // Initialize counters
+    initCounters();
     
-    // Initialisation des composants statiques (hors includes)
-    setupChatButton();
-    setupArticleModal();
+    // Initialize scroll reveal
+    initScrollReveal();
     
-    console.log('Page initialization complete');
+    // Set up event listeners
+    setupEventListeners();
 });
 
-
-// CORRECTION: Logique de basculement de langue pour gérer les dossiers /fr/ et /en/
-function setupLanguageSelector() {
-    const langToggle = document.querySelector('.lang-selector');
+// Function to load header and footer
+function loadIncludes() {
+    // Load header
+    fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Re-initialize event listeners after header is loaded
+            setupEventListeners();
+        })
+        .catch(error => console.error('Error loading header:', error));
     
-    if (langToggle) {
-        langToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const currentPath = window.location.pathname;
-            let newPath = '';
+    // Load footer
+    fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Re-initialize event listeners after footer is loaded
+            setupEventListeners();
+        })
+        .catch(error => console.error('Error loading footer:', error));
+}
 
-            // Retire l'extension .html pour la comparaison
-            let baseName = currentPath.split('/').pop().replace('.html', '');
-            if (baseName === '') baseName = 'index'; // Si c'est /, c'est l'index
-
-            if (currentPath.startsWith('/en/')) {
-                // De EN vers FR : Rediriger vers la racine ou /fr/page.html
-                newPath = (baseName === 'index' || baseName === '') ? '/' : `/fr/${baseName}.html`;
-            } else if (currentPath === '/' || currentPath.startsWith('/fr/')) {
-                // De FR vers EN : Rediriger vers /en/page.html
-                newPath = `/en/${baseName}.html`;
-            } else {
-                // Gestion de la racine index.html (cas où l'URL n'a pas de /fr/)
-                newPath = `/en/${baseName}.html`;
-            }
-
-            // Simplification de la racine: /en/index.html -> /en/
-            if (newPath === '/en/index.html') newPath = '/en/';
-            if (newPath === '/fr/index.html') newPath = '/';
-
-            // Redirection
-            window.location.href = newPath;
-        });
-    }
-
-    // Affichage de la langue actuelle dans le sélecteur
-    const currentLangSpan = document.getElementById('langSelector');
-    if (currentLangSpan) {
-        if (window.location.pathname.startsWith('/en/')) {
-            currentLangSpan.textContent = 'EN';
-        } else {
-            currentLangSpan.textContent = 'FR';
+// Detect user language based on geolocation
+function detectUserLanguage() {
+    // Check browser language first
+    const browserLang = navigator.language || navigator.userLanguage;
+    
+    // Check if it's a French-speaking region
+    const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
+    
+    if (frenchRegions.includes(browserLang)) {
+        setLanguage('fr');
+    } else {
+        // Try to get geolocation (this requires user permission)
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    // In a real implementation, you would send coordinates to a geocoding service
+                    // For this demo, we'll just use browser language detection
+                },
+                error => {
+                    // If geolocation is denied, fall back to browser language
+                    console.log('Geolocation denied:', error);
+                }
+            );
         }
     }
 }
-// Le reste des fonctions (setupHeader, setupFooter, setupChatButton, setupArticleModal, initCounters, initScrollReveal)
-// doit être conservé tel quel (sauf les modifications dans setupLanguageSelector et loadHTML ci-dessus).
 
-// Function to set up the mobile menu toggle (from your original code)
-function setupHeader() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    // ... (rest of setupHeader logic)
+// Set language
+function setLanguage(lang) {
+    currentLang = lang;
+    if (currentLangSpan) {
+        currentLangSpan.textContent = lang.toUpperCase();
+    }
 }
 
-function setupFooter() {
-    // ... (rest of setupFooter logic)
-}
-function setupChatButton() {
-    // ... (rest of setupChatButton logic)
-}
-function setupArticleModal() {
-    // ... (rest of setupArticleModal logic)
-}
+// Initialize counters
 function initCounters() {
-    // ... (rest of initCounters logic)
-}
-function initScrollReveal() {
-    // ... (rest of initScrollReveal logic)
+    if (!statsCounters || statsCounters.length === 0) return;
+    
+    const observerOptions = {
+        threshold: 0.7,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, observerOptions);
+    
+    statsCounters.forEach(counter => {
+        observer.observe(counter);
+    });
 }
 
-// Make functions globally available
-window.loadHTML = loadHTML;
-window.setupHeader = setupHeader;
-window.setupFooter = setupFooter;
-window.setupChatButton = setupChatButton;
-window.setupArticleModal = setupArticleModal;
-window.initCounters = initCounters;
-window.initScrollReveal = initScrollReveal;
+// Initialize scroll reveal
+function initScrollReveal() {
+    if (!scrollRevealElements || scrollRevealElements.length === 0) return;
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    scrollRevealElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Set up event listeners
+function setupEventListeners() {
+    // Re-initialize elements
+    langToggle = document.getElementById('langToggle');
+    langDropdown = document.getElementById('langDropdown');
+    currentLangSpan = document.getElementById('currentLang');
+    langOptions = document.querySelectorAll('.lang-option');
+    mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    mobileMenu = document.getElementById('mobileMenu');
+    chatButton = document.getElementById('chatButton');
+    
+    // Language selector
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            if (langDropdown) {
+                langDropdown.classList.toggle('hidden');
+            }
+        });
+    }
+    
+    // Close language dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
+    
+    // Language options
+    if (langOptions) {
+        langOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                if (lang === 'en') {
+                    window.location.href = '../en/index.html';
+                }
+                if (langDropdown) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+        });
+    }
+    
+    // Mobile menu toggle
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        });
+    }
+    
+    // Close mobile menu when clicking a link
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+    
+    // Chat functionality
+    if (chatButton) {
+        chatButton.addEventListener('click', () => {
+            // Detect if mobile or desktop
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Open WhatsApp on mobile
+                window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+            } else {
+                // Open email client on desktop
+                window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+            }
+        });
+    }
+}
