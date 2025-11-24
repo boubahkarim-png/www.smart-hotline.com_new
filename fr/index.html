@@ -38,6 +38,9 @@
     </script>
 
     <style>
+        /* All Critical CSS (same as in assets/main.css) will be placed here for maximum speed. */
+        /* For brevity, insert the content of assets/main.css here in your actual file. */
+        
         :root {
             --primary-50: #f0f9ff;
             --primary-100: #e0f2fe;
@@ -1093,7 +1096,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body>
+<body data-lang="fr">
     {{> includes/header.html }}
 
     <main>
@@ -1101,17 +1104,17 @@
             <div class="container">
                 <div class="hero-grid">
                     <div>
-                        <h1 class="hero-title">
+                        <h1 class="hero-title" data-i18n="hero.title">
                             <span class="gradient-text">Services de Communication Sur Mesure</span>
                         </h1>
-                        <p class="hero-description">
+                        <p class="hero-description" data-i18n="hero.description">
                             Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
                         </p>
                         <div class="hero-buttons">
-                            <a href="contact.html" class="btn-primary">
+                            <a href="contact.html" class="btn-primary" data-i18n="hero.cta_demo_text">
                                 Demander une Démo Gratuite
                             </a>
-                            <a href="services.html" class="btn-secondary">
+                            <a href="services.html" class="btn-secondary" data-i18n="hero.cta_services_text">
                                 Découvrir Nos Services
                             </a>
                         </div>
@@ -1119,8 +1122,8 @@
                     <div class="hero-image-container">
                         <img src="/images/main-hero.jpg" alt="Services de Communication" class="hero-image" loading="lazy">
                         <div class="hero-badge">
-                            <div class="badge-title">2 Semaines</div>
-                            <div class="badge-subtitle">Essai Sans Engagement</div>
+                            <div class="badge-title" data-i18n="hero.badge_title">2 Semaines</div>
+                            <div class="badge-subtitle" data-i18n="hero.badge_subtitle">Essai Sans Engagement</div>
                         </div>
                     </div>
                 </div>
@@ -1129,23 +1132,23 @@
         
         <section class="trust-badges">
             <div class="container">
-                <p class="trust-title">De confiance pour 500+ PME et entreprises en croissance</p>
+                <p class="trust-title" data-i18n="trust.title">De confiance pour 500+ PME et entreprises en croissance</p>
                 <div class="trust-grid">
                     <div class="trust-item">
                         <i class="fas fa-shield-alt trust-icon"></i>
-                        <span class="trust-text">Sécurisé & Confidentiel</span>
+                        <span class="trust-text" data-i18n="trust.badge_1">Sécurisé & Confidentiel</span>
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-clock trust-icon"></i>
-                        <span class="trust-text">Disponibilité 24/7</span>
+                        <span class="trust-text" data-i18n="trust.badge_2">Disponibilité 24/7</span>
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-user-tie trust-icon"></i>
-                        <span class="trust-text">Agents Professionnels</span>
+                        <span class="trust-text" data-i18n="trust.badge_3">Agents Professionnels</span>
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-money-bill-wave trust-icon"></i>
-                        <span class="trust-text">Rentable</span>
+                        <span class="trust-text" data-i18n="trust.badge_4">Rentable</span>
                     </div>
                 </div>
             </div>
@@ -1154,8 +1157,8 @@
         <section class="services-preview scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Nos Solutions Complètes</h2>
-                    <p class="section-description">
+                    <h2 class="section-title" data-i18n="services.title">Nos Solutions Complètes</h2>
+                    <p class="section-description" data-i18n="services.description">
                         Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
                     </p>
                 </div>
@@ -1165,44 +1168,44 @@
                         <div class="service-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h3 class="service-title">Réception d'Appels</h3>
-                        <p class="service-description">
+                        <h3 class="service-title" data-i18n="services.card_1_title">Réception d'Appels</h3>
+                        <p class="service-description" data-i18n="services.card_1_desc">
                             Ne manquez plus aucun appel important grâce à notre service de réception dédié.
                         </p>
-                        <span class="service-link">En savoir plus →</span>
+                        <span class="service-link" data-i18n="services.link_more">En savoir plus →</span>
                     </a>
                     
                     <a href="emission.html" class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-phone-volume"></i>
                         </div>
-                        <h3 class="service-title">Émission d'Appels</h3>
-                        <p class="service-description">
+                        <h3 class="service-title" data-i18n="services.card_2_title">Émission d'Appels</h3>
+                        <p class="service-description" data-i18n="services.card_2_desc">
                             Développez votre clientèle avec nos campagnes d'appels ciblées.
                         </p>
-                        <span class="service-link">En savoir plus →</span>
+                        <span class="service-link" data-i18n="services.link_more">En savoir plus →</span>
                     </a>
                     
                     <a href="support.html" class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <h3 class="service-title">Support Client</h3>
-                        <p class="service-description">
+                        <h3 class="service-title" data-i18n="services.card_3_title">Support Client</h3>
+                        <p class="service-description" data-i18n="services.card_3_desc">
                             Améliorez la satisfaction de vos clients avec un support réactif et professionnel.
                         </p>
-                        <span class="service-link">En savoir plus →</span>
+                        <span class="service-link" data-i18n="services.link_more">En savoir plus →</span>
                     </a>
                     
                     <a href="crm-lists.html" class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-database"></i>
                         </div>
-                        <h3 class="service-title">CRM & Listes</h3>
-                        <p class="service-description">
+                        <h3 class="service-title" data-i18n="services.card_4_title">CRM & Listes</h3>
+                        <p class="service-description" data-i18n="services.card_4_desc">
                             CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes.
                         </p>
-                        <span class="service-link">En savoir plus →</span>
+                        <span class="service-link" data-i18n="services.link_more">En savoir plus →</span>
                     </a>
                 </div>
             </div>
@@ -1211,8 +1214,8 @@
         <section class="process-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Comment Ça Marche</h2>
-                    <p class="section-description">
+                    <h2 class="section-title" data-i18n="process.title">Comment Ça Marche</h2>
+                    <p class="section-description" data-i18n="process.description">
                         Démarrez avec nos services en seulement 4 étapes simples
                     </p>
                 </div>
@@ -1220,32 +1223,32 @@
                 <div class="process-grid">
                     <div class="process-step">
                         <div class="step-number">1</div>
-                        <h3 class="step-title">Consultation</h3>
-                        <p class="step-description">
+                        <h3 class="step-title" data-i18n="process.step_1_title">Consultation</h3>
+                        <p class="step-description" data-i18n="process.step_1_desc">
                             Nous analysons vos besoins commerciaux et défis de communication
                         </p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">2</div>
-                        <h3 class="step-title">Personnalisation</h3>
-                        <p class="step-description">
+                        <h3 class="step-title" data-i18n="process.step_2_title">Personnalisation</h3>
+                        <p class="step-description" data-i18n="process.step_2_desc">
                             Nous adaptons nos services à votre marque et exigences
                         </p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">3</div>
-                        <h3 class="step-title">Mise en Œuvre</h3>
-                        <p class="step-description">
+                        <h3 class="step-title" data-i18n="process.step_3_title">Mise en Œuvre</h3>
+                        <p class="step-description" data-i18n="process.step_3_desc">
                             Nous configurons votre solution de communication dédiée
                         </p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">4</div>
-                        <h3 class="step-title">Support</h3>
-                        <p class="step-description">
+                        <h3 class="step-title" data-i18n="process.step_4_title">Support</h3>
+                        <p class="step-description" data-i18n="process.step_4_desc">
                             Nous fournissons un support continu et un suivi des performances
                         </p>
                     </div>
@@ -1257,28 +1260,28 @@
             <div class="container">
                 <div class="trial-grid">
                     <div class="trial-content">
-                        <h2 class="trial-title">Essayez Nos Services Sans Risque</h2>
-                        <p class="trial-description">
+                        <h2 class="trial-title" data-i18n="trial.title">Essayez Nos Services Sans Risque</h2>
+                        <p class="trial-description" data-i18n="trial.description">
                             Découvrez les avantages des services de communication professionnels avec notre essai de 2 semaines. Aucun engagement requis.
                         </p>
                         <div class="trial-features">
-                            <h3 class="features-title">Ce qui est inclus dans l'essai:</h3>
+                            <h3 class="features-title" data-i18n="trial.features_title">Ce qui est inclus dans l'essai:</h3>
                             <ul class="features-list">
                                 <li class="feature-item">
                                     <i class="fas fa-check"></i>
-                                    <span>Accès complet à notre service de réception d'appels</span>
+                                    <span data-i18n="trial.feature_1">Accès complet à notre service de réception d'appels</span>
                                 </li>
                                 <li class="feature-item">
                                     <i class="fas fa-check"></i>
-                                    <span>Gestion professionnelle du support client</span>
+                                    <span data-i18n="trial.feature_2">Gestion professionnelle du support client</span>
                                 </li>
                                 <li class="feature-item">
                                     <i class="fas fa-check"></i>
-                                    <span>Gestionnaire de compte dédié</span>
+                                    <span data-i18n="trial.feature_3">Gestionnaire de compte dédié</span>
                                 </li>
                                 <li class="feature-item">
                                     <i class="fas fa-check"></i>
-                                    <span>Rapports de performance et insights</span>
+                                    <span data-i18n="trial.feature_4">Rapports de performance et insights</span>
                                 </li>
                             </ul>
                         </div>
@@ -1293,8 +1296,8 @@
         <section class="stats-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Des Résultats Prouvés</h2>
-                    <p class="section-description">
+                    <h2 class="section-title" data-i18n="stats.title">Des Résultats Prouvés</h2>
+                    <p class="section-description" data-i18n="stats.description">
                         Découvrez comment nos services transforment les PME comme la vôtre
                     </p>
                 </div>
@@ -1304,32 +1307,32 @@
                         <div class="stat-number">
                             <span class="stats-counter" data-target="500">0</span>+
                         </div>
-                        <h3 class="stat-title">PME Satisfaites</h3>
-                        <p class="stat-description">Nous accompagnons déjà</p>
+                        <h3 class="stat-title" data-i18n="stats.stat_1_title">PME Satisfaites</h3>
+                        <p class="stat-description" data-i18n="stats.stat_1_desc">Nous accompagnons déjà</p>
                     </div>
                     
                     <div class="stat-item">
                         <div class="stat-number">
                             <span class="stats-counter" data-target="98">0</span>%
                         </div>
-                        <h3 class="stat-title">Taux de Satisfaction</h3>
-                        <p class="stat-description">De nos clients</p>
+                        <h3 class="stat-title" data-i18n="stats.stat_2_title">Taux de Satisfaction</h3>
+                        <p class="stat-description" data-i18n="stats.stat_2_desc">De nos clients</p>
                     </div>
                     
                     <div class="stat-item">
                         <div class="stat-number">
                             <span class="stats-counter" data-target="40">0</span>%
                         </div>
-                        <h3 class="stat-title">Économie de Temps</h3>
-                        <p class="stat-description">Pour nos clients</p>
+                        <h3 class="stat-title" data-i18n="stats.stat_3_title">Économie de Temps</h3>
+                        <p class="stat-description" data-i18n="stats.stat_3_desc">Pour nos clients</p>
                     </div>
                     
                     <div class="stat-item">
                         <div class="stat-number">
                             <span class="stats-counter" data-target="24">0</span>/7
                         </div>
-                        <h3 class="stat-title">Disponibilité</h3>
-                        <p class="stat-description">De nos services</p>
+                        <h3 class="stat-title" data-i18n="stats.stat_4_title">Disponibilité</h3>
+                        <p class="stat-description" data-i18n="stats.stat_4_desc">De nos services</p>
                     </div>
                 </div>
             </div>
@@ -1338,8 +1341,8 @@
         <section class="testimonials-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Ce Que Disent Nos Clients</h2>
-                    <p class="section-description">
+                    <h2 class="section-title" data-i18n="testimonials.title">Ce Que Disent Nos Clients</h2>
+                    <p class="section-description" data-i18n="testimonials.description">
                         Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur activité
                     </p>
                 </div>
@@ -1360,7 +1363,7 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" data-i18n="testimonials.test_1_text">
                             "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
                         </p>
                     </div>
@@ -1380,7 +1383,7 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" data-i18n="testimonials.test_2_text">
                             "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
                         </p>
                     </div>
@@ -1400,7 +1403,7 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" data-i18n="testimonials.test_3_text">
                             "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
                         </p>
                     </div>
@@ -1411,13 +1414,13 @@
         <section class="cta-section scroll-reveal">
             <div class="container">
                 <div class="cta-content">
-                    <h2 class="cta-title">Prêt à Transformer Votre Communication?</h2>
-                    <p class="cta-description">
+                    <h2 class="cta-title" data-i18n="cta.title">Prêt à Transformer Votre Communication?</h2>
+                    <p class="cta-description" data-i18n="cta.description">
                         Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
                     </p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn-primary">Demander une Démo Gratuite</a>
-                        <a href="pricing.html" class="btn-secondary">Découvrir Nos Offres</a>
+                        <a href="contact.html" class="btn-primary" data-i18n="cta.cta_demo_text">Demander une Démo Gratuite</a>
+                        <a href="pricing.html" class="btn-secondary" data-i18n="cta.cta_offers_text">Découvrir Nos Offres</a>
                     </div>
                 </div>
             </div>
@@ -1434,221 +1437,5 @@
     
     <script src="/assets/main.js" defer></script>
     <script src="/assets/localization.js" defer></script>
-    <script src="/assets/reveal.js" defer></script>
-    
-    <script>
-        // DOM Elements (Only those needed for FR page should remain)
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        
-        // Function to resolve relative links correctly for sub-directory
-        function correctRelativeLinks(selector) {
-            document.querySelectorAll(selector).forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && !href.startsWith('http') && !href.startsWith('/') && !href.includes('.html')) {
-                    link.setAttribute('href', `/${href}`); // Prepend / to link
-                }
-            });
-        }
-
-        // Set active navigation based on current page
-        function setActiveNavigation() {
-            const currentPath = window.location.pathname;
-            
-            // Remove active class from all nav links
-            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Set active class based on current page
-            // Logic for FR links (assuming they are in the root or in /fr/)
-            const pageMap = {
-                '/fr/': 'nav-home',
-                '/fr/index.html': 'nav-home',
-                '/fr/services.html': 'nav-services',
-                '/fr/pricing.html': 'nav-pricing',
-                '/fr/faq.html': 'nav-faq',
-                '/fr/blog.html': 'nav-blog',
-                '/fr/contact.html': 'nav-contact',
-                '/fr/reception.html': 'nav-services',
-                '/fr/emission.html': 'nav-services',
-                '/fr/support.html': 'nav-services'
-            };
-
-            let activeId = '';
-            for (const path in pageMap) {
-                if (currentPath.endsWith(path)) {
-                    activeId = pageMap[path];
-                    break;
-                }
-            }
-            
-            // Set active class
-            if (activeId) {
-                // Ensure desktop nav links are using the French path if applicable
-                const desktopLink = document.getElementById(activeId);
-                if (desktopLink && desktopLink.tagName === 'A') {
-                    desktopLink.classList.add('active');
-                } else if (desktopLink && desktopLink.tagName === 'BUTTON') {
-                    // For dropdown buttons like Services
-                    desktopLink.classList.add('active');
-                }
-                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
-            }
-        }
-        
-        // Initialize counters (from the provided code)
-        function initCounters() {
-            if (!statsCounters.length) return;
-            
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000;
-                        const increment = target / (duration / 16);
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Initialize scroll reveal (from the provided code)
-        function initScrollReveal() {
-            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-            if (!scrollRevealElements.length) return;
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Correct relative links (Important for subdirectories)
-            correctRelativeLinks('a[href]');
-            correctRelativeLinks('link[href]');
-            correctRelativeLinks('script[src]');
-            correctRelativeLinks('img[src]');
-
-            // Set active navigation
-            setActiveNavigation();
-            
-            // Initialize animations
-            initCounters();
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Set up event listeners (from the provided code, adjusting URLs)
-        function setupEventListeners() {
-            // Language selector
-            if (langToggle) {
-                langToggle.addEventListener('click', () => {
-                    langDropdown.classList.toggle('hidden');
-                });
-            }
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            if (langOptions) {
-                langOptions.forEach(option => {
-                    option.addEventListener('click', (e) => {
-                        const lang = option.getAttribute('data-lang');
-                        if (lang === 'en') {
-                            e.preventDefault();
-                            window.location.href = '/en/index.html'; // Correct path for EN page
-                        }
-                        if (langDropdown) {
-                            langDropdown.classList.add('hidden');
-                        }
-                    });
-                });
-            }
-            
-            // Mobile menu toggle
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Close mobile menu when clicking a link
-            if (mobileMenu) {
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
-            
-            // Chat functionality
-            if (chatButton) {
-                chatButton.addEventListener('click', () => {
-                    // Detect if mobile or desktop
-                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                    
-                    if (isMobile) {
-                        // Open WhatsApp on mobile
-                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                    } else {
-                        // Open email client on desktop
-                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
-                    }
-                });
-            }
-        }
-    </script>
 </body>
 </html>
