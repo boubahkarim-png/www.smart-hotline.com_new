@@ -1,112 +1,138 @@
-<!-- Header Navigation -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="../index.html" class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                SH
-            </div>
-            <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-        </a>
-        
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-            <!-- Services Dropdown -->
-            <div class="relative group">
-                <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                    Services
-                    <i class="fas fa-chevron-down text-xs ml-1"></i>
-                </button>
-                <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                        <div class="flex items-center">
-                            <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Tous nos services</div>
-                                <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Réception d'Appels</div>
-                                <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Émission d'Appels</div>
-                                <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-headset text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Support Client</div>
-                                <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-database text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">CRM & Listes</div>
-                                <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                            </div>
-                        </div>
-                    </a>
+<?php
+// --- CONFIGURATION ---
+// These variables must be set in the page that includes this header.
+// Example: $currentLang = 'fr'; $currentPage = 'index.php';
+if (!isset($currentLang)) { $currentLang = 'fr'; }
+if (!isset($currentPage)) { $currentPage = 'index.php'; }
+
+// --- PATH CALCULATION ---
+// Correctly sets the path to the root 'main' directory from any subdirectory.
+ $request_uri = $_SERVER['REQUEST_URI'];
+ $depth = substr_count($request_uri, '/') - 1;
+ $rootPath = str_repeat('../', $depth);
+if ($rootPath === '') { $rootPath = './'; } // For the main index.php
+
+// --- LOCALIZATION ---
+ $locale_file = __DIR__ . '/../assets/localization.json';
+ $translations = file_exists($locale_file) ? json_decode(file_get_contents($locale_file), true) : [];
+ $text = $translations[$currentLang] ?? [];
+
+// --- SEO & META TAGS ---
+// Set default values, which can be overridden in the content pages.
+ $pageTitle = $pageTitle ?? 'Smart Hotline Agency | Services de Communication pour PME';
+ $pageDescription = $pageDescription ?? 'Solutions de communication téléphonique adaptées aux entrepreneurs et PME.';
+ $pageKeywords = $pageKeywords ?? 'téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d\'appels externalisé';
+ $ogImage = $ogImage ?? 'images/main-hero.jpg';
+
+// Construct full URL for Open Graph
+ $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+ $host = $_SERVER['HTTP_HOST'];
+ $full_url = $protocol . $host . rtrim($request_uri, '/');
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $currentLang; ?>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($pageTitle); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars($pageDescription); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($pageKeywords); ?>">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($pageDescription); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo $full_url; ?>">
+    <meta property="og:image" content="<?php echo $protocol . $host . '/' . $ogImage; ?>">
+    
+    <link rel="alternate" hreflang="fr" href="<?php echo $protocol . $host; ?>/fr/<?php echo $currentPage; ?>" />
+    <link rel="alternate" hreflang="en" href="<?php echo $protocol . $host; ?>/en/<?php echo $currentPage; ?>" />
+    <link rel="alternate" hreflang="x-default" href="<?php echo $protocol . $host; ?>/<?php echo $currentPage; ?>" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', }, dark: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a', } }, fontFamily: { 'sans': ['Inter', 'ui-sans-serif', 'system-ui'], }, animation: { 'float': 'float 6s ease-in-out infinite', 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite', 'scroll': 'scroll 20s linear infinite', }, keyframes: { float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-20px)' }, }, scroll: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' }, } } } }
+    </script>
+    
+    <link rel="stylesheet" href="<?php echo $rootPath; ?>assets/style.css">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="<?php echo $rootPath; ?>index.php" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">SH</div>
+                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="<?php echo $rootPath; ?>index.php" class="text-primary-600 font-semibold"><?php echo $text['nav_home']; ?></a>
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                        <?php echo $text['nav_services']; ?> <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="<?php echo $rootPath; ?>services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b"><div class="flex items-center"><i class="fas fa-th-large text-primary-600 mr-3"></i><div><div class="font-medium"><?php echo $text['nav_all_services']; ?></div><div class="text-xs text-gray-500"><?php echo $text['nav_discover']; ?></div></div></div></a>
+                        <a href="<?php echo $rootPath; ?>reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors"><div class="flex items-center"><i class="fas fa-phone-alt text-primary-600 mr-3"></i><div><div class="font-medium"><?php echo $text['nav_call_reception']; ?></div><div class="text-xs text-gray-500"><?php echo $text['nav_no_missed_calls']; ?></div></div></div></a>
+                        <a href="<?php echo $rootPath; ?>emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors"><div class="flex items-center"><i class="fas fa-phone-volume text-primary-600 mr-3"></i><div><div class="font-medium"><?php echo $text['nav_call_emission']; ?></div><div class="text-xs text-gray-500"><?php echo $text['nav_grow_clientele']; ?></div></div></div></a>
+                        <a href="<?php echo $rootPath; ?>support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors"><div class="flex items-center"><i class="fas fa-headset text-primary-600 mr-3"></i><div><div class="font-medium"><?php echo $text['nav_customer_support']; ?></div><div class="text-xs text-gray-500"><?php echo $text['nav_improve_satisfaction']; ?></div></div></div></a>
+                        <a href="<?php echo $rootPath; ?>crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors"><div class="flex items-center"><i class="fas fa-database text-primary-600 mr-3"></i><div><div class="font-medium"><?php echo $text['nav_crm_lists']; ?></div><div class="text-xs text-gray-500"><?php echo $text['nav_maximize_sales']; ?></div></div></div></a>
+                    </div>
                 </div>
-            </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-            <!-- Language Selector -->
-            <div class="relative">
-                <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                    <span id="currentLang">FR</span>
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </button>
-                <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                    <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                </div>
+                <a href="<?php echo $rootPath; ?>price.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_pricing']; ?></a>
+                <a href="<?php echo $rootPath; ?>about.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_about']; ?></a>
+                <a href="<?php echo $rootPath; ?>blog.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_blog']; ?></a>
+                <a href="<?php echo $rootPath; ?>contact.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_contact']; ?></a>
             </div>
             
-            <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-        <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-            <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-            <div class="border-t pt-3">
-                <div class="font-medium text-gray-700 mb-2">Services</div>
-                <div class="pl-4 space-y-2">
-                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
-                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector -->
+                <div class="relative">
+                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
+                        <span id="currentLang"><?php echo strtoupper($currentLang); ?></span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-url="<?php echo $rootPath; ?>fr/<?php echo $currentPage; ?>">Français</a>
+                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-url="<?php echo $rootPath; ?>en/<?php echo $currentPage; ?>">English</a>
+                    </div>
                 </div>
+                
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+                <a href="<?php echo $rootPath; ?>index.php" class="text-primary-600 font-semibold"><?php echo $text['nav_home']; ?></a>
+                <div class="border-t pt-3">
+                    <div class="font-medium text-gray-700 mb-2"><?php echo $text['nav_services']; ?></div>
+                    <div class="pl-4 space-y-2">
+                        <a href="<?php echo $rootPath; ?>services.html" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $text['nav_all_services']; ?></a>
+                        <a href="<?php echo $rootPath; ?>reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $text['nav_call_reception']; ?></a>
+                        <a href="<?php echo $rootPath; ?>emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $text['nav_call_emission']; ?></a>
+                        <a href="<?php echo $rootPath; ?>support.html" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $text['nav_customer_support']; ?></a>
+                        <a href="<?php echo $rootPath; ?>crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $text['nav_crm_lists']; ?></a>
+                    </div>
+                </div>
+                <a href="<?php echo $rootPath; ?>price.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_pricing']; ?></a>
+                <a href="<?php echo $rootPath; ?>about.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_about']; ?></a>
+                <a href="<?php echo $rootPath; ?>blog.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_blog']; ?></a>
+                <a href="<?php echo $rootPath; ?>contact.html" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $text['nav_contact']; ?></a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
