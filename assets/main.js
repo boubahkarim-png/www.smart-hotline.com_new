@@ -1,102 +1,134 @@
-// DOM Elements
-let langToggle, langDropdown, currentLangSpan, langOptions, mobileMenuToggle, mobileMenu, chatButton, statsCounters, scrollRevealElements;
+// =============================================================================
+// Main.js - Handles all interactive elements for Smart Hotline Agency
+// =============================================================================
 
-// State
-let currentLang = 'fr';
+// --- DOM Elements (will be initialized after includes are loaded) ---
+let langToggle, langDropdown, mobileMenuToggle, mobileMenu, chatButton;
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize elements after DOM is loaded
-    langToggle = document.getElementById('langToggle');
-    langDropdown = document.getElementById('langDropdown');
-    currentLangSpan = document.getElementById('currentLang');
-    langOptions = document.querySelectorAll('.lang-option');
-    mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    mobileMenu = document.getElementById('mobileMenu');
-    chatButton = document.getElementById('chatButton');
-    statsCounters = document.querySelectorAll('.stats-counter');
-    scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-    
-    // Detect user's language based on geolocation
-    detectUserLanguage();
-    
-    // Initialize counters
-    initCounters();
-    
-    // Initialize scroll reveal
-    initScrollReveal();
-    
-    // Set up event listeners
-    setupEventListeners();
-});
+// --- State ---
+let currentLang = 'fr'; // Default language
 
-// Function to load header and footer
+// --- Core Functions ---
+
+/**
+ * Fetches and injects the header and footer HTML into the page.
+ * This is the main function that sets up the page structure.
+ */
 function loadIncludes() {
-    // Load header
-    fetch('../includes/header.html')
-        .then(response => response.text())
+    // Determine the correct relative path to 'includes' and 'assets'
+    // This allows the same script to work from /fr/, /en/, or root
+    const pathDepth = window.location.pathname.split('/').length - 3;
+    let basePath = '';
+    for (let i = 0; i < pathDepth; i++) {
+        basePath += '../';
+    }
+
+    // Load Header
+    fetch(`${basePath}includes/header.html`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
-            // Re-initialize event listeners after header is loaded
-            setupEventListeners();
+            // After header is in the DOM, initialize its specific scripts
+            initializeHeaderScripts(basePath);
         })
         .catch(error => console.error('Error loading header:', error));
-    
-    // Load footer
-    fetch('../includes/footer.html')
-        .then(response => response.text())
+
+    // Load Footer
+    fetch(`${basePath}includes/footer.html`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
-            // Re-initialize event listeners after footer is loaded
-            setupEventListeners();
+            // After footer is in the DOM, initialize its specific scripts
+            initializeFooterScripts();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
 
-// Detect user language based on geolocation
-function detectUserLanguage() {
-    // Check browser language first
-    const browserLang = navigator.language || navigator.userLanguage;
-    
-    // Check if it's a French-speaking region
-    const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
-    
-    if (frenchRegions.includes(browserLang)) {
-        setLanguage('fr');
-    } else {
-        // Try to get geolocation (this requires user permission)
-        if ('geolocation' in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                position => {
-                    // In a real implementation, you would send coordinates to a geocoding service
-                    // For this demo, we'll just use browser language detection
-                },
-                error => {
-                    // If geolocation is denied, fall back to browser language
-                    console.log('Geolocation denied:', error);
-                }
-            );
-        }
-    }
-}
+/**
+ * Initializes event listeners and logic for the header after it's loaded.
+ * @param {string} basePath - The relative path to the root directory.
+ */
+function initializeHeaderScripts(basePath) {
+    langToggle = document.getElementById('langToggle');
+    langDropdown = document.getElementById('langDropdown');
+    mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    mobileMenu = document.getElementById('mobileMenu');
 
-// Set language
-function setLanguage(lang) {
-    currentLang = lang;
+    // Set current language in the dropdown
+    currentLang = document.documentElement.lang;
+    const currentLangSpan = document.getElementById('currentLang');
     if (currentLangSpan) {
-        currentLangSpan.textContent = lang.toUpperCase();
+        currentLangSpan.textContent = currentLang.toUpperCase();
+    }
+
+    // Language Selector Toggle
+    if (langToggle) {
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+    }
+
+    // Mobile Menu Toggle
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+    
+    // Close dropdowns/menus when clicking outside
+    document.addEventListener('click', (e) => {
+        if (langToggle && !langToggle.contains(e.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
+}
+
+/**
+ * Initializes event listeners and logic for the footer after it's loaded.
+ */
+function initializeFooterScripts() {
+    chatButton = document.getElementById('chatButton');
+
+    // Chat Button Functionality
+    if (chatButton) {
+        chatButton.addEventListener('click', () => {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const message = encodeURIComponent("Bonjour, je souhaite en savoir plus sur vos services. Pouvez-vous m'aider ?");
+            
+            if (isMobile) {
+                window.open(`https://wa.me/15148190559?text=${message}`, '_blank');
+            } else {
+                window.location.href = `mailto:direction@smart-hotline.com?subject=Demande d'information - Smart Hotline&body=${message}`;
+            }
+        });
     }
 }
 
-// Initialize counters
+// --- Page-specific Animations ---
+
+/**
+ * Initializes the animated statistics counters.
+ */
 function initCounters() {
-    if (!statsCounters || statsCounters.length === 0) return;
-    
+    const counters = document.querySelectorAll('.stats-counter');
+    if (!counters.length) return;
+
     const observerOptions = {
         threshold: 0.7,
         rootMargin: '0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -105,7 +137,7 @@ function initCounters() {
                 const duration = 2000; // 2 seconds
                 const increment = target / (duration / 16); // 60fps
                 let current = 0;
-                
+
                 const updateCounter = () => {
                     current += increment;
                     if (current < target) {
@@ -115,27 +147,28 @@ function initCounters() {
                         counter.textContent = target;
                     }
                 };
-                
+
                 updateCounter();
                 observer.unobserve(counter);
             }
         });
     }, observerOptions);
-    
-    statsCounters.forEach(counter => {
-        observer.observe(counter);
-    });
+
+    counters.forEach(counter => observer.observe(counter));
 }
 
-// Initialize scroll reveal
+/**
+ * Initializes the scroll-reveal animations.
+ */
 function initScrollReveal() {
-    if (!scrollRevealElements || scrollRevealElements.length === 0) return;
-    
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    if (!reveals.length) return;
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -144,86 +177,18 @@ function initScrollReveal() {
             }
         });
     }, observerOptions);
-    
-    scrollRevealElements.forEach(element => {
-        observer.observe(element);
-    });
+
+    reveals.forEach(element => observer.observe(element));
 }
 
-// Set up event listeners
-function setupEventListeners() {
-    // Re-initialize elements
-    langToggle = document.getElementById('langToggle');
-    langDropdown = document.getElementById('langDropdown');
-    currentLangSpan = document.getElementById('currentLang');
-    langOptions = document.querySelectorAll('.lang-option');
-    mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    mobileMenu = document.getElementById('mobileMenu');
-    chatButton = document.getElementById('chatButton');
-    
-    // Language selector
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            if (langDropdown) {
-                langDropdown.classList.toggle('hidden');
-            }
-        });
-    }
-    
-    // Close language dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
-            langDropdown.classList.add('hidden');
-        }
-    });
-    
-    // Language options
-    if (langOptions) {
-        langOptions.forEach(option => {
-            option.addEventListener('click', (e) => {
-                e.preventDefault();
-                const lang = option.getAttribute('data-lang');
-                if (lang === 'en') {
-                    window.location.href = '../en/index.html';
-                }
-                if (langDropdown) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-        });
-    }
-    
-    // Mobile menu toggle
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            if (mobileMenu) {
-                mobileMenu.classList.toggle('hidden');
-            }
-        });
-    }
-    
-    // Close mobile menu when clicking a link
-    if (mobileMenu) {
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-    
-    // Chat functionality
-    if (chatButton) {
-        chatButton.addEventListener('click', () => {
-            // Detect if mobile or desktop
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            
-            if (isMobile) {
-                // Open WhatsApp on mobile
-                window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
-            } else {
-                // Open email client on desktop
-                window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
-            }
-        });
-    }
-}
+// --- Main Execution ---
+
+// Wait for the DOM to be fully loaded before running the main script
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Load the header and footer
+    loadIncludes();
+
+    // 2. Initialize animations that don't depend on the includes
+    initCounters();
+    initScrollReveal();
+});
