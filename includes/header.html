@@ -1,66 +1,87 @@
-<!-- Footer -->
-<footer class="bg-dark-900 text-white py-12">
-    <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-                <div class="flex items-center space-x-2 mb-4">
-                    <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                        SH
+<header>
+    <div class="container">
+        <nav class="nav-container">
+            <a href="/fr/index.html" class="logo">
+                <div class="logo-icon">SH</div>
+                <span class="logo-text">Smart Hotline</span>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="/fr/index.html" class="nav-link active" id="nav-home">Accueil</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle" id="nav-services">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/fr/services.html" class="dropdown-item">
+                            <i class="fas fa-th-large"></i>
+                            <div>
+                                <div class="dropdown-title">Tous nos services</div>
+                                <div class="dropdown-desc">Découvrir notre gamme complète</div>
+                            </div>
+                        </a>
+                        <a href="/fr/reception.html" class="dropdown-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <div class="dropdown-title">Réception d'Appels</div>
+                                <div class="dropdown-desc">Ne manquez aucun appel</div>
+                            </div>
+                        </a>
+                        <a href="/fr/emission.html" class="dropdown-item">
+                            <i class="fas fa-phone-volume"></i>
+                            <div>
+                                <div class="dropdown-title">Émission d'Appels</div>
+                                <div class="dropdown-desc">Développez votre clientèle</div>
+                            </div>
+                        </a>
+                        <a href="/fr/support.html" class="dropdown-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <div class="dropdown-title">Support Client</div>
+                                <div class="dropdown-desc">Améliorez la satisfaction</div>
+                            </div>
+                        </a>
                     </div>
-                    <span class="text-xl font-bold">Smart Hotline Agency</span>
                 </div>
-                <p class="text-gray-400" data-i18n="footer.description">
-                    Services de communication téléphonique adaptés aux entrepreneurs et PME.
-                </p>
+                <a href="/fr/pricing.html" class="nav-link" id="nav-pricing">Tarifs</a>
+                <a href="/fr/faq.html" class="nav-link" id="nav-faq">FAQ</a>
+                <a href="/fr/blog.html" class="nav-link" id="nav-blog">Blog</a>
+                <a href="/fr/contact.html" class="nav-link" id="nav-contact">Contact</a>
             </div>
             
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.services">Services</h3>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="reception.html" class="hover:text-white transition-colors" data-i18n="footer.callReception">Réception d'Appels</a></li>
-                    <li><a href="emission.html" class="hover:text-white transition-colors" data-i18n="footer.outboundCalls">Émission d'Appels</a></li>
-                    <li><a href="support.html" class="hover:text-white transition-colors" data-i18n="footer.customerSupport">Support Client</a></li>
-                    <li><a href="crm-lists.html" class="hover:text-white transition-colors" data-i18n="footer.crmLists">CRM & Listes</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.company">Entreprise</h3>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="about.html" class="hover:text-white transition-colors" data-i18n="footer.about">À Propos</a></li>
-                    <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
-                    <li><a href="contact.html" class="hover:text-white transition-colors" data-i18n="footer.contact">Contact</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.careers">Carrières</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
-                <div class="flex space-x-4 mb-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-facebook text-xl"></i>
-                    </a>
+            <div class="nav-actions">
+                <div class="language-selector">
+                    <button id="langToggle" class="lang-btn">
+                        <span id="currentLang">FR</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langDropdown" class="lang-dropdown hidden">
+                        <a href="/fr/index.html" class="lang-option" data-lang="fr">Français</a>
+                        <a href="/en/index.html" class="lang-option" data-lang="en">English</a>
+                    </div>
                 </div>
-                <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                <p class="text-gray-400">🌐 smart-hotline.com</p>
-                <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+                
+                <button id="mobileMenuToggle" class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </div>
-        
-        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p data-i18n="footer.copyright">© 2023 Smart Hotline Agency. Tous droits réservés.</p>
+        </nav>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <div class="container">
+            <a href="/fr/index.html" class="mobile-nav-link active" id="mobile-nav-home">Accueil</a>
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-title">Services</div>
+                <a href="/fr/services.html" class="mobile-nav-link">Tous nos services</a>
+                <a href="/fr/reception.html" class="mobile-nav-link">Réception d'Appels</a>
+                <a href="/fr/emission.html" class="mobile-nav-link">Émission d'Appels</a>
+                <a href="/fr/support.html" class="mobile-nav-link">Support Client</a>
+            </div>
+            <a href="/fr/pricing.html" class="mobile-nav-link" id="mobile-nav-pricing">Tarifs</a>
+            <a href="/fr/faq.html" class="mobile-nav-link" id="mobile-nav-faq">FAQ</a>
+            <a href="/fr/blog.html" class="mobile-nav-link" id="mobile-nav-blog">Blog</a>
+            <a href="/fr/contact.html" class="mobile-nav-link" id="mobile-nav-contact">Contact</a>
         </div>
     </div>
-</footer>
-
-<!-- Chat Button -->
-<div class="chat-button" id="chatButton">
-    <i class="fas fa-comments text-2xl"></i>
-</div>
+</header>
