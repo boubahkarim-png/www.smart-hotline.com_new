@@ -31,8 +31,14 @@ function loadIncludes() {
             }
             return response.text();
         })
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
+        .then(html => {
+            let processedHtml = html;
+            // If we are on the root page (pathDepth is 0), correct links that assume a subdirectory
+            if (pathDepth === 0) {
+                processedHtml = processedHtml.replace(/href="\.\.\//g, 'href="');
+                processedHtml = processedHtml.replace(/src="\.\.\//g, 'src="');
+            }
+            document.getElementById('header-placeholder').innerHTML = processedHtml;
             // After header is in the DOM, initialize its specific scripts
             initializeHeaderScripts(basePath);
         })
@@ -46,8 +52,14 @@ function loadIncludes() {
             }
             return response.text();
         })
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
+        .then(html => {
+            let processedHtml = html;
+            // If we are on the root page (pathDepth is 0), correct links that assume a subdirectory
+            if (pathDepth === 0) {
+                processedHtml = processedHtml.replace(/href="\.\.\//g, 'href="');
+                processedHtml = processedHtml.replace(/src="\.\.\//g, 'src="');
+            }
+            document.getElementById('footer-placeholder').innerHTML = processedHtml;
             // After footer is in the DOM, initialize its specific scripts
             initializeFooterScripts();
         })
