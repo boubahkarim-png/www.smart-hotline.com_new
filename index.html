@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME</title>
-    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure. Essai 2 semaines.">
-    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé, permanence téléphonique">
+    <title>Smart Hotline Agency | Services de Communication pour PME</title>
+    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure.">
+    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé">
     <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME">
-    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Externalisez votre relation client pour vous concentrer sur votre croissance.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
+    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/fr/">
+    <meta property="og:url" content="https://smart-hotline.com">
     <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
-
-    <link rel="canonical" href="https://smart-hotline.com/fr/" />
     
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/fr/" />
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -28,884 +40,384 @@
         gtag('config', 'G-RTKKH1R9FB');
     </script>
     
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'scroll': 'scroll 20s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stats-counter {
-            transition: all 0.5s ease-out;
-        }
-        
-        .marquee {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .marquee-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-        
-        .process-step {
-            position: relative;
-        }
-        
-        .process-step:not(:last-child):after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #0ea5e9, #0284c7);
-            z-index: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .process-step:not(:last-child):after {
-                display: none;
-            }
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Smart Hotline Agency",
-      "url": "https://smart-hotline.com/fr/",
-      "logo": "https://smart-hotline.com/images/logo-smart-hotline.png", 
-      "description": "Services de communication et support client externalisé pour les entrepreneurs et PME.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-514-819-0559", 
-        "contactType": "Ventes et Support"
-      },
-      "sameAs": [
-        "https://twitter.com/votrepage",
-        "https://linkedin.com/company/smart-hotline-agency",
-        "https://facebook.com/votrepage"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Services de Téléréception et Support Client pour PME",
-      "description": "Smart Hotline Agency offre des services complets de réception d'appels, téléprospection et support client avec une disponibilité 24/7. Idéal pour les PME.",
-      "serviceType": "Externalized Customer Support", 
-      "provider": {
-        "@type": "Organization",
-        "name": "Smart Hotline Agency"
-      },
-      "areaServed": "Global (avec expertise francophone)",
-      "offers": {
-        "@type": "Offer",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "N/A", 
-          "priceCurrency": "CAD", 
-          "unitText": "Contactez-nous pour une offre personnalisée" 
-        }
-      }
-    }
-    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
 </head>
-<body class="font-sans text-gray-800">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Tous nos services</div>
-                                    <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Réception d'Appels</div>
-                                    <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Émission d'Appels</div>
-                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Support Client</div>
-                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Listes</div>
-                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                                </div>
-                            </div>
-                        </a>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Services de Communication Sur Mesure</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html" class="btn btn-primary">
+                                Demander une Démo Gratuite
+                            </a>
+                            <a href="services.html" class="btn btn-secondary">
+                                Découvrir Nos Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold">2 Semaines</div>
+                            <div class="text-sm">Essai Sans Engagement</div>
+                        </div>
                     </div>
                 </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
-            
-            <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">FR</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
+        </section>
         
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+        <!-- Trust Badges Section -->
+        <section class="py-12 bg-white border-b">
+            <div class="container">
+                <div class="text-center mb-8">
+                    <p class="text-gray-600 font-medium">De confiance pour 500+ PME et entreprises en croissance</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Sécurisé & Confidentiel</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Disponibilité 24/7</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Agents Professionnels</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold">Rentable</span>
                     </div>
                 </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
-        </div>
-    </header>
-    
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Services de Communication Sur Mesure</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
+        </section>
+        
+        <!-- Services Preview -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Demander une Démo Gratuite
-                        </a>
-                        <a href="services.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Découvrir Nos Services
-                        </a>
-                    </div>
                 </div>
-                <div class="relative">
-                    <img src="../images/main-hero.jpg" alt="Agent de Smart Hotline en communication professionnelle au téléphone pour les PME" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Semaines</div>
-                        <div class="text-sm">Essai Sans Engagement</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-12 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-8">
-                <p class="text-gray-600 font-medium">De confiance pour 500+ PME et entreprises en croissance</p>
-            </div>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-                <div class="flex items-center">
-                    <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Sécurisé & Confidentiel</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Disponibilité 24/7</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Agents Professionnels</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Rentable</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a href="reception.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="reception.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Ne manquez plus aucun appel important grâce à notre service de réception dédié.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Réception d'Appels</h3>
-                        <p class="text-gray-600 mb-4">
-                            Ne manquez plus aucun appel important grâce à notre service de réception dédié.
+                    </a>
+                    
+                    <a href="emission.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Émission d'Appels</h3>
+                            <p class="text-gray-600 mb-4">
+                                Développez votre clientèle avec nos campagnes d'appels ciblées.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="support.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-headset text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Support Client</h3>
+                            <p class="text-gray-600 mb-4">
+                                Améliorez la satisfaction de vos clients avec un support réactif et professionnel.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="crm-lists.html" class="group">
+                        <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-database text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
+                            <p class="text-gray-600 mb-4">
+                                CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes.
+                            </p>
+                            <span class="text-primary-600 font-medium">En savoir plus →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dark Section: How It Works -->
+        <section class="py-20 bg-dark-800 text-white scroll-reveal">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Démarrez avec nos services en seulement 4 étapes simples
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-bold mb-3">Consultation</h3>
+                        <p class="text-gray-400">
+                            Nous analysons vos besoins commerciaux et défis de communication
                         </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
                     </div>
-                </a>
-                
-                <a href="emission.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Émission d'Appels</h3>
-                        <p class="text-gray-600 mb-4">
-                            Développez votre clientèle avec nos campagnes d'appels ciblées.
+                    
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-bold mb-3">Personnalisation</h3>
+                        <p class="text-gray-400">
+                            Nous adaptons nos services à votre marque et exigences
                         </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
                     </div>
-                </a>
-                
-                <a href="support.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-headset text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">Support Client</h3>
-                        <p class="text-gray-600 mb-4">
-                            Améliorez la satisfaction de vos clients avec un support réactif et professionnel.
+                    
+                    <div class="process-step text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-bold mb-3">Mise en Œuvre</h3>
+                        <p class="text-gray-400">
+                            Nous configurons votre solution de communication dédiée
                         </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
                     </div>
-                </a>
-                
-                <a href="crm-lists.html" class="group">
-                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-database text-primary-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 transition-colors">CRM & Listes</h3>
-                        <p class="text-gray-600 mb-4">
-                            CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes.
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
+                        <h3 class="text-xl font-bold mb-3">Support</h3>
+                        <p class="text-gray-400">
+                            Nous fournissons un support continu et un suivi des performances
                         </p>
-                        <span class="text-primary-600 font-medium">En savoir plus →</span>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-dark-800 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Démarrez avec nos services en seulement 4 étapes simples
+        </section>
+        
+        <!-- Splash Image Section -->
+        <section class="py-16 bg-gradient-to-r from-primary-50 to-primary-100 scroll-reveal">
+            <div class="container">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Essayez Nos Services Sans Risque</h2>
+                        <p class="text-xl text-gray-700 mb-6">
+                            Découvrez les avantages des services de communication professionnels avec notre essai de 2 semaines. Aucun engagement requis.
+                        </p>
+                        <div class="bg-white rounded-lg p-6 shadow-lg">
+                            <h3 class="text-xl font-bold mb-3 text-primary-600">Ce qui est inclus dans l'essai:</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Accès complet à notre service de réception d'appels</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Gestion professionnelle du support client</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Gestionnaire de compte dédié</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Rapports de performance et insights</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="images/communication-splash.jpg" alt="Communication Professionnelle" class="rounded-xl shadow-lg max-w-md w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dark Section: Stats -->
+        <section class="py-20 bg-dark-900 text-white scroll-reveal">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Découvrez comment nos services transforment les PME comme la vôtre
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="500">0</span>+
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
+                        <p class="text-gray-400">Nous accompagnons déjà</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="98">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
+                        <p class="text-gray-400">De nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="40">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Économie de Temps</h3>
+                        <p class="text-gray-400">Pour nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="24">0</span>/7
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Disponibilité</h3>
+                        <p class="text-gray-400">De nos services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur activité
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold">Marc Lefebvre</h4>
+                                <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold">Sophie Dubois</h4>
+                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean-Pierre Tremblay" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
+                                <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">
+                            "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
                 </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-white text-primary-600">
+                        Demander une Démo Gratuite
+                    </a>
+                    <a href="pricing.html" class="btn bg-transparent text-white border-2 border-white">
+                        Découvrir Nos Offres
+                    </a>
+                </div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="process-step text-center">
-                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
-                    <h3 class="text-xl font-bold mb-3">Consultation</h3>
-                    <p class="text-gray-400">
-                        Nous analysons vos besoins commerciaux et défis de communication
-                    </p>
+        </section>
+    </main>
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="article-content">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold"></h2>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
                 </div>
-                
-                <div class="process-step text-center">
-                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
-                    <h3 class="text-xl font-bold mb-3">Personnalisation</h3>
-                    <p class="text-gray-400">
-                        Nous adaptons nos services à votre marque et exigences
-                    </p>
-                </div>
-                
-                <div class="process-step text-center">
-                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
-                    <h3 class="text-xl font-bold mb-3">Mise en Œuvre</h3>
-                    <p class="text-gray-400">
-                        Nous configurons votre solution de communication dédiée
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
-                    <h3 class="text-xl font-bold mb-3">Support</h3>
-                    <p class="text-gray-400">
-                        Nous fournissons un support continu et un suivi des performances
-                    </p>
-                </div>
+                <div id="modalContent"></div>
             </div>
         </div>
-    </section>
-    
-    <section class="py-16 bg-gradient-to-r from-primary-50 to-primary-100 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Essayez Nos Services Sans Risque</h2>
-                    <p class="text-xl text-gray-700 mb-6">
-                        Découvrez les avantages des services de communication professionnels avec notre essai de 2 semaines. Aucun engagement requis.
-                    </p>
-                    <div class="bg-white rounded-lg p-6 shadow-lg">
-                        <h3 class="text-xl font-bold mb-3 text-primary-600">Ce qui est inclus dans l'essai:</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span>Accès complet à notre service de réception d'appels</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span>Gestion professionnelle du support client</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span>Gestionnaire de compte dédié</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span>Rapports de performance et insights</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="../images/communication-splash.jpg" alt="Rapports de performance et d'analyse des appels clients pour une PME" class="rounded-xl shadow-lg max-w-md w-full">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Découvrez comment nos services transforment les PME comme la vôtre
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="500">0</span>+
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">PME Satisfaites</h3>
-                    <p class="text-gray-400">Nous accompagnons déjà</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="98">0</span>%
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
-                    <p class="text-gray-400">De nos clients</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="40">0</span>%
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Économie de Temps</h3>
-                    <p class="text-gray-400">Pour nos clients</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="24">0</span>/7
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Disponibilité</h3>
-                    <p class="text-gray-400">De nos services</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez comment nos solutions ont aidé des entrepreneurs comme vous à développer leur activité
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Marc Lefebvre, Fondateur TechInnov Québec" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Marc Lefebvre</h4>
-                            <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Sophie Dubois, Directrice Cabinet Comptable Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Sophie Dubois</h4>
-                            <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                         <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Jean-Pierre Tremblay, Propriétaire de restaurant Le Gourmet" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
-                            <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Demander une Démo Gratuite
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Découvrir Nos Offres
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés aux entrepreneurs et PME.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Émission d'Appels</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">À Propos</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
     </div>
     
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'fr';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize counters
-            initCounters();
-            
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's a French-speaking region
-            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
-            
-            if (frenchRegions.includes(browserLang)) {
-                setLanguage('fr');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize counters
-        function initCounters() {
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    if (lang === 'en') {
-                        window.location.href = '../en/index.html';
-                    }
-                    langDropdown.classList.add('hidden');
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
-                }
-            });
-        }
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="assets/main.js"></script>
+    
+    <!-- Localization JavaScript -->
+    <script src="assets/localization.js"></script>
 </body>
 </html>
