@@ -1,115 +1,133 @@
-// Localization management
-class Localization {
-    constructor() {
-        this.currentLang = this.getCurrentLanguage();
-        this.translations = {
-            fr: {
-                // Navigation
-                'nav.home': 'Accueil',
-                'nav.services': 'Services',
-                'nav.pricing': 'Tarifs',
-                'nav.faq': 'FAQ',
-                'nav.blog': 'Blog',
-                'nav.contact': 'Contact',
-                
-                // Services dropdown
-                'services.all': 'Tous nos services',
-                'services.reception': 'Réception d\'Appels',
-                'services.emission': 'Émission d\'Appels',
-                'services.support': 'Support Client',
-                'services.crm': 'CRM & Listes',
-                
-                // Hero section
-                'hero.title': 'Services de Communication Sur Mesure',
-                'hero.description': 'Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.',
-                'hero.cta.demo': 'Demander une Démo Gratuite',
-                'hero.cta.services': 'Découvrir Nos Services',
-                
-                // Trust badges
-                'trust.title': 'De confiance pour 500+ PME et entreprises en croissance',
-                'trust.secure': 'Sécurisé & Confidentiel',
-                'trust.availability': 'Disponibilité 24/7',
-                'trust.professional': 'Agents Professionnels',
-                'trust.cost': 'Rentable',
-                
-                // Add more translations as needed
-            },
-            en: {
-                // Navigation
-                'nav.home': 'Home',
-                'nav.services': 'Services',
-                'nav.pricing': 'Pricing',
-                'nav.faq': 'FAQ',
-                'nav.blog': 'Blog',
-                'nav.contact': 'Contact',
-                
-                // Services dropdown
-                'services.all': 'All our services',
-                'services.reception': 'Call Reception',
-                'services.emission': 'Outbound Calls',
-                'services.support': 'Customer Support',
-                'services.crm': 'CRM & Lists',
-                
-                // Hero section
-                'hero.title': 'Custom Communication Services',
-                'hero.description': 'Outsource your customer relations and focus on your growth with our solutions tailored for entrepreneurs and SMEs.',
-                'hero.cta.demo': 'Request a Free Demo',
-                'hero.cta.services': 'Discover Our Services',
-                
-                // Trust badges
-                'trust.title': 'Trusted by 500+ SMEs and growing businesses',
-                'trust.secure': 'Secure & Confidential',
-                'trust.availability': '24/7 Availability',
-                'trust.professional': 'Professional Agents',
-                'trust.cost': 'Cost Effective',
-                
-                // Add more translations as needed
-            }
-        };
-    }
-
-    getCurrentLanguage() {
-        const path = window.location.pathname;
-        if (path.startsWith('/en/')) return 'en';
-        if (path.startsWith('/fr/')) return 'fr';
-        return 'fr'; // default
-    }
-
-    translate(key) {
-        return this.translations[this.currentLang][key] || key;
-    }
-
-    updatePageLanguage() {
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            element.textContent = this.translate(key);
-        });
-
-        // Update all elements with data-i18n-placeholder attribute
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-            const key = element.getAttribute('data-i18n-placeholder');
-            element.placeholder = this.translate(key);
-        });
-
-        // Update current language indicator
-        if (currentLangSpan) {
-            currentLangSpan.textContent = this.currentLang.toUpperCase();
+// Translation data
+const translations = {
+    fr: {
+        nav: {
+            home: "Accueil",
+            services: "Services",
+            allServices: "Tous nos services",
+            allServicesDesc: "Découvrir notre gamme complète",
+            reception: "Réception d'Appels",
+            receptionDesc: "Ne manquez aucun appel",
+            emission: "Émission d'Appels",
+            emissionDesc: "Développez votre clientèle",
+            support: "Support Client",
+            supportDesc: "Améliorez la satisfaction",
+            pricing: "Tarifs",
+            faq: "FAQ",
+            blog: "Blog",
+            contact: "Contact"
+        },
+        footer: {
+            description: "Services de communication téléphonique adaptés aux entrepreneurs et PME.",
+            services: "Services",
+            reception: "Réception d'Appels",
+            emission: "Émission d'Appels",
+            support: "Support Client",
+            crm: "CRM & Listes",
+            company: "Entreprise",
+            about: "À Propos",
+            blog: "Blog",
+            contact: "Contact",
+            careers: "Carrières",
+            contactTitle: "Contact",
+            copyright: "© 2023 Smart Hotline Agency. Tous droits réservés."
+        }
+    },
+    en: {
+        nav: {
+            home: "Home",
+            services: "Services",
+            allServices: "All Services",
+            allServicesDesc: "Discover our complete range",
+            reception: "Call Reception",
+            receptionDesc: "Never miss a call",
+            emission: "Outbound Calls",
+            emissionDesc: "Grow your customer base",
+            support: "Customer Support",
+            supportDesc: "Improve satisfaction",
+            pricing: "Pricing",
+            faq: "FAQ",
+            blog: "Blog",
+            contact: "Contact"
+        },
+        footer: {
+            description: "Telephone communication solutions tailored for entrepreneurs and SMEs.",
+            services: "Services",
+            reception: "Call Reception",
+            emission: "Outbound Calls",
+            support: "Customer Support",
+            crm: "CRM & Lists",
+            company: "Company",
+            about: "About",
+            blog: "Blog",
+            contact: "Contact",
+            careers: "Careers",
+            contactTitle: "Contact",
+            copyright: "© 2023 Smart Hotline Agency. All rights reserved."
         }
     }
+};
 
-    switchLanguage(lang) {
-        this.currentLang = lang;
-        this.updatePageLanguage();
-        // You can also save the preference in localStorage
-        localStorage.setItem('preferred-language', lang);
+// Get current language from URL or default to French
+function getCurrentLanguage() {
+    const path = window.location.pathname;
+    if (path.includes('/en/')) {
+        return 'en';
+    } else if (path.includes('/fr/')) {
+        return 'fr';
+    }
+    return 'fr'; // Default to French
+}
+
+// Apply translations to elements with data-i18n attribute
+function applyTranslations() {
+    const lang = getCurrentLanguage();
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let translation = translations[lang];
+        
+        // Navigate through nested keys
+        for (const k of keys) {
+            if (translation && translation[k]) {
+                translation = translation[k];
+            } else {
+                translation = null;
+                break;
+            }
+        }
+        
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Update current language display
+    const currentLangSpan = document.getElementById('currentLang');
+    if (currentLangSpan) {
+        currentLangSpan.textContent = lang.toUpperCase();
     }
 }
 
-// Initialize localization
-const localization = new Localization();
-
-// Update page when DOM is loaded
+// Initialize localization when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    localization.updatePageLanguage();
+    applyTranslations();
+    
+    // Re-apply translations when header/footer are loaded
+    const observer = new MutationObserver(() => {
+        applyTranslations();
+    });
+    
+    const headerContainer = document.getElementById('header-container');
+    const footerContainer = document.getElementById('footer-container');
+    
+    if (headerContainer) {
+        observer.observe(headerContainer, { childList: true });
+    }
+    
+    if (footerContainer) {
+        observer.observe(footerContainer, { childList: true });
+    }
 });
