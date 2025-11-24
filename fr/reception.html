@@ -182,6 +182,76 @@
             background: var(--primary-600);
         }
 
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            width: 20rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--primary-50);
+        }
+
+        .dropdown-item i {
+            color: var(--primary-600);
+            width: 1rem;
+        }
+
+        .dropdown-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .dropdown-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
         /* Language Selector */
         .nav-actions {
             display: flex;
@@ -297,6 +367,17 @@
         .mobile-nav-link:hover,
         .mobile-nav-link.active {
             color: var(--primary-600);
+        }
+
+        .mobile-nav-group {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
         }
 
         /* Hero Section */
@@ -880,10 +961,10 @@
                             Ne manquez plus jamais un appel important avec notre service de réception dédié pour entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans nécessiter d'embauche.
                         </p>
                         <div class="hero-buttons">
-                            <a href="contact.html?service=reception" class="btn-primary">
+                            <a href="../contact.html?service=reception" class="btn-primary">
                                 Demander une Démo
                             </a>
-                            <a href="pricing.html" class="btn-secondary">
+                            <a href="../pricing.html" class="btn-secondary">
                                 Voir les Tarifs
                             </a>
                         </div>
@@ -1114,8 +1195,8 @@
                         Commencez dès aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
                     </p>
                     <div class="cta-buttons">
-                        <a href="contact.html?service=reception" class="btn-primary">Commencer l'Essai Gratuit</a>
-                        <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
+                        <a href="../contact.html?service=reception" class="btn-primary">Commencer l'Essai Gratuit</a>
+                        <a href="../pricing.html" class="btn-secondary">Voir les Tarifs</a>
                     </div>
                 </div>
             </div>
@@ -1139,15 +1220,6 @@
     
     <!-- Inline script for critical functionality -->
     <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        
         // Load header and footer
         document.addEventListener('DOMContentLoaded', function() {
             // Load header
@@ -1155,12 +1227,6 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-container').innerHTML = data;
-                    
-                    // Set up event listeners for header after it's loaded
-                    setupHeaderEventListeners();
-                    
-                    // Set active navigation
-                    setActiveNavigation();
                 })
                 .catch(error => console.error('Error loading header:', error));
             
@@ -1178,48 +1244,6 @@
             // Initialize animations
             initScrollReveal();
         });
-        
-        // Set active navigation based on current page
-        function setActiveNavigation() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            // Remove active class from all nav links
-            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Set active class based on current page
-            let activeId = '';
-            switch(currentPage) {
-                case 'index.html':
-                    activeId = 'nav-home';
-                    break;
-                case 'services.html':
-                    activeId = 'nav-services';
-                    break;
-                case 'pricing.html':
-                    activeId = 'nav-pricing';
-                    break;
-                case 'faq.html':
-                    activeId = 'nav-faq';
-                    break;
-                case 'blog.html':
-                    activeId = 'nav-blog';
-                    break;
-                case 'contact.html':
-                    activeId = 'nav-contact';
-                    break;
-                case 'reception.html':
-                    activeId = 'nav-services';
-                    break;
-            }
-            
-            // Set active class
-            if (activeId) {
-                document.getElementById(activeId)?.classList.add('active');
-                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
-            }
-        }
         
         // Initialize scroll reveal
         function initScrollReveal() {
@@ -1243,61 +1267,6 @@
             scrollRevealElements.forEach(element => {
                 observer.observe(element);
             });
-        }
-        
-        // Set up event listeners for header
-        function setupHeaderEventListeners() {
-            const langToggle = document.getElementById('langToggle');
-            const langDropdown = document.getElementById('langDropdown');
-            const langOptions = document.querySelectorAll('.lang-option');
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            // Language selector
-            if (langToggle) {
-                langToggle.addEventListener('click', () => {
-                    langDropdown.classList.toggle('hidden');
-                });
-            }
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            if (langOptions) {
-                langOptions.forEach(option => {
-                    option.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const lang = option.getAttribute('data-lang');
-                        if (lang === 'en') {
-                            window.location.href = '../en/reception.html';
-                        }
-                        if (langDropdown) {
-                            langDropdown.classList.add('hidden');
-                        }
-                    });
-                });
-            }
-            
-            // Mobile menu toggle
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Close mobile menu when clicking a link
-            if (mobileMenu) {
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
         }
         
         // Set up event listeners for footer
