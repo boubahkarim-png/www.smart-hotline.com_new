@@ -73,7 +73,7 @@ function detectUserLocale() {
     return locale;
 }
 
-// Apply localization to the page
+// Apply localization to page
 function applyLocalization() {
     const locale = detectUserLocale();
     const locData = localization[locale];
