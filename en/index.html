@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Hotline Agency | Communication Services for SMEs</title>
-    <meta name="description" content="Phone communication solutions tailored for entrepreneurs and SMEs. Virtual receptionist, telemarketing, outsourced customer support and custom CRM.">
-    <meta name="keywords" content="virtual receptionist, remote secretarial services, telemarketing, outsourced customer support, SME CRM, outsourced call center">
+    <meta name="description" content="Telephone communication solutions tailored for entrepreneurs and SMEs. Remote receptionist, telemarketing, outsourced customer support and custom CRM.">
+    <meta name="keywords" content="remote receptionist, virtual secretary, telemarketing, outsourced customer support, SME CRM, outsourced call center">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Smart Hotline Agency | Communication Services for SMEs">
-    <meta property="og:description" content="Phone communication solutions tailored for entrepreneurs and SMEs.">
+    <meta property="og:description" content="Telephone communication solutions tailored for entrepreneurs and SMEs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/en/">
     <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
@@ -17,7 +17,8 @@
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/assets/main.css" as="style">
+    <link rel="preload" href="../assets/styles.css" as="style">
+    <link rel="preload" href="../assets/main.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
@@ -26,7 +27,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
-    <!-- Google Analytics -->
+    <!-- Google Analytics with minimal impact -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -38,25 +39,15 @@
         });
     </script>
 
-    <!-- Critical CSS Inlined -->
-    <style>
-        /* Your existing CSS here */
-    </style>
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="/assets/main.css" media="print" onload="this.media='all'">
-    
-    <!-- External resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Load Google Fonts asynchronously -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header included from external file -->
-    <div id="header"></div>
+    <!-- Include Header -->
+    <div id="header-container"></div>
 
     <main>
         <!-- Hero Section -->
@@ -65,7 +56,7 @@
                 <div class="hero-grid">
                     <div>
                         <h1 class="hero-title">
-                            <span class="gradient-text">Custom Communication Services</span>
+                            <span class="gradient-text">Custom Communication Solutions</span>
                         </h1>
                         <p class="hero-description">
                             Outsource your customer relations and focus on your growth with our solutions tailored for entrepreneurs and SMEs.
@@ -80,10 +71,10 @@
                         </div>
                     </div>
                     <div class="hero-image-container">
-                        <img src="/images/main-hero.jpg" alt="Communication Services" class="hero-image" loading="lazy">
+                        <img src="../images/main-hero.jpg" alt="Communication Services" class="hero-image" loading="lazy">
                         <div class="hero-badge">
                             <div class="badge-title">2 Weeks</div>
-                            <div class="badge-subtitle">No Commitment Trial</div>
+                            <div class="badge-subtitle">No-Commitment Trial</div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +100,7 @@
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-money-bill-wave trust-icon"></i>
-                        <span class="trust-text">Cost Effective</span>
+                        <span class="trust-text">Cost-Effective</span>
                     </div>
                 </div>
             </div>
@@ -121,7 +112,7 @@
                 <div class="section-header">
                     <h2 class="section-title">Our Complete Solutions</h2>
                     <p class="section-description">
-                        A complete range of services to meet all your phone communication needs
+                        A complete range of services to meet all your telephone communication needs
                     </p>
                 </div>
                 
@@ -173,13 +164,229 @@
             </div>
         </section>
         
-        <!-- Add other sections with English content -->
-        <!-- ... -->
+        <!-- Dark Section: How It Works -->
+        <section class="process-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-description">
+                        Get started with our services in just 4 simple steps
+                    </p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Consultation</h3>
+                        <p class="step-description">
+                            We analyze your business needs and communication challenges
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Customization</h3>
+                        <p class="step-description">
+                            We tailor our services to your brand and requirements
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Implementation</h3>
+                        <p class="step-description">
+                            We set up your dedicated communication solution
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Support</h3>
+                        <p class="step-description">
+                            We provide ongoing support and performance tracking
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
+        <!-- Splash Image Section -->
+        <section class="trial-section scroll-reveal">
+            <div class="container">
+                <div class="trial-grid">
+                    <div class="trial-content">
+                        <h2 class="trial-title">Try Our Services Risk-Free</h2>
+                        <p class="trial-description">
+                            Discover the benefits of professional communication services with our 2-week trial. No commitment required.
+                        </p>
+                        <div class="trial-features">
+                            <h3 class="features-title">What's included in the trial:</h3>
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Full access to our call reception service</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Professional customer support management</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Dedicated account manager</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Performance reports and insights</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="trial-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional Communication" class="trial-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dark Section: Stats -->
+        <section class="stats-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Proven Results</h2>
+                    <p class="section-description">
+                        See how our services are transforming SMEs like yours
+                    </p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="500">0</span>+
+                        </div>
+                        <h3 class="stat-title">Satisfied SMEs</h3>
+                        <p class="stat-description">Already supported</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="98">0</span>%
+                        </div>
+                        <h3 class="stat-title">Satisfaction Rate</h3>
+                        <p class="stat-description">Of our clients</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="40">0</span>%
+                        </div>
+                        <h3 class="stat-title">Time Savings</h3>
+                        <p class="stat-description">For our clients</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="24">0</span>/7
+                        </div>
+                        <h3 class="stat-title">Availability</h3>
+                        <p class="stat-description">Of our services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-description">
+                        Discover how our solutions have helped entrepreneurs like you grow their business
+                    </p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">John Smith</h4>
+                                <p class="testimonial-role">Founder, TechInnov Inc.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "As a small business, we couldn't afford a full-time secretary. Smart Hotline allowed us to appear bigger than we are, with a professional service that impressed our clients."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sarah Johnson</h4>
+                                <p class="testimonial-role">Director, Johnson Accounting</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The return on investment is incredible. For the cost of half a day's work per month, we have a professional call reception service that has allowed us to never miss a business opportunity."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Davis" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Michael Davis</h4>
+                                <p class="testimonial-role">Owner, The Gourmet Restaurant</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "I started my business 18 months ago and Smart Hotline has been one of my best investments. They handled all my calls while I focused on growing my business."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Communication?</h2>
+                    <p class="cta-description">
+                        Join hundreds of entrepreneurs and SMEs who have already optimized their customer relations with our solutions.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary">Request a Free Demo</a>
+                        <a href="pricing.html" class="btn-secondary">Discover Our Offers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer included from external file -->
-    <div id="footer"></div>
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
     <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
@@ -189,30 +396,16 @@
     <!-- Netlify Identity Widget -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
-    <!-- Load JavaScript -->
-    <script src="/assets/main.js" defer></script>
-    <script src="/assets/localization.js" defer></script>
+    <!-- Load JavaScript asynchronously -->
+    <script src="../assets/main.js" defer></script>
+    <script src="../assets/localization.js" defer></script>
     
+    <!-- Inline script for critical functionality -->
     <script>
-        // Load header and footer
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load header
-            fetch('/includes/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    // Initialize navigation after header is loaded
-                    if (typeof setActiveNavigation === 'function') {
-                        setActiveNavigation();
-                    }
-                });
-            
-            // Load footer
-            fetch('/includes/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load components
+            loadComponents();
         });
     </script>
 </body>
