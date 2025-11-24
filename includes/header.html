@@ -1,19 +1,22 @@
 <!-- Header Navigation -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="../index.html" class="flex items-center space-x-2">
+        <!-- Logo / Home Link -->
+        <a id="home-link" href="../index.html" class="flex items-center space-x-2">
             <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
                 SH
             </div>
             <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
         </a>
         
+        <!-- Main Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-            <a href="../index.html" class="text-primary-600 font-semibold">Accueil</a>
+            <a id="nav-home" href="../index.html" class="text-primary-600 font-semibold" data-lang-text="nav-home">Accueil</a>
+            
             <!-- Services Dropdown -->
             <div class="relative group">
                 <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                    Services
+                    <span data-lang-text="nav-services">Services</span>
                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                 </button>
                 <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -21,8 +24,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-th-large text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium">Tous nos services</div>
-                                <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
+                                <div class="font-medium" data-lang-text="nav-all-services">Tous nos services</div>
+                                <div class="text-xs text-gray-500" data-lang-text="nav-discover-range">Découvrir notre gamme complète</div>
                             </div>
                         </div>
                     </a>
@@ -30,8 +33,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium">Réception d'Appels</div>
-                                <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
+                                <div class="font-medium" data-lang-text="nav-call-reception">Réception d'Appels</div>
+                                <div class="text-xs text-gray-500" data-lang-text="nav-never-miss-call">Ne manquez aucun appel</div>
                             </div>
                         </div>
                     </a>
@@ -39,8 +42,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium">Émission d'Appels</div>
-                                <div class="text-xs text-gray-500">Développez votre clientèle</div>
+                                <div class="font-medium" data-lang-text="nav-outbound-calls">Émission d'Appels</div>
+                                <div class="text-xs text-gray-500" data-lang-text="nav-grow-customer-base">Développez votre clientèle</div>
                             </div>
                         </div>
                     </a>
@@ -48,8 +51,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-headset text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium">Support Client</div>
-                                <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
+                                <div class="font-medium" data-lang-text="nav-customer-support">Support Client</div>
+                                <div class="text-xs text-gray-500" data-lang-text="nav-improve-satisfaction">Améliorez la satisfaction</div>
                             </div>
                         </div>
                     </a>
@@ -57,17 +60,17 @@
                         <div class="flex items-center">
                             <i class="fas fa-database text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium">CRM & Listes</div>
-                                <div class="text-xs text-gray-500">Maximisez vos ventes</div>
+                                <div class="font-medium" data-lang-text="nav-crm-lists">CRM & Listes</div>
+                                <div class="text-xs text-gray-500" data-lang-text="nav-maximize-sales">Maximisez vos ventes</div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-pricing">Tarifs</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-about">À Propos</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-blog">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-contact">Contact</a>
         </div>
         
         <div class="flex items-center space-x-4">
@@ -78,8 +81,8 @@
                     <i class="fas fa-chevron-down text-xs"></i>
                 </button>
                 <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="../index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Français</a>
-                    <a href="../en/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">English</a>
+                    <a id="lang-fr" href="../fr/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Français</a>
+                    <a id="lang-en" href="../en/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">English</a>
                 </div>
             </div>
             
@@ -92,21 +95,21 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
         <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-            <a href="../index.html" class="text-primary-600 font-semibold">Accueil</a>
+            <a id="nav-home-mobile" href="../index.html" class="text-primary-600 font-semibold" data-lang-text="nav-home">Accueil</a>
             <div class="border-t pt-3">
-                <div class="font-medium text-gray-700 mb-2">Services</div>
+                <div class="font-medium text-gray-700 mb-2" data-lang-text="nav-services">Services</div>
                 <div class="pl-4 space-y-2">
-                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
-                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
+                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors" data-lang-text="nav-all-services">Tous nos services</a>
+                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors" data-lang-text="nav-call-reception">Réception d'Appels</a>
+                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors" data-lang-text="nav-outbound-calls">Émission d'Appels</a>
+                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors" data-lang-text="nav-customer-support">Support Client</a>
+                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors" data-lang-text="nav-crm-lists">CRM & Listes</a>
                 </div>
             </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-pricing">Tarifs</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-about">À Propos</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-blog">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-lang-text="nav-contact">Contact</a>
         </div>
     </div>
 </header>
