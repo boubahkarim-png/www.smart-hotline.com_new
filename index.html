@@ -399,73 +399,25 @@
     <!-- Footer Container -->
     <div id="footer-container"></div>
     
+    <!-- Article Modal -->
+    <div id="articleModal" class="article-modal">
+        <div class="article-content">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold"></h2>
+                    <button onclick="closeArticle()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Custom JavaScript -->
     <script src="assets/main.js"></script>
     
     <!-- Localization JavaScript -->
     <script src="assets/localization.js"></script>
-    
-    <!-- Page-specific JavaScript -->
-    <script>
-        // Stats counter animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const statsCounters = document.querySelectorAll('.stats-counter');
-            
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-            
-            // Initialize scroll reveal
-            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-            
-            const scrollObserverOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const scrollObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        scrollObserver.unobserve(entry.target);
-                    }
-                });
-            }, scrollObserverOptions);
-            
-            scrollRevealElements.forEach(element => {
-                scrollObserver.observe(element);
-            });
-        });
-    </script>
 </body>
 </html>
