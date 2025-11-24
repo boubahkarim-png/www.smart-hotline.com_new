@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME</title>
     <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure. Essai 2 semaines gratuit.">
     <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé, permanence téléphonique, services de communication PME">
@@ -48,13 +47,155 @@
       }
     }
     </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scroll': 'scroll 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stats-counter {
+            transition: all 0.5s ease-out;
+        }
+        
+        .marquee {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .marquee-content {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #0284c7);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans text-gray-800">
+    <!-- Header will be loaded from includes/header.html -->
     <div id="header-container"></div>
     
     <main>
+        <!-- Hero Section -->
         <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 class="text-4xl md:text-5xl font-bold mb-6">
@@ -64,10 +205,10 @@
                             Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="/fr/contact.html" class="btn btn-primary">
+                            <a href="/fr/contact.html" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
                                 Demander une Démo Gratuite
                             </a>
-                            <a href="/fr/services.html" class="btn btn-secondary">
+                            <a href="/fr/services.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
                                 Découvrir Nos Services
                             </a>
                         </div>
@@ -83,8 +224,9 @@
             </div>
         </section>
         
+        <!-- Trust Badges Section -->
         <section class="py-12 bg-white border-b">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-8">
                     <p class="text-gray-600 font-medium">De confiance pour 500+ PME et entreprises en croissance</p>
                 </div>
@@ -109,8 +251,9 @@
             </div>
         </section>
         
+        <!-- Services Preview -->
         <section class="py-20 bg-white scroll-reveal">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Solutions Complètes</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -174,8 +317,9 @@
             </div>
         </section>
         
+        <!-- Dark Section: How It Works -->
         <section class="py-20 bg-dark-800 text-white scroll-reveal">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
                     <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -219,8 +363,9 @@
             </div>
         </section>
         
+        <!-- Splash Image Section -->
         <section class="py-16 bg-gradient-to-r from-primary-50 to-primary-100 scroll-reveal">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center justify-between">
                     <div class="md:w-1/2 mb-8 md:mb-0">
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">Essayez Nos Services Sans Risque</h2>
@@ -256,8 +401,9 @@
             </div>
         </section>
         
+        <!-- Dark Section: Stats -->
         <section class="py-20 bg-dark-900 text-white scroll-reveal">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Des Résultats Prouvés</h2>
                     <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -301,8 +447,9 @@
             </div>
         </section>
         
+        <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50 scroll-reveal">
-            <div class="container">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -348,4 +495,288 @@
                             </div>
                         </div>
                         <div class="flex mb-3">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text
+                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700">"J'ai lancé mon entreprise il y a 18 mois et Smart Hotline a été l'un de mes meilleurs investissements. Ils ont géré tous mes appels pendant que je me concentrais sur le développement de mon activité."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/fr/contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Demander une Démo Gratuite
+                    </a>
+                    <a href="/fr/price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                        Découvrir Nos Offres
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be loaded from includes/footer.html -->
+    <div id="footer-container"></div>
+    
+    <!-- Chat Button -->
+    <div class="chat-button" id="chatButton">
+        <i class="fas fa-comments text-2xl"></i>
+    </div>
+    
+    <script>
+        // Load header and footer from includes
+        function loadIncludes() {
+            // Load header
+            fetch('/includes/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-container').innerHTML = html;
+                    // Initialize header functionality after loading
+                    initializeHeader();
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                    // Fallback: create a basic header if include fails
+                    document.getElementById('header-container').innerHTML = `
+                        <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+                            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                                <a href="/" class="flex items-center space-x-2">
+                                    <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                                        SH
+                                    </div>
+                                    <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+                                </a>
+                                <div class="hidden md:flex items-center space-x-8">
+                                    <a href="/" class="text-primary-600 font-semibold">Accueil</a>
+                                    <a href="/fr/services.html" class="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+                                    <a href="/fr/price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+                                    <a href="/fr/about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
+                                    <a href="/fr/contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+                                </div>
+                            </nav>
+                        </header>
+                    `;
+                });
+            
+            // Load footer
+            fetch('/includes/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer-container').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                    // Fallback: create a basic footer if include fails
+                    document.getElementById('footer-container').innerHTML = `
+                        <footer class="bg-dark-900 text-white py-12">
+                            <div class="container mx-auto px-6">
+                                <div class="text-center text-gray-400">
+                                    <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
+                                </div>
+                            </div>
+                        </footer>
+                    `;
+                });
+        }
+        
+        // Initialize header functionality
+        function initializeHeader() {
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const currentLangSpan = document.getElementById('currentLang');
+            const langOptions = document.querySelectorAll('.lang-option');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    langDropdown.classList.toggle('hidden');
+                });
+            }
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = option.getAttribute('data-lang');
+                    if (lang === 'en') {
+                        window.location.href = '/en/';
+                    }
+                    if (langDropdown) {
+                        langDropdown.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Mobile menu toggle
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // DOM Elements
+        const chatButton = document.getElementById('chatButton');
+        const statsCounters = document.querySelectorAll('.stats-counter');
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        
+        // State
+        let currentLang = 'fr';
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load includes first
+            loadIncludes();
+            
+            // Detect user's language based on geolocation
+            detectUserLanguage();
+            
+            // Initialize counters
+            initCounters();
+            
+            // Initialize scroll reveal
+            initScrollReveal();
+            
+            // Set up event listeners
+            setupEventListeners();
+        });
+        
+        // Detect user language based on geolocation
+        function detectUserLanguage() {
+            // Check browser language first
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Check if it's a French-speaking region
+            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
+            
+            if (frenchRegions.includes(browserLang)) {
+                setLanguage('fr');
+            } else {
+                // Try to get geolocation (this requires user permission)
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition(
+                        position => {
+                            // In a real implementation, you would send coordinates to a geocoding service
+                            // For this demo, we'll just use browser language detection
+                        },
+                        error => {
+                            // If geolocation is denied, fall back to browser language
+                            console.log('Geolocation denied:', error);
+                        }
+                    );
+                }
+            }
+        }
+        
+        // Set language
+        function setLanguage(lang) {
+            currentLang = lang;
+            const currentLangSpan = document.getElementById('currentLang');
+            if (currentLangSpan) {
+                currentLangSpan.textContent = lang.toUpperCase();
+            }
+        }
+        
+        // Initialize counters
+        function initCounters() {
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); // 60fps
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Chat functionality
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    // Detect if mobile or desktop
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    
+                    if (isMobile) {
+                        // Open WhatsApp on mobile
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        // Open email client on desktop
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
