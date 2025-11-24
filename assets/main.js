@@ -1,18 +1,23 @@
 // Function to load HTML content from external files
 function loadHTML(elementId, filePath, callback) {
-    console.log(`Loading ${filePath} into ${elementId}`);
-    fetch(filePath)
+    // Utiliser la fonction pour s'assurer que le chemin commence par un /
+    const absolutePath = filePath.startsWith('/') ? filePath : `/${filePath}`;
+    
+    console.log(`Loading ${absolutePath} into ${elementId}`);
+    fetch(absolutePath)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                // Pour le débogage si un chemin absolu ne fonctionne pas
+                throw new Error(`HTTP error! status: ${response.status} for path: ${absolutePath}`);
             }
             return response.text();
         })
         .then(data => {
             const element = document.getElementById(elementId);
             if (element) {
+                // Pour les pages de contenu, nous mettons le HTML dans le main-content-container
                 element.innerHTML = data;
-                console.log(`Successfully loaded ${filePath}`);
+                console.log(`Successfully loaded ${absolutePath}`);
                 if (callback) callback();
             } else {
                 console.error(`Element ${elementId} not found`);
@@ -20,19 +25,18 @@ function loadHTML(elementId, filePath, callback) {
         })
         .catch(error => {
             console.error('Error loading HTML:', error);
-            // Fallback: show error message
             const element = document.getElementById(elementId);
             if (element) {
-                element.innerHTML = '<div style="color: red; padding: 20px;">Error loading content. Please refresh the page.</div>';
+                element.innerHTML = '<div style="color: red; padding: 20px;">Error loading content from ' + absolutePath + '. Check your server configuration or path.</div>';
             }
         });
 }
 
-// Initialize page
+// Initialisation de la page
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing page...');
     
-    // Load header and footer
+    // CORRECTION: Charger le header et le footer en utilisant des chemins absolus
     loadHTML('header-container', 'includes/header.html', function() {
         console.log('Header loaded successfully');
         setupHeader();
@@ -44,207 +48,60 @@ document.addEventListener('DOMContentLoaded', function() {
         setupFooter();
     });
     
-    // Initialize other components
+    // Initialisation des composants dynamiques
     setupChatButton();
     setupArticleModal();
     initScrollReveal();
     initCounters();
     
+    // Le chargement du contenu spécifique à la page sera fait par un script inline dans le gabarit HTML
+    
     console.log('Page initialization complete');
 });
 
-// Setup header functionality
-function setupHeader() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            console.log('Mobile menu toggled');
-        });
-        
-        // Close mobile menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-            });
-        });
-    }
-}
 
-// Setup language selector
+// CORRECTION: Logique de basculement de langue pour gérer les dossiers /fr/ et /en/
 function setupLanguageSelector() {
-    const langToggle = document.getElementById('langToggle');
-    const langDropdown = document.getElementById('langDropdown');
-    const currentLangSpan = document.getElementById('currentLang');
-    const langOptions = document.querySelectorAll('.lang-option');
+    const langToggle = document.querySelector('.lang-selector');
     
-    if (langToggle && langDropdown) {
-        langToggle.addEventListener('click', function() {
-            langDropdown.classList.toggle('hidden');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                langDropdown.classList.add('hidden');
-            }
-        });
-    }
-    
-    if (langOptions) {
-        langOptions.forEach(option => {
-            option.addEventListener('click', function(e) {
-                e.preventDefault();
-                const lang = option.getAttribute('data-lang');
-                if (lang === 'en') {
-                    window.location.href = 'en/index.html';
-                }
-                langDropdown.classList.add('hidden');
-            });
-        });
-    }
-}
-
-// Setup footer functionality
-function setupFooter() {
-    console.log('Footer setup complete');
-}
-
-// Chat button functionality
-function setupChatButton() {
-    const chatButton = document.getElementById('chatButton');
-    
-    if (chatButton) {
-        chatButton.addEventListener('click', function() {
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (langToggle) {
+        langToggle.addEventListener('click', function(e) {
+            e.preventDefault();
             
-            if (isMobile) {
-                window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+            const currentPath = window.location.pathname;
+            let newPath = '';
+
+            if (currentPath.startsWith('/en/')) {
+                // De EN vers FR : Supprimer /en/ et rediriger
+                newPath = currentPath.replace('/en/', '/');
+            } else if (currentPath.startsWith('/fr/')) {
+                // De FR vers EN : Remplacer /fr/ par /en/
+                newPath = currentPath.replace('/fr/', '/en/');
             } else {
-                window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                // De la racine (index.html) vers EN ou FR (si non spécifié, on bascule vers /en/)
+                newPath = '/en' + currentPath;
             }
+            
+            // Assurez-vous que l'index.html de la racine reste '/' pour la version FR principale
+            if (newPath === '/index.html') newPath = '/';
+
+            // Redirection
+            window.location.href = newPath;
         });
+    }
+
+    // Affichage de la langue actuelle dans le sélecteur
+    const currentLangSpan = document.getElementById('langSelector');
+    if (currentLangSpan) {
+        if (window.location.pathname.startsWith('/en/')) {
+            currentLangSpan.textContent = 'EN';
+        } else {
+            currentLangSpan.textContent = 'FR';
+        }
     }
 }
 
-// Article modal functionality
-function setupArticleModal() {
-    const articleModal = document.getElementById('articleModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalContent = document.getElementById('modalContent');
-    
-    // Open article modal
-    window.openArticle = function(articleId) {
-        const article = window.articles[articleId];
-        if (article && articleModal && modalTitle && modalContent) {
-            modalTitle.textContent = article.title;
-            modalContent.innerHTML = article.content;
-            articleModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            console.log('Article modal opened');
-        }
-    }
-    
-    // Close article modal
-    window.closeArticle = function() {
-        if (articleModal) {
-            articleModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            console.log('Article modal closed');
-        }
-    }
-    
-    // Close modal on background click
-    if (articleModal) {
-        articleModal.addEventListener('click', function(e) {
-            if (e.target === articleModal) {
-                window.closeArticle();
-            }
-        });
-    }
-    
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && articleModal && articleModal.classList.contains('active')) {
-            window.closeArticle();
-        }
-    });
-}
-
-// Initialize counters
-function initCounters() {
-    const statsCounters = document.querySelectorAll('.stats-counter');
-    
-    if (statsCounters.length === 0) return;
-    
-    console.log(`Initializing ${statsCounters.length} counters`);
-    
-    const observerOptions = {
-        threshold: 0.7,
-        rootMargin: '0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000; // 2 seconds
-                const increment = target / (duration / 16); // 60fps
-                let current = 0;
-                
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                
-                updateCounter();
-                observer.unobserve(counter);
-                console.log(`Counter animated to ${target}`);
-            }
-        });
-    }, observerOptions);
-    
-    statsCounters.forEach(counter => {
-        observer.observe(counter);
-    });
-}
-
-// Initialize scroll reveal
-function initScrollReveal() {
-    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-    
-    if (scrollRevealElements.length === 0) return;
-    
-    console.log(`Initializing ${scrollRevealElements.length} scroll reveal elements`);
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-                console.log('Scroll reveal activated');
-            }
-        });
-    }, observerOptions);
-    
-    scrollRevealElements.forEach(element => {
-        observer.observe(element);
-    });
-}
+// ... (Gardez le reste des fonctions comme setupHeader, setupFooter, etc.)
 
 // Make functions globally available
 window.loadHTML = loadHTML;
