@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos | Smart Hotline Agency</title>
-    <meta name="description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME.">
-    <meta name="keywords" content="agence téléphonique, services PME, réception d'appels, téléprospection, support client, entreprise de communication">
+    <meta name="description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME. Notre histoire, notre mission et notre équipe.">
+    <meta name="keywords" content="agence communication, services téléphoniques, PME, externalisation, histoire, mission, équipe">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="À Propos | Smart Hotline Agency">
-    <meta property="og:description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME.">
+    <meta property="og:description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/fr/about.html">
+    <meta property="og:url" content="https://smart-hotline.com/about.html">
     <meta property="og:image" content="https://smart-hotline.com/images/about-hero.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com/fr/about.html">
+    <link rel="canonical" href="https://smart-hotline.com/about.html">
     
     <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/about.html" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html" />
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html" />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -31,891 +40,265 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
     
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .whatsapp-corner {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 999;
-        }
-        
-        .timeline-container {
-            position: relative;
-        }
-        
-        .timeline-line-vertical {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, #e0f2fe, #0284c7);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .timeline-number {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
-            position: relative;
-            z-index: 10;
-        }
-        
-        .timeline-number::before {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(14, 165, 233, 0.1);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-        
-        .timeline-content {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .timeline-content:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-        
-        .timeline-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        @media (max-width: 768px) {
-            .timeline-line-vertical {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                padding-left: 60px;
-            }
-            
-            .timeline-number {
-                position: absolute;
-                left: -4px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-    </style>
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Smart Hotline Agency",
+        "description": "Agence spécialisée dans les services de communication téléphonique pour PME",
+        "url": "https://smart-hotline.com",
+        "logo": "https://smart-hotline.com/images/logo.png",
+        "foundingDate": "2020",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Canada",
+            "addressLocality": "Montréal",
+            "addressRegion": "Québec"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-514-819-0559",
+            "email": "direction@smart-hotline.com",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/smart-hotline",
+            "https://www.facebook.com/smarthotline",
+            "https://twitter.com/smarthotline"
+        ],
+        "serviceType": "Communication Services",
+        "areaServed": "France, Canada, Belgique, Suisse"
+    }
+    </script>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Tous les services</div>
-                                    <div class="text-xs text-gray-500">Découvrez notre gamme complète</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Réception d'appels</div>
-                                    <div class="text-xs text-gray-500">Ne manquez jamais un appel</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Appels sortants</div>
-                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Support client</div>
-                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Listes</div>
-                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-primary-600 font-semibold">À propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <a href="../en/about.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span>FR</span>
-                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
-                    </a>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous les services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'appels</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Appels sortants</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support client</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-primary-600 font-semibold">À propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Header Container -->
+    <div id="header-container"></div>
     
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
                         <span class="gradient-text">À Propos de Smart Hotline</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Votre partenaire de confiance pour les services de communication téléphonique adaptés aux entrepreneurs et PME
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                            Nous Contacter
-                        </a>
-                        <a href="services.html" class="inline-block px-6 py-3 bg-transparent text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-                            Découvrir Nos Services
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Notre Bureau" class="rounded-xl shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Mission Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Mission & Vision</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Permettre aux entrepreneurs et PME d'accéder à des services de communication professionnelle sans les contraintes d'une équipe interne
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary-600">Notre Mission</h3>
-                    <p class="text-lg text-gray-600 mb-4">
-                        Fournir des services de communication téléphonique de haute qualité qui permettent aux PME de se concentrer sur leur cœur de métier tout en offrant une expérience client exceptionnelle.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Services personnalisés adaptés à chaque secteur</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Formation continue de nos opérateurs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Solutions technologiques de pointe</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-eye text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary-600">Notre Vision</h3>
-                    <p class="text-lg text-gray-600 mb-4">
-                        Devenir le leader incontesté des solutions de communication pour PME en innovant continuellement et en mettant nos clients au centre de tout ce que nous faisons.
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Croissance durable basée sur la satisfaction client</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Expansion internationale progressive</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-2"></i>
-                            <span>Innovation constante dans nos services</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Values Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Valeurs</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Les principes qui guident notre quotidien et nos décisions
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-handshake text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Intégrité</h3>
-                    <p class="text-gray-600">
-                        Nous agissons avec honnêteté et transparence dans toutes nos interactions avec les clients et partenaires.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-star text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Excellence</h3>
-                    <p class="text-gray-600">
-                        Nous nous engageons à fournir des services de la plus haute qualité qui dépassent les attentes de nos clients.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-users text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Collaboration</h3>
-                    <p class="text-gray-600">
-                        Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins uniques et développer des solutions sur mesure.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-lightbulb text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
-                    <p class="text-gray-600">
-                        Nous explorons constamment de nouvelles technologies et approches pour améliorer nos services et rester à la pointe de l'industrie.
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Team Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Équipe</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Des professionnels passionnés dédiés à votre succès
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Boubah Karim" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Boubah Karim</h3>
-                    <p class="text-gray-600 mb-2">Fondateur & CEO</p>
-                    <p class="text-sm text-gray-500 mb-4">15 ans d'expérience dans les services de communication</p>
-                    <div class="flex justify-center space-x-3">
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
+        </section>
+        
+        <!-- Story Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Notre Histoire</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Fondée en 2020 par des experts en communication téléphonique, Smart Hotline Agency est née d'une observation simple : les PME perdent un temps précieux à gérer leurs appels au lieu de se concentrer sur leur cœur de métier.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Notre mission est de permettre aux entrepreneurs et PME de bénéficier de services de communication professionnels sans les coûts et la complexité d'une équipe interne.
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            Aujourd'hui, nous accompagnons plus de 500 entreprises dans leur croissance en leur offrant des solutions sur mesure qui s'adaptent à leurs besoins spécifiques.
+                        </p>
                     </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophie Martin" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Sophie Martin</h3>
-                    <p class="text-gray-600 mb-2">Directrice des Opérations</p>
-                    <p class="text-sm text-gray-500 mb-4">12 ans d'expérience en gestion d'équipe et optimisation des processus</p>
-                    <div class="flex justify-center space-x-3">
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover-lift">
-                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Marc Dubois" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Marc Dubois</h3>
-                    <p class="text-gray-600 mb-2">Directeur Technique</p>
-                    <p class="text-sm text-gray-500 mb-4">10 ans d'expérience en télécommunications et systèmes CRM</p>
-                    <div class="flex justify-center space-x-3">
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
+                    <div>
+                        <img src="images/about-hero.jpg" alt="Notre Équipe" class="rounded-xl shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Stats Section -->
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Réalisations</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Des chiffres qui témoignent de notre engagement
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="500">0</span>+
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Clients Satisfaits</h3>
-                    <p class="text-gray-400">Entreprises accompagnées</p>
+        </section>
+        
+        <!-- Values Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Valeurs</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Les principes qui guident notre action au quotidien
+                    </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="98">0</span>%
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
-                    <p class="text-gray-400">Moyenne clients</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="1000000">0</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Appels Traités</h3>
-                    <p class="text-gray-400">Par an</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="15">0</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Ans d'Expérience</h3>
-                    <p class="text-gray-400">Moyenne équipe</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Timeline Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Histoire</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    De l'idée à la réalisation, notre parcours d'innovation
-                </p>
-            </div>
-            
-            <div class="max-w-6xl mx-auto">
-                <div class="relative">
-                    <!-- Timeline Container -->
-                    <div class="relative">
-                        <!-- Timeline Line -->
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-200 to-primary-600"></div>
-                        
-                        <!-- Timeline Items -->
-                        <div class="space-y-12">
-                            <!-- 2018 - Foundation -->
-                            <div class="flex items-center">
-                                <div class="w-full md:w-5/12 text-right pr-8">
-                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
-                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2018</h3>
-                                        <h4 class="text-lg font-semibold mb-3">Fondation</h4>
-                                        <p class="text-gray-600 mb-4">Lancement de Smart Hotline avec une vision claire : révolutionner la communication pour les PME.</p>
-                                        <div class="flex justify-end">
-                                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Foundation" class="w-20 h-20 rounded-lg object-cover">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-2/12 flex justify-center">
-                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                                        1
-                                    </div>
-                                </div>
-                                <div class="w-full md:w-5/12 pl-8">
-                                    <div class="hidden md:block"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2019 - First Client -->
-                            <div class="flex items-center">
-                                <div class="w-full md:w-5/12 pr-8">
-                                    <div class="hidden md:block"></div>
-                                </div>
-                                <div class="w-2/12 flex justify-center">
-                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                                        2
-                                    </div>
-                                </div>
-                                <div class="w-full md:w-5/12 text-left pl-8">
-                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
-                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2019</h3>
-                                        <h4 class="text-lg font-semibold mb-3">Premiers Succès</h4>
-                                        <p class="text-gray-600 mb-4">Atteinte de nos 100 premiers clients et un taux de satisfaction de 95%.</p>
-                                        <div class="flex">
-                                            <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Success" class="w-20 h-20 rounded-lg object-cover">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2020 - Expansion -->
-                            <div class="flex items-center">
-                                <div class="w-full md:w-5/12 text-right pr-8">
-                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
-                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2020</h3>
-                                        <h4 class="text-lg font-semibold mb-3">Expansion</h4>
-                                        <p class="text-gray-600 mb-4">Ouverture de notre bureau de Montréal et embauche de 10 nouveaux spécialistes.</p>
-                                        <div class="flex justify-end">
-                                            <img src="https://images.pexels.com/photos/1497485/pexels-photo-1497485.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Expansion" class="w-20 h-20 rounded-lg object-cover">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-2/12 flex justify-center">
-                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                                        3
-                                    </div>
-                                </div>
-                                <div class="w-full md:w-5/12 pl-8">
-                                    <div class="hidden md:block"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2021 - Innovation -->
-                            <div class="flex items-center">
-                                <div class="w-full md:w-5/12 pr-8">
-                                    <div class="hidden md:block"></div>
-                                </div>
-                                <div class="w-2/12 flex justify-center">
-                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                                        4
-                                    </div>
-                                </div>
-                                <div class="w-full md:w-5/12 text-left pl-8">
-                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
-                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2021</h3>
-                                        <h4 class="text-lg font-semibold mb-3">Innovation Technologique</h4>
-                                        <p class="text-gray-600 mb-4">Lancement de nos services CRM & Listes avec intégration IA.</p>
-                                        <div class="flex">
-                                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Innovation" class="w-20 h-20 rounded-lg object-cover">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2023 - Growth -->
-                            <div class="flex items-center">
-                                <div class="w-full md:w-5/12 text-right pr-8">
-                                    <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
-                                        <h3 class="text-xl font-bold text-primary-600 mb-2">2023</h3>
-                                        <h4 class="text-lg font-semibold mb-3">Croissance Exceptionnelle</h4>
-                                        <p class="text-gray-600 mb-4">Plus de 500 clients satisfaits et une équipe de 20 professionnels passionnés.</p>
-                                        <div class="flex justify-end">
-                                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Growth" class="w-20 h-20 rounded-lg object-cover">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-2/12 flex justify-center">
-                                    <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                                        5
-                                    </div>
-                                </div>
-                                <div class="w-full md:w-5/12 pl-8">
-                                    <div class="hidden md:block"></div>
-                                </div>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                            <i class="fas fa-bullseye"></i>
                         </div>
+                        <h3 class="text-xl font-bold mb-3">Excellence</h3>
+                        <p class="text-gray-600">
+                            Nous nous engageons à fournir un service exceptionnel à chaque interaction
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Fiabilité</h3>
+                        <p class="text-gray-600">
+                            La confiance de nos clients est notre plus grande réussite
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                        <p class="text-gray-600">
+                            Nous améliorons continuellement nos services pour rester à la pointe
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Proximité</h3>
+                        <p class="text-gray-600">
+                            Nous traitons chaque client comme un partenaire de longue date
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Rejoignez Notre Aventure</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Faites partie de notre succès et bénéficiez de notre expertise pour développer votre entreprise
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Nous Contacter
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Découvrir Nos Tarifs
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés pour entrepreneurs et PME.
+        </section>
+        
+        <!-- Team Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Équipe</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Les experts derrière votre succès
                     </p>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Tous les services</a></li>
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'appels</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Appels sortants</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Support client</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">À propos</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Karim Boubah" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Karim Boubah</h3>
+                        <p class="text-gray-600 mb-2">Fondateur & PDG</p>
+                        <p class="text-gray-500 text-sm">
+                            15+ ans d'expérience en communication téléphonique et développement d'affaires
+                        </p>
                     </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+                    
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marie Laurent" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Marie Laurent</h3>
+                        <p class="text-gray-600 mb-2">Directrice des Opérations</p>
+                        <p class="text-gray-500 text-sm">
+                            Spécialiste en optimisation des processus et formation des équipes
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Thomas Dubois" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Thomas Dubois</h3>
+                        <p class="text-gray-600 mb-2">Directeur Technique</p>
+                        <p class="text-gray-500 text-sm">
+                            Expert en télécommunications et intégration CRM
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1551434670-a7e26faf6311?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sophie Martin" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-2">Sophie Martin</h3>
+                        <p class="text-gray-600 mb-2">Responsable Client</p>
+                        <p class="text-gray-500 text-sm">
+                            Passionnée par l'excellence du service client et la satisfaction client
+                        </p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="py-20 bg-dark-800 text-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Réalisations</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Des chiffres qui témoignent de notre expertise
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="500">0</span>+
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">PME Accompagnées</h3>
+                        <p class="text-gray-400">Depuis notre création</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="98">0</span>%
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
+                        <p class="text-gray-400">De nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="24">0</span>/7
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Support Continu</h3>
+                        <p class="text-gray-400">Pour nos clients</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2 gradient-text">
+                            <span class="stats-counter" data-target="5">0</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pays Desservis</h3>
+                        <p class="text-gray-400">En Europe et Amérique</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Rejoignez Notre Aventure</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Vous êtes passionné par la communication et souhaitez aider les PME à grandir ? Découvrez nos opportunités de carrière.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-white text-primary-600">
+                        Nous Contacter
+                    </a>
+                    <a href="#" class="btn bg-transparent text-white border-2 border-white">
+                        Voir Nos Offres
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
     
-    <!-- WhatsApp Corner -->
-    <div class="whatsapp-corner">
-        <a href="https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20Smart%20Hotline.%20Pouvez-vous%20m\'aider%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </a>
-    </div>
+    <!-- Custom JavaScript -->
+    <script src="assets/main.js"></script>
     
+    <!-- Localization JavaScript -->
+    <script src="assets/localization.js"></script>
+    
+    <!-- Page-specific JavaScript -->
     <script>
-        // DOM Elements
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Initialize stats counters
-            initStatsCounters();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Initialize stats counters
-        function initStatsCounters() {
-            const observerOptions = {
-                threshold: 0.5
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const increment = target / 100;
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            if (current < target) {
-                                current += increment;
-                                counter.textContent = Math.ceil(current);
-                                setTimeout(updateCounter, 20);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20Smart%20Hotline.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20Smart%20Hotline.%20Pouvez-vous%20m\'aider%3F';
-                }
-            });
-        }
+        // Page-specific functionality here
     </script>
 </body>
 </html>
