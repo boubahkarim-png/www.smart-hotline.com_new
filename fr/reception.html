@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réception d'Appels | Smart Hotline Agency</title>
-    <meta name="description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important avec notre télésecrétariat dédié.">
-    <meta name="keywords" content="télésecrétariat, secrétariat à distance, réception d'appels, service téléphonique externalisé, PME">
+    <title>Réception d'Appels Professionnelle | Smart Hotline Agency</title>
+    <meta name="description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
+    <meta name="keywords" content="télésecrétariat, secrétariat à distance, réceptionniste, accueil téléphonique, service client externalisé, PME">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="og:title" content="Réception d'Appels | Smart Hotline Agency">
-    <meta property="og:description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important avec notre télésecrétariat dédié.">
+    <meta property="og:title" content="Réception d'Appels Professionnelle | Smart Hotline Agency">
+    <meta property="og:description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
     <meta property="og:image" content="https://smart-hotline.com/images/reception-service.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="twitter:title" content="Réception d'Appels | Smart Hotline Agency">
-    <meta property="twitter:description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important avec notre télésecrétariat dédié.">
+    <meta property="twitter:title" content="Réception d'Appels Professionnelle | Smart Hotline Agency">
+    <meta property="twitter:description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
     <meta property="twitter:image" content="https://smart-hotline.com/images/reception-service.jpg">
     
     <!-- Hreflang tags -->
@@ -490,100 +490,59 @@
             font-size: 0.875rem;
         }
 
-        /* Features Section */
-        .features-section {
+        /* Professional Reception Section (REDESIGNED) */
+        .professional-reception-section {
             padding: 5rem 0;
             background: white;
         }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #111827;
-        }
-
-        .section-description {
-            font-size: 1.25rem;
-            color: #6b7280;
-            max-width: 48rem;
-            margin: 0 auto;
-        }
-
-        .features-grid {
+        .professional-reception-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3rem;
+            gap: 2rem;
         }
-
-        @media (min-width: 1024px) {
-            .features-grid {
-                grid-template-columns: 1fr 1fr;
+        @media (min-width: 768px) {
+            .professional-reception-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
             }
         }
-
-        .feature-item {
-            background: #f9fafb;
+        .reception-feature-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 0.75rem;
             padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
         }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
+        .reception-feature-card:hover {
+            transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary-200);
         }
-
-        .feature-image {
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-image:hover {
-            transform: scale(1.02);
-        }
-
-        .feature-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .feature-title {
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #111827;
-        }
-
-        .feature-description {
-            color: #4b5563;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-item {
+        .reception-icon-wrapper {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
             display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
         }
-
-        .feature-item i {
+        .reception-feature-icon {
+            font-size: 1.75rem;
             color: var(--primary-600);
-            margin-top: 0.25rem;
+        }
+        .reception-feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .reception-feature-desc {
+            color: #475569;
+            line-height: 1.6;
         }
 
         /* Benefits Section */
@@ -833,6 +792,96 @@
             color: var(--primary-600);
         }
 
+        /* Footer */
+        .footer {
+            background: var(--dark-900);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #374151;
+            border-radius: 0.375rem;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .contact-info {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
         /* Utility Classes */
         .hidden {
             display: none !important;
@@ -903,8 +952,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Réception d'Appels",
-        "description": "Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important avec notre télésecrétariat dédié.",
+        "name": "Réception d'Appels Professionnelle",
+        "description": "Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.",
         "provider": {
             "@type": "Organization",
             "name": "Smart Hotline Agency",
@@ -921,22 +970,30 @@
         "areaServed": "Canada",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Services de réception d'appels",
+            "name": "Services de télésecrétariat",
             "itemListElement": [
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Réception personnalisée",
-                        "description": "Nos téléopérateurs suivent vos instructions précises pour répondre aux appels exactement comme vous le feriez."
+                        "name": "Scénarios d'appels personnalisés",
+                        "description": "Nos téléopérateurs suivent vos instructions précises pour chaque type d'appel."
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Prise de rendez-vous",
-                        "description": "Intégration directe avec votre calendrier pour une planification efficace des rendez-vous avec vos clients."
+                        "name": "Prise de messages et transferts intelligents",
+                        "description": "Nous prenons des notes détaillées et transférons les appels aux bonnes personnes."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Gestion d'agenda et prise de rendez-vous",
+                        "description": "Intégration parfaite avec vos calendriers pour une planification sans faille."
                     }
                 }
             ]
@@ -955,7 +1012,7 @@
                 <div class="hero-grid">
                     <div>
                         <h1 class="hero-title">
-                            <span class="gradient-text">Réception d'Appels</span>
+                            <span class="gradient-text">Réception d'Appels Professionnelle</span>
                         </h1>
                         <p class="hero-description">
                             Ne manquez plus jamais un appel important avec notre service de réception dédié pour entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans nécessiter d'embauche.
@@ -980,71 +1037,45 @@
             </div>
         </section>
         
-        <!-- Features Section -->
-        <section class="features-section scroll-reveal">
+        <!-- Professional Reception Section (REDESIGNED) -->
+        <section class="professional-reception-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Réception Professionnelle</h2>
+                    <h2 class="section-title">Un Service de Télésecrétariat Sur-Mesure</h2>
                     <p class="section-description">
-                        Tous les avantages d'une secrétaire à temps plein sans les coûts et les contraintes
+                        Plus qu'une simple réponse d'appel, nous devenons le prolongement de votre entreprise.
                     </p>
                 </div>
                 
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-image">
-                            <img src="../images/ui/crm-interface.jpg" alt="Interface de Réception" loading="lazy">
+                <div class="professional-reception-grid">
+                    <div class="reception-feature-card">
+                        <div class="reception-icon-wrapper">
+                            <i class="fas fa-user-tie reception-feature-icon"></i>
                         </div>
-                        <h3 class="feature-title">Réception Personnalisée</h3>
-                        <p class="feature-description">
-                            Nos téléopérateurs suivent vos instructions précises pour répondre aux appels exactement comme vous le feriez.
+                        <h3 class="reception-feature-title">Scénarios d'Appels Personnalisés</h3>
+                        <p class="reception-feature-desc">
+                            Nos téléopérateurs suivent vos instructions précises pour chaque type d'appel, assurant une cohérence parfaite avec votre image de marque.
                         </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Script personnalisé selon votre entreprise</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Gestion des appels urgents selon vos priorités</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Transfert intelligent vers les bons contacts</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Prise de messages détaillée et transmission immédiate</span>
-                            </li>
-                        </ul>
                     </div>
                     
-                    <div class="feature-item">
-                        <div class="feature-image">
-                            <img src="../images/ui/analytics-dashboard.jpg" alt="Tableau de Bord" loading="lazy">
+                    <div class="reception-feature-card">
+                        <div class="reception-icon-wrapper">
+                            <i class="fas fa-headset reception-feature-icon"></i>
                         </div>
-                        <h3 class="feature-title">Prise de Rendez-vous</h3>
-                        <p class="feature-description">
-                            Intégration directe avec votre calendrier pour une planification efficace des rendez-vous avec vos clients.
+                        <h3 class="reception-feature-title">Prise de Messages et Transferts Intelligents</h3>
+                        <p class="reception-feature-desc">
+                            Nous prenons des notes détaillées et transférons les appels aux bonnes personnes selon vos priorités, sans jamais perdre d'information.
                         </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Synchronisation avec Google Agenda, Outlook et plus</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Confirmation automatique par email/SMS</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Rappels automatiques avant chaque rendez-vous</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Gestion des annulations et reports</span>
-                            </li>
-                        </ul>
+                    </div>
+                    
+                    <div class="reception-feature-card">
+                        <div class="reception-icon-wrapper">
+                            <i class="fas fa-calendar-check reception-feature-icon"></i>
+                        </div>
+                        <h3 class="reception-feature-title">Gestion d'Agenda et Prise de Rendez-vous</h3>
+                        <p class="reception-feature-desc">
+                            Intégration parfaite avec vos calendriers pour une planification sans faille et des rappels automatiques pour vos clients.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1056,7 +1087,7 @@
                 <div class="section-header">
                     <h2 class="section-title">Pourquoi Choisir Notre Service de Réception?</h2>
                     <p class="section-description">
-                        Des avantages concrets pour votre entreprise
+                        Des avantages concrets et mesurables pour votre entreprise
                     </p>
                 </div>
                 
@@ -1065,9 +1096,9 @@
                         <div class="benefit-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="benefit-title">Opportunités Accrues</h3>
+                        <h3 class="benefit-title">Opportunités d'Affaires Accrues</h3>
                         <p class="benefit-description">
-                            Ne manquez plus jamais un appel potentiel, même pendant vos réunions ou en dehors des heures de bureau.
+                            Ne manquez plus jamais un appel potentiel, même pendant vos réunions ou en dehors des heures de bureau. Chaque appel est une opportunité.
                         </p>
                     </div>
                     
@@ -1077,7 +1108,7 @@
                         </div>
                         <h3 class="benefit-title">Économies Substantielles</h3>
                         <p class="benefit-description">
-                            Jusqu'à 70% d'économies par rapport à l'embauche d'une secrétaire à temps plein.
+                            Jusqu'à 70% d'économies par rapport à l'embauche d'une secrétaire à temps plein, sans les charges sociales et administratives.
                         </p>
                     </div>
                     
@@ -1085,9 +1116,9 @@
                         <div class="benefit-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="benefit-title">Image Professionnelle</h3>
+                        <h3 class="benefit-title">Image Professionnelle d'Excellence</h3>
                         <p class="benefit-description">
-                            Téléopérateurs formés et professionnels qui représentent votre marque avec excellence.
+                            Téléopérateurs formés et professionnels qui représentent votre marque avec excellence, renforçant la confiance de vos clients.
                         </p>
                     </div>
                 </div>
@@ -1125,7 +1156,7 @@
                         <div class="step-number">3</div>
                         <h3 class="step-title">Suivi et Optimisation</h3>
                         <p class="step-description">
-                            Rapports détaillés et ajustements continus pour garantir une qualité de service optimale.
+                            Rapports détaillés et ajustements continus pour garantir une qualité de service optimale et votre satisfaction.
                         </p>
                     </div>
                 </div>
@@ -1138,7 +1169,7 @@
                 <div class="section-header">
                     <h2 class="section-title">Ce Que Disent Nos Clients</h2>
                     <p class="section-description">
-                        Découvrez comment notre service de réception a transformé leur entreprise
+                        Découvrez comment notre service a transformé leur entreprise
                     </p>
                 </div>
                 
@@ -1235,9 +1266,6 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-container').innerHTML = data;
-                    
-                    // Set up event listeners for footer after it's loaded
-                    setupFooterEventListeners();
                 })
                 .catch(error => console.error('Error loading footer:', error));
             
@@ -1267,27 +1295,6 @@
             scrollRevealElements.forEach(element => {
                 observer.observe(element);
             });
-        }
-        
-        // Set up event listeners for footer
-        function setupFooterEventListeners() {
-            const chatButton = document.getElementById('chatButton');
-            
-            // Chat functionality
-            if (chatButton) {
-                chatButton.addEventListener('click', () => {
-                    // Detect if mobile or desktop
-                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                    
-                    if (isMobile) {
-                        // Open WhatsApp on mobile
-                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20réception%20d\'appels.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                    } else {
-                        // Open email client on desktop
-                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Service%20de%20Réception%20d\'Appels&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20réception%20d\'appels.%20Pouvez-vous%20m\'aider%3F';
-                    }
-                });
-            }
         }
     </script>
 </body>
