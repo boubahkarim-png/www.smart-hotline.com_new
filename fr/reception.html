@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réception d'Appels | Smart Hotline Agency</title>
-    <meta name="description" content="Service de réception d'appels professionnel pour PME. Ne manquez plus aucun appel important avec notre téléréceptionniste dédié.">
-    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, réception d'appels, standard téléphonique externalisé, PME">
+    <meta name="description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus aucun appel important avec nos agents formés 24/7.">
+    <meta name="keywords" content="réception d'appels, secrétariat à distance, standard téléphonique, accueil téléphonique, PME, externalisation">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Réception d'Appels | Smart Hotline Agency">
+    <meta property="og:description" content="Service professionnel de réception d'appels pour PME">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/reception.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/reception-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/reception.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/reception.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -17,613 +40,342 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Réception d'Appels Professionnelle",
+        "description": "Service de réception d'appels 24/7 pour PME avec agents formés et personnalisés",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "serviceType": "Réception d'appels",
+        "areaServed": "France, Canada, Belgique, Suisse",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Options de Réception d'Appels",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard",
+                        "description": "Réception d'appels pendant les heures de bureau"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium",
+                        "description": "Réception d'appels 24/7 avec transfert d'appels"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Entreprise",
+                        "description": "Réception d'appels 24/7 avec équipe dédiée et CRM intégré"
                     }
                 }
-            }
+            ]
         }
+    }
     </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">FR</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Réception d'Appels Professionnelle</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Ne manquez plus aucun appel important grâce à notre service de réception dédié. Nos agents professionnels répondent à vos appels en votre nom, selon vos instructions personnalisées.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html" class="btn btn-primary">
+                                Demander une Démo
+                            </a>
+                            <a href="services.html" class="btn btn-secondary">
+                                Découvrir Nos Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/reception-hero.jpg" alt="Réception d'Appels" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold">24/7</div>
+                            <div class="text-sm">Disponibilité</div>
+                        </div>
                     </div>
                 </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
-        </nav>
+        </section>
         
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Réception d'Appels</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Ne manquez plus aucun appel important grâce à notre service de réception dédié aux entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans nécessiter d'embauche.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Demander une Démo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Voir les Tarifs
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="images/services/reception-service.jpg" alt="Service de Réception d'Appels" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Semaines</div>
-                        <div class="text-sm">Essai Gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Une Réception Professionnelle</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Tous les avantages d'une secrétaire à temps plein sans les coûts et contraintes
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/crm-interface.jpg" alt="Interface de Réception" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Réception Personnalisée</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Nos téléopérateurs suivent vos instructions précises pour répondre aux appels exactement comme vous le feriez.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Script personnalisé selon votre entreprise</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Gestion des appels urgents selon vos priorités</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Transfert intelligent vers les bons interlocuteurs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Prise de messages détaillés et transmission immédiate</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <img src="images/ui/analytics-dashboard.jpg" alt="Tableau de Bord" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Prise de Rendez-vous</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Intégration directe avec votre agenda pour une planification efficace des rendez-vous avec vos clients.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Synchronisation avec Google Calendar, Outlook et plus</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Confirmation automatique par email/SMS</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Rappels automatiques avant chaque rendez-vous</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Gestion des annulations et reports</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi Choisir Notre Service de Réception?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Des avantages concrets pour votre entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Augmentation des Opportunités</h3>
-                    <p class="text-gray-600 text-center">
-                        Ne manquez plus aucun appel potentiel, même pendant vos réunions ou en dehors des heures de bureau.
+        <!-- Features Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Fonctionnalités Clés</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Découvrez toutes les fonctionnalités de notre service de réception d'appels
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Réponse Professionnelle</h3>
+                        <p class="text-gray-600">
+                            Nos agents formés répondent à chaque appel avec professionnalisme et courtoisie, en représentant votre entreprise.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Économie Substantielle</h3>
-                    <p class="text-gray-600 text-center">
-                        Jusqu'à 70% d'économie comparé à l'embauche d'une secrétaire à temps plein.
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Disponibilité 24/7</h3>
+                        <p class="text-gray-600">
+                            Ne manquez jamais un appel, même en dehors des heures de bureau, week-ends et jours fériés inclus.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-file-alt text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Prise de Messages</h3>
+                        <p class="text-gray-600">
+                            Nos agents prennent des messages détaillés et vous les transmettent immédiatement par email ou SMS.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Transfert d'Appels</h3>
+                        <p class="text-gray-600">
+                            Transfert intelligent des appels vers les bons interlocuteurs selon vos instructions personnalisées.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Rapports Détaillés</h3>
+                        <p class="text-gray-600">
+                            Accédez à des rapports détaillés sur tous les appels reçus pour suivre vos performances.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-language text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Support Bilingue</h3>
+                        <p class="text-gray-600">
+                            Nos agents peuvent répondre aux appels en français et en anglais pour servir tous vos clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Process Section -->
+        <section class="py-20 bg-dark-800 text-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Notre processus simple pour mettre en place votre service de réception d'appels
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-bold mb-3">Consultation</h3>
+                        <p class="text-gray-400">
+                            Nous analysons vos besoins et définissons ensemble le script de réponse idéal
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Image Professionnelle</h3>
-                    <p class="text-gray-600 text-center">
-                        Téléopérateurs formés et professionnels qui représentent votre marque avec excellence.
-                    </p>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-bold mb-3">Configuration</h3>
+                        <p class="text-gray-400">
+                            Nous configurons le transfert d'appels et formons nos agents sur vos services
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-bold mb-3">Lancement</h3>
+                        <p class="text-gray-400">
+                            Nous activons le service et commençons à répondre à vos appels en votre nom
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
+                        <h3 class="text-xl font-bold mb-3">Optimisation</h3>
+                        <p class="text-gray-400">
+                            Nous suivons les performances et ajustons continuellement notre approche
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Process Section -->
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Un processus simple en 3 étapes pour mettre en place votre service de réception
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Analyse de Vos Besoins</h3>
-                    <p class="text-gray-300">
-                        Nous définissons ensemble vos besoins spécifiques: types d'appels, informations à recueillir, procédures d'urgence.
+        </section>
+        
+        <!-- Industries Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Secteurs d'Activité</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Notre service de réception d'appels s'adapte à tous les secteurs
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Services Professionnels</h3>
+                        <p class="text-gray-600">
+                            Avocats, comptables, consultants, architectes et autres professions libérales.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Formation et Déploiement</h3>
-                    <p class="text-gray-300">
-                        Nos téléopérateurs sont formés sur vos processus et votre entreprise. Déploiement rapide en 48-72h.
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-home text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Immobilier</h3>
+                        <p class="text-gray-600">
+                            Agences immobilières, promoteurs, gestionnaires de biens et syndics de copropriété.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heartbeat text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Santé</h3>
+                        <p class="text-gray-600">
+                            Cabinets médicaux, cliniques, pharmacies et professionnels de la santé.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shopping-cart text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce</h3>
+                        <p class="text-gray-600">
+                            Boutiques en ligne, marketplaces et entreprises de vente à distance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquentes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Tout ce que vous devez savoir sur notre service de réception d'appels
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Suivi et Optimisation</h3>
-                    <p class="text-gray-300">
-                        Rapports détaillés et ajustements continus pour garantir une qualité de service optimale.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez comment notre service de réception a transformé leur activité
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Marc Lefebvre</h4>
-                            <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Comment les agents connaissent-ils mon entreprise ?</h3>
+                            <p class="text-gray-600">
+                                Nous formons chaque agent sur vos produits, services et processus internes. Vous validez chaque script avant le lancement.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Puis-je personnaliser les réponses ?</h3>
+                            <p class="text-gray-600">
+                                Oui, vous pouvez définir des scripts personnalisés pour chaque type d'appel et mettre à jour les instructions à tout moment.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Comment accéder aux rapports d'appels ?</h3>
+                            <p class="text-gray-600">
+                                Vous avez accès à un portail en ligne 24/7 pour consulter tous les rapports détaillés en temps réel.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Le service est-il disponible en week-end ?</h3>
+                            <p class="text-gray-600">
+                                Oui, nos agents sont disponibles 24/7, y compris les week-ends et jours fériés, selon vos besoins.
+                            </p>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
-                    </p>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sophie Dubois</h4>
-                            <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Ne Plus Manquer Aucun Appel?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Commencez dès aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre activité.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Commencer l'Essai Gratuit
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Voir les Tarifs
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés aux entrepreneurs et PME.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Émission d'Appels</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">À Propos</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Ne Plus Jamais Manquer un Appel ?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre service de réception d'appels peut transformer votre entreprise.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-white text-primary-600">
+                        Demander une Démo Gratuite
+                    </a>
+                    <a href="services.html" class="btn bg-transparent text-white border-2 border-white">
+                        Découvrir Nos Services
+                    </a>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
     
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
     
+    <!-- Custom JavaScript -->
+    <script src="assets/main.js"></script>
+    
+    <!-- Localization JavaScript -->
+    <script src="assets/localization.js"></script>
+    
+    <!-- Page-specific JavaScript -->
     <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'fr';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's a French-speaking region
-            const frenchRegions = ['fr', 'fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'];
-            
-            if (frenchRegions.includes(browserLang)) {
-                setLanguage('fr');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20réception%20d\'appels.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Service%20de%20Réception&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20réception%20d\'appels.%20Pouvez-vous%20m\'aider%3F';
-                }
-            });
-        }
+        // Page-specific functionality here
     </script>
 </body>
 </html>
