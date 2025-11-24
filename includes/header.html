@@ -1,380 +1,66 @@
-<?php
-// Get the current language from the URL path
- $request_uri = $_SERVER['REQUEST_URI'];
- $path_parts = explode('/', trim($request_uri, '/'));
- $currentLang = isset($path_parts[0]) && $path_parts[0] === 'en' ? 'en' : 'fr';
-
-// Set root path based on current location
- $rootPath = ($currentLang === 'en' || $currentLang === 'fr') ? '../' : '';
-
-// Set language-specific variables
-if ($currentLang === 'en') {
-    $langCode = 'en';
-    $langText = 'EN';
-    $homeUrl = '/en/';
-    $servicesUrl = '/en/services.html';
-    $priceUrl = '/en/price.html';
-    $aboutUrl = '/en/about.html';
-    $contactUrl = '/en/contact.html';
-    $receptionUrl = '/en/reception.html';
-    $emissionUrl = '/en/emission.html';
-    $supportUrl = '/en/support.html';
-    $crmListsUrl = '/en/crm-lists.html';
-    $blogUrl = '/en/blog.html';
-    
-    $nav_home = 'Home';
-    $nav_services = 'Services';
-    $nav_all_services = 'All Our Services';
-    $nav_discover = 'Discover our full range';
-    $nav_call_reception = 'Call Reception';
-    $nav_no_missed_calls = 'Never miss a call';
-    $nav_call_emission = 'Call Emission';
-    $nav_grow_clientele = 'Grow your clientele';
-    $nav_customer_support = 'Customer Support';
-    $nav_improve_satisfaction = 'Improve satisfaction';
-    $nav_crm_lists = 'CRM & Lists';
-    $nav_maximize_sales = 'Maximize your sales';
-    $nav_pricing = 'Pricing';
-    $nav_about = 'About';
-    $nav_blog = 'Blog';
-    $nav_contact = 'Contact';
-} else {
-    $langCode = 'fr';
-    $langText = 'FR';
-    $homeUrl = '/';
-    $servicesUrl = '/fr/services.html';
-    $priceUrl = '/fr/price.html';
-    $aboutUrl = '/fr/about.html';
-    $contactUrl = '/fr/contact.html';
-    $receptionUrl = '/fr/reception.html';
-    $emissionUrl = '/fr/emission.html';
-    $supportUrl = '/fr/support.html';
-    $crmListsUrl = '/fr/crm-lists.html';
-    $blogUrl = '/fr/blog.html';
-    
-    $nav_home = 'Accueil';
-    $nav_services = 'Services';
-    $nav_all_services = 'Tous nos services';
-    $nav_discover = 'Découvrir notre gamme complète';
-    $nav_call_reception = 'Réception d\'Appels';
-    $nav_no_missed_calls = 'Ne manquez aucun appel';
-    $nav_call_emission = 'Émission d\'Appels';
-    $nav_grow_clientele = 'Développez votre clientèle';
-    $nav_customer_support = 'Support Client';
-    $nav_improve_satisfaction = 'Améliorez la satisfaction';
-    $nav_crm_lists = 'CRM & Listes';
-    $nav_maximize_sales = 'Maximisez vos ventes';
-    $nav_pricing = 'Tarifs';
-    $nav_about = 'À Propos';
-    $nav_blog = 'Blog';
-    $nav_contact = 'Contact';
-}
-
-// Set page-specific variables
- $pageTitle = $pageTitle ?? ($currentLang === 'en' ? 'Smart Hotline Agency | Business Communication Services' : 'Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME');
- $pageDescription = $pageDescription ?? ($currentLang === 'en' ? 'Tailored telephone communication solutions for entrepreneurs and SMEs.' : 'Solutions de communication téléphonique adaptées aux entrepreneurs et PME.');
-?>
-<!DOCTYPE html>
-<html lang="<?php echo $langCode; ?>">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($pageTitle); ?></title>
-    <meta name="description" content="<?php echo htmlspecialchars($pageDescription); ?>">
-    <meta name="keywords" content="<?php echo htmlspecialchars($pageKeywords ?? ''); ?>">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
-    <meta property="og:description" content="<?php echo htmlspecialchars($pageDescription); ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com<?php echo htmlspecialchars($request_uri); ?>">
-    <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
-    
-    <link rel="canonical" href="https://smart-hotline.com<?php echo htmlspecialchars($request_uri); ?>" />
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/" />
-    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/" />
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $rootPath; ?>assets/main.css">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RTKKH1R9FB');
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Smart Hotline Agency",
-      "url": "https://smart-hotline.com",
-      "logo": "https://smart-hotline.com/images/logo-smart-hotline.png",
-      "description": "<?php echo htmlspecialchars($pageDescription); ?>",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-HOTLINE",
-        "contactType": "Ventes et Support"
-      }
-    }
-    </script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'scroll': 'scroll 20s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stats-counter {
-            transition: all 0.5s ease-out;
-        }
-        
-        .marquee {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .marquee-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-        
-        .process-step {
-            position: relative;
-        }
-        
-        .process-step:not(:last-child):after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #0ea5e9, #0284c7);
-            z-index: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .process-step:not(:last-child):after {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="<?php echo $homeUrl; ?>" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="<?php echo $homeUrl; ?>" class="text-primary-600 font-semibold"><?php echo $nav_home; ?></a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        <?php echo $nav_services; ?>
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="<?php echo $servicesUrl; ?>" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium"><?php echo $nav_all_services; ?></div>
-                                    <div class="text-xs text-gray-500"><?php echo $nav_discover; ?></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="<?php echo $receptionUrl; ?>" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium"><?php echo $nav_call_reception; ?></div>
-                                    <div class="text-xs text-gray-500"><?php echo $nav_no_missed_calls; ?></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="<?php echo $emissionUrl; ?>" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium"><?php echo $nav_call_emission; ?></div>
-                                    <div class="text-xs text-gray-500"><?php echo $nav_grow_clientele; ?></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="<?php echo $supportUrl; ?>" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium"><?php echo $nav_customer_support; ?></div>
-                                    <div class="text-xs text-gray-500"><?php echo $nav_improve_satisfaction; ?></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="<?php echo $crmListsUrl; ?>" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium"><?php echo $nav_crm_lists; ?></div>
-                                    <div class="text-xs text-gray-500"><?php echo $nav_maximize_sales; ?></div>
-                                </div>
-                            </div>
-                        </a>
+<!-- Footer -->
+<footer class="bg-dark-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
+                        SH
                     </div>
+                    <span class="text-xl font-bold">Smart Hotline Agency</span>
                 </div>
-                <a href="<?php echo $priceUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_pricing; ?></a>
-                <a href="<?php echo $aboutUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_about; ?></a>
-                <a href="<?php echo $blogUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_blog; ?></a>
-                <a href="<?php echo $contactUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_contact; ?></a>
+                <p class="text-gray-400" data-i18n="footer.description">
+                    Services de communication téléphonique adaptés aux entrepreneurs et PME.
+                </p>
             </div>
             
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang"><?php echo $langText; ?></span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="<?php echo $currentLang === 'en' ? '/' : '/en/'; ?>" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="<?php echo $currentLang === 'en' ? 'fr' : 'en'; ?>">
-                            <?php echo $currentLang === 'en' ? 'Français' : 'English'; ?>
-                        </a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.services">Services</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="reception.html" class="hover:text-white transition-colors" data-i18n="footer.callReception">Réception d'Appels</a></li>
+                    <li><a href="emission.html" class="hover:text-white transition-colors" data-i18n="footer.outboundCalls">Émission d'Appels</a></li>
+                    <li><a href="support.html" class="hover:text-white transition-colors" data-i18n="footer.customerSupport">Support Client</a></li>
+                    <li><a href="crm-lists.html" class="hover:text-white transition-colors" data-i18n="footer.crmLists">CRM & Listes</a></li>
+                </ul>
             </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="<?php echo $homeUrl; ?>" class="text-primary-600 font-semibold"><?php echo $nav_home; ?></a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2"><?php echo $nav_services; ?></div>
-                    <div class="pl-4 space-y-2">
-                        <a href="<?php echo $servicesUrl; ?>" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $nav_all_services; ?></a>
-                        <a href="<?php echo $receptionUrl; ?>" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $nav_call_reception; ?></a>
-                        <a href="<?php echo $emissionUrl; ?>" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $nav_call_emission; ?></a>
-                        <a href="<?php echo $supportUrl; ?>" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $nav_customer_support; ?></a>
-                        <a href="<?php echo $crmListsUrl; ?>" class="block text-gray-600 hover:text-primary-600 transition-colors"><?php echo $nav_crm_lists; ?></a>
-                    </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.company">Entreprise</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-i18n="footer.about">À Propos</a></li>
+                    <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-i18n="footer.contact">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer.careers">Carrières</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
+                <div class="flex space-x-4 mb-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
                 </div>
-                <a href="<?php echo $priceUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_pricing; ?></a>
-                <a href="<?php echo $aboutUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_about; ?></a>
-                <a href="<?php echo $blogUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_blog; ?></a>
-                <a href="<?php echo $contactUrl; ?>" class="text-gray-700 hover:text-primary-600 transition-colors"><?php echo $nav_contact; ?></a>
+                <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
+                <p class="text-gray-400">📧 direction@smart-hotline.com</p>
+                <p class="text-gray-400">🌐 smart-hotline.com</p>
+                <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
             </div>
         </div>
-    </header>
+        
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p data-i18n="footer.copyright">© 2023 Smart Hotline Agency. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Chat Button -->
+<div class="chat-button" id="chatButton">
+    <i class="fas fa-comments text-2xl"></i>
+</div>
