@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prospection Téléphonique | Smart Hotline Agency</title>
-    <meta name="description" content="Service de prospection téléphonique et prise de rendez-vous pour PME. Développez votre clientèle avec nos experts en télémarketing.">
-    <meta name="keywords" content="prospection téléphonique, prise de rendez-vous, télémarketing, génération de leads, vente par téléphone, qualification de prospects">
+    <title>Émission d'Appels | Smart Hotline Agency</title>
+    <meta name="description" content="Service professionnel d'émission d'appels pour PME. Développez votre clientèle avec nos campagnes d'appels ciblées et nos agents formés.">
+    <meta name="keywords" content="émission d'appels, téléprospection, prospection téléphonique, génération de leads, PME, externalisation">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Émission d'Appels | Smart Hotline Agency">
+    <meta property="og:description" content="Service professionnel d'émission d'appels pour PME">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/emission.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/emission-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/emission.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/emission.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/emission.html" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -17,752 +40,342 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Émission d'Appels Professionnelle",
+        "description": "Service d'émission d'appels pour PME avec campagnes ciblées et agents formés",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "serviceType": "Émission d'appels",
+        "areaServed": "France, Canada, Belgique, Suisse",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Options d'Émission d'Appels",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard",
+                        "description": "Campagnes d'appels avec script personnalisé"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium",
+                        "description": "Campagnes d'appels avec qualification de prospects et CRM intégré"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Entreprise",
+                        "description": "Campagnes d'appels complètes avec équipe dédiée et rapports avancés"
                     }
                 }
-            }
+            ]
         }
+    }
     </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Tous nos services</div>
-                                    <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Réception d'Appels</div>
-                                    <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Prospection Téléphonique</div>
-                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Support Client</div>
-                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Listes</div>
-                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                                </div>
-                            </div>
-                        </a>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Émission d'Appels Ciblée</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Développez votre clientèle avec nos campagnes d'appels ciblées. Nos agents qualifiés contactent vos prospects pour générer des rendez-vous qualifiés.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html" class="btn btn-primary">
+                                Demander une Démo
+                            </a>
+                            <a href="services.html" class="btn btn-secondary">
+                                Découvrir Nos Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/emission-hero.jpg" alt="Émission d'Appels" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold">+300%</div>
+                            <div class="text-sm">Taux de Conversion</div>
+                        </div>
                     </div>
                 </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
             </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">FR</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="../en/emission.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
+        </section>
         
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Prospection Téléphonique</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Prospection Téléphonique</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Développez votre clientèle avec nos experts en prospection téléphonique. Prise de rendez-vous, qualification de leads et ventes par téléphone pour booster votre croissance.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Demander une Démo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Voir les Tarifs
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="images/services/emission-service.jpg" alt="Service de Prospection Téléphonique" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">1 Semaine</div>
-                        <div class="text-sm">Essai Gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Trust Badges Section -->
-    <section class="py-12 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-                <div class="flex items-center">
-                    <i class="fas fa-bullseye text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Ciblage Précis</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-calendar-check text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Prise de Rendez-vous</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-chart-line text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Résultats Mesurables</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Experts Qualifiés</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Offered Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Services de Prospection</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Des solutions complètes pour développer votre portefeuille clients
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-calendar-plus text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Prise de Rendez-vous</h3>
-                    <p class="text-gray-600 mb-6">
-                        Nos téléprospecteurs qualifient vos leads et prennent des rendez-vous directement dans votre agenda.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Synchronisation avec votre calendrier</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Confirmation automatique</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Rappels SMS et email</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-filter text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Qualification de Leads</h3>
-                    <p class="text-gray-600 mb-6">
-                        Nous contactons vos prospects pour vérifier leur intérêt et leur capacité à acheter.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Score de qualification</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Fiches prospects détaillées</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Intégration CRM</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-chart-bar text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Ventes par Téléphone</h3>
-                    <p class="text-gray-600 mb-6">
-                        Nos experts en vente concluent des deals directement au téléphone pour maximiser vos revenus.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Scripts personnalisés</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Gestion des objections</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Suivi des performances</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- How It Works Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Un processus simple et efficace pour des résultats rapides
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Briefing</h3>
-                    <p class="text-gray-600">
-                        Nous étudions vos objectifs et votre cible pour créer une stratégie sur mesure.
+        <!-- Features Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Fonctionnalités Clés</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Découvrez toutes les fonctionnalités de notre service d'émission d'appels
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Scripts Personnalisés</h3>
+                        <p class="text-gray-600">
+                            Nous développons des scripts personnalisés adaptés à votre secteur d'activité et à vos objectifs commerciaux.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Lancement</h3>
-                    <p class="text-gray-600">
-                        Nos téléprospecteurs contactent vos prospects selon le plan établi.
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Agents Formés</h3>
+                        <p class="text-gray-600">
+                            Nos agents sont formés aux techniques de vente et de prospection pour maximiser vos taux de conversion.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-check text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Prise de Rendez-vous</h3>
+                        <p class="text-gray-600">
+                            Nos agents prennent des rendez-vous qualifiés et les ajoutent directement à votre calendrier.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-filter text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Qualification de Prospects</h3>
+                        <p class="text-gray-600">
+                            Nous qualifions les prospects selon vos critères pour ne vous transmettre que les leads les plus pertinents.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Rapports de Performance</h3>
+                        <p class="text-gray-600">
+                            Accédez à des rapports détaillés sur les performances de vos campagnes pour optimiser votre stratégie.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-sync text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Intégration CRM</h3>
+                        <p class="text-gray-600">
+                            Nous intégrons directement les leads qualifiés dans votre CRM pour un suivi efficace et personnalisé.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Process Section -->
+        <section class="py-20 bg-dark-800 text-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Approche</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Comment nous développons votre clientèle en 4 étapes stratégiques
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-bold mb-3">Analyse</h3>
+                        <p class="text-gray-400">
+                            Nous étudions votre marché cible et définissons ensemble le profil de client idéal
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Suivi</h3>
-                    <p class="text-gray-600">
-                        Vous recevez des rapports détaillés et pouvez suivre l'avancement en temps réel.
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-bold mb-3">Stratégie</h3>
+                        <p class="text-gray-400">
+                            Nous développons une stratégie de prospection adaptée à vos objectifs et à votre secteur
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-bold mb-3">Exécution</h3>
+                        <p class="text-gray-400">
+                            Nos agents formés exécutent les campagnes d'appels selon les meilleures pratiques
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">4</div>
+                        <h3 class="text-xl font-bold mb-3">Optimisation</h3>
+                        <p class="text-gray-400">
+                            Nous analysons les résultats et optimisons continuellement les scripts et approches
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Industries Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Secteurs d'Activité</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Nous avons une expertise dans de nombreux secteurs d'activité
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        4
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">B2B</h3>
+                        <p class="text-gray-600">
+                            Prospection B2B pour générer des rendez-vous qualifiés avec des décideurs.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Optimisation</h3>
-                    <p class="text-gray-600">
-                        Nous ajustons la stratégie en fonction des résultats pour maximiser le ROI.
-                    </p>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-home text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Immobilier</h3>
+                        <p class="text-gray-600">
+                            Prise de rendez-vous pour visites de biens et qualification d'acheteurs potentiels.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heartbeat text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Santé</h3>
+                        <p class="text-gray-600">
+                            Prise de rendez-vous pour consultations et suivi des patients pour les professionnels de santé.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Éducation</h3>
+                        <p class="text-gray-600">
+                            Recrutement d'étudiants pour les établissements d'enseignement et de formation.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi Nous Choisir ?</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Des avantages concrets pour votre entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-euro-sign text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Économique</h3>
-                    <p class="text-gray-400">
-                        60% moins cher qu'une équipe interne avec de meilleurs résultats
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquentes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Tout ce que vous devez savoir sur notre service d'émission d'appels
                     </p>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-rocket text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Rapide</h3>
-                    <p class="text-gray-400">
-                        Lancement en 48h et premiers résultats sous 7 jours
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-pie text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Flexible</h3>
-                    <p class="text-gray-400">
-                        Adaptez le volume d'appels selon vos besoins et votre budget
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Sécurisé</h3>
-                    <p class="text-gray-400">
-                        Conforme RGPD avec protection de vos données et celles de vos prospects
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Industries Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Secteurs d'Activité</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Nous accompagnons des entreprises dans tous les secteurs
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Services B2B</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Services à Domicile</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Santé & Bien-être</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Formation</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-cogs text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Technologie</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-hand-holding-usd text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Finance</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-hammer text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">BTP</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
-                    <i class="fas fa-truck text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Logistique</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ils Nous Font Confiance</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez comment notre service a transformé leur activité commerciale
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Marc Lefebvre</h4>
-                            <p class="text-sm text-gray-600">Directeur Commercial, TechSolutions</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Comment assurez-vous la qualité des appels ?</h3>
+                            <p class="text-gray-600">
+                                Nous enregistrons tous les appels, réalisons des écoutes aléatoires et fournissons des formations continues à nos agents.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Puis-je suivre les performances en temps réel ?</h3>
+                            <p class="text-gray-600">
+                                Oui, notre portail vous donne accès en temps réel aux statistiques de vos campagnes et aux performances de chaque agent.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Comment les leads sont-ils transférés ?</h3>
+                            <p class="text-gray-600">
+                                Les leads qualifiés sont automatiquement intégrés dans votre CRM ou transmis par email/SMS selon vos préférences.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Le service respecte-t-il les réglementations ?</h3>
+                            <p class="text-gray-600">
+                                Oui, nous respectons scrupuleusement les réglementations anti-démarchage téléphonique et nous nous adaptons à chaque pays.
+                            </p>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "En 3 mois, nous avons multiplié nos rendez-vous qualifiés par 5. L'équipe de Smart Hotline comprend parfaitement nos besoins et s'adapte à notre secteur très technique."
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Sophie Dubois</h4>
-                            <p class="text-sm text-gray-600">Fondatrice, Bien-Être Plus</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-gray-700">
-                        "La prise de rendez-vous automatisée a révolutionné notre activité. Nous consacrons maintenant notre temps à ce que nous faisons de mieux : nos consultations."
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Booster Votre Chiffre d'Affaires ?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Commencez dès aujourd'hui avec 1 semaine d'essai gratuit et découvrez l'impact sur vos ventes.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Commencer l'Essai Gratuit
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Voir les Tarifs
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés aux entrepreneurs et PME.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'Appels</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Prospection Téléphonique</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">À Propos</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Développer Votre Clientèle ?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre service d'émission d'appels peut transformer votre entreprise.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-white text-primary-600">
+                        Demander une Démo Gratuite
+                    </a>
+                    <a href="services.html" class="btn bg-transparent text-white border-2 border-white">
+                        Découvrir Nos Services
+                    </a>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
     
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
     
+    <!-- Custom JavaScript -->
+    <script src="assets/main.js"></script>
+    
+    <!-- Localization JavaScript -->
+    <script src="assets/localization.js"></script>
+    
+    <!-- Page-specific JavaScript -->
     <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'fr';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    if (lang === 'en') {
-                        window.location.href = '../en/emission.html';
-                    }
-                    langDropdown.classList.add('hidden');
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20prospection%20téléphonique.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Prospection%20Téléphonique&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20service%20de%20prospection%20téléphonique.%20Pouvez-vous%20m\'aider%3F';
-                }
-            });
-        }
+        // Page-specific functionality here
     </script>
 </body>
 </html>
