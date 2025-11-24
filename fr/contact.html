@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Agence Smart Hotline | Services de Communication Professionnels</title>
-    <meta name="description" content="Contactez l'Agence Smart Hotline pour des solutions de communication professionnelles. Obtenez 2 semaines d'essai + CRM GRATUIT avec listes qualifiées. Appelez +1 514 819 0559">
-    <meta name="keywords" content="contact smart hotline, réceptionniste virtuel, services centre d'appels, communication d'entreprise, support client">
+    <title>Contact | Smart Hotline Agency</title>
+    <meta name="description" content="Contactez Smart Hotline Agency pour une consultation gratuite sur nos services de communication téléphonique pour PME.">
+    <meta name="keywords" content="contact, consultation, services téléphoniques, PME, réception d'appels, support client">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Contact | Agence Smart Hotline | Services de Communication Professionnels">
-    <meta property="og:description" content="Obtenez 2 semaines d'essai + CRM GRATUIT avec listes qualifiées. Solutions de communication professionnelles pour entreprises.">
+    <meta property="og:title" content="Contact | Smart Hotline Agency">
+    <meta property="og:description" content="Contactez Smart Hotline Agency pour une consultation gratuite">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/fr/contact.html">
+    <meta property="og:url" content="https://smart-hotline.com/contact.html">
     <meta property="og:image" content="https://smart-hotline.com/images/contact-hero.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com/fr/contact.html">
+    <link rel="canonical" href="https://smart-hotline.com/contact.html">
     
     <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/contact.html" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/contact.html" />
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/contact.html" />
-    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/fr/contact.html" />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -32,723 +40,209 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        },
-                        purple: {
-                            50: '#faf5ff',
-                            100: '#f3e8ff',
-                            200: '#e9d5ff',
-                            300: '#d8b4fe',
-                            400: '#c084fc',
-                            500: '#a855f7',
-                            600: '#9333ea',
-                            700: '#7e22ce',
-                            800: '#6b21a8',
-                            900: '#581c87',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contactez Smart Hotline Agency",
+        "description": "Page de contact pour les services de communication téléphonique",
+        "url": "https://smart-hotline.com/contact.html",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com",
+            "logo": "https://smart-hotline.com/images/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-514-819-0559",
+                "email": "direction@smart-hotline.com",
+                "contactType": "customer service",
+                "availableLanguage": ["French", "English"],
+                "hoursAvailable": "Mo-Fr 09:00-18:00"
             }
         }
+    }
     </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .form-input {
-            transition: all 0.3s ease;
-        }
-        
-        .form-input:focus {
-            border-color: #0ea5e9;
-            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
-        }
-        
-        .contact-card {
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .offer-badge {
-            animation: pulse-slow 3s infinite;
-        }
-        
-        .whatsapp-corner {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 999;
-        }
-        
-        /* Success message styling */
-        .form-success {
-            display: none;
-            background: #d1fae5;
-            border: 1px solid #a7f3d0;
-            color: #065f46;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Tous les services</div>
-                                    <div class="text-xs text-gray-500">Découvrez notre gamme complète</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Réception d'appels</div>
-                                    <div class="text-xs text-gray-500">Ne manquez jamais un appel</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Appels sortants</div>
-                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Support client</div>
-                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Listes</div>
-                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-primary-600 font-semibold">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-6">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <a href="../en/contact.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50">
-                        <span>FR</span>
-                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
-                    </a>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous les services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'appels</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Appels sortants</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support client</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-primary-600 font-semibold">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Header Container -->
+    <div id="header-container"></div>
     
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Contactez-nous aujourd'hui</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Commencez avec 2 semaines d'essai sur tous les services de communication + CRM GRATUIT avec listes qualifiées. Notre équipe est prête à vous aider à transformer votre communication d'entreprise.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact-form" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Commencer l'essai
-                        </a>
-                        <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Appeler: +1 514 819 0559
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contact Smart Hotline" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-purple-500 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl mb-2">24/7</div>
-                        <div class="text-sm">Support disponible</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Special Offers Banner -->
-    <section class="py-8 bg-gradient-to-r from-purple-400 to-purple-500 scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Offres Spéciales Limitées</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
-                    <div class="text-3xl mb-2">🎁</div>
-                    <h3 class="font-bold text-lg text-white mb-1">2 Semaines d'Essai</h3>
-                    <p class="text-white">Tous les services de communication - sans engagement</p>
-                </div>
-                <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
-                    <div class="text-3xl mb-2">📊</div>
-                    <h3 class="font-bold text-lg text-white mb-1">CRM GRATUIT + Listes</h3>
-                    <p class="text-white">CRM professionnel avec listes de contacts qualifiées</p>
-                </div>
-                <div class="bg-white/20 backdrop-blur-md rounded-lg p-4">
-                    <div class="text-3xl mb-2">💰</div>
-                    <h3 class="font-bold text-lg text-white mb-1">1 Semaine Gratuite</h3>
-                    <p class="text-white">Pour le premier mois de service après l'essai</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Methods -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Plusieurs Façons de Nous Contacter</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Choisissez la méthode de contact qui vous convient le mieux. Nous sommes disponibles par téléphone, WhatsApp, email ou planifiez une réunion.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a href="tel:+15148190559" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-phone text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Appel Téléphonique</h3>
-                    <p class="text-gray-600 mb-4">
-                        Parlez directement avec nos experts de vos besoins de communication et d'essai
-                    </p>
-                    <span class="text-primary-600 font-medium">+1 514 819 0559</span>
-                </a>
-                
-                <a href="https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%202%20semaines%20d'essai%20et%20CRM%20GRATUIT.%20Pouvez-vous%20fournir%20plus%20d'informations%3F" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fab fa-whatsapp text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">WhatsApp</h3>
-                    <p class="text-gray-600 mb-4">
-                        Messagerie rapide avec notre équipe. Idéal pour les demandes initiales et questions rapides.
-                    </p>
-                    <span class="text-primary-600 font-medium">Démarrer la conversation</span>
-                </a>
-                
-                <a href="mailto:direction@smart-hotline.com?subject=Demande%20d'essai%20-%20Smart%20Hotline&body=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%202%20semaines%20d'essai%20et%20CRM%20GRATUIT.%20Veuillez%20m'envoyer%20plus%20d'informations." class="contact-card bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-envelope text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Email</h3>
-                    <p class="text-gray-600 mb-4">
-                        Envoyez des exigences détaillées. Nous répondons dans les 2 heures pendant les jours ouvrables.
-                    </p>
-                    <span class="text-primary-600 font-medium">direction@smart-hotline.com</span>
-                </a>
-                
-                <a href="https://calendly.com/boubah-karim/30min" target="_blank" class="contact-card bg-gray-50 rounded-xl p-6 text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-calendar-alt text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Réunion Vidéo</h3>
-                    <p class="text-gray-600 mb-4">
-                        Consultation de 30 minutes pour discuter de vos besoins spécifiques et démontrer nos services.
-                    </p>
-                    <span class="text-primary-600 font-medium">Planifier une réunion</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Form Section -->
-    <section id="contact-form" class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Commencez Votre Essai Aujourd'hui</h2>
-                    <p class="text-xl text-gray-600">
-                        Remplissez le formulaire ci-dessous pour réclamer vos 2 semaines d'essai + CRM GRATUIT avec listes qualifiées
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Contactez-Nous</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Prêt à transformer votre communication ? Contactez-nous dès aujourd'hui pour une consultation gratuite et sans engagement.
                     </p>
                 </div>
-                
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <!-- Success Message -->
-                    <div id="form-success" class="form-success">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        Merci! Votre message a été envoyé avec succès. Nous vous contacterons dans les 2 heures pour configurer votre essai.
-                    </div>
-                    
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="hidden">
-                            <label>Ne remplissez pas ce champ si vous êtes humain: <input name="bot-field"></label>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom Complet *</label>
-                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                            </div>
-                            <div>
-                                <label for="company" class="block text-gray-700 font-medium mb-2">Nom de l'Entreprise</label>
-                                <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Adresse Email</label>
-                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-gray-700 font-medium mb-2">Numéro de Téléphone *</label>
-                                <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="service" class="block text-gray-700 font-medium mb-2">Services qui vous intéressent *</label>
-                            <select id="service" name="service" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none">
-                                <option value="">Sélectionnez des services</option>
-                                <option value="call-answering">Réception d'appels & Réceptionniste Virtuel</option>
-                                <option value="outbound-calls">Appels Sortants & Télémarketing</option>
-                                <option value="customer-support">Support Client</option>
-                                <option value="crm-lists">CRM + Listes Qualifiées</option>
-                                <option value="multiple">Services Multiples</option>
-                                <option value="not-sure">Pas Sûr - Besoin de Consultation</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Votre Message ou Exigences Spécifiques</label>
-                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" placeholder="Parlez-nous de votre entreprise et de vos besoins de communication..."></textarea>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <div class="flex items-start">
-                                <input type="checkbox" id="free-trial" name="free-trial" class="mt-1 mr-2" checked>
-                                <label for="free-trial" class="text-gray-700">Oui, je veux réclamer mes 2 semaines d'essai + CRM GRATUIT avec listes qualifiées</label>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <div class="flex items-start">
-                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-2">
-                                <label for="newsletter" class="text-gray-700">Envoyez-moi des mises à jour sur les nouveaux services et les offres spéciales</label>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button type="submit" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors w-full md:w-auto">
-                                <i class="fas fa-gift mr-2"></i>
-                                Réclamer l'Essai
-                            </button>
-                            <p class="text-sm text-gray-600 mt-3">Aucune carte de crédit requise. Aucun engagement.</p>
-                        </div>
-                    </form>
-                </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquemment Posées</h2>
-                <p class="text-xl text-gray-600">
-                    Questions courantes sur notre essai et nos services
-                </p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="border-b">
-                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Qu'est-ce qui est inclus dans les 2 semaines d'essai?</h3>
-                            <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-4">
-                            <p class="text-gray-600">
-                                L'essai inclut un accès complet à vos services de communication choisis (réception d'appels, support client ou appels sortants) avec des agents dédiés, plus notre système CRM professionnel avec des listes de contacts qualifiées. Aucune limitation pendant la période d'essai.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="border-b">
-                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Y a-t-il un engagement requis pour l'essai?</h3>
-                            <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-4">
-                            <p class="text-gray-600">
-                                Absolument aucun engagement requis. L'essai est complètement sans obligation. Si vous êtes satisfait après 2 semaines, vous pouvez continuer avec nos plans mensuels. Sinon, il n'y a aucun frais et sans sentiment de culpabilité.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="border-b">
-                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">À quelle vitesse pouvez-vous commencer l'essai?</h3>
-                            <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-4">
-                            <p class="text-gray-600">
-                                Nous pouvons généralement démarrer votre essai dans les 24-48 heures après notre consultation initiale. Le processus de configuration est rapide et nous fournissons une formation complète pour vous assurer de tirer le meilleur parti de votre période d'essai.
-                            </p>
-                        </div>
-                    </div>
-                    
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
                     <div>
-                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                            <h3 class="font-semibold text-lg">Que se passe-t-il après la fin de l'essai?</h3>
-                            <i class="fas fa-chevron-down text-primary-600 transition-transform"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-4">
-                            <p class="text-gray-600">
-                                Après votre essai de 2 semaines, nous planifierons un appel de révision pour discuter de votre expérience. Si vous décidez de continuer, nous vous transitionnerons vers nos plans mensuels réguliers. En tant que participant à l'essai, vous recevrez 1 semaine gratuite pour votre premier mois de service.
-                            </p>
+                        <h2 class="text-3xl font-bold mb-8">Envoyez-nous un Message</h2>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom Complet *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Jean Dupont">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Professionnel *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="jean@entreprise.com">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="+33 1 23 45 67 89">
+                            </div>
+                            
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
+                                <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Nom de votre entreprise">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Intéressé *</label>
+                                <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="reception">Réception d'Appels</option>
+                                    <option value="emission">Émission d'Appels</option>
+                                    <option value="support">Support Client</option>
+                                    <option value="crm">CRM & Listes</option>
+                                    <option value="multiple">Services Multiples</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Décrivez vos besoins..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="consent" name="consent" required class="mt-1 mr-2">
+                                <label for="consent" class="text-sm text-gray-600">
+                                    J'accepte que mes données soient traitées conformément à la politique de confidentialité.
+                                </label>
+                            </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-full">
+                                Envoyer le Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-8">Autres Moyens de Contact</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-phone-alt text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Téléphone</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="tel:+15148190559" class="text-primary-600 font-semibold hover:underline">+1 514 819 0559</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Du lundi au vendredi, 9h-18h</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-envelope text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Email</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="mailto:direction@smart-hotline.com" class="text-primary-600 font-semibold hover:underline">direction@smart-hotline.com</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Réponse sous 24h</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fab fa-whatsapp text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">WhatsApp</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m'aider%3F" target="_blank" class="text-primary-600 font-semibold hover:underline">+1 514 819 0559</a>
+                                </p>
+                                <p class="text-sm text-gray-500">Disponible 24/7</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-6 hover-lift">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-calendar text-primary-600 text-2xl mr-4"></i>
+                                    <h3 class="text-xl font-bold">Prise de Rendez-vous</h3>
+                                </div>
+                                <p class="text-gray-600 mb-2">
+                                    <a href="https://calendly.com/boubah-karim/30min" target="_blank" class="text-primary-600 font-semibold hover:underline">Planifier une réunion</a>
+                                </p>
+                                <p class="text-sm text-gray-500">30 minutes gratuites</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication d'Entreprise?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Rejoignez des centaines d'entreprises qui ont amélioré la satisfaction client et augmenté leurs revenus avec nos solutions de communication professionnelles.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact-form" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Commencer l'Essai
-                </a>
-                <a href="tel:+15148190559" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Appeler: +1 514 819 0559
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Agence Smart Hotline</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Services de communication téléphonique adaptés pour entrepreneurs et PME.
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquentes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Réponses aux questions les plus courantes sur nos services
                     </p>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Réception d'appels</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Appels sortants</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Support client</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">À propos</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ Réunion: calendly.com/boubah-karim/30min</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Agence Smart Hotline. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
-    
-    <!-- WhatsApp Corner -->
-    <div class="whatsapp-corner">
-        <a href="https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%202%20semaines%20d'essai%20et%20CRM%20GRATUIT.%20Pouvez-vous%20fournir%20plus%20d'informations%3F" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </a>
-    </div>
-    
-    <script>
-        // DOM Elements
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        const faqToggles = document.querySelectorAll('.faq-toggle');
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('form-success');
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // FAQ toggles
-            faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i');
-                    
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%202%20semaines%20d\'essai%20et%20CRM%20GRATUIT.%20Pouvez-vous%20fournir%20plus%20d\'informations%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'essai%20-%20Smart%20Hotline&body=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%202%20semaines%20d\'essai%20et%20CRM%20GRATUIT.%20Veuillez%20m\'envoyer%20plus%20d\'informations.';
-                }
-            });
-            
-            // Form submission
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    // In a real implementation, this would be handled by Netlify
-                    // For demo purposes, we'll show success message
-                    e.preventDefault();
-                    formSuccess.style.display = 'block';
-                    contactForm.reset();
-                    
-                    // Scroll to success message
-                    formSuccess.scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-        }
-    </script>
-</body>
-</html>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Combien de temps faut-il pour mettre en place les services ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                La mise en place prend généralement entre 24 et 48 heures après validation de vos besoins et signature du contrat.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Proposez-vous un essai gratuit ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Oui, nous proposons un essai gratuit de 2 semaines sans engagement pour tous nos services afin que vous puissiez évaluer notre qualité.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Quelles sont les modalités de paiement ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Nous acceptons les paiements par carte bancaire, virement bancaire et prélèvement automatique mensuel.
+                            </p>
+                        </details>
+                        
+                        <details class="bg-white rounded-xl shadow-lg p-6">
+                            <summary class="text-xl font-bold cursor-pointer hover:text-primary-600 transition-colors">
+                                Puis-je changer mon offre à tout moment ?
+                            </summary>
+                            <p class="text-gray-600 mt-4">
+                                Oui, vous pouvez adapter votre offre à tout moment avec un préavis de 30 jours. Les changements
