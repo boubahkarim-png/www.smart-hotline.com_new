@@ -13,6 +13,7 @@ body {
     font-family: 'Inter', ui-sans-serif, system-ui;
     line-height: 1.6;
     color: #1f2937;
+    background-color: #ffffff;
 }
 
 /* CSS Variables */
@@ -412,12 +413,6 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .process-step:not(:last-child):after {
-        display: none;
-    }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .header-menu {
@@ -433,6 +428,10 @@ body {
     }
     
     .hide-mobile {
+        display: none;
+    }
+    
+    .process-step:not(:last-child):after {
         display: none;
     }
 }
