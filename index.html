@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Hotline Agency | Services de Communication pour PME</title>
-    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure.">
-    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé">
+    <title>Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME</title>
+    <meta name="description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Téléréceptionniste, téléprospection, support client et CRM sur mesure. Essai 2 semaines.">
+    <meta name="keywords" content="téléréceptionniste, secrétariat à distance, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé, permanence téléphonique">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Smart Hotline Agency | Services de Communication pour PME">
-    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME.">
+
+    <meta property="og:title" content="Smart Hotline Agency | Téléréceptionniste & Services de Communication pour PME">
+    <meta property="og:description" content="Solutions de communication téléphonique adaptées aux entrepreneurs et PME. Externalisez votre relation client pour vous concentrer sur votre croissance.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/fr/">
     <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
+
+    <link rel="canonical" href="https://smart-hotline.com/fr/" />
     
     <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://smart-hotline.com/fr/" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
@@ -23,6 +27,8 @@
         gtag('js', new Date());
         gtag('config', 'G-RTKKH1R9FB');
     </script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -169,9 +175,52 @@
             }
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Smart Hotline Agency",
+      "url": "https://smart-hotline.com/fr/",
+      "logo": "https://smart-hotline.com/images/logo-smart-hotline.png", 
+      "description": "Services de communication et support client externalisé pour les entrepreneurs et PME.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-514-819-0559", 
+        "contactType": "Ventes et Support"
+      },
+      "sameAs": [
+        "https://twitter.com/votrepage",
+        "https://linkedin.com/company/smart-hotline-agency",
+        "https://facebook.com/votrepage"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Services de Téléréception et Support Client pour PME",
+      "description": "Smart Hotline Agency offre des services complets de réception d'appels, téléprospection et support client avec une disponibilité 24/7. Idéal pour les PME.",
+      "serviceType": "Externalized Customer Support", 
+      "provider": {
+        "@type": "Organization",
+        "name": "Smart Hotline Agency"
+      },
+      "areaServed": "Global (avec expertise francophone)",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "N/A", 
+          "priceCurrency": "CAD", 
+          "unitText": "Contactez-nous pour une offre personnalisée" 
+        }
+      }
+    }
+    </script>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
@@ -183,7 +232,6 @@
             
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
-                <!-- Services Dropdown -->
                 <div class="relative group">
                     <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
                         Services
@@ -244,7 +292,6 @@
             </div>
             
             <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
                 <div class="relative">
                     <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
                         <span id="currentLang">FR</span>
@@ -262,7 +309,6 @@
             </div>
         </nav>
         
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
                 <a href="index.html" class="text-primary-600 font-semibold">Accueil</a>
@@ -284,7 +330,6 @@
         </div>
     </header>
     
-    <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -305,7 +350,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="../images/main-hero.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
+                    <img src="../images/main-hero.jpg" alt="Agent de Smart Hotline en communication professionnelle au téléphone pour les PME" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">2 Semaines</div>
                         <div class="text-sm">Essai Sans Engagement</div>
@@ -315,7 +360,6 @@
         </div>
     </section>
     
-    <!-- Trust Badges Section -->
     <section class="py-12 bg-white border-b">
         <div class="container mx-auto px-6">
             <div class="text-center mb-8">
@@ -342,7 +386,6 @@
         </div>
     </section>
     
-    <!-- Services Preview -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -408,7 +451,6 @@
         </div>
     </section>
     
-    <!-- Dark Section: How It Works -->
     <section class="py-20 bg-dark-800 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -454,7 +496,6 @@
         </div>
     </section>
     
-    <!-- Splash Image Section -->
     <section class="py-16 bg-gradient-to-r from-primary-50 to-primary-100 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between">
@@ -486,13 +527,12 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img src="../images/communication-splash.jpg" alt="Communication Professionnelle" class="rounded-xl shadow-lg max-w-md w-full">
+                    <img src="../images/communication-splash.jpg" alt="Rapports de performance et d'analyse des appels clients pour une PME" class="rounded-xl shadow-lg max-w-md w-full">
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Dark Section: Stats -->
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -538,7 +578,6 @@
         </div>
     </section>
     
-    <!-- Testimonials Section -->
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -551,7 +590,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Marc Lefebvre, Fondateur TechInnov Québec" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Marc Lefebvre</h4>
                             <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
@@ -571,7 +610,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
+                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Sophie Dubois, Directrice Cabinet Comptable Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Sophie Dubois</h4>
                             <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
@@ -591,7 +630,7 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean-Pierre Tremblay" class="w-12 h-12 rounded-full mr-4 object-cover">
+                         <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Portrait de Jean-Pierre Tremblay, Propriétaire de restaurant Le Gourmet" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-semibold">Jean-Pierre Tremblay</h4>
                             <p class="text-sm text-gray-600">Propriétaire, Restaurant Le Gourmet</p>
@@ -612,7 +651,6 @@
         </div>
     </section>
     
-    <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Transformer Votre Communication?</h2>
@@ -630,7 +668,6 @@
         </div>
     </section>
     
-    <!-- Footer -->
     <footer class="bg-dark-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -692,7 +729,6 @@
         </div>
     </footer>
     
-    <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
