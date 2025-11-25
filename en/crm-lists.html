@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM & Lists | Smart Hotline Agency</title>
-    <meta name="description" content="Complete CRM with qualified lists, autodialer and multiple numbers. Complete solution to maximize your sales.">
-    <meta name="keywords" content="SME CRM, autodialer, qualified lists, multiple numbers, SIP trunk, spam avoidance, automatic CRM">
+    <title data-i18n="crm.title">CRM & Lists | Smart Hotline Agency</title>
+    <meta name="description" data-i18n="crm.description" content="Complete CRM with qualified prospect lists and autodialer to maximize your sales. All-in-one solution for your sales team.">
+    <meta name="keywords" data-i18n="crm.keywords" content="CRM, customer relationship management, prospect lists, autodialer, sales, SMEs, outsourcing">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CRM & Lists | Smart Hotline Agency">
+    <meta property="og:description" content="Complete CRM with qualified prospect lists and autodialer to maximize your sales">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/crm-lists.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/crm-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/crm-lists.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,123 +80,59 @@
         }
     </script>
     
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "CRM & Prospect Lists",
+        "description": "Complete CRM with qualified prospect lists and autodialer to maximize sales",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "serviceType": "CRM & Sales",
+        "areaServed": "France, Canada, Belgium, Switzerland",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "CRM & Lists Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard",
+                        "description": "Basic CRM with autodialer and prospect lists"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium",
+                        "description": "Advanced CRM with intelligent autodialer and qualified lists"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise",
+                        "description": "Custom CRM with dedicated team and complete integration"
+                    }
+                }
+            ]
         }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stats-counter {
-            transition: all 0.5s ease-out;
-        }
-        
-        .marquee {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .marquee-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
-    </style>
+    }
+    </script>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="crm-lists-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="crm-lists.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Include Header -->
+    <div id="header-container"></div>
     
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
@@ -190,90 +140,134 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">CRM & Lists</span>
+                        <span class="gradient-text" data-i18n="crm.heroTitle">CRM & Prospect Lists</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Complete CRM with qualified lists, autodialer and multiple numbers to maximize your sales and avoid spam.
+                    <p class="text-xl text-gray-600 mb-8" data-i18n="crm.heroDescription">
+                        Maximize your sales with our complete CRM and qualified prospect lists. Our system includes an autodialer to optimize your productivity.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=crm-lists" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Free CRM + Lists Trial
+                        <a href="contact.html?service=crm" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="crm.requestDemo">
+                            Request a demo
                         </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            See Pricing
+                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="crm.seePricing">
+                            See pricing
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/services/crm-dashboard.jpg" alt="CRM Dashboard" class="rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CRM & Lists" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">100%</div>
-                        <div class="text-sm">Up-to-date Lists</div>
+                        <div class="text-3xl font-bold" data-i18n="crm.productivity">+400%</div>
+                        <div class="text-sm">Productivity</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Features Section -->
+    <!-- Trust Badges Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <div class="flex items-center">
+                    <i class="fas fa-database text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Contact Management</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone-volume text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Autodialer</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-list-ul text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Qualified Lists</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Dashboards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Offered Section -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">A Powerful CRM Solution</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    All the tools you need to transform your sales process
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.ourServices">Our CRM services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.servicesDescription">
+                    Complete solutions to maximize your sales efficiency
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/crm-interface.jpg" alt="CRM Interface" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Intuitive CRM Interface</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Our modern CRM offers an intuitive interface with all the features your team needs to effectively manage prospects and customers.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-database text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.contactManagement">Contact Management</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="crm.contactDescription">
+                        Centralize all your customer information with an intuitive and easy-to-use CRM.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Complete contact management with detailed history</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.contactHistory">Complete history</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Tracking of interactions and communications</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.customFields">Custom fields</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Customizable dashboards</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Integration with your existing tools</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.contactSegmentation">Contact segmentation</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div>
-                    <img src="images/ui/analytics-dashboard.jpg" alt="Dashboard" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">100% Up-to-date Qualified Lists</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Access our constantly updated database with qualified and verified prospects in your industry.
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.autodialer">Autodialer</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="crm.autodialerDescription">
+                        Intelligent autodialer with answering machine detection to optimize your calls.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Daily information updates</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.answeringMachineDetection">Answering machine detection</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Advanced demographic filters</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.callRecording">Call recording</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>GDPR and CAN-SPAM compliance</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.callScripts">Call scripts</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-list-ul text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.qualifiedLists">Qualified Lists</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="crm.listsDescription">
+                        Access qualified and regularly updated prospect lists.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.segmentedLists">Segmented lists</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Easy export to all CRMs</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.verifiedContacts">Verified contacts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="crm.customFilters">Custom filters</span>
                         </li>
                     </ul>
                 </div>
@@ -281,67 +275,55 @@
         </div>
     </section>
     
-    <!-- Autodialer Section -->
+    <!-- How It Works Section -->
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Intelligent Autodialer</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Increase your call volume by 300% while improving the quality and relevance of your communications.
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.howItWorks">How it works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.processDescription">
+                    A simple process to maximize your sales
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/mobile-app.jpg" alt="Mobile Application" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Optimal Performance</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Our intelligent autodialer detects answering machines, optimizes wait times and connects only to relevant contacts.
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.onboarding">Onboarding</h3>
+                    <p class="text-gray-600" data-i18n="crm.onboardingDesc">
+                        We integrate your existing data and configure the CRM according to your needs.
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Answering machine detection with 85% accuracy</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Intelligent prospect numbering</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Optimization of call schedules</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Integration with your existing CRM</span>
-                        </li>
-                    </ul>
                 </div>
                 
-                <div>
-                    <img src="images/misc/handshake.jpg" alt="Handshake" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Multiple Numbers & SIP Trunk</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Use multiple numbers and SIP lines to avoid blocking and increase your response rate. Our system automatically manages rotation.
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.training">Training</h3>
+                    <p class="text-gray-600" data-i18n="crm.trainingDesc">
+                        We train your team to use all features effectively.
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Up to 10 numbers per campaign</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>High-quality SIP trunk lines</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic number rotation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Avoids 100% blocking and spam</span>
-                        </li>
-                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.launch">Launch</h3>
+                    <p class="text-gray-600" data-i18n="crm.launchDesc">
+                        Your team starts using the CRM with our qualified prospect lists.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.optimization">Optimization</h3>
+                    <p class="text-gray-600" data-i18n="crm.optimizationDesc">
+                        We analyze performance and continuously optimize the process.
+                    </p>
                 </div>
             </div>
         </div>
@@ -351,127 +333,164 @@
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Competitive Advantages</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Why our CRM & Lists is the best choice for your business
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.whyChooseUs">Why choose us?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="crm.benefitsDescription">
+                    Concrete benefits for your business
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="300">0</span>%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">More Calls</h3>
-                    <p class="text-gray-300">
-                        Compared to manual dialing
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.timeSaving">Time Saving</h3>
+                    <p class="text-gray-400" data-i18n="crm.timeSavingDesc">
+                        Save up to 20 hours per week through automation of repetitive tasks.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="85">0</span>%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Success Rate</h3>
-                    <p class="text-gray-300">
-                        Answering machine detection
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.conversions">Better Conversions</h3>
+                    <p class="text-gray-400" data-i18n="crm.conversionsDesc">
+                        Increase your conversion rate by 40% with qualified prospects.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="40">0</span>%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Savings</h3>
-                    <p class="text-gray-300">
-                        Reduced operational costs
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.collaboration">Simplified Collaboration</h3>
+                    <p class="text-gray-400" data-i18n="crm.collaborationDesc">
+                        Work more effectively as a team with integrated collaboration tools.
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="text-5xl font-bold mb-2 gradient-text">
-                        <span class="stats-counter" data-target="100">0</span>%
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Up-to-date Lists</h3>
-                    <p class="text-gray-300">
-                        Qualified and verified data
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.dataSecurity">Data Security</h3>
+                    <p class="text-gray-400" data-i18n="crm.dataSecurityDesc">
+                        Your data is secured and backed up in compliance with GDPR.
                     </p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Process Section -->
+    <!-- Integration Section -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Quick Implementation</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Start using our CRM in just a few days
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.integrations">Possible Integrations</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.integrationsDescription">
+                    Our CRM easily integrates with your existing tools
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
+                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Analysis & Configuration</h3>
-                    <p class="text-gray-600">
-                        We study your needs and configure the system according to your objectives.
+                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.emailMarketing">Email Marketing</h3>
+                    <p class="text-gray-600" data-i18n="crm.emailMarketingDesc">
+                        Integration with Mailchimp, Sendinblue and other email platforms
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
+                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Import & Cleaning</h3>
-                    <p class="text-gray-600">
-                        We import and clean your existing data to ensure quality.
+                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.calendar">Shared Calendar</h3>
+                    <p class="text-gray-600" data-i18n="crm.calendarDesc">
+                        Synchronization with Google Calendar, Outlook and other calendars
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
+                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
+                        <i class="fas fa-file-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Training & Deployment</h3>
-                    <p class="text-gray-600">
-                        Complete training of your team and progressive deployment.
+                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.billing">Billing</h3>
+                    <p class="text-gray-600" data-i18n="crm.billingDesc">
+                        Connection with QuickBooks, Sage and other billing software
                     </p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        4
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Continuous Support</h3>
-                    <p class="text-gray-600">
-                        Technical assistance and continuous performance optimization.
-                    </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industries Section -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.industries">Industries we serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.industriesDescription">
+                    We support businesses across all sectors
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.realEstate">Real Estate</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-car text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.automotive">Automotive</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.insurance">Insurance</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.education">Education</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.homeServices">Home Services</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-dumbbell text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.fitness">Fitness & Wellness</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-cog text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.b2bServices">B2B Services</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-laptop text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="crm.technology">Technology</h3>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
+    <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover how our CRM & Lists transformed our clients' sales
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.successStories">Customer success stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.storiesDescription">
+                    Discover how our CRM has transformed their sales process
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Mark Johnson</h4>
-                            <p class="text-sm text-gray-600">Founder, TechInnov Canada</p>
+                            <h4 class="font-semibold">John Smith</h4>
+                            <p class="text-sm text-gray-600">Sales Director, Real Estate Pro</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -482,16 +501,16 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "The CRM with qualified lists revolutionized our sales process. We doubled our conversion rate in just 2 months. The return on investment is exceptional!"
+                        "Smart Hotline's CRM has transformed our sales process. The autodialer has allowed us to increase our productivity by 300% and the prospect lists are of exceptional quality."
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Sophie Smith</h4>
-                            <p class="text-sm text-gray-600">Director, Smith Accounting Firm</p>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Manager, AutoConnect</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -502,7 +521,7 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "The intelligent autodialer saved us precious work hours. Our telemarketers are more efficient and our prospects are better qualified."
+                        "The integrations with our existing tools were simple. Our sales team adopted the CRM in a few days and we saw a 40% increase in our sales from the first month."
                     </p>
                 </div>
             </div>
@@ -512,264 +531,31 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Maximize Your Sales?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Start today with 2 weeks free trial for our CRM and qualified lists.
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="crm.readyToBoost">Ready to maximize your sales?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="crm.readyDescription">
+                Contact us today for a free consultation and discover how our CRM can transform your sales process.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=crm-lists" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Free CRM + Lists Trial
+                <a href="contact.html?service=crm" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="crm.startFreeTrial">
+                    Request a free demo
                 </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    See Pricing
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="crm.seePricingBtn">
+                    See pricing
                 </a>
             </div>
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Phone communication services adapted for entrepreneurs and SMEs.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Company</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
     <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'en';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize counters
-            initCounters();
-            
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize counters
-        function initCounters() {
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'crm-lists-fr.html';
-                    }
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20CRM%20and%20lists.%20Can%20you%20help%20me%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20CRM%20and%20Lists&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20CRM%20and%20lists.%20Can%20you%20help%20me%3F';
-                }
-            });
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="../assets/main.js"></script>
+    <script src="../assets/localisation.js"></script>
 </body>
 </html>
