@@ -570,14 +570,14 @@
     <!-- Scripts -->
     <script src="../assets/main.js"></script>
     <script>
-        // Include header and footer
-        document.getElementById('header-container').innerHTML = fetch('../partials/header.html')
-            .then(response => response.text())
-            .then(html => document.getElementById('header-container').innerHTML = html);
-            
-        document.getElementById('footer-container').innerHTML = fetch('../partials/footer.html')
-            .then(response => response.text())
-            .then(html => document.getElementById('footer-container').innerHTML = html);
-    </script>
+// Include header and footer from single file
+    fetch('../partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+            document.getElementById('footer-container').innerHTML = html;
+        });
+</script>
 </body>
 </html>
+
