@@ -1,124 +1,131 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">SH</div>
-            <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center space-x-2 shrink-0">
+            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">SH</div>
+            <span class="text-xl font-bold text-gray-900 hidden sm:block">Smart Hotline</span>
         </a>
         
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="lang-en text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-            <a href="index.html" class="lang-fr text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-
-            <div class="relative group h-full flex items-center">
-                <button class="flex items-center space-x-1 text-primary-600 font-semibold focus:outline-none">
-                    <span class="lang-en">Services</span>
-                    <span class="lang-fr">Services</span>
-                    <i class="fas fa-chevron-down text-xs ml-1"></i>
+        <div class="hidden md:flex items-center space-x-8 lang-en">
+            <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+            
+            <div class="relative group">
+                <button class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 font-medium py-4 focus:outline-none">
+                    <span>Services</span>
+                    <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
                 </button>
-                
-                <div class="hidden group-hover:block absolute top-full left-1/2 transform -translate-x-1/2 pt-4 w-64">
-                    <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-                        <div class="lang-en flex flex-col">
-                            <a href="reception.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Call Reception</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Inbound calls & scheduling</span>
-                            </a>
-                            <a href="emission.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Outbound Calls</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Sales & lead generation</span>
-                            </a>
-                            <a href="support.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Customer Support</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Helpdesk & ticketing</span>
-                            </a>
-                            <a href="crm-lists.html" class="px-5 py-3 hover:bg-gray-50 transition-colors">
-                                <span class="block font-medium text-gray-800">CRM & Lists</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Data management</span>
-                            </a>
-                        </div>
-
-                        <div class="lang-fr flex flex-col">
-                            <a href="reception.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Réception d'appels</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Appels entrants & agenda</span>
-                            </a>
-                            <a href="emission.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Émission d'appels</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Prospection & relance</span>
-                            </a>
-                            <a href="support.html" class="px-5 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors">
-                                <span class="block font-medium text-gray-800">Support Client</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">SAV & Tickets</span>
-                            </a>
-                            <a href="crm-lists.html" class="px-5 py-3 hover:bg-gray-50 transition-colors">
-                                <span class="block font-medium text-gray-800">CRM & Listes</span>
-                                <span class="block text-xs text-gray-500 mt-0.5">Gestion de données</span>
-                            </a>
-                        </div>
+                <div class="hidden group-hover:block absolute top-full -left-4 w-64 pt-2">
+                    <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1">
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Call Reception</span>
+                            <span class="block text-xs text-gray-500">Inbound calls management</span>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Outbound Calls</span>
+                            <span class="block text-xs text-gray-500">Sales & Lead gen</span>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Customer Support</span>
+                            <span class="block text-xs text-gray-500">Helpdesk & Tickets</span>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-gray-50">
+                            <span class="block text-sm font-semibold text-gray-800">CRM & Lists</span>
+                            <span class="block text-xs text-gray-500">Data Management</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <a href="price.html" class="lang-en text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-            <a href="price.html" class="lang-fr text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
             
-            <a href="about.html" class="lang-en text-gray-700 hover:text-primary-600 transition-colors">About</a>
-            <a href="about.html" class="lang-fr text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Pricing</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">About</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 lang-fr" style="display:none;">
+            <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Accueil</a>
             
-            <a href="contact.html" class="lang-en text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            <a href="contact.html" class="lang-fr text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <div class="relative group">
+                <button class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 font-medium py-4 focus:outline-none">
+                    <span>Services</span>
+                    <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                </button>
+                <div class="hidden group-hover:block absolute top-full -left-4 w-64 pt-2">
+                    <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1">
+                        <a href="reception.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Réception d'appels</span>
+                            <span class="block text-xs text-gray-500">Gestion appels entrants</span>
+                        </a>
+                        <a href="emission.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Émission d'appels</span>
+                            <span class="block text-xs text-gray-500">Prospection commerciale</span>
+                        </a>
+                        <a href="support.html" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0">
+                            <span class="block text-sm font-semibold text-gray-800">Support Client</span>
+                            <span class="block text-xs text-gray-500">SAV & Tickets</span>
+                        </a>
+                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-gray-50">
+                            <span class="block text-sm font-semibold text-gray-800">CRM & Listes</span>
+                            <span class="block text-xs text-gray-500">Gestion de données</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Tarifs</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
         </div>
         
         <div class="flex items-center space-x-4">
             <div class="relative">
                 <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors p-2">
-                    <span id="currentLang" class="font-medium">EN</span>
+                    <span id="currentLang" class="font-bold">EN</span>
                     <i class="fas fa-chevron-down text-xs"></i>
                 </button>
-                <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
-                    <a id="switch-to-fr" href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">Français</a>
-                    <a id="switch-to-en" href="#" class="block px-4 py-2 hover:bg-gray-50 text-gray-700">English</a>
+                <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 ring-1 ring-black ring-opacity-5">
+                    <a id="switch-to-fr" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Français</a>
+                    <a id="switch-to-en" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">English</a>
                 </div>
             </div>
             
-            <button id="mobileMenuToggle" class="md:hidden text-gray-700 p-2">
+            <button id="mobileMenuToggle" class="md:hidden text-gray-700 p-2 focus:outline-none">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </nav>
     
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4 max-h-[80vh] overflow-y-auto">
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg h-screen overflow-y-auto pb-20">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
             
             <div class="lang-en flex flex-col space-y-4">
-                <a href="index.html" class="font-medium text-gray-800">Home</a>
+                <a href="index.html" class="text-lg font-medium text-gray-800">Home</a>
                 
-                <div class="pl-4 border-l-2 border-primary-100 flex flex-col space-y-3">
-                    <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Services</span>
+                <div class="flex flex-col space-y-3 pl-4 border-l-2 border-primary-100">
+                    <span class="text-xs font-bold text-primary-600 uppercase">Services</span>
                     <a href="reception.html" class="text-gray-600">Call Reception</a>
                     <a href="emission.html" class="text-gray-600">Outbound Calls</a>
                     <a href="support.html" class="text-gray-600">Customer Support</a>
                     <a href="crm-lists.html" class="text-gray-600">CRM & Lists</a>
                 </div>
-
-                <a href="price.html" class="text-gray-700">Pricing</a>
-                <a href="about.html" class="text-gray-700">About</a>
-                <a href="contact.html" class="text-gray-700">Contact</a>
+                
+                <a href="price.html" class="text-lg font-medium text-gray-800">Pricing</a>
+                <a href="about.html" class="text-lg font-medium text-gray-800">About</a>
+                <a href="contact.html" class="text-lg font-medium text-gray-800">Contact</a>
             </div>
 
-            <div class="lang-fr flex flex-col space-y-4">
-                <a href="index.html" class="font-medium text-gray-800">Accueil</a>
+            <div class="lang-fr flex flex-col space-y-4" style="display:none;">
+                <a href="index.html" class="text-lg font-medium text-gray-800">Accueil</a>
                 
-                <div class="pl-4 border-l-2 border-primary-100 flex flex-col space-y-3">
-                    <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Services</span>
+                <div class="flex flex-col space-y-3 pl-4 border-l-2 border-primary-100">
+                    <span class="text-xs font-bold text-primary-600 uppercase">Services</span>
                     <a href="reception.html" class="text-gray-600">Réception d'appels</a>
                     <a href="emission.html" class="text-gray-600">Émission d'appels</a>
                     <a href="support.html" class="text-gray-600">Support Client</a>
                     <a href="crm-lists.html" class="text-gray-600">CRM & Listes</a>
                 </div>
-
-                <a href="price.html" class="text-gray-700">Tarifs</a>
-                <a href="about.html" class="text-gray-700">À propos</a>
-                <a href="contact.html" class="text-gray-700">Contact</a>
+                
+                <a href="price.html" class="text-lg font-medium text-gray-800">Tarifs</a>
+                <a href="about.html" class="text-lg font-medium text-gray-800">À propos</a>
+                <a href="contact.html" class="text-lg font-medium text-gray-800">Contact</a>
             </div>
 
         </div>
