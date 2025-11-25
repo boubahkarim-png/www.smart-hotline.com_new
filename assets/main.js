@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // 1. Detect Language
     const currentLang = document.documentElement.lang || 'en';
+    
+    // We assume pages are in /en/ or /fr/, so includes are one level up
     const includePath = '../includes/';
 
     // 2. Load Header
@@ -9,14 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
             
-            // Fixes
+            // Re-initialize all scripts for the injected header
             setupMobileMenu();
             setupLanguageDropdown();
-            updateLanguageUrls(); // <--- FIXES THE URL ISSUE
+            updateLanguageUrls();
             applyLanguageVisibility(currentLang);
-            
-            // Force re-rendering of Tailwind classes if needed (rarely needed but safe)
-            document.getElementById('header-placeholder').classList.add('loaded');
+            fixPaths('header-placeholder');
         });
 
     // 3. Load Footer
@@ -25,44 +25,46 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
             applyLanguageVisibility(currentLang);
+            fixPaths('footer-placeholder');
         });
 
-    // 4. Init Utilities
+    // 4. Initialize Page Specifics
     initScrollReveal();
     setupChatButton();
 });
 
 function updateLanguageUrls() {
-    // Get current filename (e.g., "reception.html")
+    // This function ensures that switching language keeps you on the same page name
     let fileName = window.location.pathname.split('/').pop();
-    if (!fileName || fileName === '') fileName = 'index.html'; // Default to index
+    if (!fileName || fileName === '') fileName = 'index.html';
 
-    // Get the switch buttons
     const btnFr = document.getElementById('switch-to-fr');
     const btnEn = document.getElementById('switch-to-en');
 
-    // Set relative paths to sibling folders
-    // If we are in /en/, ../fr/file.html goes to French
-    // If we are in /fr/, ../en/file.html goes to English
+    // If we are in /en/, go to ../fr/filename
+    // If we are in /fr/, go to ../en/filename
     if (btnFr) btnFr.setAttribute('href', '../fr/' + fileName);
     if (btnEn) btnEn.setAttribute('href', '../en/' + fileName);
 }
 
 function applyLanguageVisibility(lang) {
-    // Controls which text shows up in Header/Footer
     const enElements = document.querySelectorAll('.lang-en');
     const frElements = document.querySelectorAll('.lang-fr');
 
     if (lang === 'fr') {
         enElements.forEach(el => el.style.display = 'none');
-        frElements.forEach(el => el.style.display = ''); 
-        const currentLangSpan = document.getElementById('currentLang');
-        if(currentLangSpan) currentLangSpan.textContent = 'FR';
+        frElements.forEach(el => el.style.display = ''); // show
+        
+        // Update Label
+        const label = document.getElementById('currentLang');
+        if(label) label.textContent = 'FR';
     } else {
         frElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = '');
-        const currentLangSpan = document.getElementById('currentLang');
-        if(currentLangSpan) currentLangSpan.textContent = 'EN';
+        enElements.forEach(el => el.style.display = ''); // show
+        
+        // Update Label
+        const label = document.getElementById('currentLang');
+        if(label) label.textContent = 'EN';
     }
 }
 
@@ -89,6 +91,19 @@ function setupMobileMenu() {
     if(btn && menu) {
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     }
+}
+
+function fixPaths(containerId) {
+    // Ensures images loaded via AJAX point to ../images/
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const images = container.querySelectorAll('img');
+    images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('../') && !src.startsWith('/')) {
+            img.setAttribute('src', '../' + src);
+        }
+    });
 }
 
 function setupChatButton() {
