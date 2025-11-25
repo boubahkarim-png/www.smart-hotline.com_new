@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réception d'Appels | Smart Hotline Agency</title>
-    <meta name="description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus aucun appel important grâce à notre télésecrétariat dédié.">
-    <meta name="keywords" content="télésecrétariat, permanence téléphonique, accueil téléphonique, standard externalisé, PME">
+    <title data-i18n="reception.title">Réception d'Appels | Smart Hotline Agency</title>
+    <meta name="description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta name="keywords" data-i18n="reception.keywords" content="réception d'appels, télésecrétariat, secrétaire virtuelle, accueil téléphonique, services d'accueil externalisés, PME">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/fr/reception.html">
+    <meta property="og:title" data-i18n="reception.title" content="Réception d'Appels | Smart Hotline Agency">
+    <meta property="og:description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta property="og:image" content="https://smart-hotline.com/images/reception-hero.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://https://the-twitter.com/smart-hotline.com/fr/reception.html">
+    <meta property="twitter:title" data-i18n="reception.title" content="Réception d'Appels | Smart Hotline Agency">
+    <meta property="twitter:description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/reception-hero.jpg">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
+    <link rel="canonical" href="https://smart-hotline.com/fr/reception.html" />
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -62,269 +85,344 @@
         }
     </script>
     
-    <link rel="stylesheet" href="../assets/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
 </head>
 <body class="font-sans text-gray-800">
-    
-    <div id="header-placeholder"></div>
-    
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Réception d'Appels</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Ne manquez plus jamais un appel important grâce à notre service de réception dédié aux entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans embauche.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Demander une démo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            Voir les tarifs
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="../images/reception-service.jpg" alt="Service de Réception" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Semaines</div>
-                        <div class="text-sm">Essai Gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Secrétariat Professionnel</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Tous les avantages d'une secrétaire à temps plein sans les coûts et les contraintes.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="../images/crm-interface.jpg" alt="Interface CRM" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Accueil Personnalisé</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Nos téléopérateurs suivent vos instructions précises pour répondre aux appels exactement comme vous le feriez.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Script personnalisé selon votre entreprise</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Gestion des urgences selon vos priorités</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Transfert intelligent vers les bons contacts</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Prise de message détaillée et envoi immédiat</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <img src="../images/analytics-dashboard.jpg" alt="Tableau de bord" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Prise de Rendez-vous</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Intégration directe avec votre calendrier pour une planification efficace des rendez-vous avec vos clients.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Synchronisation avec Google Agenda, Outlook, etc.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Confirmation automatique par email/SMS</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Rappels automatiques avant chaque rendez-vous</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Gestion des annulations et reports</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi Choisir Notre Service ?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Des avantages concrets pour votre entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Plus d'Opportunités</h3>
-                    <p class="text-gray-600 text-center">
-                        Ne manquez plus aucun appel potentiel, même pendant vos réunions ou en dehors des heures de bureau.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Économies Substantielles</h3>
-                    <p class="text-gray-600 text-center">
-                        Jusqu'à 70% d'économie par rapport à l'embauche d'une secrétaire à temps plein.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Image Professionnelle</h3>
-                    <p class="text-gray-600 text-center">
-                        Des téléopérateurs formés et professionnels qui représentent votre marque avec excellence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Un processus simple en 3 étapes pour mettre en place votre accueil
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Analyse de vos Besoins</h3>
-                    <p class="text-gray-300">
-                        Nous définissons ensemble vos besoins spécifiques : types d'appels, informations à recueillir, procédures d'urgence.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Formation et Déploiement</h3>
-                    <p class="text-gray-300">
-                        Nos téléopérateurs sont formés à vos processus et votre métier. Déploiement rapide en 48-72h.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Suivi et Optimisation</h3>
-                    <p class="text-gray-300">
-                        Rapports détaillés et ajustements continus pour assurer une qualité de service optimale.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez comment notre service a transformé leur entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Marc Dubois</h4>
-                            <p class="text-sm text-gray-600">Fondateur, TechInnov</p>
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Réception d'Appels Professionnelle</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8" data-i18n="reception.heroDescription">
+                            Ne manquez plus jamais un appel important grâce à notre service de réception dédié. Notre équipe professionnelle gère tous vos appels entrants avec le soin et l'attention que vos clients méritent.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                                Demander une Démo Gratuite
+                            </a>
+                            <a href="#services" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+                                Découvrir Nos Services
+                            </a>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service de Réception d'Appels" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold">2 Semaines</div>
+                            <div class="text-sm">Essai Sans Engagement</div>
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "En tant que petite entreprise, nous ne pouvions pas nous offrir une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grands que nous ne le sommes."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Badges Section -->
+        <section class="py-12 bg-white border-b">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-gray-500 font-medium mb-8" data-i18n="reception.trustedBy">Approuvé par plus de 500 PME et entreprises en croissance</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.secure">Sécurisé & Confidentiel</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.availability">Disponibilité 24/7</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.professional">Agents Professionnels</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.costEffective">Rentable</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.ourService">Notre Service de Réception</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Service professionnel de réception d'appels adapté pour votre entreprise, avec des scripts personnalisés et un transfert transparent vers vos équipes.
                     </p>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sophie Martin</h4>
-                            <p class="text-sm text-gray-600">Directrice, Cabinet Martin</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover-lift">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Réception Professionnelle</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="reception.feature1Description">
+                            Nos téléopérateurs professionnels répondent à vos appels au nom de votre entreprise, avec un accueil chaleureux et professionnel.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit1">Prise de messages détaillés</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit2">Transfert d'appels instantané</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit3">Gestion des appels manqués</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit4">Scripts personnalisés</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Image -->
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interface de Réception" class="rounded-xl shadow-lg max-w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Section -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.processTitle">Comment Ça Marche</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            1
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process1">Consultation</h4>
+                        <p class="text-gray-300" data-i18n="reception.process1Description">
+                            Nous analysons vos besoins et créons une solution personnalisée
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            2
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process2">Configuration</h4>
+                        <p class="text-gray-300" data-i18n="reception.process2Description">
+                            Nous mettons en place votre service et formons vos téléopérateurs
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            3
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process3">Activation</h4>
+                        <p class="text-gray-300" data-i18n="reception.process3Description">
+                            Votre service est actif et prêt à prendre vos appels
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            4
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process4">Suivi</h4>
+                        <p class="text-gray-300" data-i18n="reception.process4Description">
+                            Nous surveillons la performance et vous fournissons des rapports détaillés
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Benefits Section -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.benefitsTitle">Pourquoi Choisir Notre Service</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit1Title">Économie de Coûts</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit1Description">
+                            Jusqu'à 60% moins cher qu'une équipe interne, avec de meilleurs résultats
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            <i class="fas fa-rocket text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit2Title">Gain de Temps</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit2Description">
+                            Libérez jusqu'à 40% de votre temps pour vous concentrer sur votre cœur de métier
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            <i class="fas fa-shield-alt text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit3Title">Image Professionnelle</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit3Description">
+                            Améliorez votre image professionnelle avec des téléopérateurs formés et expérimentés
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit4Title">Flexibilité</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit4Description">
+                            Adaptez le service à vos besoins saisonniers sans engagement à long terme
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50 scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.testimonialsTitle">Ce Que Disent Nos Clients</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Marc Lefebvre</h4>
+                                <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grands que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
+                        </p>
+                    </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sarah Smith</h4>
+                                <p class="text-sm text-gray-600">Marketing Director, InnovateTech</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sophie Dubois</h4>
+                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
+                        </p>
                     </div>
-                    <p class="text-gray-700">
-                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service professionnel qui nous a permis de ne plus rater d'affaires."
-                    </p>
+                </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sophie Dubois</h4>
+                                <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à ne plus manquer aucun appel ?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Commencez aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Démarrer l'essai gratuit
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Voir les tarifs
-                </a>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="reception.ctaTitle">Prêt à Ne Jamais Manquer un Appel?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="reception.ctaDescription">
+                    Commencez dès aujourd'hui et ne perdez plus jamais une opportunité commerciale.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="reception.ctaButton">
+                        Commencer l'Essai Gratuit
+                    </a>
+                    <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                        Voir les Tarifs
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
-    <div id="footer-placeholder"></div>
-    
+    <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
+    <!-- Scripts -->
     <script src="../assets/main.js"></script>
+    <script src="../assets/localisation.js"></script>
 </body>
 </html>
