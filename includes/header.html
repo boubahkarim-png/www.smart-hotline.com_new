@@ -8,10 +8,10 @@
         </a>
         
         <div class="hidden md:flex items-center space-x-8">
-            <a href="../" class="nav-home text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+            <a href="../" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
             <!-- Services Dropdown -->
             <div class="relative group">
-                <button class="nav-services text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
                     Services
                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                 </button>
@@ -20,8 +20,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-th-large text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium nav-all-services">All Services</div>
-                                <div class="text-xs text-gray-500 nav-discover-range">Discover our complete range</div>
+                                <div class="font-medium">Tous les services</div>
+                                <div class="text-xs text-gray-500">Découvrez notre gamme complète</div>
                             </div>
                         </div>
                     </a>
@@ -29,8 +29,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium nav-call-reception">Call Reception</div>
-                                <div class="text-xs text-gray-500 nav-never-miss">Never miss a call</div>
+                                <div class="font-medium">Réception d'appels</div>
+                                <div class="text-xs text-gray-500">Ne manquez jamais un appel</div>
                             </div>
                         </div>
                     </a>
@@ -38,8 +38,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium nav-phone-prospecting">Phone Prospecting</div>
-                                <div class="text-xs text-gray-500 nav-grow-customer">Grow your customer base</div>
+                                <div class="font-medium">Prospection téléphonique</div>
+                                <div class="text-xs text-gray-500">Développez votre clientèle</div>
                             </div>
                         </div>
                     </a>
@@ -47,8 +47,8 @@
                         <div class="flex items-center">
                             <i class="fas fa-headset text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium nav-customer-support">Customer Support</div>
-                                <div class="text-xs text-gray-500 nav-improve-satisfaction">Improve satisfaction</div>
+                                <div class="font-medium">Support client</div>
+                                <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
                             </div>
                         </div>
                     </a>
@@ -56,29 +56,29 @@
                         <div class="flex items-center">
                             <i class="fas fa-database text-primary-600 mr-3"></i>
                             <div>
-                                <div class="font-medium nav-crm-lists">CRM & Lists</div>
-                                <div class="text-xs text-gray-500 nav-maximize-sales">Maximize your sales</div>
+                                <div class="font-medium">CRM & Listes</div>
+                                <div class="text-xs text-gray-500">Maximisez vos ventes</div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <a href="price.html" class="nav-pricing text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-            <a href="about.html" class="nav-about text-gray-700 hover:text-primary-600 transition-colors">About</a>
-            <a href="blog.html" class="nav-blog text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="nav-contact text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
         </div>
         
         <div class="flex items-center space-x-4">
             <!-- Language Selector -->
             <div class="relative">
                 <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                    <span id="currentLang">EN</span>
+                    <span>FR</span>
                     <i class="fas fa-chevron-down text-xs"></i>
                 </button>
                 <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="#" class="lang-option-fr block px-4 py-2 hover:bg-gray-100 transition-colors">Français</a>
-                    <a href="#" class="lang-option-en block px-4 py-2 hover:bg-gray-100 transition-colors">English</a>
+                    <a href="../en/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">English</a>
+                    <a href="../fr/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Français</a>
                 </div>
             </div>
             
@@ -91,123 +91,27 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
         <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-            <a href="../" class="mobile-nav-home text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+            <a href="../" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
             <div class="border-t pt-3">
-                <div class="font-medium text-gray-700 mb-2 mobile-nav-services">Services</div>
+                <div class="font-medium text-gray-700 mb-2">Services</div>
                 <div class="pl-4 space-y-2">
-                    <a href="services.html" class="mobile-nav-services-link block text-gray-600 hover:text-primary-600 transition-colors">All Services</a>
-                    <a href="reception.html" class="mobile-nav-reception-link block text-gray-600 hover:text-primary-600 transition-colors">Call Reception</a>
-                    <a href="emission.html" class="mobile-nav-emission-link block text-gray-600 hover:text-primary-600 transition-colors">Phone Prospecting</a>
-                    <a href="support.html" class="mobile-nav-support-link block text-gray-600 hover:text-primary-600 transition-colors">Customer Support</a>
-                    <a href="crm-lists.html" class="mobile-nav-crm-link block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
+                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous les services</a>
+                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'appels</a>
+                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Prospection téléphonique</a>
+                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support client</a>
+                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
                 </div>
             </div>
-            <a href="price.html" class="mobile-nav-pricing text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-            <a href="about.html" class="mobile-nav-about text-gray-700 hover:text-primary-600 transition-colors">About</a>
-            <a href="blog.html" class="mobile-nav-blog text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="mobile-nav-contact text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
+            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
         </div>
     </div>
 </header>
 
 <script>
-// Language content definitions
-const content = {
-    en: {
-        home: 'Home',
-        services: 'Services',
-        allServices: 'All Services',
-        discoverRange: 'Discover our complete range',
-        callReception: 'Call Reception',
-        neverMiss: 'Never miss a call',
-        phoneProspecting: 'Phone Prospecting',
-        growCustomer: 'Grow your customer base',
-        customerSupport: 'Customer Support',
-        improveSatisfaction: 'Improve satisfaction',
-        crmLists: 'CRM & Lists',
-        maximizeSales: 'Maximize your sales',
-        pricing: 'Pricing',
-        about: 'About',
-        blog: 'Blog',
-        contact: 'Contact'
-    },
-    fr: {
-        home: 'Accueil',
-        services: 'Services',
-        allServices: 'Tous les services',
-        discoverRange: 'Découvrez notre gamme complète',
-        callReception: 'Réception d\'appels',
-        neverMiss: 'Ne manquez jamais un appel',
-        phoneProspecting: 'Prospection téléphonique',
-        growCustomer: 'Développez votre clientèle',
-        customerSupport: 'Support client',
-        improveSatisfaction: 'Améliorez la satisfaction',
-        crmLists: 'CRM & Listes',
-        maximizeSales: 'Maximisez vos ventes',
-        pricing: 'Tarifs',
-        about: 'À propos',
-        blog: 'Blog',
-        contact: 'Contact'
-    }
-};
-
-// Function to detect current language
-function getCurrentLanguage() {
-    const path = window.location.pathname;
-    if (path.includes('/fr/')) {
-        return 'fr';
-    } else if (path.includes('/en/')) {
-        return 'en';
-    }
-    return 'en'; // Default to English
-}
-
-// Function to update header content
-function updateHeader() {
-    const lang = getCurrentLanguage();
-    const langContent = content[lang];
-    
-    // Update language indicator
-    document.getElementById('currentLang').textContent = lang.toUpperCase();
-    
-    // Update desktop menu
-    document.querySelectorAll('.nav-home').forEach(el => el.textContent = langContent.home);
-    document.querySelectorAll('.nav-services').forEach(el => {
-        el.innerHTML = langContent.services + '<i class="fas fa-chevron-down text-xs ml-1"></i>';
-    });
-    document.querySelectorAll('.nav-all-services').forEach(el => el.textContent = langContent.allServices);
-    document.querySelectorAll('.nav-discover-range').forEach(el => el.textContent = langContent.discoverRange);
-    document.querySelectorAll('.nav-call-reception').forEach(el => el.textContent = langContent.callReception);
-    document.querySelectorAll('.nav-never-miss').forEach(el => el.textContent = langContent.neverMiss);
-    document.querySelectorAll('.nav-phone-prospecting').forEach(el => el.textContent = langContent.phoneProspecting);
-    document.querySelectorAll('.nav-grow-customer').forEach(el => el.textContent = langContent.growCustomer);
-    document.querySelectorAll('.nav-customer-support').forEach(el => el.textContent = langContent.customerSupport);
-    document.querySelectorAll('.nav-improve-satisfaction').forEach(el => el.textContent = langContent.improveSatisfaction);
-    document.querySelectorAll('.nav-crm-lists').forEach(el => el.textContent = langContent.crmLists);
-    document.querySelectorAll('.nav-maximize-sales').forEach(el => el.textContent = langContent.maximizeSales);
-    document.querySelectorAll('.nav-pricing').forEach(el => el.textContent = langContent.pricing);
-    document.querySelectorAll('.nav-about').forEach(el => el.textContent = langContent.about);
-    document.querySelectorAll('.nav-blog').forEach(el => el.textContent = langContent.blog);
-    document.querySelectorAll('.nav-contact').forEach(el => el.textContent = langContent.contact);
-    
-    // Update mobile menu
-    document.querySelectorAll('.mobile-nav-home').forEach(el => el.textContent = langContent.home);
-    document.querySelectorAll('.mobile-nav-services').forEach(el => el.textContent = langContent.services);
-    document.querySelectorAll('.mobile-nav-services-link').forEach(el => el.textContent = langContent.allServices);
-    document.querySelectorAll('.mobile-nav-reception-link').forEach(el => el.textContent = langContent.callReception);
-    document.querySelectorAll('.mobile-nav-emission-link').forEach(el => el.textContent = langContent.phoneProspecting);
-    document.querySelectorAll('.mobile-nav-support-link').forEach(el => el.textContent = langContent.customerSupport);
-    document.querySelectorAll('.mobile-nav-crm-link').forEach(el => el.textContent = langContent.crmLists);
-    document.querySelectorAll('.mobile-nav-pricing').forEach(el => el.textContent = langContent.pricing);
-    document.querySelectorAll('.mobile-nav-about').forEach(el => el.textContent = langContent.about);
-    document.querySelectorAll('.mobile-nav-blog').forEach(el => el.textContent = langContent.blog);
-    document.querySelectorAll('.mobile-nav-contact').forEach(el => el.textContent = langContent.contact);
-}
-
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    updateHeader();
-    
     // Language dropdown toggle
     const langToggle = document.getElementById('langToggle');
     const langDropdown = document.getElementById('langDropdown');
@@ -230,25 +134,5 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
     });
-    
-    // Language switcher functionality
-    document.querySelector('.lang-option-fr').addEventListener('click', function(e) {
-        e.preventDefault();
-        const currentPath = window.location.pathname;
-        const newPath = currentPath.replace('/en/', '/fr/');
-        window.location.href = newPath;
-    });
-    
-    document.querySelector('.lang-option-en').addEventListener('click', function(e) {
-        e.preventDefault();
-        const currentPath = window.location.pathname;
-        const newPath = currentPath.replace('/fr/', '/en/');
-        window.location.href = newPath;
-    });
 });
-
-// Also update immediately if DOM is already loaded
-if (document.readyState !== 'loading') {
-    updateHeader();
-}
 </script>
