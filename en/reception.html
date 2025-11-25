@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call Reception | Smart Hotline Agency</title>
-    <meta name="description" content="Professional call reception service for SMEs. Never miss an important call again with our dedicated remote receptionist.">
-    <meta name="keywords" content="remote receptionist, remote secretarial services, call reception, outsourced telephone service, SME">
+    <title data-i18n="reception.title">Call Reception | Smart Hotline Agency</title>
+    <meta name="description" data-i18n="reception.description" content="Professional call reception service for SMEs. Never miss an important call again with our dedicated remote receptionist.">
+    <meta name="keywords" data-i18n="reception.keywords" content="remote receptionist, virtual secretary, call answering service, outsourced telephone service, SME, outsourced call center">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/reception.html">
+    <meta property="og:title" data-i18n="reception.title" content="Call Reception | Smart Hotline Agency">
+    <meta property="og:description" data-i18n="reception.description" content="Professional call reception service for SMEs. Never miss an important call again with our dedicated remote receptionist.">
+    <meta property="og:image" content="https://smart-hotline.com/images/reception-hero.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smart-hotline.com/en/reception.html">
+    <meta property="twitter:title" data-i18n="reception.title" content="Call Reception | Smart Hotline Agency">
+    <meta property="twitter:description" data-i18n="reception.description" content="Professional call reception service for SMEs. Never miss an important call again with our dedicated remote receptionist.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/reception-hero.jpg">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
+    <link rel="canonical" href="https://smart-hotline.com/en/reception.html" />
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -62,269 +85,299 @@
         }
     </script>
     
-    <link rel="stylesheet" href="../assets/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
 </head>
 <body class="font-sans text-gray-800">
-    
-    <div id="header-placeholder"></div>
-    
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Call Reception</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Never miss an important call again with our dedicated reception service for entrepreneurs and SMEs. A flexible solution that adapts to your growth without requiring hiring.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Request a Demo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            See Pricing
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="../images/reception-service.jpg" alt="Call Reception Service" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Weeks</div>
-                        <div class="text-sm">Free Trial</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Reception</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    All the benefits of a full-time secretary without the costs and constraints
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="../images/crm-interface.jpg" alt="Reception Interface" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Personalized Reception</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Our teleoperators follow your precise instructions to answer calls exactly as you would.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Custom script according to your business</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Management of urgent calls according to your priorities</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Intelligent transfer to the right contacts</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Detailed message taking and immediate transmission</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <img src="../images/analytics-dashboard.jpg" alt="Dashboard" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Appointment Scheduling</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Direct integration with your calendar for efficient scheduling of appointments with your clients.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Synchronization with Google Calendar, Outlook and more</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic confirmation by email/SMS</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic reminders before each appointment</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Management of cancellations and rescheduling</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Reception Service?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Concrete benefits for your business
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Increased Opportunities</h3>
-                    <p class="text-gray-600 text-center">
-                        Never miss another potential call, even during your meetings or outside business hours.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Substantial Savings</h3>
-                    <p class="text-gray-600 text-center">
-                        Up to 70% savings compared to hiring a full-time secretary.
-                    </p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">Professional Image</h3>
-                    <p class="text-gray-600 text-center">
-                        Trained and professional teleoperators who represent your brand with excellence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    A simple 3-step process to set up your reception service
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Analysis of Your Needs</h3>
-                    <p class="text-gray-300">
-                        We define your specific needs together: types of calls, information to collect, emergency procedures.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Training and Deployment</h3>
-                    <p class="text-gray-300">
-                        Our teleoperators are trained on your processes and your business. Fast deployment in 48-72h.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Monitoring and Optimization</h3>
-                    <p class="text-gray-300">
-                        Detailed reports and continuous adjustments to ensure optimal service quality.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover how our reception service transformed their business
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Mark Johnson</h4>
-                            <p class="text-sm text-gray-600">Founder, TechInnov Canada</p>
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text" data-i18n="reception.heroTitle">Professional Call Reception</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8" data-i18n="reception.heroDescription">
+                            Never miss an important call again with our dedicated reception service for entrepreneurs and SMEs. A flexible solution that adapts to your growth without requiring hiring.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="reception.requestDemo">
+                                Request a Free Demo
+                            </a>
+                            <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="reception.seePricing">
+                                See Pricing
+                            </a>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Call Reception Service" class="rounded-xl shadow-lg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                            <div class="text-3xl font-bold" data-i18n="reception.trialDuration">2 Weeks</div>
+                            <div class="text-sm" data-i18n="reception.trialText">Free Trial</div>
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "As a small business, we couldn't afford a full-time secretary. Smart Hotline allowed us to appear bigger than we are, with a professional service that impressed our clients."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Badges Section -->
+        <section class="py-12 bg-white border-b">
+            <div class="container mx-auto px-6">
+                <p class="text-center text-gray-500 font-medium mb-8" data-i18n="reception.trustedBy">Trusted by 500+ SMEs and growing businesses</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.secure">Secure & Confidential</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.availability">24/7 Availability</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.professional">Professional Agents</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-primary-600 mr-3"></i>
+                        <span class="font-semibold" data-i18n="reception.costEffective">Cost-Effective</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="py-20 bg-white scroll-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.ourService">Our Call Reception Service</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="reception.serviceDescription">
+                        Professional call reception service adapted for your business, with personalized scripts and seamless transfer to your teams.
                     </p>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <div class="flex items-center mb-4">
-                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sophie Smith</h4>
-                            <p class="text-sm text-gray-600">Director, Smith Accounting Firm</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Service Features -->
+                    <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover-lift">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4" data-i18n="reception.feature1">Professional Reception</h3>
                         </div>
+                        <p class="text-gray-600 mb-6" data-i18n="reception.feature1Description">
+                            Our teleoperators answer your calls in your company name, with a warm and professional greeting.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit1">Detailed message taking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit2">Instant call transfer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit3">Missed call management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span data-i18n="reception.benefit4">Customized scripts</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                </div>
+                
+                <!-- Service Image -->
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reception Interface" class="rounded-xl shadow-lg max-w-full">
                     </div>
-                    <p class="text-gray-700">
-                        "The return on investment is incredible. For the cost of half a day's work per month, we have a professional call reception service that has allowed us to never miss a business opportunity."
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Never Miss Another Call?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Start today with 2 weeks free trial and discover the impact on your business.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Start Free Trial
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    See Pricing
-                </a>
+            
+            <!-- Process Section -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.processTitle">How It Works</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            1
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process1">Consultation</h4>
+                        <p class="text-gray-300" data-i18n="reception.process1Description">
+                            We analyze your needs and create a personalized solution
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            2
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process2">Configuration</h4>
+                        <p class="text-gray-300" data-i18n="reception.process2Description">
+                            We set up your service and train our teleoperators
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            3
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process3">Activation</h4>
+                        <p class="text-gray-300" data-i18n="reception.process3Description">
+                            Your service is active and ready to take your calls
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                            4
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.process4">Monitoring</h4>
+                        <p class="text-gray-300" data-i18n="reception.process4Description">
+                            We monitor performance and provide detailed reports
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+            
+            <!-- Benefits Section -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.benefitsTitle">Why Choose Our Service</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit1Title">Cost Savings</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit1Description">
+                            Up to 60% cheaper than an internal team, with better results
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit2Title">Time Savings</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit2Description">
+                            Free up to 40% of your time to focus on your core business
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit3Title">Professional Image</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit3Description">
+                            Enhance your professional image with trained and experienced teleoperators
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mt-2" data-i18n="reception.benefit4Title">Flexibility</h4>
+                        <p class="text-gray-300" data-i18n="reception.benefit4Description">
+                            Adapt the service to your seasonal needs without long-term commitment
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-16">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.testimonialsTitle">What Our Clients Say</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Mark Johnson</h4>
+                                <p class="text-sm text-gray-600">CEO, TechInnov Solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "As a growing business, we couldn't afford a full-time secretary. Smart Hotline allowed us to appear bigger than we are, with a professional service that impressed our clients."
+                        </p>
+                    </div>
+                </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sarah Smith</h4>
+                                <p class="text-sm text-gray-600">Marketing Director, InnovateTech</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "The return on investment is incredible. For the cost of half a day's work per month, we have a professional call reception service that has allowed us to never miss a business opportunity."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary-600 text-white scroll-reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="reception.ctaTitle">Ready to Never Miss Another Call?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="reception.ctaDescription">
+                    Start today and never miss another business opportunity again.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="reception.ctaButton">
+                        Start Free Trial
+                    </a>
+                    <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="reception.ctaPricing">
+                        See Pricing
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
-    <div id="footer-placeholder"></div>
-    
+    <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
+    <!-- Scripts -->
     <script src="../assets/main.js"></script>
+    <script src="../assets/localisation.js"></script>
 </body>
 </html>
