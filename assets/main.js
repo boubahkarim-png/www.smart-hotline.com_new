@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             initScrollReveal();
             initChatButton();
             initSmoothScroll();
+            initCounters();
+            
+            // Set active navigation
+            setActiveNavigation();
             
             // Apply translations after everything is loaded
             if (typeof applyTranslations === 'function') {
@@ -41,6 +45,9 @@ function initLanguageSelector() {
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
     }
+    
+    // Update language links based on current page
+    updateLanguageLinks();
     
     langToggle.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -68,6 +75,33 @@ function initLanguageSelector() {
     });
 }
 
+// Update language links based on current page
+function updateLanguageLinks() {
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop();
+    const isFrench = currentPath.includes('/fr/');
+    
+    // Update French link
+    const frLink = document.querySelector('.lang-option[data-lang="fr"]');
+    if (frLink) {
+        if (isFrench) {
+            frLink.href = `../fr/${currentPage}`;
+        } else {
+            frLink.href = `../fr/${currentPage}`;
+        }
+    }
+    
+    // Update English link
+    const enLink = document.querySelector('.lang-option[data-lang="en"]');
+    if (enLink) {
+        if (isFrench) {
+            enLink.href = `../en/${currentPage}`;
+        } else {
+            enLink.href = `../en/${currentPage}`;
+        }
+    }
+}
+
 // Mobile menu functionality
 function initMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -86,6 +120,51 @@ function initMobileMenu() {
             mobileMenu.classList.add('hidden');
         });
     });
+}
+
+// Set active navigation based on current page
+function setActiveNavigation() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Remove active class from all nav links
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Set active class based on current page
+    let activeId = '';
+    switch(currentPage) {
+        case 'index.html':
+            activeId = 'nav-home';
+            break;
+        case 'services.html':
+            activeId = 'nav-services';
+            break;
+        case 'price.html':
+            activeId = 'nav-pricing';
+            break;
+        case 'about.html':
+            activeId = 'nav-about';
+            break;
+        case 'blog.html':
+            activeId = 'nav-blog';
+            break;
+        case 'contact.html':
+            activeId = 'nav-contact';
+            break;
+        case 'reception.html':
+        case 'emission.html':
+        case 'support.html':
+        case 'crm-lists.html':
+            activeId = 'nav-services';
+            break;
+    }
+    
+    // Set active class
+    if (activeId) {
+        document.getElementById(activeId)?.classList.add('active');
+        document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+    }
 }
 
 // Scroll reveal animation
@@ -110,6 +189,46 @@ function initScrollReveal() {
     
     scrollRevealElements.forEach(element => {
         observer.observe(element);
+    });
+}
+
+// Initialize counters
+function initCounters() {
+    const statsCounters = document.querySelectorAll('.stats-counter');
+    if (statsCounters.length === 0) return;
+    
+    const observerOptions = {
+        threshold: 0.7,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, observerOptions);
+    
+    statsCounters.forEach(counter => {
+        observer.observe(counter);
     });
 }
 
