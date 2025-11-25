@@ -3,1300 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réception d'Appels Professionnelle | Smart Hotline Agency</title>
-    <meta name="description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
-    <meta name="keywords" content="télésecrétariat, secrétariat à distance, réceptionniste, accueil téléphonique, service client externalisé, PME">
+    <title>Réception d'Appels | Smart Hotline Agency</title>
+    <meta name="description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus aucun appel important grâce à notre télésecrétariat dédié.">
+    <meta name="keywords" content="télésecrétariat, permanence téléphonique, accueil téléphonique, standard externalisé, PME">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="og:title" content="Réception d'Appels Professionnelle | Smart Hotline Agency">
-    <meta property="og:description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
-    <meta property="og:image" content="https://smart-hotline.com/images/reception-service.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="twitter:title" content="Réception d'Appels Professionnelle | Smart Hotline Agency">
-    <meta property="twitter:description" content="Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.">
-    <meta property="twitter:image" content="https://smart-hotline.com/images/reception-service.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/reception.html" />
-    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
-    <link rel="canonical" href="https://smart-hotline.com/fr/reception.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="../assets/styles.css" as="style">
-    <link rel="preload" href="../assets/reveal.js" as="script">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-    
-    <!-- DNS prefetch for external domains -->
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Google Analytics with minimal impact -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RTKKH1R9FB', { 
-            'anonymize_ip': true,
-            'optimize_id': 'OPT-XXXXXXX'
-        });
-    </script>
-
-    <!-- Critical CSS Inlined -->
-    <style>
-        :root {
-            --primary-50: #f0f9ff;
-            --primary-100: #e0f2fe;
-            --primary-200: #bae6fd;
-            --primary-300: #7dd3fc;
-            --primary-400: #38bdf8;
-            --primary-500: #0ea5e9;
-            --primary-600: #0284c7;
-            --primary-700: #0369a1;
-            --primary-800: #075985;
-            --primary-900: #0c4a6e;
-            --dark-50: #f8fafc;
-            --dark-100: #f1f5f9;
-            --dark-200: #e2e8f0;
-            --dark-300: #cbd5e1;
-            --dark-400: #94a3b8;
-            --dark-500: #64748b;
-            --dark-600: #475569;
-            --dark-700: #334155;
-            --dark-800: #1e293b;
-            --dark-900: #0f172a;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Header styles */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            background: var(--primary-600);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .logo-text {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #111827;
-        }
-        
-        /* Desktop Navigation */
-        .desktop-nav {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .desktop-nav {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-            }
-        }
-
-        .nav-link {
-            color: #374151;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary-600);
-        }
-
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--primary-600);
-        }
-
-        /* Dropdown Menu */
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .dropdown-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            margin-top: 0.5rem;
-            width: 20rem;
-            background: white;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            z-index: 50;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            text-decoration: none;
-            color: #374151;
-            border-bottom: 1px solid #f3f4f6;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-
-        .dropdown-item:hover {
-            background-color: var(--primary-50);
-        }
-
-        .dropdown-item i {
-            color: var(--primary-600);
-            width: 1rem;
-        }
-
-        .dropdown-title {
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-
-        .dropdown-desc {
-            font-size: 0.75rem;
-            color: #6b7280;
-        }
-
-        /* Language Selector */
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .language-selector {
-            position: relative;
-        }
-
-        .lang-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            background: none;
-            border: none;
-            color: #374151;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 0.375rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background-color: #f9fafb;
-        }
-
-        .lang-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 0.5rem;
-            width: 8rem;
-            background: white;
-            border-radius: 0.375rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            z-index: 50;
-        }
-
-        .lang-dropdown.hidden {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-
-        .lang-dropdown:not(.hidden) {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .lang-option {
-            display: block;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            color: #374151;
-            transition: background-color 0.3s ease;
-        }
-
-        .lang-option:hover {
-            background-color: #f9fafb;
-        }
-
-        /* Mobile Menu */
-        .mobile-toggle {
-            display: block;
-            background: none;
-            border: none;
-            color: #374151;
-            font-size: 1.25rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .mobile-toggle {
-                display: none;
-            }
-        }
-
-        .mobile-menu {
-            display: none;
-            background: white;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .mobile-menu.hidden {
-            display: none;
-        }
-
-        .mobile-menu:not(.hidden) {
-            display: block;
-        }
-
-        .mobile-nav-link {
-            display: block;
-            padding: 0.75rem 0;
-            text-decoration: none;
-            color: #374151;
-            border-bottom: 1px solid #f3f4f6;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-nav-link:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-nav-link:hover,
-        .mobile-nav-link.active {
-            color: var(--primary-600);
-        }
-
-        .mobile-nav-group {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #f3f4f6;
-        }
-
-        .mobile-nav-title {
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 6rem;
-            padding-bottom: 4rem;
-            background: linear-gradient(135deg, var(--primary-50), white);
-            overflow: hidden;
-        }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        @media (min-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        .hero-title {
-            font-size: 2.25rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero-description {
-            font-size: 1.25rem;
-            color: #4b5563;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        @media (min-width: 640px) {
-            .hero-buttons {
-                flex-direction: row;
-            }
-        }
-        
-        .btn-primary {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--primary-600);
-            color: white;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: var(--primary-700);
-        }
-        
-        .btn-secondary {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: white;
-            color: var(--primary-600);
-            border: 2px solid var(--primary-600);
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary-50);
-        }
-        
-        .hero-image-container {
-            position: relative;
-        }
-
-        .hero-image {
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            width: 100%;
-            height: auto;
-        }
-        
-        .hero-badge {
-            position: absolute;
-            bottom: -1.5rem;
-            right: -1.5rem;
-            background: var(--primary-600);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        .badge-title {
-            font-size: 1.875rem;
-            font-weight: bold;
-        }
-        
-        .badge-subtitle {
-            font-size: 0.875rem;
-        }
-
-        /* Professional Reception Section (REDESIGNED) */
-        .professional-reception-section {
-            padding: 5rem 0;
-            background: white;
-        }
-        .professional-reception-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        @media (min-width: 768px) {
-            .professional-reception-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
-            }
-        }
-        .reception-feature-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .reception-feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: var(--primary-200);
-        }
-        .reception-icon-wrapper {
-            width: 4rem;
-            height: 4rem;
-            background: var(--primary-100);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-        .reception-feature-icon {
-            font-size: 1.75rem;
-            color: var(--primary-600);
-        }
-        .reception-feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-        .reception-feature-desc {
-            color: #475569;
-            line-height: 1.6;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: 5rem 0;
-            background: #f9fafb;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .benefits-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .benefit-card {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .benefit-icon {
-            width: 4rem;
-            height: 4rem;
-            background: var(--primary-100);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .benefit-icon i {
-            font-size: 1.5rem;
-            color: var(--primary-600);
-        }
-
-        .benefit-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #111827;
-        }
-
-        .benefit-description {
-            color: #4b5563;
-            line-height: 1.6;
-        }
-
-        /* Process Section */
-        .process-section {
-            padding: 5rem 0;
-            background: var(--dark-900);
-            color: white;
-        }
-
-        .process-section .section-title,
-        .process-section .section-description {
-            color: white;
-        }
-
-        .process-section .section-description {
-            color: #d1d5db;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        @media (min-width: 768px) {
-            .process-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .process-step {
-            text-align: center;
-        }
-
-        .step-number {
-            width: 4rem;
-            height: 4rem;
-            background: white;
-            color: var(--primary-600);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .step-description {
-            color: #d1d5db;
-            line-height: 1.6;
-        }
-
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .testimonial-card {
-            background: #f9fafb;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-avatar {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-
-        .testimonial-name {
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 0.25rem;
-        }
-
-        .testimonial-role {
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-
-        .testimonial-rating {
-            display: flex;
-            gap: 0.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-rating i {
-            color: #fbbf24;
-        }
-
-        .testimonial-text {
-            color: #4b5563;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 5rem 0;
-            background: var(--primary-600);
-            color: white;
-        }
-
-        .cta-content {
-            text-align: center;
-            max-width: 48rem;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 2.25rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-description {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        @media (min-width: 640px) {
-            .cta-buttons {
-                flex-direction: row;
-            }
-        }
-
-        .cta-section .btn-primary {
-            background: white;
-            color: var(--primary-600);
-        }
-
-        .cta-section .btn-primary:hover {
-            background: #f3f4f6;
-        }
-
-        .cta-section .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: white;
-        }
-
-        .cta-section .btn-secondary:hover {
-            background: white;
-            color: var(--primary-600);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark-900);
-            color: white;
-            padding: 3rem 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-description {
-            color: #9ca3af;
-            line-height: 1.6;
-        }
-
-        .footer-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .footer-list {
-            list-style: none;
-        }
-
-        .footer-link {
-            display: block;
-            padding: 0.25rem 0;
-            color: #9ca3af;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-link:hover {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.5rem;
-            height: 2.5rem;
-            background: #374151;
-            border-radius: 0.375rem;
-            color: #9ca3af;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--primary-600);
-            color: white;
-        }
-
-        .contact-info {
-            color: #9ca3af;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
-            text-align: center;
-            color: #9ca3af;
-        }
-
-        /* Utility Classes */
-        .hidden {
-            display: none !important;
-        }
-
-        /* Scroll Reveal Animation */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Chat Button */
-        .chat-button {
-            position: fixed;
-            bottom: 1.25rem;
-            right: 1.25rem;
-            z-index: 999;
-            width: 3.75rem;
-            height: 3.75rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .chat-button i {
-            font-size: 1.5rem;
-        }
-
-        /* Utility classes for star ratings */
-        .text-yellow-400 {
-            color: #fbbf24;
-        }
-    </style>
-    
-    <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Load Font Awesome asynchronously -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
-    
-    <!-- Load Google Fonts asynchronously -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Réception d'Appels Professionnelle",
-        "description": "Service de télésecrétariat sur mesure pour PME. Ne manquez plus aucun appel avec nos réceptionnistes professionnels dédiés.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Smart Hotline Agency",
-            "url": "https://smart-hotline.com",
-            "logo": "https://smart-hotline.com/images/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-514-819-0559",
-                "contactType": "customer service",
-                "availableLanguage": ["French", "English"]
-            }
-        },
-        "serviceType": "Réception d'appels",
-        "areaServed": "Canada",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Services de télésecrétariat",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Scénarios d'appels personnalisés",
-                        "description": "Nos téléopérateurs suivent vos instructions précises pour chaque type d'appel."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Prise de messages et transferts intelligents",
-                        "description": "Nous prenons des notes détaillées et transférons les appels aux bonnes personnes."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Gestion d'agenda et prise de rendez-vous",
-                        "description": "Intégration parfaite avec vos calendriers pour une planification sans faille."
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
                     }
                 }
-            ]
+            }
         }
-    }
     </script>
-</head>
-<body>
-    <!-- Header will be loaded here -->
-    <div id="header-container"></div>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div>
-                        <h1 class="hero-title">
-                            <span class="gradient-text">Réception d'Appels Professionnelle</span>
-                        </h1>
-                        <p class="hero-description">
-                            Ne manquez plus jamais un appel important avec notre service de réception dédié pour entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans nécessiter d'embauche.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="../contact.html?service=reception" class="btn-primary">
-                                Demander une Démo
-                            </a>
-                            <a href="../pricing.html" class="btn-secondary">
-                                Voir les Tarifs
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image-container">
-                        <img src="../images/services/reception-service.jpg" alt="Service de Réception d'Appels" class="hero-image" loading="lazy">
-                        <div class="hero-badge">
-                            <div class="badge-title">2 Semaines</div>
-                            <div class="badge-subtitle">Essai Gratuit</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Professional Reception Section (REDESIGNED) -->
-        <section class="professional-reception-section scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Un Service de Télésecrétariat Sur-Mesure</h2>
-                    <p class="section-description">
-                        Plus qu'une simple réponse d'appel, nous devenons le prolongement de votre entreprise.
-                    </p>
-                </div>
-                
-                <div class="professional-reception-grid">
-                    <div class="reception-feature-card">
-                        <div class="reception-icon-wrapper">
-                            <i class="fas fa-user-tie reception-feature-icon"></i>
-                        </div>
-                        <h3 class="reception-feature-title">Scénarios d'Appels Personnalisés</h3>
-                        <p class="reception-feature-desc">
-                            Nos téléopérateurs suivent vos instructions précises pour chaque type d'appel, assurant une cohérence parfaite avec votre image de marque.
-                        </p>
-                    </div>
-                    
-                    <div class="reception-feature-card">
-                        <div class="reception-icon-wrapper">
-                            <i class="fas fa-headset reception-feature-icon"></i>
-                        </div>
-                        <h3 class="reception-feature-title">Prise de Messages et Transferts Intelligents</h3>
-                        <p class="reception-feature-desc">
-                            Nous prenons des notes détaillées et transférons les appels aux bonnes personnes selon vos priorités, sans jamais perdre d'information.
-                        </p>
-                    </div>
-                    
-                    <div class="reception-feature-card">
-                        <div class="reception-icon-wrapper">
-                            <i class="fas fa-calendar-check reception-feature-icon"></i>
-                        </div>
-                        <h3 class="reception-feature-title">Gestion d'Agenda et Prise de Rendez-vous</h3>
-                        <p class="reception-feature-desc">
-                            Intégration parfaite avec vos calendriers pour une planification sans faille et des rappels automatiques pour vos clients.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Benefits Section -->
-        <section class="benefits-section scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Pourquoi Choisir Notre Service de Réception?</h2>
-                    <p class="section-description">
-                        Des avantages concrets et mesurables pour votre entreprise
-                    </p>
-                </div>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="benefit-title">Opportunités d'Affaires Accrues</h3>
-                        <p class="benefit-description">
-                            Ne manquez plus jamais un appel potentiel, même pendant vos réunions ou en dehors des heures de bureau. Chaque appel est une opportunité.
-                        </p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3 class="benefit-title">Économies Substantielles</h3>
-                        <p class="benefit-description">
-                            Jusqu'à 70% d'économies par rapport à l'embauche d'une secrétaire à temps plein, sans les charges sociales et administratives.
-                        </p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="benefit-title">Image Professionnelle d'Excellence</h3>
-                        <p class="benefit-description">
-                            Téléopérateurs formés et professionnels qui représentent votre marque avec excellence, renforçant la confiance de vos clients.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Process Section -->
-        <section class="process-section scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Comment Ça Marche</h2>
-                    <p class="section-description">
-                        Un processus simple en 3 étapes pour mettre en place votre service de réception
-                    </p>
-                </div>
-                
-                <div class="process-grid">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Analyse de Vos Besoins</h3>
-                        <p class="step-description">
-                            Nous définissons ensemble vos besoins spécifiques : types d'appels, informations à collecter, procédures d'urgence.
-                        </p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Formation et Déploiement</h3>
-                        <p class="step-description">
-                            Nos téléopérateurs sont formés sur vos processus et votre entreprise. Déploiement rapide en 48-72h.
-                        </p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Suivi et Optimisation</h3>
-                        <p class="step-description">
-                            Rapports détaillés et ajustements continus pour garantir une qualité de service optimale et votre satisfaction.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Testimonials Section -->
-        <section class="testimonials-section scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Ce Que Disent Nos Clients</h2>
-                    <p class="section-description">
-                        Découvrez comment notre service a transformé leur entreprise
-                    </p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="../images/team/operator-1.jpg" alt="Client" class="testimonial-avatar" loading="lazy">
-                            <div>
-                                <h4 class="testimonial-name">Marc Lefebvre</h4>
-                                <p class="testimonial-role">Fondateur, TechInnov Québec</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
-                        </p>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="../images/team/operator-2.jpg" alt="Client" class="testimonial-avatar" loading="lazy">
-                            <div>
-                                <h4 class="testimonial-name">Sophie Dubois</h4>
-                                <p class="testimonial-role">Directrice, Cabinet Comptable Dubois</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section class="cta-section scroll-reveal">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Prêt à Ne Plus Jamais Manquer un Appel?</h2>
-                    <p class="cta-description">
-                        Commencez dès aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="../contact.html?service=reception" class="btn-primary">Commencer l'Essai Gratuit</a>
-                        <a href="../pricing.html" class="btn-secondary">Voir les Tarifs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer will be loaded here -->
-    <div id="footer-container"></div>
     
-    <!-- Chat Button -->
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="font-sans text-gray-800">
+    
+    <div id="header-placeholder"></div>
+    
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Réception d'Appels</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Ne manquez plus jamais un appel important grâce à notre service de réception dédié aux entrepreneurs et PME. Une solution flexible qui s'adapte à votre croissance sans embauche.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                            Demander une démo
+                        </a>
+                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                            Voir les tarifs
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="../images/reception-service.jpg" alt="Service de Réception" class="rounded-xl shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold">2 Semaines</div>
+                        <div class="text-sm">Essai Gratuit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Secrétariat Professionnel</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tous les avantages d'une secrétaire à temps plein sans les coûts et les contraintes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <img src="../images/crm-interface.jpg" alt="Interface CRM" class="rounded-xl shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6">Accueil Personnalisé</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Nos téléopérateurs suivent vos instructions précises pour répondre aux appels exactement comme vous le feriez.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Script personnalisé selon votre entreprise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Gestion des urgences selon vos priorités</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Transfert intelligent vers les bons contacts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Prise de message détaillée et envoi immédiat</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <img src="../images/analytics-dashboard.jpg" alt="Tableau de bord" class="rounded-xl shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-6">Prise de Rendez-vous</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Intégration directe avec votre calendrier pour une planification efficace des rendez-vous avec vos clients.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Synchronisation avec Google Agenda, Outlook, etc.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Confirmation automatique par email/SMS</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Rappels automatiques avant chaque rendez-vous</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+                            <span>Gestion des annulations et reports</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi Choisir Notre Service ?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Des avantages concrets pour votre entreprise
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Plus d'Opportunités</h3>
+                    <p class="text-gray-600 text-center">
+                        Ne manquez plus aucun appel potentiel, même pendant vos réunions ou en dehors des heures de bureau.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-dollar-sign text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Économies Substantielles</h3>
+                    <p class="text-gray-600 text-center">
+                        Jusqu'à 70% d'économie par rapport à l'embauche d'une secrétaire à temps plein.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Image Professionnelle</h3>
+                    <p class="text-gray-600 text-center">
+                        Des téléopérateurs formés et professionnels qui représentent votre marque avec excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-dark-900 text-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment Ça Marche</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Un processus simple en 3 étapes pour mettre en place votre accueil
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Analyse de vos Besoins</h3>
+                    <p class="text-gray-300">
+                        Nous définissons ensemble vos besoins spécifiques : types d'appels, informations à recueillir, procédures d'urgence.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Formation et Déploiement</h3>
+                    <p class="text-gray-300">
+                        Nos téléopérateurs sont formés à vos processus et votre métier. Déploiement rapide en 48-72h.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Suivi et Optimisation</h3>
+                    <p class="text-gray-300">
+                        Rapports détaillés et ajustements continus pour assurer une qualité de service optimale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ce Que Disent Nos Clients</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez comment notre service a transformé leur entreprise
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/operator-1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Marc Dubois</h4>
+                            <p class="text-sm text-gray-600">Fondateur, TechInnov</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700">
+                        "En tant que petite entreprise, nous ne pouvions pas nous offrir une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grands que nous ne le sommes."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sophie Martin</h4>
+                            <p class="text-sm text-gray-600">Directrice, Cabinet Martin</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700">
+                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service professionnel qui nous a permis de ne plus rater d'affaires."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-primary-600 text-white scroll-reveal">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à ne plus manquer aucun appel ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Commencez aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Démarrer l'essai gratuit
+                </a>
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                    Voir les tarifs
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+    
     <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments"></i>
+        <i class="fas fa-comments text-2xl"></i>
     </div>
     
-    <!-- Netlify Identity Widget -->
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    
-    <!-- Load JavaScript asynchronously -->
-    <script src="../assets/reveal.js" defer></script>
-    <script src="../assets/localization.js" defer></script>
-    
-    <!-- Inline script for critical functionality -->
-    <script>
-        // Load header and footer
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load header
-            fetch('../includes/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-            
-            // Load footer
-            fetch('../includes/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-            
-            // Initialize animations
-            initScrollReveal();
-        });
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-            if (!scrollRevealElements.length) return;
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-    </script>
+    <script src="../assets/main.js"></script>
 </body>
 </html>
-
