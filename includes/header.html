@@ -77,8 +77,8 @@
                     <i class="fas fa-chevron-down text-xs"></i>
                 </button>
                 <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="../fr/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                    <a href="../en/index.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
+                    <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
+                    <a href="#" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
                 </div>
             </div>
             
@@ -109,3 +109,119 @@
         </div>
     </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Detect current language from URL
+    const path = window.location.pathname;
+    let currentLang = 'en'; // Default to English
+    
+    if (path.includes('/fr/')) {
+        currentLang = 'fr';
+    } else if (path.includes('/en/')) {
+        currentLang = 'en';
+    }
+    
+    // Update current language display
+    document.getElementById('currentLang').textContent = currentLang.toUpperCase();
+    
+    // Language translation data
+    const translations = {
+        en: {
+            'nav.home': 'Home',
+            'nav.services': 'Services',
+            'nav.allServices': 'All Services',
+            'nav.discoverRange': 'Discover our complete range',
+            'nav.callReception': 'Call Reception',
+            'nav.neverMiss': 'Never miss a call',
+            'nav.phoneProspecting': 'Phone Prospecting',
+            'nav.growCustomer': 'Grow your customer base',
+            'nav.customerSupport': 'Customer Support',
+            'nav.improveSatisfaction': 'Improve satisfaction',
+            'nav.crmLists': 'CRM & Lists',
+            'nav.maximizeSales': 'Maximize your sales',
+            'nav.pricing': 'Pricing',
+            'nav.about': 'About',
+            'nav.blog': 'Blog',
+            'nav.contact': 'Contact'
+        },
+        fr: {
+            'nav.home': 'Accueil',
+            'nav.services': 'Services',
+            'nav.allServices': 'Tous les services',
+            'nav.discoverRange': 'Découvrez notre gamme complète',
+            'nav.callReception': 'Réception d\'appels',
+            'nav.neverMiss': 'Ne manquez jamais un appel',
+            'nav.phoneProspecting': 'Prospection téléphonique',
+            'nav.growCustomer': 'Développez votre clientèle',
+            'nav.customerSupport': 'Support client',
+            'nav.improveSatisfaction': 'Améliorez la satisfaction',
+            'nav.crmLists': 'CRM & Listes',
+            'nav.maximizeSales': 'Maximisez vos ventes',
+            'nav.pricing': 'Tarifs',
+            'nav.about': 'À propos',
+            'nav.blog': 'Blog',
+            'nav.contact': 'Contact'
+        }
+    };
+    
+    // Apply translations based on current language
+    function applyTranslations(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+    }
+    
+    // Apply initial translations
+    applyTranslations(currentLang);
+    
+    // Language switcher functionality
+    const langOptions = document.querySelectorAll('.lang-option');
+    langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetLang = this.getAttribute('data-lang');
+            
+            // Get current page path
+            const currentPath = window.location.pathname;
+            
+            // Create new path with target language
+            let newPath;
+            if (targetLang === 'fr') {
+                newPath = currentPath.replace('/en/', '/fr/');
+            } else {
+                newPath = currentPath.replace('/fr/', '/en/');
+            }
+            
+            // Navigate to the new language version
+            window.location.href = newPath;
+        });
+    });
+    
+    // Language dropdown toggle
+    const langToggle = document.getElementById('langToggle');
+    const langDropdown = document.getElementById('langDropdown');
+    
+    langToggle.addEventListener('click', function() {
+        langDropdown.classList.toggle('hidden');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+});
+</script>
