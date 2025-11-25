@@ -1,111 +1,205 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 1. Detect Language (en or fr) based on the html tag
-    const currentLang = document.documentElement.lang || 'en';
-    const includePath = '../includes/';
-
-    // 2. Load Header
-    fetch(includePath + 'header.html')
-        .then(response => response.text())
-        .then(data => {
-            const headerEl = document.getElementById('header-placeholder');
-            headerEl.innerHTML = data;
-
-            // FIX: Run these immediately after HTML is inserted
-            fixRelativePaths(headerEl);     // Fix images
-            setLanguageUrls();              // Fix Language Links (remove #)
-            toggleLanguageContent(currentLang); // Show/Hide EN/FR menus
-            setupMobileToggle();            // Enable Mobile Menu
-        });
-
-    // 3. Load Footer
-    fetch(includePath + 'footer.html')
-        .then(response => response.text())
-        .then(data => {
-            const footerEl = document.getElementById('footer-placeholder');
-            footerEl.innerHTML = data;
-            
-            fixRelativePaths(footerEl);
-            toggleLanguageContent(currentLang);
-        });
-
-    // 4. Chat Button Logic
-    const chatButton = document.getElementById('chatButton');
-    if (chatButton) {
-        chatButton.addEventListener('click', () => {
-            window.location.href = 'mailto:direction@smart-hotline.com';
-        });
-    }
+// Main JavaScript for Smart Hotline Agency
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all components
+    initLanguageSelector();
+    initMobileMenu();
+    initScrollReveal();
+    initChatButton();
+    initSmoothScroll();
 });
 
-// --- CORE FUNCTIONS ---
-
-function setLanguageUrls() {
-    // Get the current file name (e.g., 'reception.html')
-    let fileName = window.location.pathname.split('/').pop();
-    if (!fileName) fileName = 'index.html';
-
-    // Find the switch buttons
-    const linkToFr = document.getElementById('link-to-fr');
-    const linkToEn = document.getElementById('link-to-en');
-
-    // Force the HREFs. If we are in /en/, link to ../fr/file.html
-    if (linkToFr) linkToFr.href = '../fr/' + fileName;
-    if (linkToEn) linkToEn.href = '../en/' + fileName;
+// Language selector functionality
+function initLanguageSelector() {
+    const langToggle = document.getElementById('langToggle');
+    const langDropdown = document.getElementById('langDropdown');
+    const currentLangSpan = document.getElementById('currentLang');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    if (!langToggle) return;
+    
+    langToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langDropdown.classList.toggle('hidden');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+        langDropdown.classList.add('hidden');
+    });
+    
+    // Handle language selection
+    langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            const href = this.getAttribute('href');
+            
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
 }
 
-function toggleLanguageContent(lang) {
-    // Simple CSS based toggle using classes
-    const style = document.createElement('style');
-    if (lang === 'fr') {
-        style.innerHTML = `
-            .lang-en { display: none !important; } 
-            .lang-fr { display: block !important; }
-            .lang-fr.flex { display: flex !important; }
-        `;
-        const langLabel = document.getElementById('currentLangLabel');
-        if(langLabel) langLabel.textContent = 'FR';
-    } else {
-        style.innerHTML = `
-            .lang-fr { display: none !important; } 
-            .lang-en { display: block !important; }
-            .lang-en.flex { display: flex !important; }
-        `;
-        const langLabel = document.getElementById('currentLangLabel');
-        if(langLabel) langLabel.textContent = 'EN';
-    }
-    document.head.appendChild(style);
+// Mobile menu functionality
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (!mobileMenuToggle) return;
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+    });
 }
 
-function fixRelativePaths(container) {
-    // Adds "../" to images so they load from subfolders
-    const images = container.querySelectorAll('img');
-    images.forEach(img => {
-        const src = img.getAttribute('src');
-        if (src && !src.startsWith('http') && !src.startsWith('../')) {
-            img.setAttribute('src', '../' + src);
+// Scroll reveal animation
+function initScrollReveal() {
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    scrollRevealElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Chat button functionality
+function initChatButton() {
+    const chatButton = document.getElementById('chatButton');
+    
+    if (!chatButton) return;
+    
+    chatButton.addEventListener('click', function() {
+        // Detect if mobile or desktop
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Open WhatsApp on mobile
+            window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F', '_blank');
+        } else {
+            // Open email client on desktop
+            window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F';
         }
     });
 }
 
-function setupMobileToggle() {
-    const btn = document.getElementById('mobileMenuToggle');
-    const menu = document.getElementById('mobileMenu');
-    if (btn && menu) {
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    }
+// Smooth scroll for anchor links
+function initSmoothScroll() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
-    // Setup Lang Dropdown Toggle (Desktop)
-    const langBtn = document.getElementById('langBtn');
-    const langMenu = document.getElementById('langMenu');
-    if (langBtn && langMenu) {
-        langBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langMenu.classList.toggle('hidden');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
-        document.addEventListener('click', () => {
-            langMenu.classList.add('hidden');
-        });
+    });
+}
+
+// Form validation helper
+function validateForm(form) {
+    let isValid = true;
+    const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+    
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            showError(input, 'This field is required');
+            isValid = false;
+        } else {
+            clearError(input);
+        }
+        
+        // Email validation
+        if (input.type === 'email' && input.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(input.value)) {
+                showError(input, 'Please enter a valid email address');
+                isValid = false;
+            }
+        }
+    });
+    
+    return isValid;
+}
+
+// Show error message
+function showError(input, message) {
+    clearError(input);
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'text-red-500 text-sm mt-1';
+    errorDiv.textContent = message;
+    input.parentNode.appendChild(errorDiv);
+    input.classList.add('border-red-500');
+}
+
+// Clear error message
+function clearError(input) {
+    const errorDiv = input.parentNode.querySelector('.text-red-500');
+    if (errorDiv) {
+        errorDiv.remove();
     }
+    input.classList.remove('border-red-500');
+}
+
+// Loading state for buttons
+function setButtonLoading(button, isLoading) {
+    if (isLoading) {
+        button.disabled = true;
+        button.innerHTML = '<span class="loading"></span> Loading...';
+    } else {
+        button.disabled = false;
+        button.innerHTML = button.getAttribute('data-original-text') || 'Submit';
+    }
+}
+
+// Utility function to format phone numbers
+function formatPhoneNumber(phone) {
+    const cleaned = ('' + phone).replace(/\D/g, '');
+    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+    if (match) {
+        return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    }
+    return phone;
+}
+
+// Utility function to debounce function calls
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
