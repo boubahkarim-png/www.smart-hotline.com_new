@@ -1,83 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
     // 1. Detect Language
     const currentLang = document.documentElement.lang || 'en';
-    
-    // 2. Define path to includes (We are in /fr/ or /en/, so we go back one level)
     const includePath = '../includes/';
 
-    // 3. Load Header
+    // 2. Load Header
     fetch(includePath + 'header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
             
-            // Fix header image paths (add ../)
-            fixPaths('header-placeholder');
-            
-            // Setup Logic
+            // Fixes
             setupMobileMenu();
             setupLanguageDropdown();
-            updateLanguageLinks(); // <--- THIS FIXES YOUR URL ISSUE
-            applyLanguage(currentLang);
+            updateLanguageUrls(); // <--- FIXES THE URL ISSUE
+            applyLanguageVisibility(currentLang);
+            
+            // Force re-rendering of Tailwind classes if needed (rarely needed but safe)
+            document.getElementById('header-placeholder').classList.add('loaded');
         });
 
-    // 4. Load Footer
+    // 3. Load Footer
     fetch(includePath + 'footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
-            applyLanguage(currentLang);
-            fixPaths('footer-placeholder');
+            applyLanguageVisibility(currentLang);
         });
 
-    // 5. Initialize Page Effects
+    // 4. Init Utilities
     initScrollReveal();
     setupChatButton();
 });
 
-function updateLanguageLinks() {
-    // Get the current file name (e.g., "reception.html")
+function updateLanguageUrls() {
+    // Get current filename (e.g., "reception.html")
     let fileName = window.location.pathname.split('/').pop();
-    
-    // Default to index.html if root
-    if (!fileName || fileName === '') fileName = 'index.html';
+    if (!fileName || fileName === '') fileName = 'index.html'; // Default to index
 
-    // Target the English and French links in the header
-    const frLink = document.getElementById('lang-link-fr');
-    const enLink = document.getElementById('lang-link-en');
+    // Get the switch buttons
+    const btnFr = document.getElementById('switch-to-fr');
+    const btnEn = document.getElementById('switch-to-en');
 
-    // Set them to point to the sibling folder with the same filename
-    if (frLink) frLink.setAttribute('href', '../fr/' + fileName);
-    if (enLink) enLink.setAttribute('href', '../en/' + fileName);
+    // Set relative paths to sibling folders
+    // If we are in /en/, ../fr/file.html goes to French
+    // If we are in /fr/, ../en/file.html goes to English
+    if (btnFr) btnFr.setAttribute('href', '../fr/' + fileName);
+    if (btnEn) btnEn.setAttribute('href', '../en/' + fileName);
 }
 
-function applyLanguage(lang) {
+function applyLanguageVisibility(lang) {
+    // Controls which text shows up in Header/Footer
     const enElements = document.querySelectorAll('.lang-en');
     const frElements = document.querySelectorAll('.lang-fr');
 
     if (lang === 'fr') {
         enElements.forEach(el => el.style.display = 'none');
         frElements.forEach(el => el.style.display = ''); 
+        const currentLangSpan = document.getElementById('currentLang');
+        if(currentLangSpan) currentLangSpan.textContent = 'FR';
     } else {
         frElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = ''); 
+        enElements.forEach(el => el.style.display = '');
+        const currentLangSpan = document.getElementById('currentLang');
+        if(currentLangSpan) currentLangSpan.textContent = 'EN';
     }
-
-    const currentLangSpan = document.getElementById('currentLang');
-    if(currentLangSpan) currentLangSpan.textContent = lang.toUpperCase();
-}
-
-function fixPaths(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    const images = container.querySelectorAll('img');
-    images.forEach(img => {
-        const src = img.getAttribute('src');
-        // Only fix if it's a relative path starting with 'images/'
-        if (src && !src.startsWith('http') && !src.startsWith('../') && !src.startsWith('/')) {
-            img.setAttribute('src', '../' + src);
-        }
-    });
 }
 
 function setupLanguageDropdown() {
