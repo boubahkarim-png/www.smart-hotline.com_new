@@ -35,7 +35,7 @@ const translations = {
             heroDescription: "Grow your customer base with our phone prospecting experts. Appointment setting, lead qualification and telephone sales to boost your growth.",
             requestDemo: "Request a Demo",
             seePricing: "See Pricing",
-            freeTrial: "Free Trial",
+            freeTrial: "1 Week",
             ourServices: "Our Prospecting Services",
             servicesDescription: "Complete solutions to grow your customer portfolio",
             appointmentSetting: "Appointment Setting",
@@ -126,7 +126,7 @@ const translations = {
             heroDescription: "Développez votre clientèle avec nos experts en prospection téléphonique. Prise de rendez-vous, qualification des leads et ventes téléphoniques pour stimuler votre croissance.",
             requestDemo: "Demander une démo",
             seePricing: "Voir les tarifs",
-            freeTrial: "Essai gratuit",
+            freeTrial: "1 Semaine",
             ourServices: "Nos services de prospection",
             servicesDescription: "Solutions complètes pour développer votre portefeuille clients",
             appointmentSetting: "Prise de rendez-vous",
@@ -183,3 +183,49 @@ const translations = {
         }
     }
 };
+
+// Get current language from URL path
+function getCurrentLanguage() {
+    const path = window.location.pathname;
+    if (path.includes('/fr/')) return 'fr';
+    return 'en';
+}
+
+// Get translation for a key
+function t(key) {
+    const lang = getCurrentLanguage();
+    const keys = key.split('.');
+    let value = translations[lang];
+    
+    for (const k of keys) {
+        if (value && value[k]) {
+            value = value[k];
+        } else {
+            return key; // Return key if translation not found
+        }
+    }
+    
+    return value;
+}
+
+// Apply translations to elements with data-i18n attribute
+function applyTranslations() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = t(key);
+        
+        if (element.tagName === 'INPUT' || element.tagName === 'META') {
+            element.setAttribute('content', translation);
+        } else if (element.tagName === 'TITLE') {
+            element.textContent = translation;
+        } else {
+            element.textContent = translation;
+        }
+    });
+}
+
+// Export functions for use in other scripts
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { t, getCurrentLanguage, applyTranslations };
+}
