@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Client | Smart Hotline Agency</title>
-    <meta name="description" content="Service de support client professionnel pour PME. Améliorez votre satisfaction client avec notre équipe formée et nos outils de gestion.">
-    <meta name="keywords" content="support client, support technique, helpdesk, PME, externalisation">
+    <title>Services de Support Client | Smart Hotline Agency</title>
+    <meta name="description" content="Solutions professionnelles de support client pour PME. Améliorez la satisfaction client avec notre équipe formée et nos outils de gestion avancés.">
+    <meta name="keywords" content="support client, support technique, helpdesk, PME, externalisation, service client, support 24/7">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Support Client | Smart Hotline Agency">
-    <meta property="og:description" content="Service de support client professionnel pour PME">
+    <meta property="og:title" content="Services Professionnels de Support Client | Smart Hotline Agency">
+    <meta property="og:description" content="Améliorez votre entreprise avec nos solutions professionnelles de support client pour PME">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/fr/support.html">
     <meta property="og:image" content="https://smart-hotline.com/images/hero-support.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services Professionnels de Support Client | Smart Hotline Agency">
+    <meta name="twitter:description" content="Améliorez votre entreprise avec nos solutions professionnelles de support client pour PME">
+    <meta name="twitter:image" content="https://smart-hotline.com/images/hero-support.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://smart-hotline.com/fr/support.html">
     
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
     <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -93,10 +99,17 @@
         "provider": {
             "@type": "Organization",
             "name": "Smart Hotline Agency",
-            "url": "https://smart-hotline.com"
+            "url": "https://smart-hotline.com",
+            "logo": "https://smart-hotline.com/images/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+33-1-23-45-67-89",
+                "contactType": "service client",
+                "availableLanguage": ["French", "English"]
+            }
         },
         "serviceType": "Support Client",
-        "areaServed": "France, Canada, Belgique, Suisse",
+        "areaServed": ["France", "Canada", "Belgique", "Suisse"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Options de Support Client",
@@ -106,7 +119,7 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Standard",
-                        "description": "Support client par e-mail et téléphone pendant les heures de bureau"
+                        "description": "Support client par email et téléphone pendant les heures de bureau"
                     }
                 },
                 {
@@ -140,10 +153,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Support Client Professionnel</span>
+                        <span class="gradient-text">Solutions Professionnelles de Support Client</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Améliorez votre satisfaction client avec notre service de support technique et client. Nos agents formés répondent aux questions et résolvent les problèmes efficacement.
+                        Rehaussez votre satisfaction client avec nos services complets de support technique et client. Nos agents experts résolvent les problèmes efficacement et représentent votre marque avec professionnalisme.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
@@ -155,10 +168,10 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/hero-support.jpg" alt="Support Client" class="rounded-xl shadow-lg">
+                    <img src="../images/hero-support.jpg" alt="Équipe Professionnelle de Support Client" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                         <div class="text-3xl font-bold">98%</div>
-                        <div class="text-sm">Taux de satisfaction</div>
+                        <div class="text-sm">Taux de Satisfaction Client</div>
                     </div>
                 </div>
             </div>
@@ -175,7 +188,7 @@
                 </div>
                 <div class="flex items-center">
                     <i class="fas fa-ticket-alt text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Système de Tickets</span>
+                    <span class="font-semibold">Système de Tickets Avancé</span>
                 </div>
                 <div class="flex items-center">
                     <i class="fas fa-book text-3xl text-primary-600 mr-3"></i>
@@ -193,7 +206,7 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos services de support</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Services de Support Complets</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Solutions complètes pour la gestion professionnelle du support client
                 </p>
@@ -206,20 +219,20 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Support Multicanal</h3>
                     <p class="text-gray-600 mb-6">
-                        Support par téléphone, e-mail, chat et réseaux sociaux pour une expérience client fluide et cohérente.
+                        Expérience client fluide sur téléphone, email, chat et plateformes de médias sociaux.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Support téléphonique</span>
+                            <span>Support téléphonique professionnel</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Support par e-mail</span>
+                            <span>Support email réactif</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Support par chat</span>
+                            <span>Support chat en temps réel</span>
                         </li>
                     </ul>
                 </div>
@@ -228,22 +241,22 @@
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
                         <i class="fas fa-ticket-alt text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Système de Tickets</h3>
+                    <h3 class="text-2xl font-bold mb-4">Système de Tickets Avancé</h3>
                     <p class="text-gray-600 mb-6">
-                        Suivi efficace de toutes les demandes avec notre système de tickets et priorisation automatique.
+                        Suivi et gestion efficaces de toutes les demandes clients avec priorisation intelligente.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Suivi des tickets</span>
+                            <span>Suivi complet des tickets</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Priorisation automatique</span>
+                            <span>Priorisation automatique des problèmes</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Escalade des problèmes</span>
+                            <span>Processus d'escalade structuré</span>
                         </li>
                     </ul>
                 </div>
@@ -252,22 +265,22 @@
                     <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
                         <i class="fas fa-book text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Base de Connaissances</h3>
+                    <h3 class="text-2xl font-bold mb-4">Base de Connaissances Complète</h3>
                     <p class="text-gray-600 mb-6">
-                        Base de connaissances complète pour permettre aux clients de trouver rapidement des réponses.
+                        Ressources en libre-service permettant aux clients de trouver rapidement des réponses.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>FAQ dynamique</span>
+                            <span>Système de FAQ dynamique</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Tutoriels et guides</span>
+                            <span>Tutoriels et guides interactifs</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Moteur de recherche</span>
+                            <span>Fonctionnalité de recherche avancée</span>
                         </li>
                     </ul>
                 </div>
@@ -279,9 +292,9 @@
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comment ça marche</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Processus Éprouvé</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Notre méthodologie pour améliorer votre satisfaction client
+                    Notre méthodologie pour améliorer votre satisfaction et fidélité client
                 </p>
             </div>
             
@@ -290,9 +303,9 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         1
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Formation</h3>
+                    <h3 class="text-xl font-semibold mb-3">Formation Complète</h3>
                     <p class="text-gray-600">
-                        Nous formons nos agents sur vos produits, services et processus internes
+                        Nous formons en profondeur nos agents sur vos produits, services et processus internes
                     </p>
                 </div>
                 
@@ -300,9 +313,9 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         2
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Outils</h3>
+                    <h3 class="text-xl font-semibold mb-3">Outils Personnalisés</h3>
                     <p class="text-gray-600">
-                        Nous mettons en place des outils de support adaptés à vos besoins spécifiques
+                        Nous implémentons des outils de support adaptés à vos besoins commerciaux spécifiques
                     </p>
                 </div>
                 
@@ -310,9 +323,9 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         3
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Qualité</h3>
+                    <h3 class="text-xl font-semibold mb-3">Assurance Qualité</h3>
                     <p class="text-gray-600">
-                        Nous suivons des indicateurs de qualité pour garantir un service exceptionnel
+                        Nous surveillons les indicateurs de qualité pour garantir un service exceptionnel constant
                     </p>
                 </div>
                 
@@ -320,7 +333,7 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         4
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Amélioration</h3>
+                    <h3 class="text-xl font-semibold mb-3">Amélioration Continue</h3>
                     <p class="text-gray-600">
                         Nous analysons les retours clients et optimisons continuellement nos processus
                     </p>
@@ -333,9 +346,9 @@
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi nous choisir?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi Choisir Smart Hotline?</h2>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Des avantages concrets pour votre entreprise
+                    Des avantages tangibles qui font progresser votre entreprise
                 </p>
             </div>
             
@@ -344,9 +357,9 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-chart-line text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Satisfaction Accrue</h3>
+                    <h3 class="text-xl font-semibold mb-3">Satisfaction Améliorée</h3>
                     <p class="text-gray-400">
-                        Augmentation de 35% du taux de satisfaction client moyen
+                        Augmentation moyenne de 35% des taux de satisfaction client
                     </p>
                 </div>
                 
@@ -354,9 +367,9 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-clock text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Temps de Réponse</h3>
+                    <h3 class="text-xl font-semibold mb-3">Réponse Rapide</h3>
                     <p class="text-gray-400">
-                        90% des demandes traitées en moins de 24 heures
+                        90% des demandes résolues en moins de 24 heures
                     </p>
                 </div>
                 
@@ -364,9 +377,9 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-chart-pie text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Analytiques</h3>
+                    <h3 class="text-xl font-semibold mb-3">Analyse Avancée</h3>
                     <p class="text-gray-400">
-                        Rapports détaillés pour identifier les axes d'amélioration
+                        Rapports détaillés pour identifier les opportunités d'amélioration
                     </p>
                 </div>
                 
@@ -376,7 +389,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Support Multilingue</h3>
                     <p class="text-gray-400">
-                        Agents parlant français et anglais pour servir tous vos clients
+                        Agents francophones et anglophones pour servir votre clientèle mondiale
                     </p>
                 </div>
             </div>
@@ -387,16 +400,16 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Secteurs que nous servons</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Secteurs que Nous Servons</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Nous accompagnons les entreprises de tous les secteurs
+                    Solutions de support spécialisées adaptées à votre secteur d'activité
                 </p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-laptop text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Logiciels SaaS</h3>
+                    <h3 class="font-semibold">SaaS et Logiciels</h3>
                 </div>
                 <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-shopping-cart text-3xl text-primary-600 mb-4"></i>
@@ -408,7 +421,7 @@
                 </div>
                 <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-gamepad text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Jeux & Divertissement</h3>
+                    <h3 class="font-semibold">Jeux et Divertissement</h3>
                 </div>
                 <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
@@ -434,19 +447,19 @@
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Histoires de réussite client</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Témoignages Clients</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Découvrez comment notre service a transformé l'expérience client de nos partenaires
+                    Découvrez comment nos services ont transformé l'expérience client de nos partenaires
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Laurent" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Sophie Laurent</h4>
-                            <p class="text-sm text-gray-600">Responsable Succès Client, TechStart</p>
+                            <h4 class="font-semibold">Marie Dubois</h4>
+                            <p class="text-sm text-gray-600">Directrice, Solutions E-commerce</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -457,16 +470,16 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "Smart Hotline a transformé nos opérations de support client. Leur équipe gère les requêtes techniques complexes avec professionnalisme, réduisant notre temps de réponse de 60%."
+                        "Depuis notre partenariat avec Smart Hotline pour notre support client, notre taux de satisfaction a augmenté de 35%. Leurs agents sont exceptionnellement formés et répondent constamment aux besoins de nos clients."
                     </p>
                 </div>
                 
                 <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Pierre Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Thomas Martin" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Pierre Dubois</h4>
-                            <p class="text-sm text-gray-600">Directeur des Opérations, CloudFlow</p>
+                            <h4 class="font-semibold">Thomas Martin</h4>
+                            <p class="text-sm text-gray-600">PDG, TechFlow Solutions</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -477,7 +490,7 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "L'équipe de support 24/7 a été essentielle pour notre expansion mondiale. Nos clients apprécient le support multilingue et la résolution rapide des problèmes."
+                        "Le support 24/7 de Smart Hotline nous a permis de nous concentrer sur notre cœur de métier tout en offrant un service exceptionnel à nos clients. L'intégration avec nos systèmes existants s'est faite sans effort."
                     </p>
                 </div>
             </div>
@@ -490,37 +503,37 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Questions Fréquemment Posées</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Tout ce que vous devez savoir sur notre service de support client
+                    Tout ce que vous devez savoir sur nos services de support client
                 </p>
             </div>
             
             <div class="max-w-4xl mx-auto">
                 <div class="space-y-6">
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <h3 class="text-xl font-bold mb-3">Quelles sont les heures de support?</h3>
+                        <h3 class="text-xl font-bold mb-3">Quelles sont les heures de support disponibles?</h3>
                         <p class="text-gray-600">
-                            Nous offrons un support 24/7 avec des options standard (9h-18h) et premium (24/7) selon vos besoins.
+                            Nous offrons des options de support flexibles incluant les heures de bureau standard (9h-18h) et le support premium 24/7 adapté à vos besoins commerciaux spécifiques.
                         </p>
                     </div>
                     
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <h3 class="text-xl font-bold mb-3">Comment assurez-vous la confidentialité des données?</h3>
+                        <h3 class="text-xl font-bold mb-3">Comment assurez-vous la confidentialité et la sécurité des données?</h3>
                         <p class="text-gray-600">
-                            Tous nos agents signent des accords de confidentialité et nous respectons strictement le RGPD et autres réglementations.
+                            Tous nos agents signent des accords de confidentialité complets, et nous respectons strictement le RGPD, la CCPA et autres réglementations de protection des données. Nos systèmes sont sécurisés avec un chiffrement et des contrôles d'accès conformes aux normes de l'industrie.
                         </p>
                     </div>
                     
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <h3 class="text-xl font-bold mb-3">Puis-je intégrer mon CRM existant?</h3>
+                        <h3 class="text-xl font-bold mb-3">Pouvez-vous vous intégrer à notre système CRM existant?</h3>
                         <p class="text-gray-600">
-                            Oui, nous pouvons nous intégrer avec la plupart des CRM populaires via API ou en important/exportant des données selon vos préférences.
+                            Oui, nous offrons une intégration transparente avec la plupart des plateformes CRM populaires dont Salesforce, HubSpot, Zendesk et autres via des API ou des processus sécurisés d'importation/exportation de données.
                         </p>
                     </div>
                     
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <h3 class="text-xl font-bold mb-3">Comment mesurez-vous la satisfaction client?</h3>
+                        <h3 class="text-xl font-bold mb-3">Comment mesurez-vous et rapportez-vous la satisfaction client?</h3>
                         <p class="text-gray-600">
-                            Nous menons des enquêtes de satisfaction automatiques après chaque interaction et fournissons des rapports mensuels détaillés.
+                            Nous mettons en œuvre des enquêtes de satisfaction automatisées après chaque interaction et fournissons des rapports mensuels détaillés incluant des indicateurs clés tels que CSAT, temps de première réponse, temps de résolution et net promoter score.
                         </p>
                     </div>
                 </div>
@@ -531,16 +544,16 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à améliorer votre satisfaction client?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à Rehausser Votre Expérience Client?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre service de support client peut transformer votre entreprise.
+                Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nos solutions de support client peuvent transformer votre entreprise.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Demander une démo gratuite
                 </a>
                 <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Voir les tarifs
+                    Voir les plans tarifaires
                 </a>
             </div>
         </div>
@@ -557,20 +570,14 @@
     <!-- Scripts -->
     <script src="../assets/main.js"></script>
     <script>
-        // Include header and footer partials
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('../partials/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                });
-                
-            fetch('../partials/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
-        });
+        // Include header and footer
+        document.getElementById('header-container').innerHTML = fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header-container').innerHTML = html);
+            
+        document.getElementById('footer-container').innerHTML = fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer-container').innerHTML = html);
     </script>
 </body>
 </html>
