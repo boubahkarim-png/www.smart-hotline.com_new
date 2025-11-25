@@ -1,134 +1,111 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Detect Language
+    // 1. Detect Language (en or fr) based on the html tag
     const currentLang = document.documentElement.lang || 'en';
-    
-    // We assume pages are in /en/ or /fr/, so includes are one level up
     const includePath = '../includes/';
 
     // 2. Load Header
     fetch(includePath + 'header.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-            
-            // Re-initialize all scripts for the injected header
-            setupMobileMenu();
-            setupLanguageDropdown();
-            updateLanguageUrls();
-            applyLanguageVisibility(currentLang);
-            fixPaths('header-placeholder');
+            const headerEl = document.getElementById('header-placeholder');
+            headerEl.innerHTML = data;
+
+            // FIX: Run these immediately after HTML is inserted
+            fixRelativePaths(headerEl);     // Fix images
+            setLanguageUrls();              // Fix Language Links (remove #)
+            toggleLanguageContent(currentLang); // Show/Hide EN/FR menus
+            setupMobileToggle();            // Enable Mobile Menu
         });
 
     // 3. Load Footer
     fetch(includePath + 'footer.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            applyLanguageVisibility(currentLang);
-            fixPaths('footer-placeholder');
+            const footerEl = document.getElementById('footer-placeholder');
+            footerEl.innerHTML = data;
+            
+            fixRelativePaths(footerEl);
+            toggleLanguageContent(currentLang);
         });
 
-    // 4. Initialize Page Specifics
-    initScrollReveal();
-    setupChatButton();
+    // 4. Chat Button Logic
+    const chatButton = document.getElementById('chatButton');
+    if (chatButton) {
+        chatButton.addEventListener('click', () => {
+            window.location.href = 'mailto:direction@smart-hotline.com';
+        });
+    }
 });
 
-function updateLanguageUrls() {
-    // This function ensures that switching language keeps you on the same page name
+// --- CORE FUNCTIONS ---
+
+function setLanguageUrls() {
+    // Get the current file name (e.g., 'reception.html')
     let fileName = window.location.pathname.split('/').pop();
-    if (!fileName || fileName === '') fileName = 'index.html';
+    if (!fileName) fileName = 'index.html';
 
-    const btnFr = document.getElementById('switch-to-fr');
-    const btnEn = document.getElementById('switch-to-en');
+    // Find the switch buttons
+    const linkToFr = document.getElementById('link-to-fr');
+    const linkToEn = document.getElementById('link-to-en');
 
-    // If we are in /en/, go to ../fr/filename
-    // If we are in /fr/, go to ../en/filename
-    if (btnFr) btnFr.setAttribute('href', '../fr/' + fileName);
-    if (btnEn) btnEn.setAttribute('href', '../en/' + fileName);
+    // Force the HREFs. If we are in /en/, link to ../fr/file.html
+    if (linkToFr) linkToFr.href = '../fr/' + fileName;
+    if (linkToEn) linkToEn.href = '../en/' + fileName;
 }
 
-function applyLanguageVisibility(lang) {
-    const enElements = document.querySelectorAll('.lang-en');
-    const frElements = document.querySelectorAll('.lang-fr');
-
+function toggleLanguageContent(lang) {
+    // Simple CSS based toggle using classes
+    const style = document.createElement('style');
     if (lang === 'fr') {
-        enElements.forEach(el => el.style.display = 'none');
-        frElements.forEach(el => el.style.display = ''); // show
-        
-        // Update Label
-        const label = document.getElementById('currentLang');
-        if(label) label.textContent = 'FR';
+        style.innerHTML = `
+            .lang-en { display: none !important; } 
+            .lang-fr { display: block !important; }
+            .lang-fr.flex { display: flex !important; }
+        `;
+        const langLabel = document.getElementById('currentLangLabel');
+        if(langLabel) langLabel.textContent = 'FR';
     } else {
-        frElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = ''); // show
-        
-        // Update Label
-        const label = document.getElementById('currentLang');
-        if(label) label.textContent = 'EN';
+        style.innerHTML = `
+            .lang-fr { display: none !important; } 
+            .lang-en { display: block !important; }
+            .lang-en.flex { display: flex !important; }
+        `;
+        const langLabel = document.getElementById('currentLangLabel');
+        if(langLabel) langLabel.textContent = 'EN';
     }
+    document.head.appendChild(style);
 }
 
-function setupLanguageDropdown() {
-    const langToggle = document.getElementById('langToggle');
-    const langDropdown = document.getElementById('langDropdown');
-
-    if (langToggle && langDropdown) {
-        langToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langDropdown.classList.toggle('hidden');
-        });
-        document.addEventListener('click', (e) => {
-            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                langDropdown.classList.add('hidden');
-            }
-        });
-    }
-}
-
-function setupMobileMenu() {
-    const btn = document.getElementById('mobileMenuToggle');
-    const menu = document.getElementById('mobileMenu');
-    if(btn && menu) {
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-    }
-}
-
-function fixPaths(containerId) {
-    // Ensures images loaded via AJAX point to ../images/
-    const container = document.getElementById(containerId);
-    if (!container) return;
+function fixRelativePaths(container) {
+    // Adds "../" to images so they load from subfolders
     const images = container.querySelectorAll('img');
     images.forEach(img => {
         const src = img.getAttribute('src');
-        if (src && !src.startsWith('http') && !src.startsWith('../') && !src.startsWith('/')) {
+        if (src && !src.startsWith('http') && !src.startsWith('../')) {
             img.setAttribute('src', '../' + src);
         }
     });
 }
 
-function setupChatButton() {
-    const chatButton = document.getElementById('chatButton');
-    if (chatButton) {
-        chatButton.addEventListener('click', () => {
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            if (isMobile) {
-                window.open('https://wa.me/15148190559', '_blank');
-            } else {
-                window.location.href = 'mailto:direction@smart-hotline.com';
-            }
+function setupMobileToggle() {
+    const btn = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
     }
-}
-
-function initScrollReveal() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
+    
+    // Setup Lang Dropdown Toggle (Desktop)
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+    if (langBtn && langMenu) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langMenu.classList.toggle('hidden');
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        document.addEventListener('click', () => {
+            langMenu.classList.add('hidden');
+        });
+    }
 }
