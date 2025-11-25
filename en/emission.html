@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Prospecting | Smart Hotline Agency</title>
-    <meta name="description" content="Phone prospecting and appointment setting service for SMEs. Grow your customer base with our telemarketing experts.">
-    <meta name="keywords" content="phone prospecting, appointment setting, telemarketing, lead generation, telephone sales, lead qualification">
+    <title data-i18n="emission.title">Phone Prospecting | Smart Hotline Agency</title>
+    <meta name="description" data-i18n="emission.description" content="Phone prospecting and appointment setting service for SMEs. Grow your customer base with our telemarketing experts.">
+    <meta name="keywords" data-i18n="emission.keywords" content="phone prospecting, appointment setting, telemarketing, lead generation, telephone sales, lead qualification">
     <meta name="robots" content="index, follow">
     
     <!-- Tailwind CSS -->
@@ -66,171 +66,12 @@
         }
     </script>
     
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">All Services</div>
-                                    <div class="text-xs text-gray-500">Discover our complete range</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Call Reception</div>
-                                    <div class="text-xs text-gray-500">Never miss a call</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Phone Prospecting</div>
-                                    <div class="text-xs text-gray-500">Grow your customer base</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Customer Support</div>
-                                    <div class="text-xs text-gray-500">Improve satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Lists</div>
-                                    <div class="text-xs text-gray-500">Maximize your sales</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="../fr/emission.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="emission.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">All Services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Call Reception</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Phone Prospecting</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Customer Support</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Include Header -->
+    <div id="header-container"></div>
     
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
@@ -238,24 +79,24 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Phone Prospecting</span>
+                        <span class="gradient-text" data-i18n="emission.heroTitle">Phone Prospecting</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
+                    <p class="text-xl text-gray-600 mb-8" data-i18n="emission.heroDescription">
                         Grow your customer base with our phone prospecting experts. Appointment setting, lead qualification and telephone sales to boost your growth.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                        <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="emission.requestDemo">
                             Request a Demo
                         </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
+                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="emission.seePricing">
                             See Pricing
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/services/emission-service.jpg" alt="Phone Prospecting Service" class="rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phone Prospecting Service" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">1 Week</div>
+                        <div class="text-3xl font-bold" data-i18n="emission.freeTrial">1 Week</div>
                         <div class="text-sm">Free Trial</div>
                     </div>
                 </div>
@@ -291,81 +132,81 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Prospecting Services</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="emission.ourServices">Our Prospecting Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="emission.servicesDescription">
                     Complete solutions to grow your customer portfolio
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
                         <i class="fas fa-calendar-plus text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Appointment Setting</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="emission.appointmentSetting">Appointment Setting</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="emission.appointmentDescription">
                         Our teleprospectors qualify your leads and set appointments directly in your calendar.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Calendar synchronization</span>
+                            <span data-i18n="emission.calendarSync">Calendar synchronization</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Automatic confirmation</span>
+                            <span data-i18n="emission.autoConfirm">Automatic confirmation</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>SMS and email reminders</span>
+                            <span data-i18n="emission.smsReminders">SMS and email reminders</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
                         <i class="fas fa-filter text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Lead Qualification</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="emission.leadQualification">Lead Qualification</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="emission.leadDescription">
                         We contact your prospects to verify their interest and purchasing capacity.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Qualification scoring</span>
+                            <span data-i18n="emission.qualificationScoring">Qualification scoring</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Detailed prospect profiles</span>
+                            <span data-i18n="emission.detailedProfiles">Detailed prospect profiles</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>CRM integration</span>
+                            <span data-i18n="emission.crmIntegration">CRM integration</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
                         <i class="fas fa-chart-bar text-primary-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Telephone Sales</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="emission.telephoneSales">Telephone Sales</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="emission.salesDescription">
                         Our sales experts close deals directly over the phone to maximize your revenue.
                     </p>
                     <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Customized scripts</span>
+                            <span data-i18n="emission.customizedScripts">Customized scripts</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Objection handling</span>
+                            <span data-i18n="emission.objectionHandling">Objection handling</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Performance tracking</span>
+                            <span data-i18n="emission.performanceTracking">Performance tracking</span>
                         </li>
                     </ul>
                 </div>
@@ -377,8 +218,8 @@
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="emission.howItWorks">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="emission.processDescription">
                     A simple and effective process for quick results
                 </p>
             </div>
@@ -388,8 +229,8 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         1
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Briefing</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.briefing">Briefing</h3>
+                    <p class="text-gray-600" data-i18n="emission.briefingDesc">
                         We study your objectives and target to create a customized strategy.
                     </p>
                 </div>
@@ -398,8 +239,8 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         2
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Launch</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.launch">Launch</h3>
+                    <p class="text-gray-600" data-i18n="emission.launchDesc">
                         Our teleprospectors contact your prospects according to the established plan.
                     </p>
                 </div>
@@ -408,8 +249,8 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         3
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Follow-up</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.followup">Follow-up</h3>
+                    <p class="text-gray-600" data-i18n="emission.followupDesc">
                         You receive detailed reports and can track progress in real time.
                     </p>
                 </div>
@@ -418,8 +259,8 @@
                     <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                         4
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Optimization</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.optimization">Optimization</h3>
+                    <p class="text-gray-600" data-i18n="emission.optimizationDesc">
                         We adjust the strategy based on results to maximize ROI.
                     </p>
                 </div>
@@ -431,8 +272,8 @@
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us?</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="emission.whyChooseUs">Why Choose Us?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="emission.benefitsDescription">
                     Concrete benefits for your business
                 </p>
             </div>
@@ -442,8 +283,8 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-dollar-sign text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Cost-Effective</h3>
-                    <p class="text-gray-400">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.costEffective">Cost-Effective</h3>
+                    <p class="text-gray-400" data-i18n="emission.costDesc">
                         60% cheaper than an internal team with better results
                     </p>
                 </div>
@@ -452,8 +293,8 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-rocket text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Fast</h3>
-                    <p class="text-gray-400">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.fast">Fast</h3>
+                    <p class="text-gray-400" data-i18n="emission.fastDesc">
                         Launch in 48h and first results within 7 days
                     </p>
                 </div>
@@ -462,8 +303,8 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-chart-pie text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Flexible</h3>
-                    <p class="text-gray-400">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.flexible">Flexible</h3>
+                    <p class="text-gray-400" data-i18n="emission.flexibleDesc">
                         Adjust call volume according to your needs and budget
                     </p>
                 </div>
@@ -472,8 +313,8 @@
                     <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-shield-alt text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Secure</h3>
-                    <p class="text-gray-400">
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="emission.secure">Secure</h3>
+                    <p class="text-gray-400" data-i18n="emission.secureDesc">
                         GDPR compliant with protection of your data and your prospects' data
                     </p>
                 </div>
@@ -485,44 +326,44 @@
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="emission.industries">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="emission.industriesDescription">
                     We support businesses in all sectors
                 </p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">B2B Services</h3>
+                    <h3 class="font-semibold" data-i18n="emission.b2bServices">B2B Services</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Home Services</h3>
+                    <h3 class="font-semibold" data-i18n="emission.homeServices">Home Services</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Health & Wellness</h3>
+                    <h3 class="font-semibold" data-i18n="emission.healthWellness">Health & Wellness</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Education</h3>
+                    <h3 class="font-semibold" data-i18n="emission.education">Education</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-cogs text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Technology</h3>
+                    <h3 class="font-semibold" data-i18n="emission.technology">Technology</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-hand-holding-usd text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Finance</h3>
+                    <h3 class="font-semibold" data-i18n="emission.finance">Finance</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-hammer text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Construction</h3>
+                    <h3 class="font-semibold" data-i18n="emission.construction">Construction</h3>
                 </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
                     <i class="fas fa-truck text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold">Logistics</h3>
+                    <h3 class="font-semibold" data-i18n="emission.logistics">Logistics</h3>
                 </div>
             </div>
         </div>
@@ -532,14 +373,14 @@
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="emission.successStories">Client Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="emission.storiesDescription">
                     Discover how our service transformed their business
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mark Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
@@ -559,7 +400,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Smith" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
@@ -585,184 +426,31 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Boost Your Revenue?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="emission.readyToBoost">Ready to Boost Your Revenue?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="emission.readyDescription">
                 Start today with 1 week free trial and discover the impact on your sales.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <a href="contact.html?service=emission" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="emission.startFreeTrial">
                     Start Free Trial
                 </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="emission.seePricingBtn">
                     See Pricing
                 </a>
             </div>
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Phone communication services adapted for entrepreneurs and SMEs.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Phone Prospecting</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Company</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
     <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'en';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    if (lang === 'fr') {
-                        window.location.href = '../fr/emission.html';
-                    }
-                    langDropdown.classList.add('hidden');
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20phone%20prospecting%20service.%20Can%20you%20help%20me%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Phone%20Prospecting&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20phone%20prospecting%20service.%20Can%20you%20help%20me%3F';
-                }
-            });
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="../assets/main.js"></script>
+    <script src="../assets/localisation.js"></script>
 </body>
 </html>
