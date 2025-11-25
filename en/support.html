@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Support | Smart Hotline Agency</title>
-    <meta name="description" content="Multichannel customer support service for SMEs. Responsive support, ticket management and rapid problem resolution.">
-    <meta name="keywords" content="outsourced customer support, customer service, ticket management, multichannel support, SME support, outsourced call center">
+    <title data-i18n="support.title">Customer Support | Smart Hotline Agency</title>
+    <meta name="description" data-i18n="support.description" content="Professional customer support service for SMEs. Improve your customer satisfaction with our trained team and management tools.">
+    <meta name="keywords" data-i18n="support.keywords" content="customer support, technical support, helpdesk, SMEs, outsourcing">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Customer Support | Smart Hotline Agency">
+    <meta property="og:description" content="Professional customer support service for SMEs">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/en/support.html">
+    <meta property="og:image" content="https://smart-hotline.com/images/support-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/en/support.html">
+    
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,109 +80,59 @@
         }
     </script>
     
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
+    
+    <!-- Structured Data for SEO & AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Professional Customer Support",
+        "description": "Customer support service for SMEs with trained team and management tools",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "serviceType": "Customer Support",
+        "areaServed": "France, Canada, Belgium, Switzerland",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Customer Support Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard",
+                        "description": "Customer support by email and phone during business hours"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium",
+                        "description": "24/7 customer support with ticket system and knowledge base"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise",
+                        "description": "24/7 customer support with dedicated team, custom SLA and CRM integration"
+                    }
+                }
+            ]
         }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    }
+    </script>
 </head>
 <body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <a href="support-fr.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="fr">Français</a>
-                        <a href="support.html" class="lang-option block px-4 py-2 hover:bg-gray-100 transition-colors" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                <a href="services.html" class="text-primary-600 font-semibold">Services</a>
-                <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- Include Header -->
+    <div id="header-container"></div>
     
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
@@ -176,90 +140,134 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Customer Support</span>
+                        <span class="gradient-text" data-i18n="support.heroTitle">Professional Customer Support</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Improve your customers' satisfaction with responsive and professional support. Our service is designed for small businesses that want to offer excellent customer service without the costs of a dedicated team.
+                    <p class="text-xl text-gray-600 mb-8" data-i18n="support.heroDescription">
+                        Improve your customer satisfaction with our technical and customer support service. Our trained agents answer questions and resolve problems effectively.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
-                            Request a Demo
+                        <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="support.requestDemo">
+                            Request a demo
                         </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center">
-                            See Pricing
+                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="support.seePricing">
+                            See pricing
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/services/support-service.jpg" alt="Customer Support Service" class="rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Customer Support" class="rounded-xl shadow-lg">
                     <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">2 Weeks</div>
-                        <div class="text-sm">Free Trial</div>
+                        <div class="text-3xl font-bold" data-i18n="support.satisfactionRate">98%</div>
+                        <div class="text-sm">Satisfaction Rate</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Features Section -->
+    <!-- Trust Badges Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <div class="flex items-center">
+                    <i class="fas fa-headset text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Multichannel Support</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-ticket-alt text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Ticket System</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-book text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">Knowledge Base</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
+                    <span class="font-semibold">24/7 Availability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Offered Section -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Complete Multichannel Support</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    A comprehensive solution to manage all your customer requests
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.ourServices">Our support services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="support.servicesDescription">
+                    Complete solutions for professional customer support management
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/chat-interface.jpg" alt="Support Interface" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Phone Support</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Dedicated line with trained professionals to answer your customers' technical and commercial questions.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-headset text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="support.multichannelSupport">Multichannel Support</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="support.multichannelDescription">
+                        Support by phone, email, chat and social media for a smooth and consistent customer experience.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>24/7 availability according to your needs</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.phoneSupport">Phone support</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>In-depth knowledge of your products/services</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.emailSupport">Email support</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Management of incoming and outgoing calls</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Customized script for brand consistency</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.chatSupport">Chat support</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div>
-                    <img src="images/ui/mobile-app.jpg" alt="Mobile Application" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Email Support</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Management of email requests with guaranteed response time and communication tracking.
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-ticket-alt text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="support.ticketSystem">Ticket System</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="support.ticketDescription">
+                        Effective tracking of all requests with our ticket system and automatic prioritization.
                     </p>
-                    <ul class="space-y-3">
+                    <ul class="text-left space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Response within 4 hours guaranteed</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.ticketTracking">Ticket tracking</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Custom templates by request type</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.prioritization">Automatic prioritization</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Integration with your ticket system</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.escalation">Problem escalation</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
+                        <i class="fas fa-book text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="support.knowledgeBase">Knowledge Base</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="support.knowledgeDescription">
+                        Complete knowledge base to allow customers to find answers quickly.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.faqs">Dynamic FAQ</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic notifications to concerned teams</span>
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.tutorials">Tutorials and guides</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span data-i18n="support.searchEngine">Search engine</span>
                         </li>
                     </ul>
                 </div>
@@ -267,67 +275,55 @@
         </div>
     </section>
     
-    <!-- Ticket System Section -->
+    <!-- How It Works Section -->
     <section class="py-20 bg-gray-50 scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Centralized Ticket Management</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Complete tracking of all customer interactions for optimal service quality
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.howItWorks">How it works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="support.processDescription">
+                    Our methodology to improve your customer satisfaction
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <img src="images/ui/analytics-dashboard.jpg" alt="Ticket Dashboard" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Ticket Tracking</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Complete ticket tracking system with history, prioritization and automatic assignment.
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.training">Training</h3>
+                    <p class="text-gray-600" data-i18n="support.trainingDesc">
+                        We train our agents on your products, services and internal processes
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic ticket numbering</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Classification by type and urgency</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic assignment by skills</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Automatic escalation after defined delay</span>
-                        </li>
-                    </ul>
                 </div>
                 
-                <div>
-                    <img src="images/misc/charts.jpg" alt="Ticket Analytics" class="rounded-xl shadow-lg mb-8">
-                    <h3 class="text-2xl font-bold mb-6">Analytics and Reports</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Detailed dashboards to measure performance and identify areas for improvement.
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.tools">Tools</h3>
+                    <p class="text-gray-600" data-i18n="support.toolsDesc">
+                        We implement support tools adapted to your specific needs
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Average response time by channel</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>First contact resolution rate</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Customer satisfaction by request type</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
-                            <span>Customizable exportable reports</span>
-                        </li>
-                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.quality">Quality</h3>
+                    <p class="text-gray-600" data-i18n="support.qualityDesc">
+                        We follow quality indicators to guarantee exceptional service
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.improvement">Improvement</h3>
+                    <p class="text-gray-600" data-i18n="support.improvementDesc">
+                        We analyze customer feedback and continuously optimize our processes
+                    </p>
                 </div>
             </div>
         </div>
@@ -337,63 +333,120 @@
     <section class="py-20 bg-dark-900 text-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Customer Support?</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Concrete benefits for your business and your customers
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.whyChooseUs">Why choose us?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="support.benefitsDescription">
+                    Concrete benefits for your business
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-clock text-primary-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Response Speed</h3>
-                    <p class="text-gray-300">
-                        Average response time under 2 hours for all communication channels.
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.satisfaction">Increased Satisfaction</h3>
+                    <p class="text-gray-400" data-i18n="support.satisfactionDesc">
+                        35% increase in average customer satisfaction rate
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Significant Savings</h3>
-                    <p class="text-gray-300">
-                        Up to 60% savings compared to a dedicated internal support team.
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.responseTime">Response Time</h3>
+                    <p class="text-gray-400" data-i18n="support.responseTimeDesc">
+                        90% of requests handled in less than 24 hours
                     </p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chart-line text-primary-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Increased Customer Satisfaction</h3>
-                    <p class="text-gray-300">
-                        35% average improvement in customer satisfaction score thanks to our structured approach.
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.analytics">Analytics</h3>
+                    <p class="text-gray-400" data-i18n="support.analyticsDesc">
+                        Detailed reports to identify improvement areas
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-language text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" data-i18n="support.multilingual">Multilingual Support</h3>
+                    <p class="text-gray-400" data-i18n="support.multilingualDesc">
+                        Agents speaking French and English to serve all your customers
                     </p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Testimonials Section -->
+    <!-- Industries Section -->
     <section class="py-20 bg-white scroll-reveal">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Customer Testimonials</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover how our support service transformed our partners' customer relations
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.industries">Industries we serve</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="support.industriesDescription">
+                    We support businesses across all sectors
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-laptop text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.software">SaaS Software</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-shopping-cart text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.ecommerce">E-commerce</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-wifi text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.telecom">Telecommunications</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-gamepad text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.gaming">Gaming & Entertainment</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.education">Education</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.healthcare">Healthcare</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.professional">Professional Services</h3>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
+                    <i class="fas fa-cog text-3xl text-primary-600 mb-4"></i>
+                    <h3 class="font-semibold" data-i18n="support.manufacturing">Manufacturing</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.successStories">Customer success stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="support.storiesDescription">
+                    Discover how our service has transformed our partners' customer experience
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">Sophie Smith</h4>
-                            <p class="text-sm text-gray-600">Director, Smith Accounting Firm</p>
+                            <h4 class="font-semibold">Marie Dubois</h4>
+                            <p class="text-sm text-gray-600">Director, E-commerce Solutions</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -404,16 +457,16 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "Outsourced customer support allowed us to offer 24/7 service to our clients without the costs of a night team. The quality is excellent and our clients are very satisfied."
+                        "Since we outsourced our customer support to Smart Hotline, our satisfaction rate has increased by 35%. Their agents are trained and responsive."
                     </p>
                 </div>
                 
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <img src="images/team/operator-3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Thomas Martin" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
-                            <h4 class="font-semibold">John Tremblay</h4>
-                            <p class="text-sm text-gray-600">Owner, Le Gourmet Restaurant</p>
+                            <h4 class="font-semibold">Thomas Martin</h4>
+                            <p class="text-sm text-gray-600">CEO, IT Services</p>
                         </div>
                     </div>
                     <div class="flex mb-3">
@@ -424,8 +477,52 @@
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700">
-                        "Automated satisfaction surveys allowed us to improve our service by 15% in just 3 months. It's an essential tool for our growth."
+                        "Smart Hotline's 24/7 support has allowed us to focus on our core business while providing exceptional service to our customers."
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white scroll-reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="support.faqTitle">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="support.faqDescription">
+                    Everything you need to know about our customer support service
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-3" data-i18n="support.faq1Question">What are the support hours?</h3>
+                        <p class="text-gray-600" data-i18n="support.faq1Answer">
+                            We offer 24/7 support with standard (9am-6pm) and premium (24/7) options according to your needs.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-3" data-i18n="support.faq2Question">How do you ensure data confidentiality?</h3>
+                        <p class="text-gray-600" data-i18n="support.faq2Answer">
+                            All our agents sign confidentiality agreements and we strictly comply with GDPR and other regulations.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-3" data-i18n="support.faq3Question">Can I integrate my existing CRM?</h3>
+                        <p class="text-gray-600" data-i18n="support.faq3Answer">
+                            Yes, we can integrate with most popular CRMs via API or by importing/exporting data according to your preferences.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold mb-3" data-i18n="support.faq4Question">How do you measure customer satisfaction?</h3>
+                        <p class="text-gray-600" data-i18n="support.faq4Answer">
+                            We conduct automatic satisfaction surveys after each interaction and provide detailed monthly reports.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -434,223 +531,31 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary-600 text-white scroll-reveal">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Offer Exceptional Support?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Start today with 2 weeks free trial and discover the impact on your customers' satisfaction.
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="support.readyToBoost">Ready to improve your customer satisfaction?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="support.readyDescription">
+                Contact us today for a free consultation and discover how our customer support service can transform your business.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Start Free Trial
+                <a href="contact.html?service=support" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="support.startFreeTrial">
+                    Request a free demo
                 </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    See Pricing
+                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="support.seePricingBtn">
+                    See pricing
                 </a>
             </div>
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                            SH
-                        </div>
-                        <span class="text-xl font-bold">Smart Hotline Agency</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Phone communication services adapted for entrepreneurs and SMEs.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="reception.html" class="hover:text-white transition-colors">Call Reception</a></li>
-                        <li><a href="emission.html" class="hover:text-white transition-colors">Outbound Calls</a></li>
-                        <li><a href="support.html" class="hover:text-white transition-colors">Customer Support</a></li>
-                        <li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Lists</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Company</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400">💬 WhatsApp: +1 514 819 0559</p>
-                    <p class="text-gray-400">📧 direction@smart-hotline.com</p>
-                    <p class="text-gray-400">🌐 smart-hotline.com</p>
-                    <p class="text-gray-400">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>© 2023 Smart Hotline Agency. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
     
     <!-- Chat Button -->
     <div class="chat-button" id="chatButton">
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        
-        // State
-        let currentLang = 'en';
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Detect user's language based on geolocation
-            detectUserLanguage();
-            
-            // Initialize scroll reveal
-            initScrollReveal();
-            
-            // Set up event listeners
-            setupEventListeners();
-        });
-        
-        // Detect user language based on geolocation
-        function detectUserLanguage() {
-            // Check browser language first
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Check if it's an English-speaking region
-            const englishRegions = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ', 'en-IE', 'en-ZA', 'en-IN'];
-            
-            if (englishRegions.includes(browserLang)) {
-                setLanguage('en');
-            } else {
-                // Try to get geolocation (this requires user permission)
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(
-                        position => {
-                            // In a real implementation, you would send coordinates to a geocoding service
-                            // For this demo, we'll just use browser language detection
-                        },
-                        error => {
-                            // If geolocation is denied, fall back to browser language
-                            console.log('Geolocation denied:', error);
-                        }
-                    );
-                }
-            }
-        }
-        
-        // Set language
-        function setLanguage(lang) {
-            currentLang = lang;
-            currentLangSpan.textContent = lang.toUpperCase();
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Language selector
-            langToggle.addEventListener('click', () => {
-                langDropdown.classList.toggle('hidden');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            langOptions.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = option.getAttribute('data-lang');
-                    setLanguage(lang);
-                    langDropdown.classList.add('hidden');
-                    
-                    // If French is selected, redirect to French version
-                    if (lang === 'fr') {
-                        window.location.href = 'support-fr.html';
-                    }
-                });
-            });
-            
-            // Mobile menu toggle
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Chat functionality
-            chatButton.addEventListener('click', () => {
-                // Detect if mobile or desktop
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // Open WhatsApp on mobile
-                    window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20customer%20support%20service.%20Can%20you%20help%20me%3F', '_blank');
-                } else {
-                    // Open email client on desktop
-                    window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Customer%20Support%20Service&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20customer%20support%20service.%20Can%20you%20help%20me%3F';
-                }
-            });
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="../assets/main.js"></script>
+    <script src="../assets/localisation.js"></script>
 </body>
 </html>
