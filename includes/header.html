@@ -8,15 +8,15 @@
         </a>
         
         <div class="hidden md:flex items-center space-x-8">
-            <a href="../" id="nav-home" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+            <a href="../" class="nav-home text-gray-700 hover:text-primary-600 transition-colors">Home</a>
             <!-- Services Dropdown -->
             <div class="relative group">
-                <button id="nav-services" class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
+                <button class="nav-services text-gray-700 hover:text-primary-600 transition-colors flex items-center">
                     Services
                     <i class="fas fa-chevron-down text-xs ml-1"></i>
                 </button>
                 <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="services.html" class="nav-services-link block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
+                    <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
                         <div class="flex items-center">
                             <i class="fas fa-th-large text-primary-600 mr-3"></i>
                             <div>
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="reception.html" class="nav-reception-link block px-4 py-3 hover:bg-primary-50 transition-colors">
+                    <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
                         <div class="flex items-center">
                             <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
                             <div>
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="emission.html" class="nav-emission-link block px-4 py-3 hover:bg-primary-50 transition-colors">
+                    <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
                         <div class="flex items-center">
                             <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
                             <div>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="support.html" class="nav-support-link block px-4 py-3 hover:bg-primary-50 transition-colors">
+                    <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
                         <div class="flex items-center">
                             <i class="fas fa-headset text-primary-600 mr-3"></i>
                             <div>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="crm-lists.html" class="nav-crm-link block px-4 py-3 hover:bg-primary-50 transition-colors">
+                    <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
                         <div class="flex items-center">
                             <i class="fas fa-database text-primary-600 mr-3"></i>
                             <div>
@@ -63,10 +63,10 @@
                     </a>
                 </div>
             </div>
-            <a href="price.html" class="nav-pricing-link text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-            <a href="about.html" class="nav-about-link text-gray-700 hover:text-primary-600 transition-colors">About</a>
-            <a href="blog.html" class="nav-blog-link text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="nav-contact-link text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="nav-pricing text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+            <a href="about.html" class="nav-about text-gray-700 hover:text-primary-600 transition-colors">About</a>
+            <a href="blog.html" class="nav-blog text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="nav-contact text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
         </div>
         
         <div class="flex items-center space-x-4">
@@ -102,105 +102,163 @@
                     <a href="crm-lists.html" class="mobile-nav-crm-link block text-gray-600 hover:text-primary-600 transition-colors">CRM & Lists</a>
                 </div>
             </div>
-            <a href="price.html" class="mobile-nav-pricing-link text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
-            <a href="about.html" class="mobile-nav-about-link text-gray-700 hover:text-primary-600 transition-colors">About</a>
-            <a href="blog.html" class="mobile-nav-blog-link text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="mobile-nav-contact-link text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+            <a href="price.html" class="mobile-nav-pricing text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+            <a href="about.html" class="mobile-nav-about text-gray-700 hover:text-primary-600 transition-colors">About</a>
+            <a href="blog.html" class="mobile-nav-blog text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
+            <a href="contact.html" class="mobile-nav-contact text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
         </div>
     </div>
 </header>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Detect current language from URL
+// Define translations
+const translations = {
+    en: {
+        home: 'Home',
+        services: 'Services',
+        allServices: 'All Services',
+        discoverRange: 'Discover our complete range',
+        callReception: 'Call Reception',
+        neverMiss: 'Never miss a call',
+        phoneProspecting: 'Phone Prospecting',
+        growCustomer: 'Grow your customer base',
+        customerSupport: 'Customer Support',
+        improveSatisfaction: 'Improve satisfaction',
+        crmLists: 'CRM & Lists',
+        maximizeSales: 'Maximize your sales',
+        pricing: 'Pricing',
+        about: 'About',
+        blog: 'Blog',
+        contact: 'Contact'
+    },
+    fr: {
+        home: 'Accueil',
+        services: 'Services',
+        allServices: 'Tous les services',
+        discoverRange: 'Découvrez notre gamme complète',
+        callReception: 'Réception d\'appels',
+        neverMiss: 'Ne manquez jamais un appel',
+        phoneProspecting: 'Prospection téléphonique',
+        growCustomer: 'Développez votre clientèle',
+        customerSupport: 'Support client',
+        improveSatisfaction: 'Améliorez la satisfaction',
+        crmLists: 'CRM & Listes',
+        maximizeSales: 'Maximisez vos ventes',
+        pricing: 'Tarifs',
+        about: 'À propos',
+        blog: 'Blog',
+        contact: 'Contact'
+    }
+};
+
+// Function to detect current language
+function detectLanguage() {
     const path = window.location.pathname;
-    let currentLang = 'en'; // Default to English
-    
     if (path.includes('/fr/')) {
-        currentLang = 'fr';
+        return 'fr';
     } else if (path.includes('/en/')) {
-        currentLang = 'en';
+        return 'en';
     }
+    return 'en'; // Default to English
+}
+
+// Function to update all text elements
+function updateLanguage(lang) {
+    console.log('Updating language to:', lang);
     
-    // Update current language display
-    document.getElementById('currentLang').textContent = currentLang.toUpperCase();
+    // Update desktop menu
+    const homeElements = document.querySelectorAll('.nav-home');
+    homeElements.forEach(el => el.textContent = translations[lang].home);
     
-    // Text content for different languages
-    const textContent = {
-        en: {
-            home: 'Home',
-            services: 'Services',
-            allServices: 'All Services',
-            discoverRange: 'Discover our complete range',
-            callReception: 'Call Reception',
-            neverMiss: 'Never miss a call',
-            phoneProspecting: 'Phone Prospecting',
-            growCustomer: 'Grow your customer base',
-            customerSupport: 'Customer Support',
-            improveSatisfaction: 'Improve satisfaction',
-            crmLists: 'CRM & Lists',
-            maximizeSales: 'Maximize your sales',
-            pricing: 'Pricing',
-            about: 'About',
-            blog: 'Blog',
-            contact: 'Contact'
-        },
-        fr: {
-            home: 'Accueil',
-            services: 'Services',
-            allServices: 'Tous les services',
-            discoverRange: 'Découvrez notre gamme complète',
-            callReception: 'Réception d\'appels',
-            neverMiss: 'Ne manquez jamais un appel',
-            phoneProspecting: 'Prospection téléphonique',
-            growCustomer: 'Développez votre clientèle',
-            customerSupport: 'Support client',
-            improveSatisfaction: 'Améliorez la satisfaction',
-            crmLists: 'CRM & Listes',
-            maximizeSales: 'Maximisez vos ventes',
-            pricing: 'Tarifs',
-            about: 'À propos',
-            blog: 'Blog',
-            contact: 'Contact'
-        }
-    };
+    const servicesElements = document.querySelectorAll('.nav-services');
+    servicesElements.forEach(el => {
+        el.innerHTML = translations[lang].services + '<i class="fas fa-chevron-down text-xs ml-1"></i>';
+    });
     
-    // Update text content based on current language
-    function updateText(lang) {
-        // Desktop menu text
-        document.getElementById('nav-home').textContent = textContent[lang].home;
-        document.getElementById('nav-services').innerHTML = textContent[lang].services + '<i class="fas fa-chevron-down text-xs ml-1"></i>';
-        document.querySelector('.nav-all-services').textContent = textContent[lang].allServices;
-        document.querySelector('.nav-discover-range').textContent = textContent[lang].discoverRange;
-        document.querySelector('.nav-call-reception').textContent = textContent[lang].callReception;
-        document.querySelector('.nav-never-miss').textContent = textContent[lang].neverMiss;
-        document.querySelector('.nav-phone-prospecting').textContent = textContent[lang].phoneProspecting;
-        document.querySelector('.nav-grow-customer').textContent = textContent[lang].growCustomer;
-        document.querySelector('.nav-customer-support').textContent = textContent[lang].customerSupport;
-        document.querySelector('.nav-improve-satisfaction').textContent = textContent[lang].improveSatisfaction;
-        document.querySelector('.nav-crm-lists').textContent = textContent[lang].crmLists;
-        document.querySelector('.nav-maximize-sales').textContent = textContent[lang].maximizeSales;
-        document.querySelector('.nav-pricing-link').textContent = textContent[lang].pricing;
-        document.querySelector('.nav-about-link').textContent = textContent[lang].about;
-        document.querySelector('.nav-blog-link').textContent = textContent[lang].blog;
-        document.querySelector('.nav-contact-link').textContent = textContent[lang].contact;
-        
-        // Mobile menu text
-        document.querySelector('.mobile-nav-home').textContent = textContent[lang].home;
-        document.querySelector('.mobile-nav-services').textContent = textContent[lang].services;
-        document.querySelector('.mobile-nav-services-link').textContent = textContent[lang].allServices;
-        document.querySelector('.mobile-nav-reception-link').textContent = textContent[lang].callReception;
-        document.querySelector('.mobile-nav-emission-link').textContent = textContent[lang].phoneProspecting;
-        document.querySelector('.mobile-nav-support-link').textContent = textContent[lang].customerSupport;
-        document.querySelector('.mobile-nav-crm-link').textContent = textContent[lang].crmLists;
-        document.querySelector('.mobile-nav-pricing-link').textContent = textContent[lang].pricing;
-        document.querySelector('.mobile-nav-about-link').textContent = textContent[lang].about;
-        document.querySelector('.mobile-nav-blog-link').textContent = textContent[lang].blog;
-        document.querySelector('.mobile-nav-contact-link').textContent = textContent[lang].contact;
-    }
+    const allServicesElements = document.querySelectorAll('.nav-all-services');
+    allServicesElements.forEach(el => el.textContent = translations[lang].allServices);
     
-    // Apply initial text updates
-    updateText(currentLang);
+    const discoverRangeElements = document.querySelectorAll('.nav-discover-range');
+    discoverRangeElements.forEach(el => el.textContent = translations[lang].discoverRange);
+    
+    const callReceptionElements = document.querySelectorAll('.nav-call-reception');
+    callReceptionElements.forEach(el => el.textContent = translations[lang].callReception);
+    
+    const neverMissElements = document.querySelectorAll('.nav-never-miss');
+    neverMissElements.forEach(el => el.textContent = translations[lang].neverMiss);
+    
+    const phoneProspectingElements = document.querySelectorAll('.nav-phone-prospecting');
+    phoneProspectingElements.forEach(el => el.textContent = translations[lang].phoneProspecting);
+    
+    const growCustomerElements = document.querySelectorAll('.nav-grow-customer');
+    growCustomerElements.forEach(el => el.textContent = translations[lang].growCustomer);
+    
+    const customerSupportElements = document.querySelectorAll('.nav-customer-support');
+    customerSupportElements.forEach(el => el.textContent = translations[lang].customerSupport);
+    
+    const improveSatisfactionElements = document.querySelectorAll('.nav-improve-satisfaction');
+    improveSatisfactionElements.forEach(el => el.textContent = translations[lang].improveSatisfaction);
+    
+    const crmListsElements = document.querySelectorAll('.nav-crm-lists');
+    crmListsElements.forEach(el => el.textContent = translations[lang].crmLists);
+    
+    const maximizeSalesElements = document.querySelectorAll('.nav-maximize-sales');
+    maximizeSalesElements.forEach(el => el.textContent = translations[lang].maximizeSales);
+    
+    const pricingElements = document.querySelectorAll('.nav-pricing');
+    pricingElements.forEach(el => el.textContent = translations[lang].pricing);
+    
+    const aboutElements = document.querySelectorAll('.nav-about');
+    aboutElements.forEach(el => el.textContent = translations[lang].about);
+    
+    const blogElements = document.querySelectorAll('.nav-blog');
+    blogElements.forEach(el => el.textContent = translations[lang].blog);
+    
+    const contactElements = document.querySelectorAll('.nav-contact');
+    contactElements.forEach(el => el.textContent = translations[lang].contact);
+    
+    // Update mobile menu
+    const mobileHomeElements = document.querySelectorAll('.mobile-nav-home');
+    mobileHomeElements.forEach(el => el.textContent = translations[lang].home);
+    
+    const mobileServicesElements = document.querySelectorAll('.mobile-nav-services');
+    mobileServicesElements.forEach(el => el.textContent = translations[lang].services);
+    
+    const mobileServicesLinkElements = document.querySelectorAll('.mobile-nav-services-link');
+    mobileServicesLinkElements.forEach(el => el.textContent = translations[lang].allServices);
+    
+    const mobileReceptionElements = document.querySelectorAll('.mobile-nav-reception-link');
+    mobileReceptionElements.forEach(el => el.textContent = translations[lang].callReception);
+    
+    const mobileEmissionElements = document.querySelectorAll('.mobile-nav-emission-link');
+    mobileEmissionElements.forEach(el => el.textContent = translations[lang].phoneProspecting);
+    
+    const mobileSupportElements = document.querySelectorAll('.mobile-nav-support-link');
+    mobileSupportElements.forEach(el => el.textContent = translations[lang].customerSupport);
+    
+    const mobileCrmElements = document.querySelectorAll('.mobile-nav-crm-link');
+    mobileCrmElements.forEach(el => el.textContent = translations[lang].crmLists);
+    
+    const mobilePricingElements = document.querySelectorAll('.mobile-nav-pricing');
+    mobilePricingElements.forEach(el => el.textContent = translations[lang].pricing);
+    
+    const mobileAboutElements = document.querySelectorAll('.mobile-nav-about');
+    mobileAboutElements.forEach(el => el.textContent = translations[lang].about);
+    
+    const mobileBlogElements = document.querySelectorAll('.mobile-nav-blog');
+    mobileBlogElements.forEach(el => el.textContent = translations[lang].blog);
+    
+    const mobileContactElements = document.querySelectorAll('.mobile-nav-contact');
+    mobileContactElements.forEach(el => el.textContent = translations[lang].contact);
+    
+    // Update language indicator
+    document.getElementById('currentLang').textContent = lang.toUpperCase();
+}
+
+// Initialize language when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = detectLanguage();
+    updateLanguage(currentLang);
     
     // Language switcher functionality
     document.querySelector('.lang-option-fr').addEventListener('click', function(e) {
@@ -240,4 +298,17 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('hidden');
     });
 });
+
+// Also update language immediately in case DOM is already loaded
+if (document.readyState === 'loading') {
+    // DOM is still loading
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentLang = detectLanguage();
+        updateLanguage(currentLang);
+    });
+} else {
+    // DOM is already loaded
+    const currentLang = detectLanguage();
+    updateLanguage(currentLang);
+}
 </script>
