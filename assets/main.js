@@ -1,11 +1,30 @@
 // Main JavaScript for Smart Hotline Agency
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
-    initLanguageSelector();
-    initMobileMenu();
-    initScrollReveal();
-    initChatButton();
-    initSmoothScroll();
+    // Load includes first, then initialize everything
+    Promise.all([
+        fetch('../includes/header.html').then(response => response.text()),
+        fetch('../includes/footer.html').then(response => response.text())
+    ]).then(([headerHtml, footerHtml]) => {
+        // Insert header and footer
+        document.getElementById('header-container').innerHTML = headerHtml;
+        document.getElementById('footer-container').innerHTML = footerHtml;
+        
+        // Now initialize all components after DOM is updated
+        setTimeout(() => {
+            initLanguageSelector();
+            initMobileMenu();
+            initScrollReveal();
+            initChatButton();
+            initSmoothScroll();
+            
+            // Apply translations after everything is loaded
+            if (typeof applyTranslations === 'function') {
+                applyTranslations();
+            }
+        }, 100);
+    }).catch(error => {
+        console.error('Error loading includes:', error);
+    });
 });
 
 // Language selector functionality
@@ -17,6 +36,12 @@ function initLanguageSelector() {
     
     if (!langToggle) return;
     
+    // Set current language display
+    const currentLang = getCurrentLanguage();
+    if (currentLangSpan) {
+        currentLangSpan.textContent = currentLang.toUpperCase();
+    }
+    
     langToggle.addEventListener('click', function(e) {
         e.stopPropagation();
         langDropdown.classList.toggle('hidden');
@@ -24,7 +49,9 @@ function initLanguageSelector() {
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function() {
-        langDropdown.classList.add('hidden');
+        if (langDropdown) {
+            langDropdown.classList.add('hidden');
+        }
     });
     
     // Handle language selection
@@ -64,6 +91,8 @@ function initMobileMenu() {
 // Scroll reveal animation
 function initScrollReveal() {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    
+    if (scrollRevealElements.length === 0) return;
     
     const observerOptions = {
         threshold: 0.1,
@@ -123,6 +152,13 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+// Get current language from URL path
+function getCurrentLanguage() {
+    const path = window.location.pathname;
+    if (path.includes('/fr/')) return 'fr';
+    return 'en';
 }
 
 // Form validation helper
