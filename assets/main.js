@@ -1,5 +1,156 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
+    // Inject header and footer content directly
+    injectHeader();
+    injectFooter();
+    
+    // Initialize other functions after header/footer are loaded
+    setTimeout(function() {
+        initializeMobileMenu();
+        initializeChat();
+        initializeScrollReveal();
+        initializeStatsCounter();
+        initializeFormValidation();
+        detectLocationAndAdaptContent();
+        prefillContactForm();
+    }, 100);
+});
+
+// Header content as JavaScript string
+function injectHeader() {
+    const headerContent = `
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="../images/logo.svg" alt="Smart Hotline Agency" class="h-10 mr-2">
+                    <span class="text-xl font-bold text-primary-600">Smart Hotline</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.home">Accueil</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.services">Services</a>
+                    <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.pricing">Tarifs</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.blog">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.about">À propos</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.contact">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="../en/index.html" class="text-gray-700 hover:text-primary-600 transition-colors">
+                        <i class="fas fa-globe"></i> EN
+                    </a>
+                    <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.home">Accueil</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.services">Services</a>
+                <a href="pricing.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.pricing">Tarifs</a>
+                <a href="blog.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.blog">Blog</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.about">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.contact">Contact</a>
+            </div>
+        </nav>
+    </header>`;
+    
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        headerContainer.innerHTML = headerContent;
+    }
+}
+
+// Footer content as JavaScript string
+function injectFooter() {
+    const footerContent = `
+    <footer class="bg-dark-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../images/logo-white.svg" alt="Smart Hotline Agency" class="h-10 mr-2">
+                        <span class="text-xl font-bold">Smart Hotline</span>
+                    </div>
+                    <p class="text-gray-400 mb-4" data-i18n="footer.description">
+                        Votre partenaire de confiance pour tous vos besoins en communication téléphonique.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.servicesTitle">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="reception.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.reception">Réception d'appels</a></li>
+                        <li><a href="emission.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.emission">Émission d'appels</a></li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.support">Support client</a></li>
+                        <li><a href="crm-lists.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.crm">CRM & Listes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.companyTitle">Entreprise</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.about">À propos</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.pricing">Tarifs</a></li>
+                        <li><a href="conditions-generales.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.terms">Conditions générales</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contactTitle">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span data-i18n="footer.address">123 Rue de la Communication, Montréal, QC H3A 1A1</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span data-i18n="footer.phone">+1 (514) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span data-i18n="footer.email">contact@smart-hotline.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p data-i18n="footer.copyright">&copy; 2023 Smart Hotline Agency. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/15141234567" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>`;
+    
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        footerContainer.innerHTML = footerContent;
+    }
+}
+
+// Initialize mobile menu
+function initializeMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     
@@ -8,8 +159,10 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.toggle('hidden');
         });
     }
-    
-    // Chat Window
+}
+
+// Initialize chat
+function initializeChat() {
     const chatButton = document.getElementById('chatButton');
     const chatWindow = document.getElementById('chatWindow');
     const chatClose = document.getElementById('chatClose');
@@ -73,8 +226,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Scroll Reveal Animation
+}
+
+// Initialize scroll reveal animation
+function initializeScrollReveal() {
     const revealElements = document.querySelectorAll('.scroll-reveal');
     
     function reveal() {
@@ -91,8 +246,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', reveal);
     reveal();
-    
-    // Stats Counter Animation
+}
+
+// Initialize stats counter
+function initializeStatsCounter() {
     const counters = document.querySelectorAll('.stats-counter');
     const speed = 200;
     
@@ -112,8 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Intersection Observer for Stats Counter
-    const statsSection = document.querySelector('.stats-counter').parentElement.parentElement.parentElement;
-    
+    const statsSection = document.querySelector('.stats-counter');
     if (statsSection) {
         const observer = new IntersectionObserver(function(entries) {
             if (entries[0].isIntersecting) {
@@ -124,8 +280,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         observer.observe(statsSection);
     }
-    
-    // Form Validation
+}
+
+// Initialize form validation
+function initializeFormValidation() {
     const forms = document.querySelectorAll('form');
     
     forms.forEach(form => {
@@ -182,19 +340,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    // Location Detection and Content Adaptation
-    detectLocationAndAdaptContent();
-    
-    // Pre-fill contact form based on URL parameters
-    prefillContactForm();
-});
+}
 
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Location Detection and Content Adaptation
 function detectLocationAndAdaptContent() {
     // Use browser's geolocation API to get user's location
     if (navigator.geolocation) {
@@ -215,10 +368,11 @@ function detectLocationAndAdaptContent() {
                 })
                 .catch(error => {
                     console.error('Error getting location:', error);
+                    // Fallback to IP-based location detection
+                    detectLocationByIP();
                 });
         }, function(error) {
             console.error('Error getting location:', error);
-            
             // Fallback to IP-based location detection
             detectLocationByIP();
         });
@@ -305,6 +459,7 @@ function adaptContentForLocation(country, city) {
     }
 }
 
+// Pre-fill contact form based on URL parameters
 function prefillContactForm() {
     // Get URL parameters
     const urlParams = new URLSearchParams(window.location.search);
