@@ -13,14 +13,14 @@
     <meta property="og:url" content="https://smart-hotline.com/fr/services.html">
     <meta property="og:title" data-i18n="services.title" content="Services de Communication Téléphonique | Smart Hotline Agency">
     <meta property="og:description" data-i18n="services.description" content="Découvrez nos services complets de communication téléphonique pour PME : réception d'appels, émission d'appels, support client et CRM sur mesure.">
-    <meta property="og:image" content="https://smart-hotline.com/images/services-hero.jpg">
+    <meta property="og:image" content="https://smart-hotline.com/images/hero-services.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://smart-hotline.com/fr/services.html">
     <meta property="twitter:title" data-i18n="services.title" content="Services de Communication Téléphonique | Smart Hotline Agency">
     <meta property="twitter:description" data-i18n="services.description" content="Découvrez nos services complets de communication téléphonique pour PME : réception d'appels, émission d'appels, support client et CRM sur mesure.">
-    <meta property="twitter:image" content="https://smart-hotline.com/images/services-hero.jpg">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/hero-services.jpg">
     
     <!-- Hreflang tags -->
     <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/services.html" />
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Services de Communication" class="rounded-xl shadow-lg">
+                        <img src="../images/hero-services.jpg" alt="Services de Communication" class="rounded-xl shadow-lg">
                         <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
                             <div class="text-3xl font-bold" data-i18n="services.trialDuration">2 Semaines</div>
                             <div class="text-sm" data-i18n="services.trialText">Essai Sans Engagement</div>
@@ -425,8 +425,47 @@
         <i class="fas fa-comments text-2xl"></i>
     </div>
     
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>Chat avec Smart Hotline</h3>
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body" id="chatMessages">
+            <div class="mb-4">
+                <div class="flex justify-start">
+                    <div class="bg-gray-200 text-gray-800 rounded-lg py-2 px-4 max-w-xs">
+                        Bonjour! Comment puis-je vous aider aujourd'hui?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Tapez votre message...">
+            <button class="chat-send" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
     <!-- Scripts -->
     <script src="../assets/main.js"></script>
-    <script src="../assets/localisation.js"></script>
+    <script src="../assets/localization.js"></script>
+    <script>
+        // Include header and footer
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+            
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
