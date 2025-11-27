@@ -1,22 +1,43 @@
 [build]
-  publish = "."
+  publish = "public"
+  command = "# No build command needed for a static site"
 
-# Redirect from index-fr.html to index.html
+[build.environment]
+  NODE_VERSION = "16"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
 [[redirects]]
-  from = "/fr/index.html"
-  to = "/fr/index.html"
-  status = 301
+  from = "/fr/*"
+  to = "/fr/:splat"
+  status = 200
 
-# Language-based redirects
 [[redirects]]
-  from = "/"
-  to = "/fr/index.html"
-  status = 302
+  from = "/en/*"
+  to = "/en/:splat"
+  status = 200
 
-# Remove _new from URLs
 [[redirects]]
   from = "/*"
-  to = "/:splat"
-  status = 301
-  conditions = {query = {"_new": "true"}}
+  to = "/fr/:splat"
+  status = 302
+  force = false
+  conditions = {Language = ["fr"]}
 
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  force = false
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/fr/:splat"
+  status = 302
