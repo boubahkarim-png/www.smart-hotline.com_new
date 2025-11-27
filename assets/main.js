@@ -1,73 +1,78 @@
-// Main JavaScript file for Smart Hotline Agency
+// assets/main.js
+// Main JavaScript for Smart Hotline Agency
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Load header and footer components
-    loadComponents();
+    // Load header and footer
+    loadPartial('header-container', '../fr/partials/header.html');
+    loadPartial('footer-container', '../fr/partials/footer.html');
     
-    // Initialize scroll reveal animations
-    initScrollReveal();
+    // Initialize mobile menu toggle
+    initializeMobileMenu();
+    
+    // Initialize language selector
+    initializeLanguageSelector();
+    
+    // Initialize scroll reveal animation
+    initializeScrollReveal();
     
     // Initialize stats counter animation
-    initStatsCounter();
+    initializeStatsCounter();
     
-    // Initialize mobile menu
-    initMobileMenu();
-    
-    // Initialize chat functionality
-    initChat();
-    
-    // Initialize form handling
-    initForms();
+    // Initialize chat button
+    initializeChatButton();
 });
 
-// Load header and footer components
-function loadComponents() {
-    // Load header
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        const path = window.location.pathname;
-        let langPath = '';
-        
-        if (path.includes('/en/')) {
-            langPath = '../en/';
-        } else if (path.includes('/fr/')) {
-            langPath = '../fr/';
-        }
-        
-        fetch(`${langPath}header.html`)
+// Function to load partial HTML files
+function loadPartial(elementId, filePath) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        fetch(filePath)
             .then(response => response.text())
             .then(html => {
-                headerContainer.innerHTML = html;
+                element.innerHTML = html;
                 
-                // Re-initialize mobile menu after loading header
-                initMobileMenu();
+                // Re-initialize language selector after loading header
+                if (elementId === 'header-container') {
+                    initializeLanguageSelector();
+                    initializeMobileMenu();
+                }
             })
-            .catch(error => console.error('Error loading header:', error));
-    }
-    
-    // Load footer
-    const footerContainer = document.getElementById('footer-container');
-    if (footerContainer) {
-        const path = window.location.pathname;
-        let langPath = '';
-        
-        if (path.includes('/en/')) {
-            langPath = '../en/';
-        } else if (path.includes('/fr/')) {
-            langPath = '../fr/';
-        }
-        
-        fetch(`${langPath}footer.html`)
-            .then(response => response.text())
-            .then(html => {
-                footerContainer.innerHTML = html;
-            })
-            .catch(error => console.error('Error loading footer:', error));
+            .catch(error => console.error('Error loading partial:', error));
     }
 }
 
-// Initialize scroll reveal animations
-function initScrollReveal() {
+// Function to initialize mobile menu toggle
+function initializeMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+}
+
+// Function to initialize language selector
+function initializeLanguageSelector() {
+    const languageToggle = document.getElementById('language-toggle');
+    const languageDropdown = document.getElementById('language-dropdown');
+    
+    if (languageToggle && languageDropdown) {
+        languageToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            languageDropdown.classList.add('hidden');
+        });
+    }
+}
+
+// Function to initialize scroll reveal animation
+function initializeScrollReveal() {
     const reveals = document.querySelectorAll('.scroll-reveal');
     
     function checkReveal() {
@@ -89,116 +94,52 @@ function initScrollReveal() {
     window.addEventListener('scroll', checkReveal);
 }
 
-// Initialize stats counter animation
-function initStatsCounter() {
+// Function to initialize stats counter animation
+function initializeStatsCounter() {
     const counters = document.querySelectorAll('.stats-counter');
+    const speed = 200; // The lower the slower
     
     function startCounter(counter) {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // 2 seconds
-        const increment = target / (duration / 16); // 60fps
-        let current = 0;
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
         
-        const updateCounter = () => {
-            current += increment;
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => startCounter(counter), 10);
+        } else {
+            counter.innerText = target;
+        }
+    }
+    
+    function checkCounters() {
+        counters.forEach(counter => {
+            const windowHeight = window.innerHeight;
+            const elementTop = counter.getBoundingClientRect().top;
+            const elementVisible = 150;
             
-            if (current < target) {
-                counter.textContent = Math.ceil(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target;
-            }
-        };
-        
-        updateCounter();
-    }
-    
-    // Use Intersection Observer to start counter when visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target);
+            if (elementTop < windowHeight - elementVisible && counter.innerText === '0') {
+                startCounter(counter);
             }
         });
-    });
-    
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
-}
-
-// Initialize mobile menu
-function initMobileMenu() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
     }
+    
+    // Check on load
+    checkCounters();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkCounters);
 }
 
-// Initialize chat functionality
-function initChat() {
+// Function to initialize chat button
+function initializeChatButton() {
     const chatButton = document.getElementById('chatButton');
     
     if (chatButton) {
         chatButton.addEventListener('click', function() {
             // Here you would typically open a chat widget
             // For now, we'll just show an alert
-            alert('Chat functionality would be implemented here. Consider integrating a service like Tawk.to, Crisp, or LiveChat.');
+            alert('Chat feature coming soon! Please contact us at +1-514-819-0559 for immediate assistance.');
         });
     }
-}
-
-// Initialize form handling
-function initForms() {
-    // Handle Netlify forms
-    const forms = document.querySelectorAll('form[data-netlify="true"]');
-    
-    forms.forEach(form => {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Show loading state
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<span class="spinner"></span> Sending...';
-            submitButton.disabled = true;
-            
-            // Submit form using fetch
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Show success message
-                    form.innerHTML = `
-                        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-                            <strong>Success!</strong> Your message has been sent.
-                        </div>
-                    `;
-                } else {
-                    throw new Error('Network response was not ok.');
-                }
-            })
-            .catch(error => {
-                // Show error message
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-4';
-                errorDiv.innerHTML = `<strong>Error:</strong> There was a problem sending your message. Please try again.`;
-                form.appendChild(errorDiv);
-                
-                // Reset button
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-            });
-        });
-    });
 }
