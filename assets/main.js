@@ -1,360 +1,397 @@
-// Main JavaScript for Smart Hotline Agency
+// DOM Elements
 document.addEventListener('DOMContentLoaded', function() {
-    // Load includes first, then initialize everything
-    Promise.all([
-        fetch('../includes/header.html').then(response => response.text()),
-        fetch('../includes/footer.html').then(response => response.text())
-    ]).then(([headerHtml, footerHtml]) => {
-        // Insert header and footer
-        document.getElementById('header-container').innerHTML = headerHtml;
-        document.getElementById('footer-container').innerHTML = footerHtml;
-        
-        // Now initialize all components after DOM is updated
-        setTimeout(() => {
-            initLanguageSelector();
-            initMobileMenu();
-            initScrollReveal();
-            initChatButton();
-            initSmoothScroll();
-            initCounters();
-            
-            // Set active navigation
-            setActiveNavigation();
-            
-            // Apply translations after everything is loaded
-            if (typeof applyTranslations === 'function') {
-                applyTranslations();
-            }
-        }, 100);
-    }).catch(error => {
-        console.error('Error loading includes:', error);
-    });
+    // Initialize all components
+    initNavigation();
+    initScrollReveal();
+    initStatsCounter();
+    initChatButton();
+    initWhatsAppButton();
+    initLocationDetection();
+    initFormHandling();
+    loadHeader();
+    loadFooter();
 });
 
-// Language selector functionality
-function initLanguageSelector() {
-    const langToggle = document.getElementById('langToggle');
-    const langDropdown = document.getElementById('langDropdown');
-    const currentLangSpan = document.getElementById('currentLang');
-    const langOptions = document.querySelectorAll('.lang-option');
+// Navigation
+function initNavigation() {
+    const navbar = document.querySelector('.navbar');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
     
-    if (!langToggle) return;
-    
-    // Set current language display
-    const currentLang = getCurrentLanguage();
-    if (currentLangSpan) {
-        currentLangSpan.textContent = currentLang.toUpperCase();
-    }
-    
-    // Update language links based on current page
-    updateLanguageLinks();
-    
-    langToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        langDropdown.classList.toggle('hidden');
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function() {
-        if (langDropdown) {
-            langDropdown.classList.add('hidden');
+    // Change navbar style on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
     
-    // Handle language selection
-    langOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            const href = this.getAttribute('href');
-            
-            if (href) {
-                window.location.href = href;
-            }
+    // Toggle mobile menu
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
         });
-    });
-}
-
-// Update language links based on current page
-function updateLanguageLinks() {
-    const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop();
-    const isFrench = currentPath.includes('/fr/');
-    
-    // Update French link
-    const frLink = document.querySelector('.lang-option[data-lang="fr"]');
-    if (frLink) {
-        if (isFrench) {
-            frLink.href = `../fr/${currentPage}`;
-        } else {
-            frLink.href = `../fr/${currentPage}`;
-        }
     }
     
-    // Update English link
-    const enLink = document.querySelector('.lang-option[data-lang="en"]');
-    if (enLink) {
-        if (isFrench) {
-            enLink.href = `../en/${currentPage}`;
-        } else {
-            enLink.href = `../en/${currentPage}`;
-        }
-    }
-}
-
-// Mobile menu functionality
-function initMobileMenu() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    if (!mobileMenuToggle) return;
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
         });
     });
 }
 
-// Set active navigation based on current page
-function setActiveNavigation() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Remove active class from all nav links
-    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-        link.classList.remove('active');
-    });
-    
-    // Set active class based on current page
-    let activeId = '';
-    switch(currentPage) {
-        case 'index.html':
-            activeId = 'nav-home';
-            break;
-        case 'services.html':
-            activeId = 'nav-services';
-            break;
-        case 'price.html':
-            activeId = 'nav-pricing';
-            break;
-        case 'about.html':
-            activeId = 'nav-about';
-            break;
-        case 'blog.html':
-            activeId = 'nav-blog';
-            break;
-        case 'contact.html':
-            activeId = 'nav-contact';
-            break;
-        case 'reception.html':
-        case 'emission.html':
-        case 'support.html':
-        case 'crm-lists.html':
-            activeId = 'nav-services';
-            break;
-    }
-    
-    // Set active class
-    if (activeId) {
-        document.getElementById(activeId)?.classList.add('active');
-        document.getElementById(`mobile-${activeId}`)?.classList.add('active');
-    }
-}
-
-// Scroll reveal animation
+// Scroll Reveal Animation
 function initScrollReveal() {
-    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    const reveals = document.querySelectorAll('.scroll-reveal');
     
-    if (scrollRevealElements.length === 0) return;
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+    function checkReveal() {
+        reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
             }
         });
-    }, observerOptions);
+    }
     
-    scrollRevealElements.forEach(element => {
-        observer.observe(element);
-    });
+    // Check on load
+    checkReveal();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkReveal);
 }
 
-// Initialize counters
-function initCounters() {
-    const statsCounters = document.querySelectorAll('.stats-counter');
-    if (statsCounters.length === 0) return;
+// Stats Counter Animation
+function initStatsCounter() {
+    const counters = document.querySelectorAll('.stats-counter');
+    const speed = 200;
     
-    const observerOptions = {
-        threshold: 0.7,
-        rootMargin: '0px'
-    };
+    function startCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / speed;
+        
+        function updateCount() {
+            const count = +counter.innerText;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+        
+        updateCount();
+    }
     
+    // Use Intersection Observer to start counter when visible
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-                
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                
-                updateCounter();
-                observer.unobserve(counter);
+                startCounter(entry.target);
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.5 });
     
-    statsCounters.forEach(counter => {
+    counters.forEach(counter => {
         observer.observe(counter);
     });
 }
 
-// Chat button functionality
+// Chat Button
 function initChatButton() {
     const chatButton = document.getElementById('chatButton');
     
-    if (!chatButton) return;
+    if (chatButton) {
+        chatButton.addEventListener('click', function() {
+            // Open chat widget or redirect to chat page
+            window.open('https://smart-hotline.com/fr/chat', '_blank');
+        });
+    }
+}
+
+// WhatsApp Button
+function initWhatsAppButton() {
+    const whatsappButton = document.getElementById('whatsappButton');
     
-    chatButton.addEventListener('click', function() {
-        // Detect if mobile or desktop
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function() {
+            // Open WhatsApp with pre-filled message
+            const phoneNumber = '+1234567890'; // Replace with actual WhatsApp number
+            const message = encodeURIComponent('Bonjour, je souhaite en savoir plus sur vos services.');
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        });
+    }
+}
+
+// Location Detection
+function initLocationDetection() {
+    // Detect user location and adapt content
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            const country = data.country;
+            const currency = data.currency;
+            
+            // Update prices based on location
+            updatePrices(country, currency);
+            
+            // Update phone numbers based on location
+            updatePhoneNumbers(country);
+            
+            // Store location data for form submission
+            localStorage.setItem('userLocation', JSON.stringify({
+                country: country,
+                currency: currency,
+                city: data.city,
+                region: data.region
+            }));
+        })
+        .catch(error => {
+            console.error('Error detecting location:', error);
+            // Default to Canada if detection fails
+            updatePrices('CA', 'CAD');
+        });
+}
+
+// Update prices based on location
+function updatePrices(country, currency) {
+    const priceElements = document.querySelectorAll('[data-price]');
+    
+    priceElements.forEach(element => {
+        const basePrice = parseFloat(element.getAttribute('data-price'));
+        let convertedPrice = basePrice;
+        let currencySymbol = '$';
         
-        if (isMobile) {
-            // Open WhatsApp on mobile
-            window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F', '_blank');
-        } else {
-            // Open email client on desktop
-            window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F';
+        // Convert price based on currency
+        if (currency === 'EUR') {
+            convertedPrice = basePrice * 0.68; // Approximate conversion rate
+            currencySymbol = '€';
+        } else if (currency === 'GBP') {
+            convertedPrice = basePrice * 0.58; // Approximate conversion rate
+            currencySymbol = '£';
         }
+        
+        // Update price display
+        element.textContent = `${currencySymbol}${convertedPrice.toFixed(2)}`;
     });
 }
 
-// Smooth scroll for anchor links
-function initSmoothScroll() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+// Update phone numbers based on location
+function updatePhoneNumbers(country) {
+    const phoneElements = document.querySelectorAll('[data-phone]');
     
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    phoneElements.forEach(element => {
+        let phoneNumber = '+1 (555) 123-4567'; // Default Canadian number
+        
+        if (country === 'US') {
+            phoneNumber = '+1 (555) 987-6543'; // US number
+        } else if (country === 'FR') {
+            phoneNumber = '+33 1 23 45 67 89'; // French number
+        } else if (country === 'GB') {
+            phoneNumber = '+44 20 7946 0958'; // UK number
+        }
+        
+        element.textContent = phoneNumber;
+        element.href = `tel:${phoneNumber.replace(/\s/g, '')}`;
+    });
+}
+
+// Form Handling
+function initFormHandling() {
+    const forms = document.querySelectorAll('form');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
             
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Get form data
+            const formData = new FormData(form);
+            const formDataObj = {};
+            
+            formData.forEach((value, key) => {
+                formDataObj[key] = value;
+            });
+            
+            // Add location data if available
+            const locationData = localStorage.getItem('userLocation');
+            if (locationData) {
+                formDataObj.location = JSON.parse(locationData);
             }
+            
+            // Submit form to Netlify
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formDataObj).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    showFormMessage(form, 'Merci! Votre message a été envoyé avec succès.', 'success');
+                    form.reset();
+                } else {
+                    // Show error message
+                    showFormMessage(form, 'Une erreur est survenue. Veuillez réessayer.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                showFormMessage(form, 'Une erreur est survenue. Veuillez réessayer.', 'error');
+            });
         });
     });
-}
-
-// Get current language from URL path
-function getCurrentLanguage() {
-    const path = window.location.pathname;
-    if (path.includes('/fr/')) return 'fr';
-    return 'en';
-}
-
-// Form validation helper
-function validateForm(form) {
-    let isValid = true;
-    const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            showError(input, 'This field is required');
-            isValid = false;
-        } else {
-            clearError(input);
+    // Pre-fill form based on URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('service')) {
+        const serviceField = document.querySelector('#service');
+        if (serviceField) {
+            serviceField.value = urlParams.get('service');
         }
-        
-        // Email validation
-        if (input.type === 'email' && input.value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(input.value)) {
-                showError(input, 'Please enter a valid email address');
-                isValid = false;
-            }
-        }
-    });
-    
-    return isValid;
-}
-
-// Show error message
-function showError(input, message) {
-    clearError(input);
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'text-red-500 text-sm mt-1';
-    errorDiv.textContent = message;
-    input.parentNode.appendChild(errorDiv);
-    input.classList.add('border-red-500');
-}
-
-// Clear error message
-function clearError(input) {
-    const errorDiv = input.parentNode.querySelector('.text-red-500');
-    if (errorDiv) {
-        errorDiv.remove();
     }
-    input.classList.remove('border-red-500');
+    
+    if (urlParams.has('package')) {
+        const packageField = document.querySelector('#package');
+        if (packageField) {
+            packageField.value = urlParams.get('package');
+        }
+    }
 }
 
-// Loading state for buttons
-function setButtonLoading(button, isLoading) {
-    if (isLoading) {
-        button.disabled = true;
-        button.innerHTML = '<span class="loading"></span> Loading...';
+// Show form message
+function showFormMessage(form, message, type) {
+    // Remove any existing message
+    const existingMessage = form.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message element
+    const messageElement = document.createElement('div');
+    messageElement.className = `form-message ${type}`;
+    messageElement.textContent = message;
+    
+    // Add message styling
+    messageElement.style.padding = '10px';
+    messageElement.style.marginTop = '10px';
+    messageElement.style.borderRadius = '4px';
+    
+    if (type === 'success') {
+        messageElement.style.backgroundColor = '#d4edda';
+        messageElement.style.color = '#155724';
     } else {
-        button.disabled = false;
-        button.innerHTML = button.getAttribute('data-original-text') || 'Submit';
+        messageElement.style.backgroundColor = '#f8d7da';
+        messageElement.style.color = '#721c24';
+    }
+    
+    // Add message to form
+    form.appendChild(messageElement);
+    
+    // Remove message after 5 seconds
+    setTimeout(() => {
+        messageElement.remove();
+    }, 5000);
+}
+
+// Load Header
+function loadHeader() {
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(html => {
+                headerContainer.innerHTML = html;
+                // Re-initialize navigation after loading header
+                initNavigation();
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+                // Fallback header if component fails to load
+                headerContainer.innerHTML = `
+                    <header class="navbar">
+                        <div class="container">
+                            <div class="nav-container">
+                                <a href="index.html" class="nav-logo">Smart Hotline</a>
+                                <ul class="nav-menu">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                                    <li class="nav-item"><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                                    <li class="nav-item"><a href="about.html" class="nav-link">À propos</a></li>
+                                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                </ul>
+                                <div class="nav-toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                `;
+                initNavigation();
+            });
     }
 }
 
-// Utility function to format phone numbers
-function formatPhoneNumber(phone) {
-    const cleaned = ('' + phone).replace(/\D/g, '');
-    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-    if (match) {
-        return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+// Load Footer
+function loadFooter() {
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                footerContainer.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if component fails to load
+                footerContainer.innerHTML = `
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="footer-content">
+                                <div class="footer-column">
+                                    <h3 class="footer-title">Smart Hotline</h3>
+                                    <p>Votre partenaire de confiance pour l'externalisation de la communication téléphonique.</p>
+                                </div>
+                                <div class="footer-column">
+                                    <h3 class="footer-title">Services</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="reception.html" class="footer-link">Réception d'appels</a></li>
+                                        <li><a href="emission.html" class="footer-link">Émission d'appels</a></li>
+                                        <li><a href="support.html" class="footer-link">Support client</a></li>
+                                        <li><a href="crm-lists.html" class="footer-link">CRM & Listes</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-column">
+                                    <h3 class="footer-title">Entreprise</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="about.html" class="footer-link">À propos</a></li>
+                                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                                        <li><a href="conditions-generales.html" class="footer-link">Conditions générales</a></li>
+                                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-column">
+                                    <h3 class="footer-title">Contact</h3>
+                                    <p><i class="fas fa-phone"></i> <span data-phone>+1 (555) 123-4567</span></p>
+                                    <p><i class="fas fa-envelope"></i> contact@smart-hotline.com</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> 123 rue du Commerce, Montréal, QC</p>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>&copy; 2023 Smart Hotline Agency. Tous droits réservés.</p>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            });
     }
-    return phone;
-}
-
-// Utility function to debounce function calls
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
 }
