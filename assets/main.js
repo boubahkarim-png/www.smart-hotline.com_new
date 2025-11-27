@@ -1,397 +1,344 @@
-// DOM Elements
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
-    initNavigation();
-    initScrollReveal();
-    initStatsCounter();
-    initChatButton();
-    initWhatsAppButton();
-    initLocationDetection();
-    initFormHandling();
-    loadHeader();
-    loadFooter();
-});
-
-// Navigation
-function initNavigation() {
-    const navbar = document.querySelector('.navbar');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
     
-    // Change navbar style on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    
-    // Toggle mobile menu
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+    if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
         });
     }
     
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
-    });
-}
-
-// Scroll Reveal Animation
-function initScrollReveal() {
-    const reveals = document.querySelectorAll('.scroll-reveal');
+    // Chat Window
+    const chatButton = document.getElementById('chatButton');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatSend = document.getElementById('chatSend');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
     
-    function checkReveal() {
-        reveals.forEach(element => {
+    if (chatButton && chatWindow) {
+        chatButton.addEventListener('click', function() {
+            chatWindow.classList.toggle('active');
+        });
+    }
+    
+    if (chatClose && chatWindow) {
+        chatClose.addEventListener('click', function() {
+            chatWindow.classList.remove('active');
+        });
+    }
+    
+    if (chatSend && chatInput && chatMessages) {
+        chatSend.addEventListener('click', function() {
+            const message = chatInput.value.trim();
+            if (message) {
+                // Add user message
+                const userMessage = document.createElement('div');
+                userMessage.className = 'mb-4';
+                userMessage.innerHTML = `
+                    <div class="flex justify-end">
+                        <div class="bg-primary-600 text-white rounded-lg py-2 px-4 max-w-xs">
+                            ${message}
+                        </div>
+                    </div>
+                `;
+                chatMessages.appendChild(userMessage);
+                
+                // Clear input
+                chatInput.value = '';
+                
+                // Simulate bot response
+                setTimeout(function() {
+                    const botMessage = document.createElement('div');
+                    botMessage.className = 'mb-4';
+                    botMessage.innerHTML = `
+                        <div class="flex justify-start">
+                            <div class="bg-gray-200 text-gray-800 rounded-lg py-2 px-4 max-w-xs">
+                                Merci pour votre message. Un de nos agents vous répondra sous peu.
+                            </div>
+                        </div>
+                    `;
+                    chatMessages.appendChild(botMessage);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+                
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        });
+        
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                chatSend.click();
+            }
+        });
+    }
+    
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    
+    function reveal() {
+        for (let i = 0; i < revealElements.length; i++) {
             const windowHeight = window.innerHeight;
-            const elementTop = element.getBoundingClientRect().top;
+            const elementTop = revealElements[i].getBoundingClientRect().top;
             const elementVisible = 150;
             
             if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
+                revealElements[i].classList.add('active');
             }
-        });
+        }
     }
     
-    // Check on load
-    checkReveal();
+    window.addEventListener('scroll', reveal);
+    reveal();
     
-    // Check on scroll
-    window.addEventListener('scroll', checkReveal);
-}
-
-// Stats Counter Animation
-function initStatsCounter() {
+    // Stats Counter Animation
     const counters = document.querySelectorAll('.stats-counter');
     const speed = 200;
     
-    function startCounter(counter) {
-        const target = +counter.getAttribute('data-target');
-        const increment = target / speed;
-        
-        function updateCount() {
+    const countUp = function() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
+            const increment = target / speed;
             
             if (count < target) {
                 counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 1);
+                setTimeout(countUp, 1);
             } else {
                 counter.innerText = target;
             }
-        }
-        
-        updateCount();
-    }
+        });
+    };
     
-    // Use Intersection Observer to start counter when visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target);
+    // Intersection Observer for Stats Counter
+    const statsSection = document.querySelector('.stats-counter').parentElement.parentElement.parentElement;
+    
+    if (statsSection) {
+        const observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                countUp();
+                observer.unobserve(statsSection);
             }
-        });
-    }, { threshold: 0.5 });
-    
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
-}
-
-// Chat Button
-function initChatButton() {
-    const chatButton = document.getElementById('chatButton');
-    
-    if (chatButton) {
-        chatButton.addEventListener('click', function() {
-            // Open chat widget or redirect to chat page
-            window.open('https://smart-hotline.com/fr/chat', '_blank');
-        });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
     }
-}
-
-// WhatsApp Button
-function initWhatsAppButton() {
-    const whatsappButton = document.getElementById('whatsappButton');
     
-    if (whatsappButton) {
-        whatsappButton.addEventListener('click', function() {
-            // Open WhatsApp with pre-filled message
-            const phoneNumber = '+1234567890'; // Replace with actual WhatsApp number
-            const message = encodeURIComponent('Bonjour, je souhaite en savoir plus sur vos services.');
-            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-        });
-    }
-}
-
-// Location Detection
-function initLocationDetection() {
-    // Detect user location and adapt content
-    fetch('https://ipapi.co/json/')
-        .then(response => response.json())
-        .then(data => {
-            const country = data.country;
-            const currency = data.currency;
-            
-            // Update prices based on location
-            updatePrices(country, currency);
-            
-            // Update phone numbers based on location
-            updatePhoneNumbers(country);
-            
-            // Store location data for form submission
-            localStorage.setItem('userLocation', JSON.stringify({
-                country: country,
-                currency: currency,
-                city: data.city,
-                region: data.region
-            }));
-        })
-        .catch(error => {
-            console.error('Error detecting location:', error);
-            // Default to Canada if detection fails
-            updatePrices('CA', 'CAD');
-        });
-}
-
-// Update prices based on location
-function updatePrices(country, currency) {
-    const priceElements = document.querySelectorAll('[data-price]');
-    
-    priceElements.forEach(element => {
-        const basePrice = parseFloat(element.getAttribute('data-price'));
-        let convertedPrice = basePrice;
-        let currencySymbol = '$';
-        
-        // Convert price based on currency
-        if (currency === 'EUR') {
-            convertedPrice = basePrice * 0.68; // Approximate conversion rate
-            currencySymbol = '€';
-        } else if (currency === 'GBP') {
-            convertedPrice = basePrice * 0.58; // Approximate conversion rate
-            currencySymbol = '£';
-        }
-        
-        // Update price display
-        element.textContent = `${currencySymbol}${convertedPrice.toFixed(2)}`;
-    });
-}
-
-// Update phone numbers based on location
-function updatePhoneNumbers(country) {
-    const phoneElements = document.querySelectorAll('[data-phone]');
-    
-    phoneElements.forEach(element => {
-        let phoneNumber = '+1 (555) 123-4567'; // Default Canadian number
-        
-        if (country === 'US') {
-            phoneNumber = '+1 (555) 987-6543'; // US number
-        } else if (country === 'FR') {
-            phoneNumber = '+33 1 23 45 67 89'; // French number
-        } else if (country === 'GB') {
-            phoneNumber = '+44 20 7946 0958'; // UK number
-        }
-        
-        element.textContent = phoneNumber;
-        element.href = `tel:${phoneNumber.replace(/\s/g, '')}`;
-    });
-}
-
-// Form Handling
-function initFormHandling() {
+    // Form Validation
     const forms = document.querySelectorAll('form');
     
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(form);
-            const formDataObj = {};
+            // Reset previous errors
+            const errorElements = form.querySelectorAll('.form-error');
+            errorElements.forEach(element => element.remove());
             
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
+            let isValid = true;
             
-            // Add location data if available
-            const locationData = localStorage.getItem('userLocation');
-            if (locationData) {
-                formDataObj.location = JSON.parse(locationData);
-            }
-            
-            // Submit form to Netlify
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formDataObj).toString()
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Show success message
-                    showFormMessage(form, 'Merci! Votre message a été envoyé avec succès.', 'success');
-                    form.reset();
-                } else {
-                    // Show error message
-                    showFormMessage(form, 'Une erreur est survenue. Veuillez réessayer.', 'error');
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    
+                    const error = document.createElement('div');
+                    error.className = 'form-error';
+                    error.textContent = 'Ce champ est requis';
+                    field.parentNode.appendChild(error);
                 }
-            })
-            .catch(error => {
-                console.error('Error submitting form:', error);
-                showFormMessage(form, 'Une erreur est survenue. Veuillez réessayer.', 'error');
             });
+            
+            // Validate email
+            const emailFields = form.querySelectorAll('[type="email"]');
+            emailFields.forEach(field => {
+                if (field.value.trim() && !isValidEmail(field.value.trim())) {
+                    isValid = false;
+                    
+                    const error = document.createElement('div');
+                    error.className = 'form-error';
+                    error.textContent = 'Veuillez entrer une adresse email valide';
+                    field.parentNode.appendChild(error);
+                }
+            });
+            
+            // If form is valid, submit it
+            if (isValid) {
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'form-success';
+                successMessage.textContent = 'Votre message a été envoyé avec succès. Nous vous contacterons sous peu.';
+                form.prepend(successMessage);
+                
+                // Reset form
+                form.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            }
         });
     });
     
-    // Pre-fill form based on URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('service')) {
-        const serviceField = document.querySelector('#service');
-        if (serviceField) {
-            serviceField.value = urlParams.get('service');
-        }
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
     
-    if (urlParams.has('package')) {
-        const packageField = document.querySelector('#package');
-        if (packageField) {
-            packageField.value = urlParams.get('package');
-        }
-    }
-}
+    // Location Detection and Content Adaptation
+    detectLocationAndAdaptContent();
+    
+    // Pre-fill contact form based on URL parameters
+    prefillContactForm();
+});
 
-// Show form message
-function showFormMessage(form, message, type) {
-    // Remove any existing message
-    const existingMessage = form.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Create new message element
-    const messageElement = document.createElement('div');
-    messageElement.className = `form-message ${type}`;
-    messageElement.textContent = message;
-    
-    // Add message styling
-    messageElement.style.padding = '10px';
-    messageElement.style.marginTop = '10px';
-    messageElement.style.borderRadius = '4px';
-    
-    if (type === 'success') {
-        messageElement.style.backgroundColor = '#d4edda';
-        messageElement.style.color = '#155724';
+function detectLocationAndAdaptContent() {
+    // Use browser's geolocation API to get user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            // Get latitude and longitude
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            
+            // Use a reverse geocoding API to get country and city
+            fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=fr`)
+                .then(response => response.json())
+                .then(data => {
+                    const country = data.countryName;
+                    const city = data.city;
+                    
+                    // Adapt content based on location
+                    adaptContentForLocation(country, city);
+                })
+                .catch(error => {
+                    console.error('Error getting location:', error);
+                });
+        }, function(error) {
+            console.error('Error getting location:', error);
+            
+            // Fallback to IP-based location detection
+            detectLocationByIP();
+        });
     } else {
-        messageElement.style.backgroundColor = '#f8d7da';
-        messageElement.style.color = '#721c24';
-    }
-    
-    // Add message to form
-    form.appendChild(messageElement);
-    
-    // Remove message after 5 seconds
-    setTimeout(() => {
-        messageElement.remove();
-    }, 5000);
-}
-
-// Load Header
-function loadHeader() {
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        fetch('components/header.html')
-            .then(response => response.text())
-            .then(html => {
-                headerContainer.innerHTML = html;
-                // Re-initialize navigation after loading header
-                initNavigation();
-            })
-            .catch(error => {
-                console.error('Error loading header:', error);
-                // Fallback header if component fails to load
-                headerContainer.innerHTML = `
-                    <header class="navbar">
-                        <div class="container">
-                            <div class="nav-container">
-                                <a href="index.html" class="nav-logo">Smart Hotline</a>
-                                <ul class="nav-menu">
-                                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-                                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                                    <li class="nav-item"><a href="pricing.html" class="nav-link">Tarifs</a></li>
-                                    <li class="nav-item"><a href="about.html" class="nav-link">À propos</a></li>
-                                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                </ul>
-                                <div class="nav-toggle">
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                `;
-                initNavigation();
-            });
+        // Fallback to IP-based location detection
+        detectLocationByIP();
     }
 }
 
-// Load Footer
-function loadFooter() {
-    const footerContainer = document.getElementById('footer-container');
-    if (footerContainer) {
-        fetch('components/footer.html')
-            .then(response => response.text())
-            .then(html => {
-                footerContainer.innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                // Fallback footer if component fails to load
-                footerContainer.innerHTML = `
-                    <footer class="footer">
-                        <div class="container">
-                            <div class="footer-content">
-                                <div class="footer-column">
-                                    <h3 class="footer-title">Smart Hotline</h3>
-                                    <p>Votre partenaire de confiance pour l'externalisation de la communication téléphonique.</p>
-                                </div>
-                                <div class="footer-column">
-                                    <h3 class="footer-title">Services</h3>
-                                    <ul class="footer-links">
-                                        <li><a href="reception.html" class="footer-link">Réception d'appels</a></li>
-                                        <li><a href="emission.html" class="footer-link">Émission d'appels</a></li>
-                                        <li><a href="support.html" class="footer-link">Support client</a></li>
-                                        <li><a href="crm-lists.html" class="footer-link">CRM & Listes</a></li>
-                                    </ul>
-                                </div>
-                                <div class="footer-column">
-                                    <h3 class="footer-title">Entreprise</h3>
-                                    <ul class="footer-links">
-                                        <li><a href="about.html" class="footer-link">À propos</a></li>
-                                        <li><a href="blog.html" class="footer-link">Blog</a></li>
-                                        <li><a href="conditions-generales.html" class="footer-link">Conditions générales</a></li>
-                                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                                    </ul>
-                                </div>
-                                <div class="footer-column">
-                                    <h3 class="footer-title">Contact</h3>
-                                    <p><i class="fas fa-phone"></i> <span data-phone>+1 (555) 123-4567</span></p>
-                                    <p><i class="fas fa-envelope"></i> contact@smart-hotline.com</p>
-                                    <p><i class="fas fa-map-marker-alt"></i> 123 rue du Commerce, Montréal, QC</p>
-                                </div>
-                            </div>
-                            <div class="footer-bottom">
-                                <p>&copy; 2023 Smart Hotline Agency. Tous droits réservés.</p>
-                            </div>
-                        </div>
-                    </footer>
-                `;
-            });
+function detectLocationByIP() {
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            const country = data.country_name;
+            const city = data.city;
+            
+            // Adapt content based on location
+            adaptContentForLocation(country, city);
+        })
+        .catch(error => {
+            console.error('Error getting location by IP:', error);
+        });
+}
+
+function adaptContentForLocation(country, city) {
+    // Store location in localStorage for later use
+    localStorage.setItem('userCountry', country);
+    localStorage.setItem('userCity', city);
+    
+    // Adapt currency based on country
+    let currency = 'CAD'; // Default
+    let currencySymbol = '$';
+    
+    if (country === 'France' || country === 'Belgium' || country === 'Switzerland') {
+        currency = 'EUR';
+        currencySymbol = '€';
+    } else if (country === 'United States') {
+        currency = 'USD';
+        currencySymbol = '$';
+    }
+    
+    // Update price displays
+    const priceElements = document.querySelectorAll('.price-value');
+    priceElements.forEach(element => {
+        const basePrice = parseFloat(element.getAttribute('data-base-price'));
+        
+        // Convert price based on currency
+        let convertedPrice = basePrice;
+        if (currency === 'EUR') {
+            convertedPrice = basePrice * 0.68; // Approximate conversion rate
+        } else if (currency === 'USD') {
+            convertedPrice = basePrice * 0.74; // Approximate conversion rate
+        }
+        
+        // Update display
+        element.textContent = `${currencySymbol}${convertedPrice.toFixed(2)}`;
+    });
+    
+    // Update currency indicators
+    const currencyIndicators = document.querySelectorAll('.currency-indicator');
+    currencyIndicators.forEach(element => {
+        element.textContent = currency;
+    });
+    
+    // Adapt contact information based on location
+    if (country === 'France' || country === 'Belgium' || country === 'Switzerland') {
+        const phoneElements = document.querySelectorAll('.phone-number');
+        phoneElements.forEach(element => {
+            element.textContent = '+33 1 23 45 67 89';
+        });
+        
+        const addressElements = document.querySelectorAll('.address');
+        addressElements.forEach(element => {
+            element.textContent = '123 Rue de la Communication, 75001 Paris, France';
+        });
+    }
+    
+    // Adapt content based on city if available
+    if (city) {
+        const cityElements = document.querySelectorAll('.city-specific');
+        cityElements.forEach(element => {
+            element.textContent = element.textContent.replace('[ville]', city);
+        });
+    }
+}
+
+function prefillContactForm() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const service = urlParams.get('service');
+    const package = urlParams.get('package');
+    
+    // If service parameter is present, pre-fill the form
+    if (service) {
+        const serviceField = document.getElementById('service');
+        if (serviceField) {
+            serviceField.value = service;
+        }
+        
+        // Update form title based on service
+        const formTitle = document.querySelector('.form-title');
+        if (formTitle) {
+            const serviceNames = {
+                'reception': 'Réception d\'Appels',
+                'emission': 'Émission d\'Appels',
+                'support': 'Support Client',
+                'crm': 'CRM & Listes'
+            };
+            
+            if (serviceNames[service]) {
+                formTitle.textContent = `Demande d'information - ${serviceNames[service]}`;
+            }
+        }
+    }
+    
+    // If package parameter is present, pre-fill the form
+    if (package) {
+        const packageField = document.getElementById('package');
+        if (packageField) {
+            packageField.value = package;
+        }
     }
 }
