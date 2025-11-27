@@ -1,11 +1,14 @@
-/* Custom Styles */
+/* Custom styles for Smart Hotline Agency */
+
+/* Gradient text */
 .gradient-text {
-    background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+    background: linear-gradient(90deg, #0ea5e9, #0369a1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 
+/* Hover lift effect */
 .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -15,6 +18,13 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Service card hover effect */
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Scroll reveal animation */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -26,233 +36,123 @@
     transform: translateY(0);
 }
 
-.chat-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #0ea5e9;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.chat-button:hover {
-    background-color: #0284c7;
-    transform: scale(1.05);
-}
-
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px;
-    right: 100px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;
-    transform: scale(1.05);
-}
-
-/* Chat Window */
-.chat-window {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    width: 350px;
-    height: 450px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-    z-index: 1001;
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.chat-window.active {
-    display: flex;
-}
-
-.chat-header {
-    background-color: #0ea5e9;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chat-body {
-    flex-grow: 1;
-    padding: 15px;
-    overflow-y: auto;
-}
-
-.chat-footer {
-    padding: 15px;
-    border-top: 1px solid #eee;
-    display: flex;
-}
-
-.chat-input {
-    flex-grow: 1;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 8px 15px;
-    margin-right: 10px;
-}
-
-.chat-send {
-    background-color: #0ea5e9;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.chat-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-/* Pricing Table */
-.pricing-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-card.featured {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(14, 165, 233, 0.3);
-}
-
-.pricing-card.featured .pricing-header {
-    background-color: #0ea5e9;
-    color: white;
-}
-
-/* Form Styles */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.form-input, .form-select, .form-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-.form-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.form-checkbox {
-    margin-right: 8px;
-}
-
-.form-error {
-    color: #ef4444;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.form-success {
-    background-color: #10b981;
-    color: white;
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-}
-
-/* Blog Styles */
-.blog-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.blog-category {
-    display: inline-block;
-    padding: 4px 10px;
-    background-color: #e0f2fe;
-    color: #0284c7;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-/* Testimonial Styles */
-.testimonial-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Stats Counter */
+/* Stats counter animation */
 .stats-counter {
     display: inline-block;
 }
 
-/* Responsive Styles */
+/* Chat button */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0ea5e9;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #0284c7;
+}
+
+/* Language selector */
+.language-selector {
+    position: relative;
+}
+
+/* Testimonial card */
+.testimonial-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form styling */
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.form-button {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0284c7;
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid white;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .chat-window {
-        width: 90%;
-        height: 70%;
-        right: 5%;
-        bottom: 80px;
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
     
-    .whatsapp-button {
-        right: 30px;
+    .section-padding {
+        padding: 3rem 0;
     }
-    
-    .pricing-card.featured {
-        transform: scale(1);
-    }
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for better accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
 }
