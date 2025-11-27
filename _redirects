@@ -1,18 +1,11 @@
-# FIX LANGUAGE SWITCHER SUFFIX ISSUES - ADD THESE LINES
-/*-fr.html /fr/:splat.html 301
-/*-en.html /en/:splat.html 301
-/fr/*-fr.html /fr/:splat.html 301
-/en/*-en.html /en/:splat.html 301
-/fr/*-en.html /en/:splat.html 301
-/en/*-fr.html /fr/:splat.html 301
-
-# Clean up any double suffixes
-/*-fr-fr.html /fr/:splat.html 301
-/*-en-en.html /en/:splat.html 301
-/*-fr-en.html /fr/:splat.html 301
-/*-en-fr.html /en/:splat.html 301
-
-# Your existing redirects - KEEP THESE
-/fr /fr/index.html 200
-/en /en/index.html 200
-/ /fr/index.html 302
+/ /fr/ 302
+/contact /fr/contact.html 200
+/services /fr/services.html 200
+/pricing /fr/pricing.html 200
+/blog /fr/blog.html 200
+/about /fr/about.html 200
+/reception /fr/reception.html 200
+/emission /fr/emission.html 200
+/support /fr/support.html 200
+/crm-lists /fr/crm-lists.html 200
+/conditions-generales /fr/conditions-generales.html 200
