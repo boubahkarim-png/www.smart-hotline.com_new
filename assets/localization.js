@@ -6,67 +6,45 @@ const translations = {
             home: "Accueil",
             services: "Services",
             pricing: "Tarifs",
-            about: "À propos",
             blog: "Blog",
-            contact: "Contact",
-            getStarted: "Commencer",
-            login: "Connexion"
+            about: "À propos",
+            contact: "Contact"
         },
         
-        // Common
-        common: {
-            readMore: "Lire la suite",
-            learnMore: "En savoir plus",
-            contactUs: "Contactez-nous",
-            requestDemo: "Demander une démo",
-            freeTrial: "Essai gratuit",
-            pricing: "Tarifs",
-            features: "Fonctionnalités",
-            testimonials: "Témoignages",
-            faq: "FAQ",
-            newsletter: "Newsletter",
-            subscribe: "S'abonner",
-            submit: "Envoyer",
-            name: "Nom",
-            email: "Email",
-            phone: "Téléphone",
-            company: "Entreprise",
-            message: "Message",
-            service: "Service",
-            package: "Forfait",
-            thankYou: "Merci!",
-            successMessage: "Votre message a été envoyé avec succès.",
-            errorMessage: "Une erreur est survenue. Veuillez réessayer."
+        // Footer
+        footer: {
+            description: "Votre partenaire de confiance pour tous vos besoins en communication téléphonique.",
+            servicesTitle: "Services",
+            reception: "Réception d'appels",
+            emission: "Émission d'appels",
+            support: "Support client",
+            crm: "CRM & Listes",
+            companyTitle: "Entreprise",
+            about: "À propos",
+            terms: "Conditions générales",
+            contactTitle: "Contact",
+            address: "123 Rue de la Communication, Montréal, QC H3A 1A1",
+            phone: "+1 (514) 123-4567",
+            email: "contact@smart-hotline.com",
+            copyright: "&copy; 2023 Smart Hotline Agency. Tous droits réservés."
         },
         
-        // Home page
-        home: {
-            title: "Services d'Externalisation Téléphonique | Smart Hotline Agency",
-            description: "Externalisez votre réception et émission d'appels avec Smart Hotline. Solutions adaptées aux PME avec tarifs compétitifs et essai sans engagement.",
-            heroTitle: "Optimisez Votre Relation Client",
-            heroDescription: "Externalisez votre communication téléphonique et concentrez-vous sur votre croissance. Nos solutions adaptées aux PME vous font économiser temps et argent.",
-            heroCTA: "Commencer Votre Essai Gratuit",
-            heroSecondaryCTA: "Découvrir Nos Services",
-            featuresTitle: "Pourquoi Choisir Smart Hotline?",
-            servicesTitle: "Nos Services Populaires",
-            testimonialsTitle: "Ce Que Disent Nos Clients",
-            pricingTitle: "Tarifs Simples et Transparent",
-            blogTitle: "Derniers Articles",
-            newsletterTitle: "Restez Informé",
-            newsletterDescription: "Recevez nos derniers conseils et actualités sur l'externalisation téléphonique."
+        // Site
+        site: {
+            title: "Smart Hotline Agency",
+            description: "Services de communication téléphonique pour PME",
+            keywords: "réception d'appels, télésecrétariat, téléprospection"
         },
         
-        // Services page
+        // Services
         services: {
             title: "Services de Communication Téléphonique | Smart Hotline Agency",
             description: "Découvrez nos services complets de communication téléphonique pour PME : réception d'appels, émission d'appels, support client et CRM sur mesure. Externalisez votre relation client.",
             keywords: "réception d'appels, télésecrétariat, téléprospection, support client externalisé, CRM PME, centre d'appels externalisé, services téléphoniques pour PME",
             heroTitle: "Services de Communication Complètes",
             heroDescription: "Externalisez votre relation client et concentrez-vous sur votre croissance avec nos solutions adaptées aux entrepreneurs et PME.",
-            requestDemo: "Demander une Démo",
+            requestDemo: "Demander une Démo Gratuite",
             discoverServices: "Découvrir Nos Services",
-            trialDuration: "2 Semaines",
-            trialText: "Essai Sans Engagement",
             ourServices: "Nos Solutions Complètes",
             servicesDescription: "Une gamme complète de services pour répondre à tous vos besoins en matière de communication téléphonique",
             receptionTitle: "Réception d'Appels",
@@ -89,6 +67,8 @@ const translations = {
             crmBenefit1: "Gestion des contacts",
             crmBenefit2: "Intégration autocomposeur",
             crmBenefit3: "Analytiques de vente",
+            learnMore: "En Savoir Plus",
+            getStarted: "Commencer",
             provenResults: "Des Résultats Prouvés",
             resultsDescription: "Découvrez comment nos services transforment les PME comme la vôtre",
             satisfiedSMEs: "PME Satisfaites",
@@ -105,386 +85,414 @@ const translations = {
             readyDescription: "Rejoignez des centaines d'entrepreneurs et PME qui ont déjà optimisé leur relation client avec nos solutions.",
             contactUs: "Contactez-Nous Aujourd'hui",
             selectPlan: "Voir Nos Plans",
-            learnMore: "En Savoir Plus",
-            getStarted: "Commencer"
+            trialDuration: "2 Semaines",
+            trialText: "Essai Sans Engagement"
         },
         
-        // Pricing page
-        pricing: {
-            title: "Tarifs des Services Téléphoniques | Smart Hotline Agency",
-            description: "Découvrez nos tarifs compétitifs pour l'externalisation de vos appels. Plans flexibles adaptés aux PME avec essai gratuit sans engagement.",
-            keywords: "tarifs externalisation appels, prix télésecrétariat, coût centre d'appels, tarification support client, prix CRM PME",
-            heroTitle: "Tarifs Simples et Transparent",
-            heroDescription: "Choisissez le plan qui correspond à vos besoins. Tous nos plans incluent un essai de 2 semaines sans engagement.",
-            monthly: "Mensuel",
-            yearly: "Annuel (Économisez 20%)",
-            save: "Économisez",
-            mostPopular: "Le Plus Populaire",
-            basic: "Basique",
-            standard: "Standard",
-            premium: "Premium",
-            enterprise: "Entreprise",
-            reception: "Réception d'Appels",
-            emission: "Émission d'Appels",
-            support: "Support Client",
-            crm: "CRM & Listes",
-            customPlan: "Plan Sur Mesure",
-            contactSales: "Contacter le Service Commercial",
-            features: {
-                callsPerMonth: "Appels par mois",
-                minutesPerMonth: "Minutes par mois",
-                dedicatedNumber: "Numéro dédié",
-                customScript: "Script personnalisé",
-                callRecording: "Enregistrement d'appels",
-                analytics: "Analytiques",
-                prioritySupport: "Support prioritaire",
-                dedicatedAgent: "Agent dédié",
-                crmIntegration: "Intégration CRM",
-                customReporting: "Rapports personnalisés",
-                slaGuarantee: "Garantie SLA"
-            },
-            faqTitle: "Questions Fréquentes",
-            faq1Question: "Comment fonctionne l'essai gratuit?",
-            faq1Answer: "Nous offrons un essai de 2 semaines sans engagement. Vous pouvez tester tous nos services et décider si Smart Hotline vous convient.",
-            faq2Question: "Puis-je changer de plan à tout moment?",
-            faq2Answer: "Oui, vous pouvez passer à un plan supérieur à tout moment. Pour passer à un plan inférieur, cela prendra effet au début du prochain cycle de facturation.",
-            faq3Question: "Y a-t-il des frais d'installation?",
-            faq3Answer: "Non, il n'y a aucun frais d'installation. Vous ne payez que pour le plan que vous choisissez.",
-            faq4Question: "Comment facturez-vous?",
-            faq4Answer: "Nous facturons mensuellement ou annuellement, selon votre préférence. Le paiement par carte de crédit ou prélèvement automatique est accepté.",
-            faq5Question: "Puis-je annuler mon abonnement à tout moment?",
-            faq5Answer: "Oui, vous pouvez annuler votre abonnement à tout moment. L'annulation prendra effet à la fin de la période de facturation en cours."
-        },
-        
-        // Contact page
-        contact: {
-            title: "Contactez-Nous | Smart Hotline Agency",
-            description: "Contactez Smart Hotline pour découvrir comment nos services d'externalisation téléphonique peuvent aider votre entreprise à croître.",
-            keywords: "contact Smart Hotline, externalisation téléphonique, centre d'appels, support client PME",
-            heroTitle: "Contactez-Nous",
-            heroDescription: "Notre équipe est prête à répondre à toutes vos questions et à vous aider à trouver la solution parfaite pour votre entreprise.",
-            formTitle: "Envoyez-Nous un Message",
-            formDescription: "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
-            officesTitle: "Nos Bureaux",
-            montrealOffice: "Bureau de Montréal",
-            torontoOffice: "Bureau de Toronto",
-            parisOffice: "Bureau de Paris",
-            londonOffice: "Bureau de Londres",
-            callUs: "Appelez-Nous",
-            emailUs: "Écrivez-Nous",
-            followUs: "Suivez-Nous"
-        },
-        
-        // About page
-        about: {
-            title: "À Propos de Smart Hotline Agency",
-            description: "Découvrez l'histoire de Smart Hotline Agency et notre mission d'aider les PME à optimiser leur communication téléphonique.",
-            keywords: "à propos Smart Hotline, histoire entreprise, mission vision, équipe centre d'appels",
-            heroTitle: "À Propos de Smart Hotline",
-            heroDescription: "Nous sommes passionnés par l'aide aux PME pour réussir grâce à une communication téléphonique efficace et professionnelle.",
-            ourStoryTitle: "Notre Histoire",
-            ourStoryDescription: "Smart Hotline a été fondée en 2018 par des entrepreneurs qui comprenaient les défis auxquels les petites entreprises sont confrontées pour gérer leurs communications tout en se concentrant sur leur croissance.",
-            ourMissionTitle: "Notre Mission",
-            ourMissionDescription: "Notre mission est de fournir des services de communication téléphonique de haute qualité aux PME à un coût abordable, leur permettant de paraître plus grandes et plus professionnelles.",
-            ourValuesTitle: "Nos Valeurs",
-            ourValuesDescription: "Nous sommes guidés par des valeurs de professionnalisme, d'intégrité, d'innovation et de engagement envers le succès de nos clients.",
-            teamTitle: "Notre Équipe",
-            teamDescription: "Notre équipe est composée de professionnels expérimentés passionnés par l'aide aux entreprises à réussir."
-        },
-        
-        // Blog page
-        blog: {
-            title: "Blog - Actualités et Conseils | Smart Hotline Agency",
-            description: "Découvrez nos derniers articles sur l'externalisation téléphonique, le service client et les conseils pour PME.",
-            keywords: "blog externalisation, conseils service client, télésecrétariat, gestion appels PME",
-            heroTitle: "Notre Blog",
-            heroDescription: "Découvrez nos derniers articles, conseils et actualités sur l'externalisation téléphonique et l'amélioration du service client.",
-            readMore: "Lire la suite",
-            publishedOn: "Publié le",
-            categories: "Catégories",
-            allCategories: "Toutes les catégories",
-            recentPosts: "Articles Récents",
-            tags: "Tags",
-            popularTags: "Tags Populaires",
-            searchPlaceholder: "Rechercher des articles...",
-            noResults: "Aucun résultat trouvé pour votre recherche.",
-            loadMore: "Charger plus d'articles"
-        },
-        
-        // Reception page
+        // Reception
         reception: {
             title: "Service de Réception d'Appels | Smart Hotline Agency",
-            description: "Ne manquez plus jamais un appel avec notre service de réception d'appels professionnel. Disponible 24/7 pour les PME.",
-            keywords: "réception d'appels, télésecrétariat, standard externalisé, réponse téléphonique PME",
+            description: "Ne manquez plus jamais un appel avec notre service de réception professionnelle. Disponible 24/7 pour répondre à vos clients.",
+            keywords: "réception d'appels, télésecrétariat, standard externalisé, réponse téléphonique",
             heroTitle: "Réception d'Appels Professionnelle",
-            heroDescription: "Notre équipe de télésecrétaires dédiés gère tous vos appels entrants avec professionnalisme, garantissant que chaque client reçoit l'attention qu'il mérite.",
-            howItWorksTitle: "Comment Ça Fonctionne",
-            step1Title: "Configuration",
-            step1Description: "Nous travaillons avec vous pour comprendre vos besoins et créer des scripts personnalisés.",
-            step2Title: "Transfert",
-            step2Description: "Transférez vos appels vers notre numéro dédié ou utilisez notre service de transfert d'appels.",
-            step3Title: "Gestion",
-            step3Description: "Notre équipe répond à vos appels selon vos instructions et transmet les messages importants.",
-            featuresTitle: "Fonctionnalités Incluses",
+            heroDescription: "Ne manquez plus jamais un appel important avec notre service de réception dédié. Notre équipe professionnelle gère tous vos appels entrants avec le soin et l'attention que vos clients méritent.",
+            requestDemo: "Demander une Démo",
+            howItWorks: "Comment Ça Marche",
+            step1Title: "Inscription",
+            step1Description: "Inscrivez-vous en quelques minutes et configurez vos préférences",
+            step2Title: "Transfert d'appels",
+            step2Description: "Transférez vos appels vers notre numéro dédié",
+            step3Title: "Réception professionnelle",
+            step3Description: "Notre équipe répond à vos appels selon vos instructions",
+            featuresTitle: "Fonctionnalités Principales",
+            feature1Title: "Réponse personnalisée",
+            feature1Description: "Nos opérateurs répondent au nom de votre entreprise avec un script personnalisé",
+            feature2Title: "Prise de messages",
+            feature2Description: "Nous prenons des messages détaillés et vous les transmettons immédiatement",
+            feature3Title: "Transfert d'appels",
+            feature3Description: "Transfert d'appels urgents vers vous ou vos collègues",
+            feature4Title: "Prise de rendez-vous",
+            feature4Description: "Gestion de votre agenda et prise de rendez-vous pour vos clients",
+            pricingTitle: "Tarification Simple et Transparente",
+            pricingDescription: "Choisissez le plan qui correspond le mieux à vos besoins",
+            basicPlan: "Plan Essentiel",
+            basicPrice: "19$/heure",
+            basicDescription: "Idéal pour les petites entreprises ayant besoin d'une assistance ponctuelle",
+            professionalPlan: "Plan Professionnel",
+            professionalPrice: "17$/heure",
+            professionalDescription: "Pour les entreprises ayant besoin d'un support régulier",
+            enterprisePlan: "Plan Entreprise",
+            enterprisePrice: "Sur mesure",
+            enterpriseDescription: "Solutions personnalisées pour les grandes entreprises",
             testimonialsTitle: "Ce Que Disent Nos Clients",
-            pricingTitle: "Tarifs pour la Réception d'Appels",
-            getStarted: "Commencer Maintenant"
+            getStarted: "Commencer Maintenant",
+            questionsTitle: "Questions Fréquentes",
+            q1Question: "Comment les opérateurs savent-ils comment répondre à mes appels?",
+            q1Answer: "Avant le début du service, nous travaillons avec vous pour créer un script personnalisé qui correspond à votre entreprise et à vos besoins.",
+            q2Question: "Puis-je conserver mon numéro de téléphone actuel?",
+            q2Answer: "Oui, absolument. Vous pouvez simplement transférer vos appels vers notre numéro dédié lorsque vous avez besoin de notre service.",
+            q3Question: "Comment reçois-je les messages?",
+            q3Answer: "Les messages peuvent vous être envoyés par email, SMS ou via notre application mobile, selon vos préférences.",
+            q4Question: "Le service est-il disponible 24/7?",
+            q4Answer: "Oui, notre service de réception d'appels est disponible 24 heures sur 24, 7 jours sur 7."
         },
         
-        // Emission page
+        // Emission
         emission: {
             title: "Service d'Émission d'Appels | Smart Hotline Agency",
-            description: "Développez votre clientèle avec notre service d'émission d'appels. Génération de leads, prise de rendez-vous et campagnes de suivi.",
-            keywords: "émission d'appels, téléprospection, génération leads, prise rendez-vous, prospection téléphonique",
+            description: "Développez votre clientèle avec nos services d'émission d'appels professionnels. Génération de leads et prise de rendez-vous.",
+            keywords: "émission d'appels, téléprospection, génération de leads, prise de rendez-vous",
             heroTitle: "Émission d'Appels Efficace",
-            heroDescription: "Notre équipe expérimentée vous aide à contacter des clients potentiels, à générer des leads qualifiés et à prendre des rendez-vous pour votre entreprise.",
-            howItWorksTitle: "Comment Ça Fonctionne",
-            step1Title: "Stratégie",
-            step1Description: "Nous développons une stratégie d'appel adaptée à vos objectifs et à votre public cible.",
-            step2Description: "Nous préparons des scripts et formons notre équipe sur vos produits ou services.",
-            step3Title: "Exécution",
-            step3Description: "Notre équipe lance la campagne d'appels et vous fournit des rapports détaillés sur les résultats.",
-            featuresTitle: "Fonctionnalités Incluses",
+            heroDescription: "Développez votre clientèle avec nos campagnes d'appels ciblées. Notre équipe expérimentée vous aide à contacter des clients potentiels et à générer des leads qualifiés.",
+            requestDemo: "Demander une Démo",
+            howItWorks: "Comment Ça Marche",
+            step1Title: "Définition des objectifs",
+            step1Description: "Nous travaillons avec vous pour définir vos objectifs et votre public cible",
+            step2Title: "Préparation des scripts",
+            step2Description: "Nous créons des scripts personnalisés adaptés à votre entreprise et à vos objectifs",
+            step3Title: "Lancement de la campagne",
+            step3Description: "Notre équipe lance la campagne et vous fournit des rapports réguliers",
+            featuresTitle: "Fonctionnalités Principales",
+            feature1Title: "Génération de leads",
+            feature1Description: "Nous identifions et qualifions des prospects potentiels pour votre entreprise",
+            feature2Title: "Prise de rendez-vous",
+            feature2Description: "Nous prenons des rendez-vous qualifiés avec des clients potentiels",
+            feature3Title: "Suivi des prospects",
+            feature3Description: "Nous assurons le suivi des prospects pour maximiser les conversions",
+            feature4Title: "Rapports détaillés",
+            feature4Description: "Vous recevez des rapports détaillés sur les performances de la campagne",
+            pricingTitle: "Tarification Simple et Transparente",
+            pricingDescription: "Choisissez le plan qui correspond le mieux à vos besoins",
+            basicPlan: "Plan Découverte",
+            basicPrice: "19$/heure + 30$/rendez-vous",
+            basicDescription: "Idéal pour tester nos services avec un petit volume d'appels",
+            professionalPlan: "Plan Croissance",
+            professionalPrice: "17$/heure + 25$/rendez-vous",
+            professionalDescription: "Pour les entreprises qui veulent développer leur clientèle",
+            enterprisePlan: "Plan Performance",
+            enterprisePrice: "15$/heure + 20$/rendez-vous",
+            enterpriseDescription: "Pour les entreprises avec des besoins importants en génération de leads",
             testimonialsTitle: "Ce Que Disent Nos Clients",
-            pricingTitle: "Tarifs pour l'Émission d'Appels",
-            getStarted: "Commencer Maintenant"
+            getStarted: "Commencer Maintenant",
+            questionsTitle: "Questions Fréquentes",
+            q1Question: "Comment assurez-vous la qualité des appels?",
+            q1Answer: "Tous nos opérateurs sont formés et supervisés. Nous enregistrons également les appels à des fins de formation et d'assurance qualité.",
+            q2Question: "Puis-je fournir ma propre liste de prospects?",
+            q2Answer: "Oui, vous pouvez utiliser votre propre liste ou nous pouvons vous aider à en créer une en fonction de vos critères.",
+            q3Question: "Comment suis-je informé des résultats?",
+            q3Answer: "Vous recevez des rapports réguliers détaillant les appels effectués, les leads générés et les rendez-vous pris.",
+            q4Question: "Quelle est la durée minimale d'engagement?",
+            q4Answer: "Nous proposons des contrats flexibles sans engagement à long terme. Vous pouvez ajuster ou arrêter le service selon vos besoins."
         },
         
-        // Support page
+        // Support
         support: {
             title: "Service de Support Client | Smart Hotline Agency",
-            description: "Améliorez la satisfaction de vos clients avec notre service de support client externalisé. Disponible 24/7 pour les PME.",
-            keywords: "support client externalisé, service client PME, assistance téléphonique, helpdesk externalisé",
-            heroTitle: "Support Client de Qualité",
-            heroDescription: "Notre équipe de support client gère toutes les demandes, réclamations et requêtes de support de manière efficace, améliorant la satisfaction de vos clients.",
-            howItWorksTitle: "Comment Ça Fonctionne",
-            step1Title: "Formation",
-            step1Description: "Nous formons notre équipe sur vos produits, services et procédures de support.",
-            step2Title: "Intégration",
-            step2Description: "Nous intégrons nos systèmes avec les vôtres pour un suivi transparent des demandes.",
-            step3Title: "Support",
-            step3Description: "Notre équipe gère toutes les demandes de support et vous fournit des rapports détaillés.",
-            featuresTitle: "Fonctionnalités Incluses",
+            description: "Améliorez la satisfaction de vos clients avec notre service de support client professionnel. Disponible 24/7.",
+            keywords: "support client, service client externalisé, assistance téléphonique, helpdesk",
+            heroTitle: "Support Client Professionnel",
+            heroDescription: "Améliorez la satisfaction de vos clients avec un support réactif et professionnel. Notre équipe gère toutes les demandes, réclamations et requêtes de support de manière efficace.",
+            requestDemo: "Demander une Démo",
+            howItWorks: "Comment Ça Marche",
+            step1Title: "Configuration du service",
+            step1Description: "Nous configurons votre service de support en fonction de vos produits et processus",
+            step2Title: "Formation de l'équipe",
+            step2Description: "Notre équipe est formée sur vos produits, services et procédures de support",
+            step3Title: "Lancement du support",
+            step3Description: "Nous commençons à gérer les demandes de support de vos clients",
+            featuresTitle: "Fonctionnalités Principales",
+            feature1Title: "Support technique",
+            feature1Description: "Assistance technique pour vos produits et services",
+            feature2Title: "Gestion des réclamations",
+            feature2Description: "Traitement professionnel des réclamations et des problèmes des clients",
+            feature3Title: "Base de connaissances",
+            feature3Description: "Création et maintenance d'une base de connaissances pour les questions fréquentes",
+            feature4Title: "Rapports de satisfaction",
+            feature4Description: "Suivi de la satisfaction client et rapports détaillés",
+            pricingTitle: "Tarification Simple et Transparente",
+            pricingDescription: "Choisissez le plan qui correspond le mieux à vos besoins",
+            basicPlan: "Plan Essentiel",
+            basicPrice: "19$/heure",
+            basicDescription: "Idéal pour les petites entreprises ayant besoin d'un support ponctuel",
+            professionalPlan: "Plan Professionnel",
+            professionalPrice: "17$/heure",
+            professionalDescription: "Pour les entreprises ayant besoin d'un support régulier",
+            enterprisePlan: "Plan Entreprise",
+            enterprisePrice: "Sur mesure",
+            enterpriseDescription: "Solutions personnalisées pour les grandes entreprises",
             testimonialsTitle: "Ce Que Disent Nos Clients",
-            pricingTitle: "Tarifs pour le Support Client",
-            getStarted: "Commencer Maintenant"
+            getStarted: "Commencer Maintenant",
+            questionsTitle: "Questions Fréquentes",
+            q1Question: "Comment votre équipe connaît-elle mes produits?",
+            q1Answer: "Avant le début du service, nous formons notre équipe sur vos produits, services et procédures de support.",
+            q2Question: "Puis-je conserver mon système de ticket actuel?",
+            q2Answer: "Oui, nous pouvons nous intégrer à la plupart des systèmes de ticket existants ou vous fournir notre propre solution.",
+            q3Question: "Comment assurez-vous la qualité du support?",
+            q3Answer: "Nous avons des procédures d'assurance qualité strictes,包括l'enregistrement des appels et des évaluations régulières des performances.",
+            q4Question: "Le service est-il disponible en dehors des heures de bureau?",
+            q4Answer: "Oui, notre service de support est disponible 24 heures sur 24, 7 jours sur 7, selon vos besoins."
         },
         
-        // CRM & Lists page
-        crmLists: {
+        // CRM & Lists
+        crm: {
             title: "CRM & Listes Qualifiées | Smart Hotline Agency",
             description: "CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes. Gérez efficacement vos relations clients.",
-            keywords: "CRM PME, gestion relation client, listes qualifiées, autocomposeur, logiciel vente",
-            heroTitle: "CRM & Listes pour Maximiser vos Ventes",
-            heroDescription: "Notre système CRM complet avec listes qualifiées et autocomposeur vous aide à gérer efficacement vos relations clients et à augmenter vos ventes.",
-            howItWorksTitle: "Comment Ça Fonctionne",
-            step1Title: "Configuration",
-            step1Description: "Nous configurons le CRM selon vos besoins et importons vos contacts existants.",
-            step2Title: "Listes",
-            step2Description: "Nous fournissons des listes qualifiées adaptées à votre secteur d'activité et à vos objectifs.",
-            step3Title: "Autocomposeur",
-            step3Description: "Notre système d'autocomposeur automatise les appels et optimise le temps de vos agents.",
-            featuresTitle: "Fonctionnalités Incluses",
+            keywords: "CRM, gestion de la relation client, listes qualifiées, autocomposeur",
+            heroTitle: "CRM & Listes Qualifiées",
+            heroDescription: "CRM complet avec listes qualifiées et autocomposeur pour maximiser vos ventes. Gérez efficacement vos relations clients avec notre système complet.",
+            requestDemo: "Demander une Démo",
+            howItWorks: "Comment Ça Marche",
+            step1Title: "Configuration du CRM",
+            step1Description: "Nous configurons votre CRM en fonction de vos processus de vente",
+            step2Title: "Importation des contacts",
+            step2Description: "Nous importons vos contacts existants et enrichissons vos données",
+            step3Title: "Lancement des campagnes",
+            step3Description: "Utilisez notre autocomposeur pour lancer des campagnes ciblées",
+            featuresTitle: "Fonctionnalités Principales",
+            feature1Title: "Gestion des contacts",
+            feature1Description: "Centralisez et gérez toutes vos informations client en un seul endroit",
+            feature2Title: "Autocomposeur intégré",
+            feature2Description: "Composez automatiquement les numéros de votre liste de contacts",
+            feature3Title: "Suivi des interactions",
+            feature3Description: "Suivez toutes les interactions avec vos clients pour un service personnalisé",
+            feature4Title: "Analytiques de vente",
+            feature4Description: "Obtenez des informations précieuses sur vos performances de vente",
+            pricingTitle: "Tarification Simple et Transparente",
+            pricingDescription: "Choisissez le plan qui correspond le mieux à vos besoins",
+            basicPlan: "Plan Essentiel",
+            basicPrice: "99$/mois",
+            basicDescription: "Idéal pour les petites équipes de vente",
+            professionalPlan: "Plan Professionnel",
+            professionalPrice: "199$/mois",
+            professionalDescription: "Pour les équipes de vente en croissance",
+            enterprisePlan: "Plan Entreprise",
+            enterprisePrice: "Sur mesure",
+            enterpriseDescription: "Solutions personnalisées pour les grandes équipes de vente",
             testimonialsTitle: "Ce Que Disent Nos Clients",
-            pricingTitle: "Tarifs pour le CRM & Listes",
-            getStarted: "Commencer Maintenant"
+            getStarted: "Commencer Maintenant",
+            questionsTitle: "Questions Fréquentes",
+            q1Question: "Puis-je importer mes contacts existants?",
+            q1Answer: "Oui, vous pouvez importer facilement vos contacts depuis des fichiers CSV, Excel ou d'autres systèmes CRM.",
+            q2Question: "Le CRM est-il accessible sur mobile?",
+            q2Answer: "Oui, notre CRM est entièrement responsive et fonctionne sur tous les appareils mobiles.",
+            q3Question: "Puis-je intégrer le CRM avec d'autres outils?",
+            q3Answer: "Oui, nous proposons des intégrations avec de nombreux outils populaires comme Gmail, Outlook et plus encore.",
+            q4Question: "Mes données sont-elles sécurisées?",
+            q4Answer: "Absolument. Nous utilisons des protocoles de sécurité de pointe pour protéger vos données."
         },
         
-        // Terms and Conditions page
+        // Pricing
+        pricing: {
+            title: "Tarifs | Smart Hotline Agency",
+            description: "Découvrez nos tarifs compétitifs pour tous nos services de communication téléphonique. Solutions adaptées à tous les budgets.",
+            keywords: "tarifs, prix, coûts, forfaits, plans tarifaires",
+            heroTitle: "Tarifs Simple et Transparent",
+            heroDescription: "Choisissez le plan qui correspond le mieux à vos besoins. Tous nos plans incluent un essai gratuit de 2 semaines sans engagement.",
+            receptionTitle: "Réception d'Appels",
+            receptionDescription: "Ne manquez plus jamais un appel important",
+            emissionTitle: "Émission d'Appels",
+            emissionDescription: "Développez votre clientèle avec nos campagnes ciblées",
+            supportTitle: "Support Client",
+            supportDescription: "Améliorez la satisfaction de vos clients",
+            crmTitle: "CRM & Listes",
+            crmDescription: "Gérez efficacement vos relations clients",
+            trialTitle: "Essai Gratuit",
+            trialDescription: "Essayez nos services pendant 2 semaines sans engagement",
+            trialButton: "Commencer l'Essai Gratuit",
+            questionsTitle: "Questions Fréquentes",
+            q1Question: "Y a-t-il des frais d'installation?",
+            q1Answer: "Non, il n'y a aucun frais d'installation. Vous ne payez que pour les services que vous utilisez.",
+            q2Question: "Puis-je changer de plan à tout moment?",
+            q2Answer: "Oui, vous pouvez passer à un plan supérieur ou inférieur à tout moment sans frais.",
+            q3Question: "Comment fonctionne la facturation?",
+            q3Answer: "Nous facturons mensuellement en fonction de votre utilisation réelle. Vous recevez une facture détaillée au début de chaque mois.",
+            q4Question: "Y a-t-il un engagement à long terme?",
+            q4Answer: "Non, nous n'exigeons aucun engagement à long terme. Vous pouvez résilier votre service à tout moment.",
+            contactTitle: "Besoin d'un plan sur mesure?",
+            contactDescription: "Contactez-nous pour discuter de vos besoins spécifiques et obtenir un plan personnalisé.",
+            contactButton: "Contactez-Nous"
+        },
+        
+        // Blog
+        blog: {
+            title: "Blog | Smart Hotline Agency",
+            description: "Découvrez nos articles sur la communication téléphonique, le service client et les meilleures pratiques pour les PME.",
+            keywords: "blog, articles, communication téléphonique, service client, PME",
+            heroTitle: "Notre Blog",
+            heroDescription: "Découvrez nos conseils, astuces et meilleures pratiques pour optimiser votre communication téléphonique et votre service client.",
+            categoriesTitle: "Catégories",
+            recentPostsTitle: "Articles Récents",
+            tagsTitle: "Tags",
+            subscribeTitle: "Abonnez-vous à notre newsletter",
+            subscribeDescription: "Recevez nos derniers articles et conseils directement dans votre boîte de réception.",
+            subscribeButton: "S'abonner",
+            loadMoreButton: "Charger Plus d'Articles"
+        },
+        
+        // Contact
+        contact: {
+            title: "Contact | Smart Hotline Agency",
+            description: "Contactez-nous pour en savoir plus sur nos services de communication téléphonique. Notre équipe est là pour vous aider.",
+            keywords: "contact, nous joindre, information, support",
+            heroTitle: "Contactez-Nous",
+            heroDescription: "Notre équipe est là pour répondre à toutes vos questions et vous aider à trouver la solution qui convient le mieux à votre entreprise.",
+            formTitle: "Envoyez-nous un message",
+            nameLabel: "Nom",
+            namePlaceholder: "Votre nom complet",
+            emailLabel: "Email",
+            emailPlaceholder: "votre@email.com",
+            phoneLabel: "Téléphone",
+            phonePlaceholder: "Votre numéro de téléphone",
+            companyLabel: "Entreprise",
+            companyPlaceholder: "Nom de votre entreprise",
+            serviceLabel: "Service d'intérêt",
+            servicePlaceholder: "Sélectionnez un service",
+            messageLabel: "Message",
+            messagePlaceholder: "Décrivez vos besoins...",
+            submitButton: "Envoyer le Message",
+            infoTitle: "Informations de Contact",
+            officeTitle: "Notre Bureau",
+            address: "123 Rue de la Communication, Montréal, QC H3A 1A1",
+            phone: "+1 (514) 123-4567",
+            email: "contact@smart-hotline.com",
+            hoursTitle: "Heures d'Ouverture",
+            hoursWeekdays: "Lundi - Vendredi: 9h00 - 18h00",
+            hoursSaturday: "Samedi: 10h00 - 16h00",
+            hoursSunday: "Dimanche: Fermé",
+            responseTitle: "Temps de Réponse",
+            responseEmail: "Email: Dans les 24 heures",
+            responsePhone: "Téléphone: Immédiat pendant les heures d'ouverture",
+            socialTitle: "Suivez-nous"
+        },
+        
+        // About
+        about: {
+            title: "À Propos | Smart Hotline Agency",
+            description: "Découvrez notre histoire, notre mission et notre équipe. Nous sommes dédiés à aider les PME à optimiser leur communication téléphonique.",
+            keywords: "à propos, histoire, mission, équipe, valeurs",
+            heroTitle: "À Propos de Smart Hotline",
+            heroDescription: "Nous sommes une équipe passionnée dédiée à aider les PME à optimiser leur communication téléphonique et à améliorer leur service client.",
+            storyTitle: "Notre Histoire",
+            storyDescription: "Fondée en 2018, Smart Hotline Agency est née de la constatation que de nombreuses PME peinent à gérer efficacement leurs communications téléphoniques tout en se concentrant sur leur cœur de métier. Notre fondateur, ayant lui-même fait face à ce défi, a décidé de créer une solution abordable et professionnelle pour aider les entreprises comme la sienne.",
+            missionTitle: "Notre Mission",
+            missionDescription: "Notre mission est de fournir des services de communication téléphonique de haute qualité qui permettent aux PME de paraître plus grandes et plus professionnelles, tout en leur permettant de se concentrer sur la croissance de leur entreprise.",
+            valuesTitle: "Nos Valeurs",
+            value1Title: "Professionnalisme",
+            value1Description: "Nous nous engageons à fournir un service professionnel de la plus haute qualité à chaque interaction.",
+            value2Title: "Flexibilité",
+            value2Description: "Nous comprenons que chaque entreprise est unique et offrons des solutions flexibles adaptées à vos besoins spécifiques.",
+            value3Title: "Transparence",
+            value3Description: "Nous croyons en une tarification transparente et en une communication honnête avec nos clients.",
+            value4Title: "Innovation",
+            value4Description: "Nous cherchons constamment à innover et à améliorer nos services pour mieux servir nos clients.",
+            teamTitle: "Notre Équipe",
+            teamDescription: "Notre équipe est composée de professionnels expérimentés passionnés par le service client et la communication.",
+            joinTitle: "Rejoignez Notre Équipe",
+            joinDescription: "Nous sommes toujours à la recherche de talents passionnés pour rejoindre notre équipe.",
+            joinButton: "Voir les Postes Ouverts"
+        },
+        
+        // Terms
         terms: {
             title: "Conditions Générales | Smart Hotline Agency",
-            description: "Consultez nos conditions générales pour l'utilisation des services de Smart Hotline Agency.",
-            keywords: "conditions générales, termes d'utilisation, contrat service, mentions légales",
+            description: "Consultez nos conditions générales d'utilisation pour tous nos services de communication téléphonique.",
+            keywords: "conditions générales, termes d'utilisation, contrat, service",
             heroTitle: "Conditions Générales",
             heroDescription: "Veuillez lire attentivement nos conditions générales avant d'utiliser nos services.",
-            introductionTitle: "Introduction",
-            introductionContent: "Ces conditions générales régissent l'utilisation des services de Smart Hotline Agency. En utilisant nos services, vous acceptez ces conditions.",
-            servicesTitle: "Services",
-            servicesContent: "Smart Hotline Agency fournit des services de réception et émission d'appels, de support client et de CRM pour les entreprises.",
-            paymentTitle: "Paiement",
-            paymentContent: "Les paiements sont dus mensuellement ou annuellement, selon le plan choisi. Tous les paiements sont non remboursables.",
-            cancellationTitle: "Annulation",
-            cancellationContent: "Vous pouvez annuler votre abonnement à tout moment. L'annulation prendra effet à la fin de la période de facturation en cours.",
+            lastUpdated: "Dernière mise à jour: 15 mai 2023",
+            introText: "En utilisant les services de Smart Hotline Agency, vous acceptez les conditions générales décrites ci-dessous. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.",
+            servicesTitle: "Description des Services",
+            servicesDescription: "Smart Hotline Agency fournit des services de communication téléphonique externalisés, incluant mais sans s'y limiter: la réception d'appels, l'émission d'appels, le support client et les solutions CRM.",
+            obligationsTitle: "Obligations du Client",
+            obligationsDescription: "Le client s'engage à: fournir des informations exactes, respecter les termes de paiement, ne pas utiliser nos services à des fins illégales, et respecter les droits de propriété intellectuelle.",
+            paymentTitle: "Modalités de Paiement",
+            paymentDescription: "Les services sont facturés mensuellement en fonction de l'utilisation réelle. Les paiements sont dus dans les 30 jours suivant la réception de la facture. Les retards de paiement peuvent entraîner des frais d'intérêt.",
+            terminationTitle: "Résiliation",
+            terminationDescription: "Le client peut résilier le service à tout moment avec un préavis de 30 jours. Smart Hotline Agency se réserve le droit de résilier le service en cas de non-respect des conditions générales.",
             privacyTitle: "Confidentialité",
-            privacyContent: "Nous nous engageons à protéger la confidentialité de vos informations. Consultez notre politique de confidentialité pour plus de détails.",
-            liabilityTitle: "Responsabilité",
-            liabilityContent: "Smart Hotline Agency n'est pas responsable des pertes indirectes ou consécutives découlant de l'utilisation de nos services.",
-            changesTitle: "Modifications",
-            changesContent: "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications entreront en vigueur dès leur publication sur notre site.",
+            privacyDescription: "Nous nous engageons à protéger la confidentialité des informations de nos clients conformément à notre politique de confidentialité.",
+            liabilityTitle: "Limitation de Responsabilité",
+            liabilityDescription: "Smart Hotline Agency n'est pas responsable des pertes indirectes, consécutives ou spéciales résultant de l'utilisation de nos services.",
+            changesTitle: "Modifications des Conditions",
+            changesDescription: "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications entreront en vigueur dès leur publication sur notre site web.",
             contactTitle: "Contact",
-            contactContent: "Pour toute question concernant ces conditions générales, veuillez nous contacter à l'adresse suivante : legal@smart-hotline.com."
+            contactDescription: "Pour toute question concernant ces conditions générales, veuillez nous contacter à l'adresse suivante: legal@smart-hotline.com"
         }
     },
     
     en: {
-        // Navigation
-        nav: {
-            home: "Home",
-            services: "Services",
-            pricing: "Pricing",
-            about: "About",
-            blog: "Blog",
-            contact: "Contact",
-            getStarted: "Get Started",
-            login: "Login"
-        },
-        
-        // Common
-        common: {
-            readMore: "Read More",
-            learnMore: "Learn More",
-            contactUs: "Contact Us",
-            requestDemo: "Request Demo",
-            freeTrial: "Free Trial",
-            pricing: "Pricing",
-            features: "Features",
-            testimonials: "Testimonials",
-            faq: "FAQ",
-            newsletter: "Newsletter",
-            subscribe: "Subscribe",
-            submit: "Submit",
-            name: "Name",
-            email: "Email",
-            phone: "Phone",
-            company: "Company",
-            message: "Message",
-            service: "Service",
-            package: "Package",
-            thankYou: "Thank You!",
-            successMessage: "Your message has been sent successfully.",
-            errorMessage: "An error occurred. Please try again."
-        },
-        
-        // Add English translations for all pages...
+        // English translations would go here
     }
 };
 
-// Current language
-let currentLanguage = 'fr';
-
 // Initialize localization
 function initLocalization() {
-    // Detect language from URL or browser
-    const urlLanguage = window.location.pathname.split('/')[1];
-    if (urlLanguage === 'en' || urlLanguage === 'fr') {
-        currentLanguage = urlLanguage;
-    } else {
-        // Fallback to browser language or default to French
-        const browserLanguage = navigator.language.split('-')[0];
-        currentLanguage = browserLanguage === 'en' ? 'en' : 'fr';
+    // Detect user's preferred language
+    let userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.split('-')[0]; // Get the language code without region
+    
+    // Default to French if language is not supported
+    if (!translations[userLang]) {
+        userLang = 'fr';
     }
     
-    // Apply translations
-    applyTranslations();
+    // Store the current language
+    localStorage.setItem('language', userLang);
     
-    // Add language switcher event listeners
-    const languageSwitchers = document.querySelectorAll('.language-switcher');
-    languageSwitchers.forEach(switcher => {
-        switcher.addEventListener('click', function(e) {
-            e.preventDefault();
-            const newLanguage = this.getAttribute('data-language');
-            switchLanguage(newLanguage);
-        });
-    });
+    // Apply translations
+    applyTranslations(userLang);
 }
 
-// Apply translations to elements with data-i18n attribute
-function applyTranslations() {
+// Apply translations to the page
+function applyTranslations(lang) {
     const elements = document.querySelectorAll('[data-i18n]');
     
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
-        const translation = getTranslation(key);
+        const keys = key.split('.');
+        let translation = translations[lang];
         
-        if (translation) {
-            // Handle different element types
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
-            } else if (element.tagName === 'META') {
-                element.content = translation;
+        for (const k of keys) {
+            if (translation[k]) {
+                translation = translation[k];
             } else {
-                element.textContent = translation;
+                translation = key; // Fallback to the key if translation is not found
+                break;
             }
+        }
+        
+        // Update element content or attribute based on element type
+        if (element.tagName === 'META') {
+            element.content = translation;
+        } else {
+            element.textContent = translation;
         }
     });
-    
-    // Update HTML lang attribute
-    document.documentElement.lang = currentLanguage;
-    
-    // Update direction if needed (for RTL languages)
-    if (currentLanguage === 'ar' || currentLanguage === 'he') {
-        document.documentElement.dir = 'rtl';
-    } else {
-        document.documentElement.dir = 'ltr';
-    }
-}
-
-// Get translation by key
-function getTranslation(key) {
-    const keys = key.split('.');
-    let translation = translations[currentLanguage];
-    
-    for (const k of keys) {
-        if (translation && translation[k]) {
-            translation = translation[k];
-        } else {
-            // Fallback to French if translation not found in current language
-            translation = translations.fr;
-            for (const fallbackKey of keys) {
-                if (translation && translation[fallbackKey]) {
-                    translation = translation[fallbackKey];
-                } else {
-                    return null;
-                }
-            }
-            break;
-        }
-    }
-    
-    return translation;
 }
 
 // Switch language
-function switchLanguage(newLanguage) {
-    if (newLanguage === currentLanguage) return;
-    
-    // Store current page path
-    const currentPath = window.location.pathname;
-    
-    // Replace language in path
-    let newPath;
-    if (currentPath.includes('/fr/') || currentPath.includes('/en/')) {
-        newPath = currentPath.replace(`/${currentLanguage}/`, `/${newLanguage}/`);
-    } else {
-        newPath = `/${newLanguage}${currentPath}`;
+function switchLanguage(lang) {
+    if (translations[lang]) {
+        localStorage.setItem('language', lang);
+        applyTranslations(lang);
+        
+        // Update language selector if present
+        const langSelector = document.getElementById('language-selector');
+        if (langSelector) {
+            langSelector.value = lang;
+        }
     }
-    
-    // Navigate to new language page
-    window.location.href = newPath;
 }
 
-// Format price based on current language and location
-function formatPrice(price, currency = 'CAD') {
-    const locale = currentLanguage === 'fr' ? 'fr-CA' : 'en-CA';
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initLocalization();
     
-    return new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: currency,
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    }).format(price);
-}
-
-// Format date based on current language
-function formatDate(date) {
-    const locale = currentLanguage === 'fr' ? 'fr-CA' : 'en-CA';
-    
-    return new Intl.DateTimeFormat(locale, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }).format(date);
-}
-
-// Initialize on DOM content loaded
-document.addEventListener('DOMContentLoaded', initLocalization);
+    // Add event listener to language selector if present
+    const langSelector = document.getElementById('language-selector');
+    if (langSelector) {
+        langSelector.addEventListener('change', function() {
+            switchLanguage(this.value);
+        });
+    }
+});
