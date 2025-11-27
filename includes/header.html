@@ -1,138 +1,111 @@
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="../" class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                SH
-            </div>
-            <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-        </a>
-        
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="../" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-            <!-- Services Dropdown -->
-            <div class="relative group">
-                <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                    Services
-                    <i class="fas fa-chevron-down text-xs ml-1"></i>
-                </button>
-                <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                        <div class="flex items-center">
-                            <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Tous les services</div>
-                                <div class="text-xs text-gray-500">Découvrez notre gamme complète</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Réception d'appels</div>
-                                <div class="text-xs text-gray-500">Ne manquez jamais un appel</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Prospection téléphonique</div>
-                                <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-headset text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">Support client</div>
-                                <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                        <div class="flex items-center">
-                            <i class="fas fa-database text-primary-600 mr-3"></i>
-                            <div>
-                                <div class="font-medium">CRM & Listes</div>
-                                <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                            </div>
-                        </div>
-                    </a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="site.title">Smart Hotline Agency</title>
+    <meta name="description" data-i18n="site.description" content="Services de communication téléphonique pour PME">
+    <meta name="keywords" data-i18n="site.keywords" content="réception d'appels, télésecrétariat, téléprospection">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/main.css">
+</head>
+
+<body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="../images/logo.svg" alt="Smart Hotline Agency" class="h-10 mr-2">
+                    <span class="text-xl font-bold text-primary-600">Smart Hotline</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.home">Accueil</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.services">Services</a>
+                    <a href="pricing.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.pricing">Tarifs</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.blog">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.about">À propos</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.contact">Contact</a>
                 </div>
-            </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-            <!-- Language Selector -->
-            <div class="relative">
-                <button id="langToggle" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                    <span>FR</span>
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </button>
-                <div id="langDropdown" class="hidden absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <a href="../en/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">English</a>
-                    <a href="../fr/index.html" class="block px-4 py-2 hover:bg-gray-100 transition-colors">Français</a>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="../en/index.html" class="text-gray-700 hover:text-primary-600 transition-colors">
+                        <i class="fas fa-globe"></i> EN
+                    </a>
+                    <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
             
-            <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </nav>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-        <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-            <a href="../" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-            <div class="border-t pt-3">
-                <div class="font-medium text-gray-700 mb-2">Services</div>
-                <div class="pl-4 space-y-2">
-                    <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous les services</a>
-                    <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'appels</a>
-                    <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Prospection téléphonique</a>
-                    <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support client</a>
-                    <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
-                </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.home">Accueil</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.services">Services</a>
+                <a href="pricing.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.pricing">Tarifs</a>
+                <a href="blog.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.blog">Blog</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.about">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary-600 transition-colors" data-i18n="nav.contact">Contact</a>
             </div>
-            <a href="price.html" class="text-gray-700 hover:text-primary-600 transition-colors">Tarifs</a>
-            <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À propos</a>
-            <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-            <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-        </div>
-    </div>
-</header>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Language dropdown toggle
-    const langToggle = document.getElementById('langToggle');
-    const langDropdown = document.getElementById('langDropdown');
-    
-    langToggle.addEventListener('click', function() {
-        langDropdown.classList.toggle('hidden');
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-            langDropdown.classList.add('hidden');
-        }
-    });
-    
-    // Mobile menu toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-});
-</script>
+        </nav>
+    </header>
