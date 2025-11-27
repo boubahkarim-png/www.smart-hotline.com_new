@@ -1,83 +1,78 @@
-    <!-- Footer -->
-    <footer class="bg-dark-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <img src="../images/logo-white.svg" alt="Smart Hotline Agency" class="h-10 mr-2">
-                        <span class="text-xl font-bold">Smart Hotline</span>
-                    </div>
-                    <p class="text-gray-400 mb-4" data-i18n="footer.description">
-                        Votre partenaire de confiance pour tous vos besoins en communication téléphonique.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
+<!-- fr/partials/footer.html -->
+<footer class="bg-dark-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="../images/logo-white.png" alt="Smart Hotline Agency" class="h-10 mr-3">
+                    <span class="text-xl font-bold">Smart Hotline Agency</span>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.servicesTitle">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="reception.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.reception">Réception d'appels</a></li>
-                        <li><a href="emission.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.emission">Émission d'appels</a></li>
-                        <li><a href="support.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.support">Support client</a></li>
-                        <li><a href="crm-lists.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.crm">CRM & Listes</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.companyTitle">Entreprise</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.about">À propos</a></li>
-                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
-                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.pricing">Tarifs</a></li>
-                        <li><a href="conditions-generales.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.terms">Conditions générales</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contactTitle">Contact</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
-                            <span data-i18n="footer.address">123 Rue de la Communication, Montréal, QC H3A 1A1</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            <span data-i18n="footer.phone">+1 (514) 123-4567</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <span data-i18n="footer.email">contact@smart-hotline.com</span>
-                        </li>
-                    </ul>
+                <p class="text-gray-400 mb-4" data-i18n="footer.description">
+                    Solutions de communication téléphonique adaptées pour les entrepreneurs et PME.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/smart-hotline" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://twitter.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p data-i18n="footer.copyright">&copy; 2023 Smart Hotline Agency. Tous droits réservés.</p>
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.services">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="reception.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.callReception">Réception d'Appels</a></li>
+                    <li><a href="emission.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.callMaking">Appels Sortants</a></li>
+                    <li><a href="support.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.customerSupport">Support Client</a></li>
+                    <li><a href="crm-lists.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.crmLists">CRM & Listes</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.company">Entreprise</h3>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.about">À Propos</a></li>
+                    <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
+                    <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.pricing">Tarifs</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-500"></i>
+                        <span data-i18n="footer.address">123 rue de la République, Montréal, QC H3A 2B4</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-primary-500"></i>
+                        <span>+1-514-819-0559</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-primary-500"></i>
+                        <span>contact@smart-hotline.com</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
-    
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/15141234567" target="_blank" class="whatsapp-button">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-    
-    <!-- Scripts -->
-    <script src="../assets/main.js"></script>
-    <script src="../assets/localization.js"></script>
-</body>
-</html>
+        
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0" data-i18n="footer.copyright">
+                © 2023 Smart Hotline Agency. Tous droits réservés.
+            </p>
+            <div class="flex space-x-6 text-sm">
+                <a href="conditions-generales.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.terms">Conditions Générales</a>
+                <a href="politique-confidentialite.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.privacy">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
