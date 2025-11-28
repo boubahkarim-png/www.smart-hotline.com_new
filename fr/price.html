@@ -8,142 +8,943 @@
     <meta name="keywords" content="tarifs téléphonie, prix appels sortants, prix appels entrants, tarifs CRM, tarifs support client, formules PME">
     <meta name="robots" content="index, follow">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-hotline.com/fr/pricing.html">
+    <meta property="og:title" content="Tarifs | Smart Hotline Agency">
+    <meta property="og:description" content="Tarifs compétitifs pour services de téléphonie: appels sortants, appels entrants, CRM, support client. Formules flexibles pour PME.">
+    <meta property="og:image" content="https://smart-hotline.com/images/pricing-hero.jpg">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smart-hotline.com/fr/pricing.html">
+    <meta property="twitter:title" content="Tarifs | Smart Hotline Agency">
+    <meta property="twitter:description" content="Tarifs compétitifs pour services de téléphonie: appels sortants, appels entrants, CRM, support client. Formules flexibles pour PME.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/pricing-hero.jpg">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/fr/pricing.html" />
     
-    <!-- Custom Tailwind Config -->
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/pricing.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/pricing.html" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/styles.css" as="style">
+    <link rel="preload" href="../assets/reveal.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Google Analytics with minimal impact -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB', { 
+            'anonymize_ip': true,
+            'optimize_id': 'OPT-XXXXXXX'
+        });
     </script>
-    
+
+    <!-- Critical CSS Inlined -->
     <style>
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --dark-50: #f8fafc;
+            --dark-100: #f1f5f9;
+            --dark-200: #e2e8f0;
+            --dark-300: #cbd5e1;
+            --dark-400: #94a3b8;
+            --dark-500: #64748b;
+            --dark-600: #475569;
+            --dark-700: #334155;
+            --dark-800: #1e293b;
+            --dark-900: #0f172a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
         .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .hover-lift {
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-600);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-600);
+        }
+
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            width: 20rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--primary-50);
+        }
+
+        .dropdown-item i {
+            color: var(--primary-600);
+            width: 1rem;
+        }
+
+        .dropdown-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .dropdown-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        /* Language Selector */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            color: #374151;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            width: 8rem;
+            background: white;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .lang-dropdown.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+
+        .lang-dropdown:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #374151;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .mobile-menu:not(.hidden) {
+            display: block;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .mobile-nav-group {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(135deg, var(--primary-50), white);
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-600);
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-700);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-600);
+            border: 2px solid var(--primary-600);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-50);
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: auto;
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--primary-600);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .badge-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .badge-subtitle {
+            font-size: 0.875rem;
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            padding: 3rem 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .trust-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem 4rem;
+            opacity: 0.6;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .trust-icon {
+            font-size: 1.875rem;
+            color: var(--primary-600);
+        }
+        
+        .trust-text {
+            font-weight: 600;
+        }
+
+        /* Service Tabs */
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .service-tab {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-tab.active {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .service-tab:not(.active) {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .service-tab:not(.active):hover {
+            background: #e5e7eb;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .pricing-card {
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
-        
-        .hover-lift:hover {
+
+        .pricing-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary-600);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary-600);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-currency {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-600);
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-600);
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+
+        .pricing-description {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .pricing-feature i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .pricing-action {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        /* Custom Quote Section */
+        .custom-quote {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .faq-grid {
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-600);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #4b5563;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 20rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #f3f4f6;
+        }
+
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-900);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #374151;
+            border-radius: 0.375rem;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .contact-info {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Scroll Reveal Animation */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        
+
         .scroll-reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        .pricing-card {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: visible;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            z-index: 10;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-        }
-        
-        .price-highlight {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #0ea5e9;
-        }
-        
-        .price-period {
-            font-size: 1rem;
-            color: #64748b;
-        }
-        
-        .price-note {
-            font-size: 0.875rem;
-            color: #94a3b8;
-        }
-        
+
+        /* Chat Button */
         .chat-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 1.25rem;
+            right: 1.25rem;
             z-index: 999;
-            width: 60px;
-            height: 60px;
+            width: 3.75rem;
+            height: 3.75rem;
             border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
             color: white;
             display: flex;
             align-items: center;
@@ -152,583 +953,976 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
         }
-        
+
         .chat-button:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
-        
-        .service-tab {
-            transition: all 0.3s ease;
-        }
-        
-        .service-tab.active {
-            background: #0ea5e9;
-            color: white;
-        }
-        
-        .service-content {
-            display: none;
-        }
-        
-        .service-content.active {
-            display: block;
-        }
-        
-        /* Horizontal scroll for pricing cards on mobile */
-        @media (max-width: 768px) {
-            .pricing-container {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: x mandatory;
-                padding-bottom: 1rem;
-            }
-            
-            .pricing-container::-webkit-scrollbar {
-                height: 8px;
-            }
-            
-            .pricing-container::-webkit-scrollbar-track {
-                background: #f1f5f9;
-                border-radius: 10px;
-            }
-            
-            .pricing-container::-webkit-scrollbar-thumb {
-                background: #0ea5e9;
-                border-radius: 10px;
-            }
-            
-            .pricing-card {
-                min-width: 300px;
-                scroll-snap-align: start;
-            }
+
+        .chat-button i {
+            font-size: 1.5rem;
         }
     </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    
+    <!-- Load Google Fonts asynchronously -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body class="font-sans text-gray-800">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">
-                    SH
-                </div>
-                <span class="text-xl font-bold text-gray-900">Smart Hotline</span>
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-primary-600 transition-colors flex items-center">
-                        Services
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="services.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors border-b">
-                            <div class="flex items-center">
-                                <i class="fas fa-th-large text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Tous nos services</div>
-                                    <div class="text-xs text-gray-500">Découvrir notre gamme complète</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Réception d'Appels</div>
-                                    <div class="text-xs text-gray-500">Ne manquez aucun appel</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-volume text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Émission d'Appels</div>
-                                    <div class="text-xs text-gray-500">Développez votre clientèle</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-headset text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">Support Client</div>
-                                    <div class="text-xs text-gray-500">Améliorez la satisfaction</div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="block px-4 py-3 hover:bg-primary-50 transition-colors">
-                            <div class="flex items-center">
-                                <i class="fas fa-database text-primary-600 mr-3"></i>
-                                <div>
-                                    <div class="font-medium">CRM & Listes</div>
-                                    <div class="text-xs text-gray-500">Maximisez vos ventes</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-primary-600 font-semibold">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
-                <div class="relative">
-                    <a href="../en/index.html" class="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors">
-                        <span>FR</span>
-                        <i class="fas fa-exchange-alt text-xs ml-1"></i>
-                    </a>
-                </div>
-                
-                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Accueil</a>
-                <div class="border-t pt-3">
-                    <div class="font-medium text-gray-700 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="services.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Tous nos services</a>
-                        <a href="reception.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Réception d'Appels</a>
-                        <a href="emission.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Émission d'Appels</a>
-                        <a href="support.html" class="block text-gray-600 hover:text-primary-600 transition-colors">Support Client</a>
-                        <a href="crm-lists.html" class="block text-gray-600 hover:text-primary-600 transition-colors">CRM & Listes</a>
-                    </div>
-                </div>
-                <a href="price.html" class="text-primary-600 font-semibold">Tarifs</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-600 transition-colors">À Propos</a>
-                <a href="blog.html" class="text-gray-700 hover:text-primary-600 transition-colors">Blog</a>
-                <a href="contact.html" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Tarifs Compétitifs</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Des formules flexibles adaptées aux besoins des PME avec essai gratuit et promotions avantageuses
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="bg-primary-100 rounded-lg p-4 flex items-center">
-                            <i class="fas fa-gift text-primary-600 mr-3 text-xl"></i>
-                            <div class="text-left">
-                                <div class="font-semibold text-primary-800">7 Jours Gratuit</div>
-                                <div class="text-sm text-primary-600">Premier mois pour tous les services</div>
-                            </div>
-                        </div>
-                        <div class="bg-primary-100 rounded-lg p-4 flex items-center">
-                            <i class="fas fa-percentage text-primary-600 mr-3 text-xl"></i>
-                            <div class="text-left">
-                                <div class="font-semibold text-primary-800">10% de Réduction</div>
-                                <div class="text-sm text-primary-600">Pour un engagement de 3 mois</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="../images/pricing-hero.png" alt="Plans Tarifaires" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold">7 Jours</div>
-                        <div class="text-sm">Essai Gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Service Selector -->
-    <section class="py-8 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <button onclick="showService('outbound')" class="service-tab active px-6 py-3 rounded-lg font-semibold transition-colors" data-service="outbound">
-                    <i class="fas fa-phone-volume mr-2"></i>Appels Sortants
-                </button>
-                <button onclick="showService('inbound')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="inbound">
-                    <i class="fas fa-phone-alt mr-2"></i>Appels Entrants
-                </button>
-                <button onclick="showService('crm')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="crm">
-                    <i class="fas fa-database mr-2"></i>CRM & Support
-                </button>
-                <button onclick="showService('all')" class="service-tab px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="all">
-                    <i class="fas fa-th mr-2"></i>Tous les Services
-                </button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Pricing Tables -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Tarifs</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Choisissez la formule qui correspond le mieux à vos besoins
-                </p>
-            </div>
-            
-            <!-- Appels Sortants Pricing -->
-            <div id="outbound-content" class="service-content active mb-16">
-                <h3 class="text-2xl font-bold mb-8 text-center">Appels Sortants</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
-                    <!-- 20h/week Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <h4 class="text-xl font-bold mb-4 text-center">Starter</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">19€</div>
-                            <span class="price-period">/heure</span>
-                            <p class="text-gray-600">20 heures par semaine</p>
-                            <p class="text-gray-500 mt-2">~160€/mois</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Système de distribution automatique</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Optimisation des horaires</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Rapports mensuels</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support email et téléphone</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=outgoing-starter" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 40h/week Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <div class="popular-badge">La Plus Populaire</div>
-                        <h4 class="text-xl font-bold mb-4 text-center">Professional</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">17€</div>
-                            <span class="price-period">/heure</span>
-                            <p class="text-gray-600">40 heures par semaine</p>
-                            <p class="text-gray-500 mt-2">~290€/mois</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Stratégie de numérotation avancée</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Gestion des scripts personnalisés</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Optimisation de la conversion</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support prioritaire 24/7</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=outgoing-professional" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 80h/week Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <h4 class="text-xl font-bold mb-4 text-center">Enterprise</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">15€</div>
-                            <span class="price-period">/heure</span>
-                            <p class="text-gray-600">80 heures par semaine</p>
-                            <p class="text-gray-500 mt-2">~520€/mois</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Plusieurs numéros et SIP trunk</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Équipe dédiée incluse</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Formation continue et optimisation</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support personnalisé</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=outgoing-enterprise" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Sur Devis Plan -->
-                    <div class="pricing-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-8 border-2 border-dashed border-gray-300">
-                        <h4 class="text-xl font-bold mb-4 text-center">Sur Devis</h4>
-                        <div class="text-center mb-6">
-                            <i class="fas fa-calculator text-6xl text-gray-400 mb-4"></i>
-                            <p class="text-gray-600">Solution sur mesure pour vos besoins spécifiques</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Horaires flexibles</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Fonctionnalités personnalisées</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support personnalisé</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Gestionnaire de compte dédié</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=outgoing-custom" class="inline-block px-6 py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Demander un Devis
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Custom Quote Option -->
-                <div class="text-center mt-8">
-                    <a href="contact.html?plan=outgoing-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fas fa-calculator mr-2"></i> Demander un Devis Personnalisé
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Appels Entrants Pricing -->
-            <div id="inbound-content" class="service-content mb-16">
-                <h3 class="text-2xl font-bold mb-8 text-center">Appels Entrants</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
-                    <!-- Basic Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <h4 class="text-xl font-bold mb-4 text-center">Basic</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">149€</div>
-                            <span class="price-period">/mois</span>
-                            <p class="text-gray-600">Jusqu'à 500 appels</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Standard IVR</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Prise de messages</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Rapports d'appels détaillés</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=incoming-basic" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Advanced Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <div class="popular-badge">La Plus Populaire</div>
-                        <h4 class="text-xl font-bold mb-4 text-center">Advanced</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">249€</div>
-                            <span class="price-period">/mois</span>
-                            <p class="text-gray-600">Jusqu'à 1500 appels</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>IVR intelligent avec reconnaissance vocale</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Intégration CRM complète</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Analytique avancée</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Personnalisation complète</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=incoming-advanced" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Premium Plan -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <h4 class="text-xl font-bold mb-4 text-center">Premium</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">349€</div>
-                            <span class="price-period">/mois</span>
-                            <p class="text-gray-600">Jusqu'à 2500 appels</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Toutes les fonctionnalités Advanced</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support multicanal prioritaire</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Formation personnalisée continue</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=incoming-premium" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Sur Devis Plan -->
-                    <div class="pricing-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-8 border-2 border-dashed border-gray-300">
-                        <h4 class="text-xl font-bold mb-4 text-center">Sur Devis</h4>
-                        <div class="text-center mb-6">
-                            <i class="fas fa-calculator text-6xl text-gray-400 mb-4"></i>
-                            <p class="text-gray-600">Solution sur mesure pour vos besoins spécifiques</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Volume d'appels flexible</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Flux IVR personnalisés</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Intégrations avancées</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Gestionnaire de compte dédié</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=incoming-custom" class="inline-block px-6 py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Demander un Devis
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Custom Quote Option -->
-                <div class="text-center mt-8">
-                    <a href="contact.html?plan=incoming-custom" class="inline-block px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                        <i class="fas fa-calculator mr-2"></i> Demander un Devis Personnalisé
-                    </a>
-                </div>
-            </div>
-            
-            <!-- CRM & Support Pricing -->
-            <div id="crm-content" class="service-content mb-16">
-                <h3 class="text-2xl font-bold mb-8 text-center">CRM & Support</h3>
-                <div class="pricing-container flex md:grid md:grid-cols-4 gap-8 pb-4">
-                    <!-- Starter CRM -->
-                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <h4 class="text-xl font-bold mb-4 text-center">CRM Starter</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">199€</div>
-                            <span class="price-period">/mois</span>
-                            <p class="text-gray-600">CRM basique avec fonctionnalités essentielles</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Gestion des contacts</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Suivi des interactions</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Rapports de base</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=crm-starter" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Professional CRM -->
-                                        <div class="pricing-card bg-white rounded-xl shadow-lg p-8">
-                        <div class="popular-badge">La Plus Populaire</div>
-                        <h4 class="text-xl font-bold mb-4 text-center">CRM Professional</h4>
-                        <div class="text-center mb-6">
-                            <div class="text-4xl font-bold text-primary-600">299€</div>
-                            <span class="price-period">/mois</span>
-                            <p class="text-gray-600">CRM avancé avec automatisation</p>
-                        </div>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Automatisation marketing</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Intégrations multiples</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-primary-600 mr-2"></i>
-                                <span>Support client dédié</span>
-                            </li>
-                        </ul>
-                        <div class="text-center mt-6">
-                            <a href="contact.html?plan=crm-professional" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                                Choisir cette Formule
-                            </a>
-                        </div>
-                    </div>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <h1 class="hero-title">
+                            <span class="gradient-text">Tarifs Compétitifs</span>
+                        </h1>
+                        <p class="hero-description">
+                            Des formules flexibles adaptées aux besoins des PME avec essai gratuit et promotions avantageuses
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#outbound" class="btn-primary">Voir les Tarifs</a>
+                            <a href="contact.html" class="btn-secondary">Nous Contacter</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <img src="../images/pricing-hero.jpg" alt="Plans Tarifaires" class="hero-image" loading="lazy">
+                        <div class="hero-badge">
+                            <div class="badge-title">7 Jours</div>
+                            <div class="badge-subtitle">Essai Gratuit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Badges Section -->
+        <section class="trust-badges">
+            <div class="container">
+                <p class="trust-title">Des tarifs transparents et adaptés à vos besoins</p>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fas fa-gift trust-icon"></i>
+                        <span class="trust-text">7 Jours Gratuit</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-percentage trust-icon"></i>
+                        <span class="trust-text">10% de Réduction</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-ban trust-icon"></i>
+                        <span class="trust-text">Sans Engagement</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-sync trust-icon"></i>
+                        <span class="trust-text">Flexibilité Totale</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Tabs -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="service-tabs">
+                    <button class="service-tab active" onclick="showService('outbound')">
+                        <i class="fas fa-phone-volume mr-2"></i>Appels Sortants
+                    </button>
+                    <button class="service-tab" onclick="showService('inbound')">
+                        <i class="fas fa-phone-alt mr-2"></i>Appels Entrants
+                    </button>
+                    <button class="service-tab" onclick="showService('support')">
+                        <i class="fas fa-headset mr-2"></i>Support Client
+                    </button>
+                    <button class="service-tab" onclick="showService('crm')">
+                        <i class="fas fa-database mr-2"></i>CRM & Listes
+                    </button>
+                </div>
+                
+                <!-- Outbound Pricing -->
+                <div id="outbound" class="pricing-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Appels Sortants</h2>
+                        <p class="section-description">
+                            Des tarifs dégressifs selon le volume d'appels avec essai gratuit
+                        </p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <!-- Starter Plan -->
+                        <div class="pricing-card">
+                            <div class="popular-badge">Offre Spéciale</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Starter</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">15</span>
+                                    <span class="price-period">/heure</span>
+                                </div>
+                                <p class="pricing-description">20h/semaine pendant 2 semaines</p>
+                                <p class="pricing-description">+30€/rendez-vous ou vente</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Système de distribution automatique</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Optimisation des horaires</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rapports mensuels</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support email et téléphone</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=outbound-starter" class="btn-primary">Commencer l'Essai</a>
+                            </div>
+                            <p class="pricing-note">Offre de découverte limitée à une fois</p>
+                        </div>
+                        
+                        <!-- Professional Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Professional</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">19</span>
+                                    <span class="price-period">/heure</span>
+                                </div>
+                                <p class="pricing-description">Moins de 40h par semaine</p>
+                                <p class="pricing-description">~300€/mois</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Système de distribution automatique</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Optimisation des horaires</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rapports mensuels détaillés</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support prioritaire 24/7</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=outbound-professional" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Business</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">18</span>
+                                    <span class="price-period">/heure</span>
+                                </div>
+                                <p class="pricing-description">Moins de 80h par semaine</p>
+                                <p class="pricing-description">~580€/mois</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Stratégie de numérotation avancée</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des scripts personnalisés</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Optimisation de la conversion</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support prioritaire 24/7</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=outbound-business" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Enterprise Plan -->
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">La Plus Populaire</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Enterprise</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">17</span>
+                                    <span class="price-period">/heure</span>
+                                </div>
+                                <p class="pricing-description">Moins de 120h par semaine (3 agents)</p>
+                                <p class="pricing-description">~820€/mois</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Plusieurs numéros et SIP trunk</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Équipe dédiée incluse</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Formation continue et optimisation</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support personnalisé</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=outbound-enterprise" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-quote">
+                        <p>Besoin d'un volume supérieur ou d'une solution sur mesure ?</p>
+                        <a href="contact.html?plan=outbound-custom" class="btn-secondary">Demander un Devis</a>
+                    </div>
+                </div>
+                
+                <!-- Inbound Pricing -->
+                <div id="inbound" class="pricing-content hidden">
+                    <div class="section-header">
+                        <h2 class="section-title">Appels Entrants</h2>
+                        <p class="section-description">
+                            Ne manquez plus aucun appel avec nos formules de réception professionnelle
+                        </p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <!-- Basic Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Basic</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">149</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">Jusqu'à 500 appels</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Standard IVR</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Prise de messages</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rapports d'appels détaillés</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=inbound-basic" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Advanced Plan -->
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">La Plus Populaire</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Advanced</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">249</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">Jusqu'à 1500 appels</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>IVR intelligent avec reconnaissance vocale</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégration CRM complète</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Analytique avancée</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Personnalisation complète</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=inbound-advanced" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Premium</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">349</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">Jusqu'à 2500 appels</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Toutes les fonctionnalités Advanced</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support multicanal prioritaire</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Formation personnalisée continue</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=inbound-premium" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Custom Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Sur Devis</h3>
+                                <div class="pricing-price">
+                                    <i class="fas fa-calculator fa-2x text-gray-400"></i>
+                                </div>
+                                <p class="pricing-description">Solution sur mesure</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Volume d'appels flexible</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Flux IVR personnalisés</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégrations avancées</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestionnaire de compte dédié</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=inbound-custom" class="btn-primary">Demander un Devis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Support Pricing -->
+                <div id="support" class="pricing-content hidden">
+                    <div class="section-header">
+                        <h2 class="section-title">Support Client</h2>
+                        <p class="section-description">
+                            Offrez un service client exceptionnel 24/7 à vos clients
+                        </p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <!-- Basic Support Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Basic</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">199</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">8h/5j par email et téléphone</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Réponse sous 24h</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des tickets</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rapports mensuels</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=support-basic" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Support Plan -->
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">La Plus Populaire</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Professional</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">299</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">24/7 multilingue et multicanal</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Réponse sous 2h</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support multicanal</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Base de connaissances</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégration CRM</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=support-professional" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Support Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Premium</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">449</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">Équipe dédiée et sur mesure</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Réponse sous 30min</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support prioritaire</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Formation personnalisée</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestionnaire de compte dédié</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=support-premium" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Custom Support Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Sur Devis</h3>
+                                <div class="pricing-price">
+                                    <i class="fas fa-calculator fa-2x text-gray-400"></i>
+                                </div>
+                                <p class="pricing-description">Solution sur mesure</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Horaires flexibles</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Fonctionnalités personnalisées</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support personnalisé</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestionnaire de compte dédié</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=support-custom" class="btn-primary">Demander un Devis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CRM Pricing -->
+                <div id="crm" class="pricing-content hidden">
+                    <div class="section-header">
+                        <h2 class="section-title">CRM & Listes</h2>
+                        <p class="section-description">
+                            Maximisez vos ventes avec notre CRM complet et nos listes qualifiées
+                        </p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <!-- Starter CRM Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Starter</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">199</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">CRM basique avec fonctionnalités essentielles</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des contacts</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Suivi des interactions</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rapports de base</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=crm-starter" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional CRM Plan -->
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">La Plus Populaire</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Professional</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">299</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">CRM avancé avec automatisation</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Automatisation marketing</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégrations multiples</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support client dédié</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Listes de prospects qualifiées</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=crm-professional" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Enterprise CRM Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Enterprise</h3>
+                                <div class="pricing-price">
+                                    <span class="price-currency">€</span>
+                                    <span class="price-amount">499</span>
+                                    <span class="price-period">/mois</span>
+                                </div>
+                                <p class="pricing-description">CRM sur mesure avec équipe dédiée</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Toutes les fonctionnalités Professional</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Autocomposeur intelligent</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Listes de prospects illimitées</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Formation personnalisée</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=crm-enterprise" class="btn-primary">Choisir cette Formule</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Custom CRM Plan -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Sur Devis</h3>
+                                <div class="pricing-price">
+                                    <i class="fas fa-calculator fa-2x text-gray-400"></i>
+                                </div>
+                                <p class="pricing-description">Solution sur mesure</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Fonctionnalités personnalisées</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégrations sur mesure</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Support personnalisé</span>
+                                </li>
+                                <li class="pricing-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestionnaire de compte dédié</span>
+                                </li>
+                            </ul>
+                            <div class="pricing-action">
+                                <a href="contact.html?plan=crm-custom" class="btn-primary">Demander un Devis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Questions Fréquentes</h2>
+                    <p class="section-description">
+                        Réponses aux questions les plus courantes sur nos tarifs
+                    </p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Comment fonctionne l'essai gratuit ?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>L'essai gratuit de 2 semaines vous permet de tester nos services sans engagement. Vous bénéficiez de 20h/semaine à 15€/heure plus 30€ par rendez-vous ou vente validée. À la fin de la période, vous pouvez choisir de continuer avec une de nos formules ou d'arrêter sans frais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Puis-je changer de formule à tout moment ?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez adapter votre formule à tout moment avec un préavis de 7 jours. Les changements prennent effet au début du mois suivant.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Quelles sont les modalités de paiement ?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nous acceptons les paiements par carte bancaire, virement bancaire et prélèvement automatique mensuel. Les paiements sont sécurisés et conformes aux normes RGPD.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Proposez-vous des réductions pour les engagements longs ?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, nous proposons une réduction de 10% pour tout engagement de 3 mois ou plus. Contactez-nous pour en savoir plus sur nos offres spéciales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Prêt à Transformer Votre Communication ?</h2>
+                    <p class="cta-description">
+                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment nos services peuvent booster votre activité.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary">Commencer Maintenant</a>
+                        <a href="tel:+15148190559" class="btn-secondary">Appeler Directement</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- Load JavaScript asynchronously -->
+    <script src="../assets/reveal.js" defer></script>
+    <script src="../assets/localization.js" defer></script>
+    
+    <!-- Inline script for critical functionality -->
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    
+                    // Set up event listeners for header after it's loaded
+                    setupHeaderEventListeners();
+                    
+                    // Set active navigation
+                    setActiveNavigation();
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            // Load footer
+            fetch('../includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                    
+                    // Set up event listeners for footer after it's loaded
+                    setupFooterEventListeners();
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Initialize animations
+            initScrollReveal();
+        });
+        
+        // Service tab switching
+        function showService(service) {
+            // Hide all service contents
+            document.querySelectorAll('.pricing-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.service-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected service content
+            document.getElementById(service).classList.remove('hidden');
+            
+            // Add active class to selected tab
+            document.querySelector(`.service-tab[onclick="showService('${service}')"]`).classList.add('active');
+        }
+        
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('open');
+        }
+        
+        // Set active navigation based on current page
+        function setActiveNavigation() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Set active class based on current page
+            let activeId = '';
+            switch(currentPage) {
+                case 'index.html':
+                    activeId = 'nav-home';
+                    break;
+                case 'services.html':
+                    activeId = 'nav-services';
+                    break;
+                case 'pricing.html':
+                    activeId = 'nav-pricing';
+                    break;
+                case 'faq.html':
+                    activeId = 'nav-faq';
+                    break;
+                case 'blog.html':
+                    activeId = 'nav-blog';
+                    break;
+                case 'contact.html':
+                    activeId = 'nav-contact';
+                    break;
+                case 'reception.html':
+                case 'emission.html':
+                case 'support.html':
+                case 'crm-lists.html':
+                    activeId = 'nav-services';
+                    break;
+            }
+            
+            // Set active class
+            if (activeId) {
+                document.getElementById(activeId)?.classList.add('active');
+                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+            }
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            if (!scrollRevealElements.length) return;
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners for header
+        function setupHeaderEventListeners() {
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            // Language selector
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    langDropdown.classList.toggle('hidden');
+                });
+            }
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            if (langOptions) {
+                langOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = option.getAttribute('data-lang');
+                        if (lang === 'en') {
+                            window.location.href = '../en/pricing.html';
+                        }
+                        if (langDropdown) {
+                            langDropdown.classList.add('hidden');
+                        }
+                    });
+                });
+            }
+            
+            // Mobile menu toggle
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // Set up event listeners for footer
+        function setupFooterEventListeners() {
+            const chatButton = document.getElementById('chatButton');
+            
+            // Chat functionality
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    // Detect if mobile or desktop
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    
+                    if (isMobile) {
+                        // Open WhatsApp on mobile
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        // Open email client on desktop
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
