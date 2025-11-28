@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM & Listes | Smart Hotline Agency</title>
-    <meta name="description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
-    <meta name="keywords" content="CRM, gestion de la relation client, listes de prospects, autocomposeur, ventes, PME, externalisation">
+    <title>Support Client | Smart Hotline Agency</title>
+    <meta name="description" content="Service de support client externalisé professionnel pour PME. Assistance 24/7, multilingue et multicanale pour améliorer la satisfaction de vos clients.">
+    <meta name="keywords" content="support client externalisé, assistance client, service client 24/7, helpdesk, support technique, centre d'appels">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/fr/crm-lists.html">
-    <meta property="og:title" content="CRM & Listes | Smart Hotline Agency">
-    <meta property="og:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
-    <meta property="og:image" content="https://smart-hotline.com/images/crm-hero.jpg">
+    <meta property="og:url" content="https://smart-hotline.com/fr/support.html">
+    <meta property="og:title" content="Support Client | Smart Hotline Agency">
+    <meta property="og:description" content="Service de support client externalisé professionnel pour PME. Assistance 24/7, multilingue et multicanale pour améliorer la satisfaction de vos clients.">
+    <meta property="og:image" content="https://smart-hotline.com/images/support-hero.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://smart-hotline.com/fr/crm-lists.html">
-    <meta property="twitter:title" content="CRM & Listes | Smart Hotline Agency">
-    <meta property="twitter:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
-    <meta property="twitter:image" content="https://smart-hotline.com/images/crm-hero.jpg">
+    <meta property="twitter:url" content="https://smart-hotline.com/fr/support.html">
+    <meta property="twitter:title" content="Support Client | Smart Hotline Agency">
+    <meta property="twitter:description" content="Service de support client externalisé professionnel pour PME. Assistance 24/7, multilingue et multicanale pour améliorer la satisfaction de vos clients.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/support-hero.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com/fr/crm-lists.html" />
+    <link rel="canonical" href="https://smart-hotline.com/fr/support.html" />
     
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
-    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/support.html" />
+    <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/support.html" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="../assets/styles.css" as="style">
-    <link rel="preload" href="../assets/main.js" as="script">
-    <link rel="preload" href="../assets/localization.js" as="script">
-    <link rel="preload" href="../images/crm-hero.jpg" as="image">
+    <link rel="preload" href="../assets/reveal.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
     <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
-    <!-- Google Analytics -->
+    <!-- Google Analytics with minimal impact -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -54,7 +54,6 @@
 
     <!-- Critical CSS Inlined -->
     <style>
-        /* ... (Insert entire <style> block from fr/reception.html here) ... */
         :root {
             --primary-50: #f0f9ff;
             --primary-100: #e0f2fe;
@@ -493,8 +492,91 @@
             font-size: 0.875rem;
         }
 
-        /* Service Section */
-        .services-section {
+        /* Trust badges */
+        .trust-badges {
+            padding: 3rem 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .trust-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem 4rem;
+            opacity: 0.6;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .trust-icon {
+            font-size: 1.875rem;
+            color: var(--primary-600);
+        }
+        
+        .trust-text {
+            font-weight: 600;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Scroll Reveal Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 999;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button i {
+            font-size: 1.5rem;
+        }
+
+        /* Support Features Section */
+        .support-features-section {
             padding: 5rem 0;
             background: white;
         }
@@ -518,45 +600,40 @@
             margin: 0 auto;
         }
 
-        .service-item {
-            margin-bottom: 5rem;
-        }
-
-        .service-grid {
+        .support-features-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
+            gap: 2rem;
         }
 
-        @media (min-width: 1024px) {
-            .service-grid {
-                grid-template-columns: 1fr 1fr;
+        @media (min-width: 768px) {
+            .support-features-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        .service-item:nth-child(even) .service-grid {
-            direction: rtl;
+        @media (min-width: 1024px) {
+            .support-features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
-        .service-item:nth-child(even) .service-content {
-            direction: ltr;
-        }
-
-        .service-content {
+        .support-feature {
             background: #f9fafb;
             border-radius: 0.75rem;
-            padding: 2rem;
+            padding: 1.5rem;
             height: 100%;
+            display: flex;
+            flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .service-content:hover {
+        .support-feature:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .service-icon {
+        .feature-icon {
             width: 4rem;
             height: 4rem;
             background: var(--primary-100);
@@ -567,71 +644,39 @@
             margin-bottom: 1.5rem;
         }
 
-        .service-icon i {
+        .feature-icon i {
             font-size: 1.5rem;
             color: var(--primary-600);
         }
 
-        .service-title {
-            font-size: 1.875rem;
+        .feature-title {
+            font-size: 1.25rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             color: #111827;
         }
 
-        .service-description {
-            font-size: 1.125rem;
+        .feature-description {
             color: #4b5563;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
 
-        .service-features {
+        .feature-list {
             list-style: none;
-            margin-bottom: 2rem;
         }
 
-        .service-feature {
+        .feature-item {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
             color: #4b5563;
         }
 
-        .service-feature i {
+        .feature-item i {
             color: var(--primary-600);
             margin-top: 0.25rem;
-        }
-
-        .service-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .service-buttons {
-                flex-direction: row;
-            }
-        }
-
-        .service-image {
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            height: 100%;
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .service-image:hover img {
-            transform: scale(1.05);
         }
 
         /* Process Section */
@@ -774,46 +819,68 @@
             line-height: 1.6;
         }
 
-        /* Industries Section */
-        .industries-section {
+        /* Channels Section */
+        .channels-section {
             padding: 5rem 0;
-            background: white;
+            background: #f9fafb;
         }
 
-        .industries-grid {
+        .channels-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
         @media (min-width: 768px) {
-            .industries-grid {
-                grid-template-columns: repeat(4, 1fr);
+            .channels-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        .industry-item {
-            background: #f9fafb;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            text-align: center;
+        .channel-item {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .industry-item:hover {
+        .channel-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .industry-icon {
-            font-size: 2rem;
+        .channel-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .channel-icon i {
+            font-size: 1.5rem;
             color: var(--primary-600);
-            margin-bottom: 1rem;
         }
 
-        .industry-title {
-            font-weight: 600;
+        .channel-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
             color: #111827;
+        }
+
+        .channel-description {
+            font-size: 1.125rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
         }
 
         /* Testimonials Section */
@@ -830,7 +897,7 @@
 
         @media (min-width: 768px) {
             .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -839,9 +906,6 @@
             border-radius: 0.75rem;
             padding: 1.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
         }
 
         .testimonial-header {
@@ -883,7 +947,6 @@
             color: #4b5563;
             line-height: 1.6;
             font-style: italic;
-            flex-grow: 1;
         }
 
         /* CTA Section */
@@ -1038,439 +1101,6 @@
         .text-yellow-400 {
             color: #fbbf24;
         }
-
-        /* Utility Classes */
-        .hidden {
-            display: none !important;
-        }
-
-        /* Scroll Reveal Animation */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Chat Button */
-        .chat-button {
-            position: fixed;
-            bottom: 1.25rem;
-            right: 1.25rem;
-            z-index: 999;
-            width: 3.75rem;
-            height: 3.75rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .chat-button i {
-            font-size: 1.5rem;
-        }
-
-        /* CRM specific styles */
-        .crm-hero {
-            background: linear-gradient(135deg, var(--primary-50), white);
-        }
-
-        .crm-hero-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (min-width: 1024px) {
-            .crm-hero-content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .crm-features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .crm-features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .crm-feature {
-            background: #f9fafb;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .crm-feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .feature-icon {
-            width: 4rem;
-            height: 4rem;
-            background: var(--primary-100);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-icon i {
-            font-size: 1.5rem;
-            color: var(--primary-600);
-        }
-
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #111827;
-        }
-
-        .feature-description {
-            font-size: 1.125rem;
-            color: #4b5563;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: #4b5563;
-        }
-
-        .feature-item i {
-            color: var(--primary-600);
-            margin-top: 0.25rem;
-        }
-
-        .integration-section {
-            padding: 5rem 0;
-            background: #f9fafb;
-        }
-
-        .integration-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .integration-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .integration-item {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .integration-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .integration-icon {
-            width: 4rem;
-            height: 4rem;
-            background: var(--primary-100);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .integration-icon i {
-            font-size: 1.5rem;
-            color: var(--primary-600);
-        }
-
-        .integration-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 0.75rem;
-            color: #111827;
-        }
-
-        .integration-description {
-            font-size: 1.125rem;
-            color: #4b5563;
-            line-height: 1.6;
-            margin-bottom: 0.75rem;
-        }
-
-        .integration-list {
-            list-style: none;
-        }
-
-        .integration-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: #4b5563;
-        }
-
-        .integration-item i {
-            color: var(--primary-600);
-            margin-top: 0.25rem;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            padding: 5rem 0;
-            background: var(--dark-900);
-            color: white;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .pricing-cards {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .pricing-card {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .pricing-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .pricing-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #111827;
-        }
-
-        .pricing-price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-600);
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .pricing-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: #4b5563;
-        }
-
-        .pricing-feature i {
-            color: <div class="feature-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="feature-title">Gestion des Contacts</h3>
-                        <p class="feature-description">
-                            Centralisez toutes vos informations clients dans une base de données sécurisée et accessible.
-                        </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Historique complet</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Champs personnalisés</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Segmentation des contacts</span>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
-                    
-                    <div class="crm-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-phone-volume"></i>
-                        </div>
-                        <h3 class="feature-title">Autocomposeur</h3>
-                        <p class="feature-description">
-                            Composez automatiquement des milliers d'appels avec notre système intelligent.
-                        </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Détection de répondeur</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Enregistrement des appels</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Scripts d'appel</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Planification des campagnes</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="crm-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-list-ul"></i>
-                        </div>
-                        <h3 class="feature-title">Listes Qualifiées</h3>
-                        <p class="feature-description">
-                            Accédez à des listes de prospects qualifiés et régulièrement mises à jour.
-                        </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Listes segmentées</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Contacts vérifiés</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Filtres personnalisés</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Testimonials Section -->
-        <section class="testimonials-section scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Histoires de réussite client</h2>
-                    <p class="section-description">
-                        Découvrez comment notre CRM a transformé leur processus de vente
-                    </p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean Dupont" class="testimonial-avatar" loading="lazy">
-                            <div class="testimonial-info">
-                                <h4 class="testimonial-name">Jean Dupont</h4>
-                                <p class="testimonial-role">Directeur commercial, Immobilier Pro</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Notre CRM a transformé notre processus de vente. L'autocomposeur nous a permis d'augmenter notre productivité de 300% et les listes de prospects sont d'une qualité exceptionnelle."
-                        </p>
-                    </div>
-                
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Laurent" class="testimonial-avatar" loading="lazy">
-                            <div class="testimonial-info">
-                                <h4 class="testimonial-name">Marie Laurent</h4>
-                                <p class="testimonial-role">Responsable, AutoConnect</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "L'intégration avec nos systèmes existants s'est faite sans effort. Le support client est maintenant centralisé et nous pouvons suivre toutes les interactions en temps réel."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section class="cta-section scroll-reveal">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Prêt à maximiser vos ventes?</h2>
-                    <p class="cta-description">
-                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre CRM peut transformer votre processus de vente.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
-                        <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
@@ -1493,26 +1123,26 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero crm-hero">
+        <section class="hero">
             <div class="container">
-                <div class="crm-hero-content">
+                <div class="hero-grid">
                     <div>
                         <h1 class="hero-title">
-                            <span class="gradient-text">CRM & Listes de Prospects</span>
+                            <span class="gradient-text">Support Client Professionnel</span>
                         </h1>
                         <p class="hero-description">
-                            Maximisez vos ventes avec notre CRM complet et nos listes de prospects qualifiés. Notre système tout-en-un vous permet de gérer efficacement votre pipeline commercial.
+                            Offrez à vos clients un service d'assistance exceptionnel 24/7. Notre équipe multilingue garantit une satisfaction client maximale pour votre entreprise.
                         </p>
                         <div class="hero-buttons">
-                            <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
+                            <a href="contact.html?service=support" class="btn-primary">Commencer Maintenant</a>
                             <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
                         </div>
                     </div>
                     <div class="hero-image-container">
-                        <img src="../images/crm-hero.jpg" alt="CRM & Listes" class="hero-image" loading="lazy">
+                        <img src="../images/support-hero.jpg" alt="Support Client" class="hero-image" loading="lazy">
                         <div class="hero-badge">
-                            <div class="badge-title">+400%</div>
-                            <div class="badge-subtitle">Productivité</div>
+                            <div class="badge-title">24/7</div>
+                            <div class="badge-subtitle">Disponibilité</div>
                         </div>
                     </div>
                 </div>
@@ -1522,123 +1152,147 @@
         <!-- Trust Badges Section -->
         <section class="trust-badges">
             <div class="container">
-                <p class="trust-title">Une solution complète pour votre équipe commerciale</p>
+                <p class="trust-title">Une solution complète pour votre service client</p>
                 <div class="trust-grid">
                     <div class="trust-item">
-                        <i class="fas fa-database trust-icon"></i>
-                        <span class="trust-text">Gestion Centralisée</span>
+                        <i class="fas fa-headset trust-icon"></i>
+                        <span class="trust-text">Support 24/7</span>
                     </div>
                     <div class="trust-item">
-                        <i class="fas fa-phone-volume trust-icon"></i>
-                        <span class="trust-text">Autocomposeur Intelligent</span>
+                        <i class="fas fa-globe trust-icon"></i>
+                        <span class="trust-text">Multilingue</span>
                     </div>
                     <div class="trust-item">
-                        <i class="fas fa-list-ul trust-icon"></i>
-                        <span class="trust-text">Listes Qualifiées</span>
+                        <i class="fas fa-comments trust-icon"></i>
+                        <span class="trust-text">Multicanal</span>
                     </div>
                     <div class="trust-item">
                         <i class="fas fa-chart-line trust-icon"></i>
-                        <span class="trust-text">Analyse Avancée</span>
+                        <span class="trust-text">Suivi Performance</span>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- CRM Features Section -->
-        <section class="services-section scroll-reveal">
+        <!-- Support Features Section -->
+        <section class="support-features-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Fonctionnalités Principales</h2>
                     <p class="section-description">
-                        Notre CRM tout-en-un offre toutes les fonctionnalités nécessaires pour optimiser votre processus de vente
+                        Notre service de support client offre toutes les fonctionnalités nécessaires pour satisfaire vos clients
                     </p>
                 </div>
                 
-                <div class="crm-features">
-                    <div class="crm-feature">
+                <div class="support-features-grid">
+                    <div class="support-feature">
                         <div class="feature-icon">
-                            <i class="fas fa-database"></i>
+                            <i class="fas fa-headset"></i>
                         </div>
-                        <h3 class="feature-title">Gestion des Contacts</h3>
+                        <h3 class="feature-title">Support Téléphonique</h3>
                         <p class="feature-description">
-                            Centralisez toutes vos informations clients dans une base de données sécurisée et accessible.
+                            Répondez à tous les appels de vos clients avec notre équipe professionnelle.
                         </p>
                         <ul class="feature-list">
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Historique complet des interactions</span>
+                                <span>Standard téléphonique dédié</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Segmentation des contacts</span>
+                                <span>Gestion des appels entrants</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Champs personnalisés</span>
+                                <span>Prise de messages</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Synchronisation multi-appareils</span>
+                                <span>Transfert d'appels</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <div class="crm-feature">
+                    <div class="support-feature">
                         <div class="feature-icon">
-                            <i class="fas fa-phone-volume"></i>
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <h3 class="feature-title">Autocomposeur</h3>
+                        <h3 class="feature-title">Support par Email</h3>
                         <p class="feature-description">
-                            Composez automatiquement des milliers d'appels avec notre système intelligent.
+                            Gérez toutes les demandes par email avec rapidité et professionnalisme.
                         </p>
                         <ul class="feature-list">
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Détection de répondeur automatique</span>
+                                <span>Réponse sous 2 heures</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Enregistrement des appels</span>
+                                <span>Templates personnalisés</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Scripts d'appel personnalisés</span>
+                                <span>Suivi des tickets</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Planification des campagnes</span>
+                                <span>Notifications automatiques</span>
                             </li>
                         </ul>
                     </div>
                     
-                    <div class="crm-feature">
+                    <div class="support-feature">
                         <div class="feature-icon">
-                            <i class="fas fa-list-ul"></i>
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <h3 class="feature-title">Listes de Prospects</h3>
+                        <h3 class="feature-title">Chat en Direct</h3>
                         <p class="feature-description">
-                            Accédez à des listes de prospects qualifiés et régulièrement mises à jour.
+                            Offrez un support instantané via le chat sur votre site web.
                         </p>
                         <ul class="feature-list">
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Listes segmentées par secteur</span>
+                                <span>Chat 24/7</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Filtres de qualification</span>
+                                <span>Réponses en temps réel</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Filtres de qualification</span>
+                                <span>Transfert vers téléphone</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Synchronisation avec les campagnes</span>
+                                <span>Historique des conversations</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Analyse & Rapports</h3>
+                        <p class="feature-description">
+                            Suivez les performances de votre service client avec des rapports détaillés.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Tableaux de bord en temps réel</span>
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Intégration avec les outils CRM</span>
+                                <span>Taux de satisfaction</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Temps de réponse moyen</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Rapports mensuels</span>
                             </li>
                         </ul>
                     </div>
@@ -1646,22 +1300,22 @@
             </div>
         </section>
         
-        <!-- How It Works Section -->
+        <!-- Process Section -->
         <section class="process-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Comment ça marche</h2>
                     <p class="section-description">
-                        Un processus simple pour maximiser vos ventes
+                        Un processus simple pour améliorer votre service client
                     </p>
                 </div>
                 
                 <div class="process-grid">
                     <div class="process-step">
                         <div class="step-number">1</div>
-                        <h3 class="step-title">Intégration</h3>
+                        <h3 class="step-title">Configuration</h3>
                         <p class="step-description">
-                            Nous intégrons vos données existantes et configurons le CRM selon vos besoins.
+                            Nous configurons votre service client selon vos besoins spécifiques.
                         </p>
                     </div>
                     
@@ -1669,15 +1323,15 @@
                         <div class="step-number">2</div>
                         <h3 class="step-title">Formation</h3>
                         <p class="step-description">
-                            Nous formons votre équipe à utiliser efficacement toutes les fonctionnalités.
+                            Nous formons notre équipe sur vos produits et services.
                         </p>
                     </div>
                     
                     <div class="process-step">
-                        <div class="number">3</div>
+                        <div class="step-number">3</div>
                         <h3 class="step-title">Lancement</h3>
                         <p class="step-description">
-                            Votre équipe commence à utiliser le CRM avec nos listes de prospects qualifiés.
+                            Votre service client est opérationnel 24/7.
                         </p>
                     </div>
                     
@@ -1685,7 +1339,7 @@
                         <div class="step-number">4</div>
                         <h3 class="step-title">Optimisation</h3>
                         <p class="step-description">
-                            Nous analysons les performances et optimisons continuellement le processus.
+                            Nous analysons les performances et améliorons continuellement.
                         </p>
                     </div>
                 </div>
@@ -1707,9 +1361,19 @@
                         <div class="benefit-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="benefit-title">Gain de Temps</h3>
+                        <h3 class="benefit-title">Disponibilité 24/7</h3>
                         <p class="benefit-description">
-                            Économisez jusqu'à 20 heures par semaine grâce à l'automatisation des tâches répétitives.
+                            Vos clients sont toujours pris en charge, même en dehors des heures de bureau.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="benefit-title">Support Multilingue</h3>
+                        <p class="benefit-description">
+                            Nous parlons français, anglais, espagnol et plus pour servir vos clients internationaux.
                         </p>
                     </div>
                     
@@ -1717,73 +1381,63 @@
                         <div class="benefit-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="benefit-title">Meilleures Conversions</h3>
+                        <h3 class="benefit-title">Satisfaction Améliorée</h3>
                         <p class="benefit-description">
-                            Augmentez votre taux de conversion de 40% avec des prospects qualifiés.
+                            Augmentez votre taux de satisfaction client de 35% en moyenne.
                         </p>
                     </div>
                     
                     <div class="benefit-item">
                         <div class="benefit-icon">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-dollar-sign"></i>
                         </div>
-                        <h3 class="benefit-title">Collaboration Simplifiée</h3>
+                        <h3 class="benefit-title">Coût Réduit</h3>
                         <p class="benefit-description">
-                            Travaillez plus efficacement en équipe avec des outils de collaboration intégrés.
-                        </p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="benefit-title">Sécurité des Données</h3>
-                        <p class="benefit-description">
-                            Vos données sont sécurisées et sauvegardées conformément au RGPD.
+                            Économisez jusqu'à 60% par rapport à une équipe interne.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Integration Section -->
-        <section class="integration-section scroll-reveal">
+        <!-- Channels Section -->
+        <section class="channels-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Intégrations Possibles</h2>
+                    <h2 class="section-title">Canaux de Support</h2>
                     <p class="section-description">
-                        Notre CRM s'intègre facilement avec vos outils existants
+                        Joignez vos clients sur leurs canaux préférés
                     </p>
                 </div>
                 
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <div class="integration-icon">
+                <div class="channels-grid">
+                    <div class="channel-item">
+                        <div class="channel-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="channel-title">Téléphone</h3>
+                        <p class="channel-description">
+                            Support vocal professionnel avec gestion des appels et transferts
+                        </p>
+                    </div>
+                    
+                    <div class="channel-item">
+                        <div class="channel-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h3 class="integration-title">Email Marketing</h3>
-                        <p class="integration-description">
-                            Intégration avec Mailchimp, Sendinblue et autres plateformes d'emailing
+                        <h3 class="channel-title">Email</h3>
+                        <p class="channel-description">
+                            Gestion des tickets email avec suivi et notifications
                         </p>
                     </div>
                     
-                    <div class="integration-item">
-                        <div class="integration-icon">
-                            <i class="fas fa-calendar-alt"></i>
+                    <div class="channel-item">
+                        <div class="channel-icon">
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <h3 class="integration-title">Agenda Partagé</h3>
-                        <p class="integration-description">
-                            Synchronisation avec Google Calendar, Outlook et autres agendas
-                        </p>
-                    </div>
-                    
-                    <div class="integration-item">
-                        <div class="integration-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <h3 class="integration-title">Facturation</h3>
-                        <p class="integration-description">
-                            Connexion avec QuickBooks, Sage et autres logiciels de facturation
+                        <h3 class="channel-title">Chat en Direct</h3>
+                        <p class="channel-description">
+                            Support instantané via chat sur votre site web
                         </p>
                     </div>
                 </div>
@@ -1794,19 +1448,19 @@
         <section class="testimonials-section scroll-reveal">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Histoires de réussite client</h2>
+                    <h2 class="section-title">Ce Que Disent Nos Clients</h2>
                     <p class="section-description">
-                        Découvrez comment notre CRM a transformé leur processus de vente
+                        Découvrez comment notre service client a transformé leur entreprise
                     </p>
                 </div>
                 
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean Dupont" class="testimonial-avatar" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Claire Martin" class="testimonial-avatar" loading="lazy">
                             <div class="testimonial-info">
-                                <h4 class="testimonial-name">Jean Dupont</h4>
-                                <p class="testimonial-role">Directeur commercial, Immobilier Pro</p>
+                                <h4 class="testimonial-name">Claire Martin</h4>
+                                <p class="testimonial-role">Directrice, E-Shop Pro</p>
                             </div>
                         </div>
                         <div class="testimonial-rating">
@@ -1814,18 +1468,19 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="testimonial-text">
-                            "Notre CRM a transformé notre processus de vente. L'autocomposeur nous a permis d'augmenter notre productivité de 300% et les listes de prospects sont d'une qualité exceptionnelle."
+                            "Le support 24/7 a transformé notre service client. Nos clients sont ravis de pouvoir obtenir de l'aide à tout moment, même le week-end. Le retour sur investissement est exceptionnel."
                         </p>
                     </div>
                 
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Laurent" class="testimonial-avatar" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Lucas Dubois" class="testimonial-avatar" loading="lazy">
                             <div class="testimonial-info">
-                                <h4 class="testimonial-name">Marie Laurent</h4>
-                                <p class="testimonial-role">Responsable, AutoConnect</p>
+                                <h4 class="testimonial-name">Lucas Dubois</h4>
+                                <p class="testimonial-role">Fondateur, TechStart</p>
                             </div>
                         </div>
                         <div class="testimonial-rating">
@@ -1833,9 +1488,30 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="testimonial-text">
-                            "L'intégration avec nos systèmes existants s'est faite sans effort. Le support client est maintenant centralisé et nous pouvons suivre toutes les interactions en temps réel."
+                            "L'équipe de Smart Hotline est incroyablement professionnelle. Ils connaissent nos produits sur le bout des doigts et traitent chaque client avec empathie. Notre taux de satisfaction a augmenté de 40%."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Leroy" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sophie Leroy</h4>
+                                <p class="testimonial-role">Responsable, Mode & Style</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Le support multilingue nous a permis de nous développer à l'international. Nos clients anglophones et hispanophones reçoivent le même niveau de service que nos clients francophones."
                         </p>
                     </div>
                 </div>
@@ -1846,12 +1522,12 @@
         <section class="cta-section scroll-reveal">
             <div class="container">
                 <div class="cta-content">
-                    <h2 class="cta-title">Prêt à maximiser vos ventes?</h2>
+                    <h2 class="cta-title">Prêt à améliorer votre service client?</h2>
                     <p class="cta-description">
-                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre CRM peut transformer votre processus de vente.
+                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre service client peut transformer votre entreprise.
                     </p>
                     <div class="cta-buttons">
-                        <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
+                        <a href="contact.html?service=support" class="btn-primary">Commencer Maintenant</a>
                         <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
                     </div>
                 </div>
@@ -1867,7 +1543,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "CRM & Listes de Prospects",
+        "serviceType": "Support Client Externalisé",
         "provider": {
             "@type": "Organization",
             "name": "Smart Hotline Agency",
@@ -1876,14 +1552,14 @@
         "areaServed": "France, Canada, Belgique, Suisse",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Options de CRM & Listes",
+            "name": "Options de Support Client",
             "itemListElement": [
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Standard",
-                        "description": "CRM de base avec autocomposeur et listes de prospects"
+                        "description": "Support client 8h/5j par email et téléphone"
                     }
                 },
                 {
@@ -1891,7 +1567,7 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Premium",
-                        "description": "CRM avancé avec autocomposeur intelligent et listes qualifiées"
+                        "description": "Support client 24/7 multilingue et multicanal"
                     }
                 },
                 {
@@ -1899,7 +1575,7 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Entreprise",
-                        "description": "CRM sur mesure avec équipe dédiée et intégration complète"
+                        "description": "Support client dédié avec équipe assignée"
                     }
                 }
             ]
@@ -1911,41 +1587,107 @@
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
     <!-- Load JavaScript asynchronously -->
-    <script src="../assets/main.js" defer></script>
+    <script src="../assets/reveal.js" defer></script>
     <script src="../assets/localization.js" defer></script>
     
     <!-- Inline script for critical functionality -->
     <script>
+        // DOM Elements
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+        const currentLangSpan = document.getElementById('currentLang');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const chatButton = document.getElementById('chatButton');
+        const statsCounters = document.querySelectorAll('.stats-counter');
+        
+        // Load header and footer
         document.addEventListener('DOMContentLoaded', function() {
-            // Load header and footer
+            // Load header
             fetch('../includes/header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-container').innerHTML = data;
+                    
+                    // Set up event listeners for header after it's loaded
                     setupHeaderEventListeners();
+                    
+                    // Set active navigation
                     setActiveNavigation();
                 })
                 .catch(error => console.error('Error loading header:', error));
             
+            // Load footer
             fetch('../includes/footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-container').innerHTML = data;
+                    
+                    // Set up event listeners for footer after it's loaded
                     setupFooterEventListeners();
                 })
                 .catch(error => console.error('Error loading footer:', error));
             
             // Initialize animations
-            initializeCounters();
-            initializeScrollReveal();
+            initCounters();
+            initScrollReveal();
         });
-
-        // Functions for animations and event listeners
-        function initializeCounters() {
-            const statsCounters = document.querySelectorAll('.stats-counter');
+        
+        // Set active navigation based on current page
+        function setActiveNavigation() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Set active class based on current page
+            let activeId = '';
+            switch(currentPage) {
+                case 'index.html':
+                    activeId = 'nav-home';
+                    break;
+                case 'services.html':
+                    activeId = 'nav-services';
+                    break;
+                case 'pricing.html':
+                    activeId = 'nav-pricing';
+                    break;
+                case 'faq.html':
+                    activeId = 'nav-faq';
+                    break;
+                case 'blog.html':
+                    activeId = 'nav-blog';
+                    break;
+                case 'contact.html':
+                    activeId = 'nav-contact';
+                    break;
+                case 'reception.html':
+                case 'emission.html':
+                case 'support.html':
+                case 'crm-lists.html':
+                    activeId = 'nav-services';
+                    break;
+            }
+            
+            // Set active class
+            if (activeId) {
+                document.getElementById(activeId)?.classList.add('active');
+                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+            }
+        }
+        
+        // Initialize counters
+        function initCounters() {
             if (!statsCounters.length) return;
             
-            const observerOptions = { threshold: 0.7, rootMargin: '0px' };
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '0px'
+            };
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1964,20 +1706,28 @@
                                 counter.textContent = target;
                             }
                         };
+                        
                         updateCounter();
                         observer.unobserve(counter);
                     }
                 });
             }, observerOptions);
             
-            statsCounters.forEach(counter => observer.observe(counter));
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
         }
-
-        function initializeScrollReveal() {
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
             const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
             if (!scrollRevealElements.length) return;
             
-            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1987,56 +1737,85 @@
                 });
             }, observerOptions);
             
-            scrollRevealElements.forEach(element => observer.observe(element));
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
         }
-
+        
+        // Set up event listeners for header
         function setupHeaderEventListeners() {
             const langToggle = document.getElementById('langToggle');
             const langDropdown = document.getElementById('langDropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
             const mobileMenuToggle = document.getElementById('mobileMenuToggle');
             const mobileMenu = document.getElementById('mobileMenu');
             
+            // Language selector
             if (langToggle) {
-                langToggle.addEventListener('click', () => langDropdown.classList.toggle('hidden'));
-                document.addEventListener('click', (e) => {
-                    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                        langDropdown.classList.add('hidden');
-                    }
-                });
-                document.querySelector('.lang-option[data-lang="en"]').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.location.href = '../en/crm-lists.html';
+                langToggle.addEventListener('click', () => {
+                    langDropdown.classList.toggle('hidden');
                 });
             }
-
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            if (langOptions) {
+                langOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = option.getAttribute('data-lang');
+                        if (lang === 'en') {
+                            window.location.href = '../en/support.html';
+                        }
+                        if (langDropdown) {
+                            langDropdown.classList.add('hidden');
+                        }
+                    });
+                });
+            }
+            
+            // Mobile menu toggle
             if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
                 });
             }
-        }
-
-        function setupFooterEventListeners() {
-            const chatButton = document.getElementById('chatButton');
-            if (chatButton) {
-                chatButton.addEventListener('click', () => {
-                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                    if (isMobile) {
-                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
-                    } else {
-                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
-                    }
+            
+            // Close mobile menu when clicking a link
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
                 });
             }
         }
         
-        function setActiveNavigation() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => link.classList.remove('active'));
-            let activeId = 'nav-services';
-            document.getElementById(activeId)?.classList.add('active');
-            document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+        // Set up event listeners for footer
+        function setupFooterEventListeners() {
+            const chatButton = document.getElementById('chatButton');
+            
+            // Chat functionality
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    // Detect if mobile or desktop
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    
+                    if (isMobile) {
+                        // Open WhatsApp on mobile
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        // Open email client on desktop
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
         }
     </script>
 </body>
