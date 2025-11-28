@@ -1,51 +1,92 @@
-<header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="fr/index.html" class="flex items-center">
-                    <img src="images/logo.png" alt="Smart Hotline Agency" class="h-10 mr-3">
-                    <span class="text-xl font-bold text-primary-600">Smart Hotline Agency</span>
-                </a>
+<header>
+    <div class="container">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">SH</div>
+                <span class="logo-text">Smart Hotline</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link active" id="nav-home" data-translate="nav-home">Accueil</a>
+                <!-- Services Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle" id="nav-services" data-translate="nav-services">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="services.html" class="dropdown-item">
+                            <i class="fas fa-th-large"></i>
+                            <div>
+                                <div class="dropdown-title" data-translate="services-all">Tous nos services</div>
+                                <div class="dropdown-desc" data-translate="services-all-desc">Découvrir notre gamme complète</div>
+                            </div>
+                        </a>
+                        <a href="reception.html" class="dropdown-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <div class="dropdown-title" data-translate="services-reception">Réception d'Appels</div>
+                                <div class="dropdown-desc" data-translate="services-reception-desc">Ne manquez aucun appel</div>
+                            </div>
+                        </a>
+                        <a href="emission.html" class="dropdown-item">
+                            <i class="fas fa-phone-volume"></i>
+                            <div>
+                                <div class="dropdown-title" data-translate="services-emission">Émission d'Appels</div>
+                                <div class="dropdown-desc" data-translate="services-emission-desc">Développez votre clientèle</div>
+                            </div>
+                        </a>
+                        <a href="support.html" class="dropdown-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <div class="dropdown-title" data-translate="services-support">Support Client</div>
+                                <div class="dropdown-desc" data-translate="services-support-desc">Améliorez la satisfaction</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="nav-link" id="nav-pricing" data-translate="nav-pricing">Tarifs</a>
+                <a href="faq.html" class="nav-link" id="nav-faq" data-translate="nav-faq">FAQ</a>
+                <a href="blog.html" class="nav-link" id="nav-blog" data-translate="nav-blog">Blog</a>
+                <a href="contact.html" class="nav-link" id="nav-contact" data-translate="nav-contact">Contact</a>
             </div>
             
-            <nav class="hidden md:flex space-x-8">
-                <a href="fr/index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.home">Accueil</a>
-                <a href="fr/services.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.services">Services</a>
-                <a href="fr/pricing.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.pricing">Tarifs</a>
-                <a href="fr/about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.about">À Propos</a>
-                <a href="fr/blog.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.blog">Blog</a>
-                <a href="fr/contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" data-i18n="nav.contact">Contact</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <div class="relative language-selector">
-                    <button id="language-toggle" class="flex items-center text-gray-700 hover:text-primary-600 transition-colors">
-                        <i class="fas fa-globe mr-2"></i>
-                        <span id="current-language">FR</span>
-                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            <div class="nav-actions">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button id="langToggle" class="lang-btn">
+                        <span id="currentLang">FR</span>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-10 hidden">
-                        <a href="fr/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
-                        <a href="en/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <div id="langDropdown" class="lang-dropdown hidden">
+                        <a href="#" class="lang-option" data-lang="fr" data-translate="lang-fr">Français</a>
+                        <a href="../en/index.html" class="lang-option" data-lang="en" data-translate="lang-en">English</a>
                     </div>
                 </div>
                 
-                <button id="mobile-menu-toggle" class="md:hidden text-gray-700 hover:text-primary-600">
-                    <i class="fas fa-bars text-xl"></i>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuToggle" class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
-            <nav class="flex flex-col space-y-2">
-                <a href="fr/index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.home">Accueil</a>
-                <a href="fr/services.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.services">Services</a>
-                <a href="fr/pricing.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.pricing">Tarifs</a>
-                <a href="fr/about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.about">À Propos</a>
-                <a href="fr/blog.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.blog">Blog</a>
-                <a href="fr/contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2" data-i18n="nav.contact">Contact</a>
-            </nav>
+        </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <div class="container">
+            <a href="index.html" class="mobile-nav-link active" id="mobile-nav-home" data-translate="nav-home">Accueil</a>
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-title" data-translate="nav-services">Services</div>
+                <a href="services.html" class="mobile-nav-link" data-translate="services-all">Tous nos services</a>
+                <a href="reception.html" class="mobile-nav-link" data-translate="services-reception">Réception d'Appels</a>
+                <a href="emission.html" class="mobile-nav-link" data-translate="services-emission">Émission d'Appels</a>
+                <a href="support.html" class="mobile-nav-link" data-translate="services-support">Support Client</a>
+            </div>
+            <a href="pricing.html" class="mobile-nav-link" id="mobile-nav-pricing" data-translate="nav-pricing">Tarifs</a>
+            <a href="faq.html" class="mobile-nav-link" id="mobile-nav-faq" data-translate="nav-faq">FAQ</a>
+            <a href="blog.html" class="mobile-nav-link" id="mobile-nav-blog" data-translate="nav-blog">Blog</a>
+            <a href="contact.html" class="mobile-nav-link" id="mobile-nav-contact" data-translate="nav-contact">Contact</a>
         </div>
     </div>
 </header>
