@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="reception.title">Réception d'Appels | Smart Hotline Agency</title>
-    <meta name="description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
-    <meta name="keywords" data-i18n="reception.keywords" content="réception d'appels, télésecrétariat, secrétaire virtuelle, accueil téléphonique, services d'accueil externalisés, PME">
+    <title>Réception d'Appels | Smart Hotline Agency</title>
+    <meta name="description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta name="keywords" content="réception d'appels, télésecrétariat, secrétaire virtuelle, accueil téléphonique, services d'accueil externalisés, PME">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="og:title" data-i18n="reception.title" content="Réception d'Appels | Smart Hotline Agency">
-    <meta property="og:description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta property="og:title" content="Réception d'Appels | Smart Hotline Agency">
+    <meta property="og:description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
     <meta property="og:image" content="https://smart-hotline.com/images/reception-hero.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://smart-hotline.com/fr/reception.html">
-    <meta property="twitter:title" data-i18n="reception.title" content="Réception d'Appels | Smart Hotline Agency">
-    <meta property="twitter:description" data-i18n="reception.description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
+    <meta property="twitter:title" content="Réception d'Appels | Smart Hotline Agency">
+    <meta property="twitter:description" content="Service professionnel de réception d'appels pour PME. Ne manquez plus jamais un appel important grâce à notre service de réception dédié.">
     <meta property="twitter:image" content="https://smart-hotline.com/images/reception-hero.jpg">
     
     <!-- Hreflang tags -->
@@ -27,449 +27,1700 @@
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/reception.html" />
     <link rel="canonical" href="https://smart-hotline.com/fr/reception.html" />
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/styles.css" as="style">
+    <link rel="preload" href="../assets/main.js" as="script">
+    <link rel="preload" href="../assets/localization.js" as="script">
+    <link rel="preload" href="../images/reception-hero.jpg" as="image">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom Tailwind Config -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB', { 
+            'anonymize_ip': true,
+            'optimize_id': 'OPT-XXXXXXX'
+        });
+    </script>
+
+    <!-- Critical CSS Inlined -->
+    <style>
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --dark-50: #f8fafc;
+            --dark-100: #f1f5f9;
+            --dark-200: #e2e8f0;
+            --dark-300: #cbd5e1;
+            --dark-400: #94a3b8;
+            --dark-500: #64748b;
+            --dark-600: #475569;
+            --dark-700: #334155;
+            --dark-800: #1e293b;
+            --dark-900: #0f172a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-600);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
             }
         }
-    </script>
+
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-600);
+        }
+
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            width: 20rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--primary-50);
+        }
+
+        .dropdown-item i {
+            color: var(--primary-600);
+            width: 1rem;
+        }
+
+        .dropdown-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .dropdown-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        /* Language Selector */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            color: #374151;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            width: 8rem;
+            background: white;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .lang-dropdown.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+
+        .lang-dropdown:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #374151;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .mobile-menu:not(.hidden) {
+            display: block;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .mobile-nav-group {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(135deg, var(--primary-50), white);
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-600);
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-700);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-600);
+            border: 2px solid var(--primary-600);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-50);
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: auto;
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--primary-600);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .badge-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .badge-subtitle {
+            font-size: 0.875rem;
+        }
+
+        /* Service Section */
+        .services-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            margin-bottom: 5rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-item:nth-child(even) .service-grid {
+            direction: rtl;
+        }
+
+        .service-item:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-content {
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-600);
+        }
+
+        .service-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .service-description {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .service-feature i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .service-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .service-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .service-image {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Trust Badges Section */
+        .trust-badges {
+            padding: 3rem 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .trust-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem 4rem;
+            opacity: 0.6;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .trust-icon {
+            font-size: 1.875rem;
+            color: var(--primary-600);
+        }
+        
+        .trust-text {
+            font-weight: 600;
+        }
+
+        /* How It Works Section */
+        .process-section {
+            padding: 5rem 0;
+            background: var(--dark-800);
+            color: white;
+        }
+
+        .process-section .section-title,
+        .process-section .section-description {
+            color: white;
+        }
+
+        .process-section .section-description {
+            color: #d1d5db;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+            z-index: 1;
+        }
+
+        @media (max-width: 767px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        .step-number {
+            width: 5rem;
+            height: 5rem;
+            background: var(--primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 5rem 0;
+            background: var(--dark-900);
+            color: white;
+        }
+
+        .benefits-section .section-title,
+        .benefits-section .section-description {
+            color: white;
+        }
+
+        .benefits-section .section-description {
+            color: #d1d5db;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* Industries Section */
+        .industries-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .industries-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .industry-item {
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .industry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .industry-icon {
+            font-size: 2rem;
+            color: var(--primary-600);
+            margin-bottom: 1rem;
+        }
+
+        .industry-title {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-rating i {
+            color: #fbbf24;
+        }
+
+        .testimonial-text {
+            color: #4b5563;
+            line-height: 1.6;
+            font-style: italic;
+            flex-grow: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #f3f4f6;
+        }
+
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-900);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #374151;
+            border-radius: 0.375rem;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .contact-info {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Utility classes for star ratings */
+        .text-yellow-400 {
+            color: #fbbf24;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Scroll Reveal Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 999;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button i {
+            font-size: 1.5rem;
+        }
+    </style>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/main.css">
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    
+    <!-- Load Google Fonts asynchronously -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body class="font-sans text-gray-800">
-    <!-- Include Header -->
+<body>
+    <!-- Header will be loaded here -->
     <div id="header-container"></div>
-    
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text" data-i18n="reception.heroTitle">Réception d'Appels Professionnelle</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8" data-i18n="reception.heroDescription">
-                        Ne manquez plus jamais un appel important grâce à notre service de réception dédié. Notre équipe professionnelle gère tous vos appels entrants avec le soin et l'attention que vos clients méritent.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="reception.requestDemo">
-                            Demander une démo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="reception.seePricing">
-                            Voir les tarifs
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service de réception d'appels" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold" data-i18n="reception.freeTrial">2 Semaines</div>
-                        <div class="text-sm">Essai gratuit</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Trust Badges Section -->
-    <section class="py-12 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-                <div class="flex items-center">
-                    <i class="fas fa-shield-alt text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Sécurisé & Confidentiel</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-clock text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Disponibilité 24/7</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-user-tie text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Agents Professionnels</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-dollar-sign text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Rentable</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Offered Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.ourServices">Nos services de réception</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="reception.servicesDescription">
-                    Solutions complètes pour une gestion professionnelle de vos appels
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-phone-alt text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.standardReception">Réception Standard</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="reception.standardDescription">
-                        Nos téléopérateurs répondent à vos appels au nom de votre entreprise avec un accueil professionnel.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.greeting">Accueil personnalisé</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.messageTaking">Prise de messages détaillés</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.callForwarding">Transfert d'appels</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-calendar-check text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.appointmentScheduling">Prise de rendez-vous</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="reception.appointmentDescription">
-                        Gérez votre agenda efficacement avec notre service de prise de rendez-vous intégré.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.calendarSync">Synchronisation d'agenda</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.confirmations">Confirmations automatiques</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.reminders">Rappels SMS et email</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-headset text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="reception.customerSupport">Support client</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="reception.supportDescription">
-                        Offrez un service client exceptionnel avec notre équipe de support dédiée.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.firstResponse">Première réponse garantie</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.ticketManagement">Gestion des tickets</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="reception.crmIntegration">Intégration CRM</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- How It Works Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.howItWorks">Comment ça marche</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="reception.processDescription">
-                    Un processus simple et efficace pour une mise en place rapide
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.consultation">Consultation</h3>
-                    <p class="text-gray-600" data-i18n="reception.consultationDesc">
-                        Nous analysons vos besoins et créons une solution personnalisée.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.setup">Configuration</h3>
-                    <p class="text-gray-600" data-i18n="reception.setupDesc">
-                        Nous mettons en place votre service et formons nos opérateurs.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.activation">Activation</h3>
-                    <p class="text-gray-600" data-i18n="reception.activationDesc">
-                        Votre service est actif et prêt à prendre vos appels.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        4
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.monitoring">Suivi</h3>
-                    <p class="text-gray-600" data-i18n="reception.monitoringDesc">
-                        Nous surveillons la performance et fournissons des rapports détaillés.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.whyChooseUs">Pourquoi nous choisir?</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="reception.benefitsDescription">
-                    Des avantages concrets pour votre entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-dollar-sign text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.costEffective">Rentable</h3>
-                    <p class="text-gray-400" data-i18n="reception.costDesc">
-                        60% moins cher qu'une équipe interne avec de meilleurs résultats
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.timeSaving">Gain de temps</h3>
-                    <p class="text-gray-400" data-i18n="reception.timeDesc">
-                        Libérez jusqu'à 40% de votre temps pour vous concentrer sur votre cœur de métier
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.flexible">Flexible</h3>
-                    <p class="text-gray-400" data-i18n="reception.flexibleDesc">
-                        Adaptez le service à vos besoins saisonniers sans engagement à long terme
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="reception.professional">Professionnel</h3>
-                    <p class="text-gray-400" data-i18n="reception.professionalDesc">
-                        Améliorez votre image avec des téléopérateurs formés et expérimentés
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Industries Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.industries">Secteurs que nous servons</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="reception.industriesDescription">
-                    Nous soutenons les entreprises de tous les secteurs
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.professionalServices">Services professionnels</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.realEstate">Immobilier</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.healthcare">Santé</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-car text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.automotive">Automobile</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-shopping-cart text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.retail">Commerce de détail</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-hammer text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.construction">Construction</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.education">Éducation</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-dumbbell text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="reception.fitness">Fitness & Bien-être</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="reception.successStories">Histoires de réussite client</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="reception.storiesDescription">
-                    Découvrez comment notre service a transformé leur entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Marc Lefebvre</h4>
-                            <p class="text-sm text-gray-600">Fondateur, TechInnov Québec</p>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <h1 class="hero-title">
+                            <span class="gradient-text">Réception d'Appels Professionnelle</span>
+                        </h1>
+                        <p class="hero-description">
+                            Ne manquez plus jamais un appel important grâce à notre service de réception dédié. Notre équipe professionnelle gère tous vos appels entrants avec le soin et l'attention que vos clients méritent.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="contact.html?service=reception" class="btn-primary">
+                                Demander une Démo
+                            </a>
+                            <a href="pricing.html" class="btn-secondary">
+                                Voir les Tarifs
+                            </a>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    <div class="hero-image-container">
+                        <img src="../images/reception-hero.jpg" alt="Service de réception d'appels" class="hero-image" loading="lazy">
+                        <div class="hero-badge">
+                            <div class="badge-title">2 Semaines</div>
+                            <div class="badge-subtitle">Essai Gratuit</div>
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grands que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Badges Section -->
+        <section class="trust-badges">
+            <div class="container">
+                <p class="trust-title">De confiance pour 500+ PME et entreprises en croissance</p>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt trust-icon"></i>
+                        <span class="trust-text">Sécurisé & Confidentiel</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock trust-icon"></i>
+                        <span class="trust-text">Disponibilité 24/7</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-user-tie trust-icon"></i>
+                        <span class="trust-text">Agents Professionnels</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-dollar-sign trust-icon"></i>
+                        <span class="trust-text">Rentable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Offered Section -->
+        <section class="services-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nos Services de Réception</h2>
+                    <p class="section-description">
+                        Solutions complètes pour une gestion professionnelle de vos appels
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Sophie Dubois</h4>
-                            <p class="text-sm text-gray-600">Directrice, Cabinet Comptable Dubois</p>
+                <div class="service-item">
+                    <div class="service-grid">
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3 class="service-title">Réception Standard</h3>
+                            <p class="service-description">
+                                Nos téléopérateurs répondent à vos appels au nom de votre entreprise avec un accueil professionnel.
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Accueil personnalisé</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Prise de messages détaillés</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Transfert d'appels</span>
+                                </li>
+                            </ul>
+                            <div class="service-buttons">
+                                <a href="contact.html?service=reception" class="btn-primary">
+                                    En Savoir Plus
+                                </a>
+                                <a href="pricing.html" class="btn-secondary">
+                                    Voir les Tarifs
+                                </a>
+                            </div>
+                        </div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service de réception standard" loading="lazy">
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-grid">
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3 class="service-title">Prise de Rendez-vous</h3>
+                            <p class="service-description">
+                                Gérez votre agenda efficacement avec notre service de prise de rendez-vous intégré.
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Synchronisation d'agenda</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Confirmations automatiques</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Rappels SMS et email</span>
+                                </li>
+                            </ul>
+                            <div class="service-buttons">
+                                <a href="contact.html?service=reception" class="btn-primary">
+                                    En Savoir Plus
+                                </a>
+                                <a href="pricing.html" class="btn-secondary">
+                                    Voir les Tarifs
+                                </a>
+                            </div>
+                        </div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1515378791036-0646a3e7798f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service de prise de rendez-vous" loading="lazy">
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
-                    </p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-grid">
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="service-title">Support Client</h3>
+                            <p class="service-description">
+                                Offrez un service client exceptionnel avec notre équipe de support dédiée.
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Première réponse garantie</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Gestion des tickets</span>
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Intégration CRM</span>
+                                </li>
+                            </ul>
+                            <div class="service-buttons">
+                                <a href="contact.html?service=reception" class="btn-primary">
+                                    En Savoir Plus
+                                </a>
+                                <a href="pricing.html" class="btn-secondary">
+                                    Voir les Tarifs
+                                </a>
+                            </div>
+                        </div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Service de support client" loading="lazy">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="reception.readyToBoost">Prêt à ne jamais manquer un appel?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="reception.readyDescription">
-                Commencez aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=reception" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="reception.startFreeTrial">
-                    Commencer l'essai gratuit
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="reception.seePricingBtn">
-                    Voir les tarifs
-                </a>
+        </section>
+        
+        <!-- How It Works Section -->
+        <section class="process-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Comment Ça Marche</h2>
+                    <p class="section-description">
+                        Un processus simple et efficace pour une mise en place rapide
+                    </p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Consultation</h3>
+                        <p class="step-description">
+                            Nous analysons vos besoins et créons une solution personnalisée.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Configuration</h3>
+                        <p class="step-description">
+                            Nous mettons en place votre service et formons nos opérateurs.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Activation</h3>
+                        <p class="step-description">
+                            Votre service est actif et prêt à prendre vos appels.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Suivi</h3>
+                        <p class="step-description">
+                            Nous surveillons la performance et fournissons des rapports détaillés.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Include Footer -->
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="benefits-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pourquoi Nous Choisir</h2>
+                    <p class="section-description">
+                        Des avantages concrets pour votre entreprise
+                    </p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="benefit-title">Rentable</h3>
+                        <p class="benefit-description">
+                            60% moins cher qu'une équipe interne avec de meilleurs résultats
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="benefit-title">Gain de Temps</h3>
+                        <p class="benefit-description">
+                            Libérez jusqu'à 40% de votre temps pour vous concentrer sur votre cœur de métier
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="benefit-title">Flexible</h3>
+                        <p class="benefit-description">
+                            Adaptez le service à vos besoins saisonniers sans engagement à long terme
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Professionnel</h3>
+                        <p class="benefit-description">
+                            Améliorez votre image avec des téléopérateurs formés et expérimentés
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Industries Section -->
+        <section class="industries-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Secteurs que Nous Servons</h2>
+                    <p class="section-description">
+                        Nous soutenons les entreprises de tous les secteurs
+                    </p>
+                </div>
+                
+                <div class="industries-grid">
+                    <div class="industry-item">
+                        <i class="fas fa-briefcase industry-icon"></i>
+                        <h3 class="industry-title">Services Professionnels</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-home industry-icon"></i>
+                        <h3 class="industry-title">Immobilier</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-heartbeat industry-icon"></i>
+                        <h3 class="industry-title">Santé</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-car industry-icon"></i>
+                        <h3 class="industry-title">Automobile</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-shopping-cart industry-icon"></i>
+                        <h3 class="industry-title">Commerce de Détail</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-hammer industry-icon"></i>
+                        <h3 class="industry-title">Construction</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-graduation-cap industry-icon"></i>
+                        <h3 class="industry-title">Éducation</h3>
+                    </div>
+                    <div class="industry-item">
+                        <i class="fas fa-dumbbell industry-icon"></i>
+                        <h3 class="industry-title">Fitness & Bien-être</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Histoires de Réussite Client</h2>
+                    <p class="section-description">
+                        Découvrez comment notre service a transformé leur entreprise
+                    </p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marc Lefebvre" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Marc Lefebvre</h4>
+                                <p class="testimonial-role">Fondateur, TechInnov Québec</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "En tant que petite entreprise, nous ne pouvions pas nous permettre une secrétaire à temps plein. Smart Hotline nous a permis de paraître plus grand que nous ne sommes, avec un service professionnel qui a impressionné nos clients."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sophie Dubois" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sophie Dubois</h4>
+                                <p class="testimonial-role">Directrice, Cabinet Comptable Dubois</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Le retour sur investissement est incroyable. Pour le coût d'une demi-journée de travail par mois, nous avons un service de réception d'appels professionnel qui nous a permis de ne manquer aucune opportunité commerciale."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Prêt à Ne Jamais Manquer un Appel?</h2>
+                    <p class="cta-description">
+                        Commencez aujourd'hui avec 2 semaines d'essai gratuit et découvrez l'impact sur votre entreprise.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html?service=reception" class="btn-primary">Commencer l'Essai Gratuit</a>
+                        <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
     
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Réception d'Appels",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "areaServed": "Canada",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services de Réception d'Appels",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Réception Standard",
+                        "description": "Nos téléopérateurs répondent à vos appels au nom de votre entreprise avec un accueil professionnel."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Prise de Rendez-vous",
+                        "description": "Gérez votre agenda efficacement avec notre service de prise de rendez-vous intégré."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Support Client",
+                        "description": "Offrez un service client exceptionnel avec notre équipe de support dédiée."
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     
-    <!-- Scripts -->
-    <script src="../assets/main.js"></script>
-    <script src="../assets/localisation.js"></script>
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- Load JavaScript asynchronously -->
+    <script src="../assets/main.js" defer></script>
+    <script src="../assets/localization.js" defer></script>
+    
+    <!-- Inline script for critical functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header and footer
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    setupHeaderEventListeners();
+                    setActiveNavigation();
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            fetch('../includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                    setupFooterEventListeners();
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Initialize animations
+            initializeCounters();
+            initializeScrollReveal();
+        });
+
+        // Functions for animations and event listeners
+        function initializeCounters() {
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            if (!statsCounters.length) return;
+            
+            const observerOptions = { threshold: 0.7, rootMargin: '0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => observer.observe(counter));
+        }
+
+        function initializeScrollReveal() {
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            if (!scrollRevealElements.length) return;
+            
+            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => observer.observe(element));
+        }
+
+        function setupHeaderEventListeners() {
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (langToggle) {
+                langToggle.addEventListener('click', () => langDropdown.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.add('hidden');
+                    }
+                });
+                document.querySelector('.lang-option[data-lang="en"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = '../en/reception.html';
+                });
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
+        }
+
+        function setupFooterEventListeners() {
+            const chatButton = document.getElementById('chatButton');
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (isMobile) {
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
+        }
+        
+        function setActiveNavigation() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => link.classList.remove('active'));
+            let activeId = 'nav-services';
+            document.getElementById(activeId)?.classList.add('active');
+            document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+        }
+    </script>
 </body>
 </html>
