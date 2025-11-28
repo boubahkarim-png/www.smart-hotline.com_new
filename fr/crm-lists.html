@@ -3,559 +3,1529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="crm.title">CRM & Listes | Smart Hotline Agency</title>
-    <meta name="description" data-i18n="crm.description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
-    <meta name="keywords" data-i18n="crm.keywords" content="CRM, gestion de la relation client, listes de prospects, autocomposeur, ventes, PME, externalisation">
+    <title>CRM & Listes | Smart Hotline Agency</title>
+    <meta name="description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
+    <meta name="keywords" content="CRM, gestion de la relation client, listes de prospects, autocomposeur, ventes, PME, externalisation">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="CRM & Listes | Smart Hotline Agency">
-    <meta property="og:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/crm-lists.html">
+    <meta property="og:url" content="https://smart-hotline.com/fr/crm-lists.html">
+    <meta property="og:title" content="CRM & Listes | Smart Hotline Agency">
+    <meta property="og:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
     <meta property="og:image" content="https://smart-hotline.com/images/crm-hero.jpg">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com/crm-lists.html">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smart-hotline.com/fr/crm-lists.html">
+    <meta property="twitter:title" content="CRM & Listes | Smart Hotline Agency">
+    <meta property="twitter:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/crm-hero.jpg">
     
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/crm-lists.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
+    <link rel="canonical" href="https://smart-hotline.com/fr/crm-lists.html" />
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/styles.css" as="style">
+    <link rel="preload" href="../assets/main.js" as="script">
+    <link rel="preload" href="../assets/localization.js" as="script">
+    <link rel="preload" href="../images/crm-hero.jpg" as="image">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom Tailwind Config -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTKKH1R9FB', { 
+            'anonymize_ip': true,
+            'optimize_id': 'OPT-XXXXXXX'
+        });
+    </script>
+
+    <!-- Critical CSS Inlined -->
+    <style>
+        /* ... (Insert entire <style> block from fr/reception.html here) ... */
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --dark-50: #f8fafc;
+            --dark-100: #f1f5f9;
+            --dark-200: #e2e8f0;
+            --dark-300: #cbd5e1;
+            --dark-400: #94a3b8;
+            --dark-500: #64748b;
+            --dark-600: #475569;
+            --dark-700: #334155;
+            --dark-800: #1e293b;
+            --dark-900: #0f172a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-600);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
             }
         }
-    </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/main.css">
-    
-    <!-- Structured Data for SEO & AI -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "CRM & Listes de Prospects",
-        "description": "CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser les ventes",
-        "provider": {
-            "@type": "Organization",
-            "name": "Smart Hotline Agency",
-            "url": "https://smart-hotline.com"
-        },
-        "serviceType": "CRM & Ventes",
-        "areaServed": "France, Canada, Belgique, Suisse",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Options de CRM & Listes",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Standard",
-                        "description": "CRM de base avec autocomposeur et listes de prospects"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Premium",
-                        "description": "CRM avancé avec autocomposeur intelligent et listes qualifiées"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Entreprise",
-                        "description": "CRM sur mesure avec équipe dédiée et intégration complète"
-                    }
-                }
-            ]
+
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
         }
-    }
-    </script>
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-600);
+        }
+
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            width: 20rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--primary-50);
+        }
+
+        .dropdown-item i {
+            color: var(--primary-600);
+            width: 1rem;
+        }
+
+        .dropdown-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .dropdown-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        /* Language Selector */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            color: #374151;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            width: 8rem;
+            background: white;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .lang-dropdown.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+
+        .lang-dropdown:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #374151;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .mobile-menu:not(.hidden) {
+            display: block;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .mobile-nav-group {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(135deg, var(--primary-50), white);
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-600);
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-700);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-600);
+            border: 2px solid var(--primary-600);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-50);
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: auto;
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--primary-600);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .badge-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .badge-subtitle {
+            font-size: 0.875rem;
+        }
+
+        /* Service Section */
+        .services-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            margin-bottom: 5rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-item:nth-child(even) .service-grid {
+            direction: rtl;
+        }
+
+        .service-item:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-content {
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-600);
+        }
+
+        .service-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .service-description {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .service-feature i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .service-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .service-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .service-image {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 5rem 0;
+            background: var(--dark-800);
+            color: white;
+        }
+
+        .process-section .section-title,
+        .process-section .section-description {
+            color: white;
+        }
+
+        .process-section .section-description {
+            color: #d1d5db;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .process-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+            z-index: 1;
+        }
+
+        @media (max-width: 767px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        .step-number {
+            width: 5rem;
+            height: 5rem;
+            background: var(--primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 5rem 0;
+            background: var(--dark-900);
+            color: white;
+        }
+
+        .benefits-section .section-title,
+        .benefits-section .section-description {
+            color: white;
+        }
+
+        .benefits-section .section-description {
+            color: #d1d5db;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        /* Industries Section */
+        .industries-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .industries-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .industry-item {
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .industry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .industry-icon {
+            font-size: 2rem;
+            color: var(--primary-600);
+            margin-bottom: 1rem;
+        }
+
+        .industry-title {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-rating i {
+            color: #fbbf24;
+        }
+
+        .testimonial-text {
+            color: #4b5563;
+            line-height: 1.6;
+            font-style: italic;
+            flex-grow: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #f3f4f6;
+        }
+
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-900);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #374151;
+            border-radius: 0.375rem;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .contact-info {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Utility classes for star ratings */
+        .text-yellow-400 {
+            color: #fbbf24;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Scroll Reveal Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 999;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button i {
+            font-size: 1.5rem;
+        }
+
+        /* CRM specific styles */
+        .crm-hero {
+            background: linear-gradient(135deg, var(--primary-50), white);
+        }
+
+        .crm-hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .crm-hero-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .crm-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .crm-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .crm-feature {
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .crm-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-600);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .feature-description {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .feature-item i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .integration-section {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .integration-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .integration-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .integration-item {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .integration-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .integration-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .integration-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-600);
+        }
+
+        .integration-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        .integration-description {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .integration-list {
+            list-style: none;
+        }
+
+        .integration-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .integration-item i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .pricing-section {
+            padding: 5rem 0;
+            background: var(--dark-900);
+            color: white;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .pricing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-600);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .pricing-feature i {
+            color: var(--primary-600);
+            margin-top: 0.25rem;
+        }
+
+        .pricing-button {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+    </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    
+    <!-- Load Google Fonts asynchronously -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body class="font-sans text-gray-800">
-    <!-- Include Header -->
+<body>
+    <!-- Header will be loaded here -->
     <div id="header-container"></div>
-    
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text" data-i18n="crm.heroTitle">CRM & Listes de Prospects</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8" data-i18n="crm.heroDescription">
-                        Maximisez vos ventes avec notre CRM complet et nos listes de prospects qualifiés. Notre système intègre un autocomposeur pour optimiser votre productivité.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html?service=crm" class="inline-block px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center" data-i18n="crm.requestDemo">
-                            Demander une démo
-                        </a>
-                        <a href="price.html" class="inline-block px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center" data-i18n="crm.seePricing">
-                            Voir les tarifs
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CRM & Listes" class="rounded-xl shadow-lg">
-                    <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-3xl font-bold" data-i18n="crm.productivity">+400%</div>
-                        <div class="text-sm">Productivité</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Trust Badges Section -->
-    <section class="py-12 bg-white border-b">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-                <div class="flex items-center">
-                    <i class="fas fa-database text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Gestion des contacts</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-phone-volume text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Autocomposeur</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-list-ul text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Listes qualifiées</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-chart-line text-3xl text-primary-600 mr-3"></i>
-                    <span class="font-semibold">Tableaux de bord</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Offered Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.ourServices">Nos services CRM</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.servicesDescription">
-                    Solutions complètes pour maximiser votre efficacité commerciale
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-database text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.contactManagement">Gestion des Contacts</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="crm.contactDescription">
-                        Centralisez toutes vos informations clients avec un CRM intuitif et facile à utiliser.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.contactHistory">Historique complet</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.customFields">Champs personnalisés</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.contactSegmentation">Segmentation des contacts</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-phone-volume text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.autodialer">Autocomposeur</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="crm.autodialerDescription">
-                        Autocomposeur intelligent avec détection de répondeur automatique pour optimiser vos appels.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.answeringMachineDetection">Détection de répondeur</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.callRecording">Enregistrement des appels</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.callScripts">Scripts d'appel</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl p-8 text-center hover-lift service-card">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto service-icon">
-                        <i class="fas fa-list-ul text-primary-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="crm.qualifiedLists">Listes Qualifiées</h3>
-                    <p class="text-gray-600 mb-6" data-i18n="crm.listsDescription">
-                        Accédez à des listes de prospects qualifiés et régulièrement mises à jour.
-                    </p>
-                    <ul class="text-left space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.segmentedLists">Listes segmentées</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.verifiedContacts">Contacts vérifiés</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span data-i18n="crm.customFilters">Filtres personnalisés</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- How It Works Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.howItWorks">Comment ça marche</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.processDescription">
-                    Un processus simple pour maximiser vos ventes
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.onboarding">Intégration</h3>
-                    <p class="text-gray-600" data-i18n="crm.onboardingDesc">
-                        Nous intégrons vos données existantes et configurons le CRM selon vos besoins.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        2
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.training">Formation</h3>
-                    <p class="text-gray-600" data-i18n="crm.trainingDesc">
-                        Nous formons votre équipe à utiliser efficacement toutes les fonctionnalités.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.launch">Lancement</h3>
-                    <p class="text-gray-600" data-i18n="crm.launchDesc">
-                        Votre équipe commence à utiliser le CRM avec nos listes de prospects qualifiés.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                        4
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.optimization">Optimisation</h3>
-                    <p class="text-gray-600" data-i18n="crm.optimizationDesc">
-                        Nous analysons les performances et optimisons continuellement le processus.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section class="py-20 bg-dark-900 text-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.whyChooseUs">Pourquoi nous choisir?</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="crm.benefitsDescription">
-                    Des avantages concrets pour votre entreprise
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.timeSaving">Gain de Temps</h3>
-                    <p class="text-gray-400" data-i18n="crm.timeSavingDesc">
-                        Économisez jusqu'à 20 heures par semaine grâce à l'automatisation des tâches répétitives.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.conversions">Meilleures Conversions</h3>
-                    <p class="text-gray-400" data-i18n="crm.conversionsDesc">
-                        Augmentez votre taux de conversion de 40% avec des prospects qualifiés.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.collaboration">Collaboration Simplifiée</h3>
-                    <p class="text-gray-400" data-i18n="crm.collaborationDesc">
-                        Travaillez plus efficacement en équipe avec des outils de collaboration intégrés.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="crm.dataSecurity">Sécurité des Données</h3>
-                    <p class="text-gray-400" data-i18n="crm.dataSecurityDesc">
-                        Vos données sont sécurisées et sauvegardées conformément au RGPD.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Integration Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.integrations">Intégrations Possibles</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.integrationsDescription">
-                    Notre CRM s'intègre facilement avec vos outils existants
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.emailMarketing">Email Marketing</h3>
-                    <p class="text-gray-600" data-i18n="crm.emailMarketingDesc">
-                        Intégration avec Mailchimp, Sendinblue et autres plateformes d'emailing
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.calendar">Agenda Partagé</h3>
-                    <p class="text-gray-600" data-i18n="crm.calendarDesc">
-                        Synchronisation avec Google Calendar, Outlook et autres agendas
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-2xl mx-auto mb-4">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="crm.billing">Facturation</h3>
-                    <p class="text-gray-600" data-i18n="crm.billingDesc">
-                        Connexion avec QuickBooks, Sage et autres logiciels de facturation
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Industries Section -->
-    <section class="py-20 bg-gray-50 scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.industries">Secteurs que nous servons</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.industriesDescription">
-                    Nous soutenons les entreprises de tous les secteurs
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-briefcase text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.realEstate">Immobilier</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-car text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.automotive">Automobile</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-heartbeat text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.insurance">Assurance</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-graduation-cap text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.education">Éducation</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-home text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.homeServices">Services à domicile</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-dumbbell text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.fitness">Fitness & Bien-être</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-cog text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.b2bServices">Services B2B</h3>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg hover-lift">
-                    <i class="fas fa-laptop text-3xl text-primary-600 mb-4"></i>
-                    <h3 class="font-semibold" data-i18n="crm.technology">Technologie</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-white scroll-reveal">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="crm.successStories">Histoires de réussite client</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="crm.storiesDescription">
-                    Découvrez comment notre CRM a transformé leur processus de vente
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean Dupont" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Jean Dupont</h4>
-                            <p class="text-sm text-gray-600">Directeur commercial, Immobilier Pro</p>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero crm-hero">
+            <div class="container">
+                <div class="crm-hero-content">
+                    <div>
+                        <h1 class="hero-title">
+                            <span class="gradient-text">CRM & Listes de Prospects</span>
+                        </h1>
+                        <p class="hero-description">
+                            Maximisez vos ventes avec notre CRM complet et nos listes de prospects qualifiés. Notre système tout-en-un vous permet de gérer efficacement votre pipeline commercial.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="contact.html?service=crm" class="btn-primary">
+                                Demander une Démo
+                            </a>
+                            <a href="pricing.html" class="btn-secondary">
+                                Voir les Tarifs
+                            </a>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    <div class="hero-image-container">
+                        <img src="../images/crm-hero.jpg" alt="CRM & Listes" class="hero-image" loading="lazy">
+                        <div class="hero-badge">
+                            <div class="badge-title">+400%</div>
+                            <div class="badge-subtitle">Productivité</div>
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "Le CRM de Smart Hotline a transformé notre processus de vente. L'autocomposeur nous a permis d'augmenter notre productivité de 300% et les listes de prospects sont d'une qualité exceptionnelle."
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Badges Section -->
+        <section class="trust-badges">
+            <div class="container">
+                <p class="trust-title">Une solution complète pour votre équipe commerciale</p>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fas fa-database trust-icon"></i>
+                        <span class="trust-text">Gestion Centralisée</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-phone-volume trust-icon"></i>
+                        <span class="trust-text">Autocomposeur Intelligent</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-list-ul trust-icon"></i>
+                        <span class="trust-text">Listes Qualifiées</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-chart-line trust-icon"></i>
+                        <span class="trust-text">Analyse Avancée</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CRM Features Section -->
+        <section class="services-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Fonctionnalités Principales</h2>
+                    <p class="section-description">
+                        Notre CRM tout-en-un offre toutes les fonctionnalités nécessaires pour optimiser votre processus de vente
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-8 shadow-lg testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Laurent" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-semibold">Marie Laurent</h4>
-                            <p class="text-sm text-gray-600">Responsable, AutoConnect</p>
+                <div class="crm-features">
+                    <div class="crm-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="feature-title">Gestion des Contacts</h3>
+                        <p class="feature-description">
+                            Centralisez toutes vos informations clients dans une base de données sécurisée et accessible.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Historique complet des interactions</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Segmentation des contacts</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Champs personnalisés</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Synchronisation multi-appareils</span>
+                            </li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="#contact-management" class="btn-primary">En Savoir Plus</a>
                         </div>
                     </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    
+                    <div class="crm-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <h3 class="feature-title">Autocomposeur</h3>
+                        <p class="feature-description">
+                            Composez automatiquement des milliers d'appels avec notre système intelligent.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Détection de répondeur automatique</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Enregistrement des appels</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Scripts d'appel personnalisés</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Planification des campagnes</span>
+                            </li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="#autodialer" class="btn-primary">En Savoir Plus</a>
+                        </div>
                     </div>
-                    <p class="text-gray-700">
-                        "Les intégrations avec nos outils existants ont été simples. Notre équipe commerciale a adopté le CRM en quelques jours et nous avons vu une augmentation de 40% de nos ventes dès le premier mois."
-                    </p>
+                    
+                    <div class="crm-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-list-ul"></i>
+                        </div>
+                        <h3 class="feature-title">Listes de Prospects</h3>
+                        <p class="feature-description">
+                            Accédez à nos listes de prospects qualifiés et régulièrement mises à jour.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Listes segmentées par secteur</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Filtres de qualification</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Synchronisation avec les campagnes</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Intégration avec les outils CRM</span>
+                            </li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="#qualified-lists" class="btn-primary">En Savoir Plus</a>
+                                                       
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Listes segmentées par secteur</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Filtres de qualification</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Synchronisation avec les campagnes</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Intégration avec les outils CRM</span>
+                            </li>
+                        </ul>
+                        <div class="service-buttons">
+                            <a href="#qualified-lists" class="btn-primary">En Savoir Plus</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600 text-white scroll-reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="crm.readyToBoost">Prêt à maximiser vos ventes?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto" data-i18n="crm.readyDescription">
-                Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre CRM peut transformer votre processus de vente.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html?service=crm" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-i18n="crm.startFreeTrial">
-                    Demander une démo gratuite
-                </a>
-                <a href="price.html" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors" data-i18n="crm.seePricingBtn">
-                    Voir les tarifs
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Include Footer -->
-    <div id="footer-container"></div>
-    
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments text-2xl"></i>
-    </div>
-    
-    <!-- Scripts -->
-    <script src="assets/main.js"></script>
-    <script src="assets/localisation.js"></script>
-</body>
-</html>
+        </section>
