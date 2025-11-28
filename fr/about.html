@@ -8,42 +8,1157 @@
     <meta name="keywords" content="agence communication, services téléphoniques, PME, externalisation, histoire, mission, équipe">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="À Propos | Smart Hotline Agency">
-    <meta property="og:description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smart-hotline.com/about.html">
+    <meta property="og:url" content="https://smart-hotline.com/fr/about.html">
+    <meta property="og:title" content="À Propos | Smart Hotline Agency">
+    <meta property="og:description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME.">
     <meta property="og:image" content="https://smart-hotline.com/images/about-hero.jpg">
     
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smart-hotline.com/fr/about.html">
+    <meta property="twitter:title" content="À Propos | Smart Hotline Agency">
+    <meta property="twitter:description" content="Découvrez Smart Hotline Agency, votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME.">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/about-hero.jpg">
+    
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://smart-hotline.com/about.html">
+    <link rel="canonical" href="https://smart-hotline.com/fr/about.html" />
     
     <!-- Hreflang tags -->
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/about.html" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/about.html" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/about.html" />
     
-    <!-- Google Analytics -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/styles.css" as="style">
+    <link rel="preload" href="../assets/reveal.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Google Analytics with minimal impact -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKKH1R9FB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-RTKKH1R9FB');
+        gtag('config', 'G-RTKKH1R9FB', { 
+            'anonymize_ip': true,
+            'optimize_id': 'OPT-XXXXXXX'
+        });
     </script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Critical CSS Inlined -->
+    <style>
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --dark-50: #f8fafc;
+            --dark-100: #f1f5f9;
+            --dark-200: #e2e8f0;
+            --dark-300: #cbd5e1;
+            --dark-400: #94a3b8;
+            --dark-500: #64748b;
+            --dark-600: #475569;
+            --dark-700: #334155;
+            --dark-800: #1e293b;
+            --dark-900: #0f172a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-600);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-600);
+        }
+
+        /* Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            width: 20rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--primary-50);
+        }
+
+        .dropdown-item i {
+            color: var(--primary-600);
+            width: 1rem;
+        }
+
+        .dropdown-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .dropdown-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        /* Language Selector */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            color: #374151;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            width: 8rem;
+            background: white;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+
+        .lang-dropdown.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+
+        .lang-dropdown:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #374151;
+            transition: background-color 0.3s ease;
+        }
+
+        .lang-option:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #374151;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .mobile-menu:not(.hidden) {
+            display: block;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .mobile-nav-group {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mobile-nav-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(135deg, var(--primary-50), white);
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-600);
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-700);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-600);
+            border: 2px solid var(--primary-600);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-50);
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: auto;
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--primary-600);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .badge-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .badge-subtitle {
+            font-size: 0.875rem;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .story-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .story-content {
+            padding: 2rem;
+        }
+
+        .story-content h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #111827;
+        }
+
+        .story-content p {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .value-item {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .value-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        .value-description {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .team-member {
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .team-avatar {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .team-role {
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-bio {
+            color: #4b5563;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 5rem 0;
+            background: var(--dark-800);
+            color: white;
+        }
+
+        .stats-section .section-title,
+        .stats-section .section-description {
+            color: white;
+        }
+
+        .stats-section .section-description {
+            color: #d1d5db;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            color: #9ca3af;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #f3f4f6;
+        }
+
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: white;
+            color: var(--primary-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-900);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #374151;
+            border-radius: 0.375rem;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .contact-info {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Scroll Reveal Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 999;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button i {
+            font-size: 1.5rem;
+        }
+    </style>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/main.css">
+    <!-- Load Font Awesome asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     
-    <!-- Structured Data for SEO & AI -->
+    <!-- Load Google Fonts asynchronously -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="story-content">
+                        <h1 class="hero-title">
+                            <span class="gradient-text">À Propos de Smart Hotline</span>
+                        </h1>
+                        <p class="hero-description">
+                            Votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#values" class="btn-primary">Nos Valeurs</a>
+                            <a href="#team" class="btn-secondary">Notre Équipe</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <img src="../images/about-hero.jpg" alt="Notre Équipe" class="hero-image" loading="lazy">
+                        <div class="hero-badge">
+                            <div class="badge-title">500+</div>
+                            <div class="badge-subtitle">PME Accompagnées</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Story Section -->
+        <section class="story-section scroll-reveal">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2 class="section-title">Notre Histoire</h2>
+                        <p>
+                            Fondée en 2020 par des experts en communication téléphonique, Smart Hotline Agency est née d'une observation simple : les PME perdent un temps précieux à gérer leurs appels au lieu de se concentrer sur leur cœur de métier.
+                        </p>
+                        <p>
+                            Notre mission est de permettre aux entrepreneurs et PME de bénéficier de services de communication professionnels sans les coûts et la complexité d'une équipe interne.
+                        </p>
+                        <p>
+                            Aujourd'hui, nous accompagnons plus de 500 entreprises dans leur croissance en leur offrant des solutions sur mesure qui s'adaptent à leurs besoins spécifiques.
+                        </p>
+                    </div>
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1600880292201-328be2c351c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Notre Mission" class="hero-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Values Section -->
+        <section id="values" class="values-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nos Valeurs</h2>
+                    <p class="section-description">
+                        Les principes qui guident notre action au quotidien
+                    </p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="value-title">Excellence</h3>
+                        <p class="value-description">
+                            Nous nous engageons à fournir un service exceptionnel à chaque interaction
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Fiabilité</h3>
+                        <p class="value-description">
+                            La confiance de nos clients est notre plus grande réussite
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-description">
+                            Nous améliorons continuellement nos services pour rester à la pointe
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Proximité</h3>
+                        <p class="value-description">
+                            Nous traitons chaque client comme un partenaire de longue date
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="team" class="team-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Notre Équipe</h2>
+                    <p class="section-description">
+                        Les experts derrière votre succès
+                    </p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Karim Boubah" class="team-avatar" loading="lazy">
+                        <h3 class="team-name">Karim Boubah</h3>
+                        <p class="team-role">Fondateur & PDG</p>
+                        <p class="team-bio">
+                            15+ ans d'expérience en communication téléphonique et développement d'affaires
+                        </p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marie Laurent" class="team-avatar" loading="lazy">
+                        <h3 class="team-name">Marie Laurent</h3>
+                        <p class="team-role">Directrice des Opérations</p>
+                        <p class="team-bio">
+                            Spécialiste en optimisation des processus et formation des équipes
+                        </p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Thomas Dubois" class="team-avatar" loading="lazy">
+                        <h3 class="team-name">Thomas Dubois</h3>
+                        <p class="team-role">Directeur Technique</p>
+                        <p class="team-bio">
+                            Expert en télécommunications et intégration CRM
+                        </p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1551434670-a7e26faf6311?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sophie Martin" class="team-avatar" loading="lazy">
+                        <h3 class="team-name">Sophie Martin</h3>
+                        <p class="team-role">Responsable Client</p>
+                        <p class="team-bio">
+                            Passionnée par l'excellence du service client et la satisfaction client
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nos Réalisations</h2>
+                    <p class="section-description">
+                        Des chiffres qui témoignent de notre expertise
+                    </p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="500">0</span>+
+                        </div>
+                        <h3 class="stat-title">PME Accompagnées</h3>
+                        <p class="stat-description">Depuis notre création</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="98">0</span>%
+                        </div>
+                        <h3 class="stat-title">Taux de Satisfaction</h3>
+                        <p class="stat-description">De nos clients</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="24">0</span>/7
+                        </div>
+                        <h3 class="stat-title">Support Continu</h3>
+                        <p class="stat-description">Pour nos clients</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="stats-counter" data-target="5">0</span>
+                        </div>
+                        <h3 class="stat-title">Pays Desservis</h3>
+                        <p class="stat-description">En Europe et Amérique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Rejoignez Notre Aventure</h2>
+                    <p class="cta-description">
+                        Vous êtes passionné par la communication et souhaitez aider les PME à grandir ? Découvrez nos opportunités de carrière.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html?subject=carriere" class="btn-primary">Nous Contacter</a>
+                        <a href="mailto:rh@smart-hotline.com" class="btn-secondary">Envoyer CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -74,231 +1189,235 @@
         "areaServed": "France, Canada, Belgique, Suisse"
     }
     </script>
-</head>
-<body class="font-sans text-gray-800">
-    <!-- Header Container -->
-    <div id="header-container"></div>
     
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">À Propos de Smart Hotline</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Votre partenaire de confiance pour les services de communication téléphonique adaptés aux PME
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Story Section -->
-        <section class="py-20 bg-white scroll-reveal">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-6">Notre Histoire</h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                            Fondée en 2020 par des experts en communication téléphonique, Smart Hotline Agency est née d'une observation simple : les PME perdent un temps précieux à gérer leurs appels au lieu de se concentrer sur leur cœur de métier.
-                        </p>
-                        <p class="text-lg text-gray-600 mb-6">
-                            Notre mission est de permettre aux entrepreneurs et PME de bénéficier de services de communication professionnels sans les coûts et la complexité d'une équipe interne.
-                        </p>
-                        <p class="text-lg text-gray-600">
-                            Aujourd'hui, nous accompagnons plus de 500 entreprises dans leur croissance en leur offrant des solutions sur mesure qui s'adaptent à leurs besoins spécifiques.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="images/about-hero.jpg" alt="Notre Équipe" class="rounded-xl shadow-lg">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Values Section -->
-        <section class="py-20 bg-gray-50 scroll-reveal">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Valeurs</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Les principes qui guident notre action au quotidien
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Excellence</h3>
-                        <p class="text-gray-600">
-                            Nous nous engageons à fournir un service exceptionnel à chaque interaction
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Fiabilité</h3>
-                        <p class="text-gray-600">
-                            La confiance de nos clients est notre plus grande réussite
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Innovation</h3>
-                        <p class="text-gray-600">
-                            Nous améliorons continuellement nos services pour rester à la pointe
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Proximité</h3>
-                        <p class="text-gray-600">
-                            Nous traitons chaque client comme un partenaire de longue date
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Team Section -->
-        <section class="py-20 bg-white scroll-reveal">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre Équipe</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Les experts derrière votre succès
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Karim Boubah" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold mb-2">Karim Boubah</h3>
-                        <p class="text-gray-600 mb-2">Fondateur & PDG</p>
-                        <p class="text-gray-500 text-sm">
-                            15+ ans d'expérience en communication téléphonique et développement d'affaires
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marie Laurent" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold mb-2">Marie Laurent</h3>
-                        <p class="text-gray-600 mb-2">Directrice des Opérations</p>
-                        <p class="text-gray-500 text-sm">
-                            Spécialiste en optimisation des processus et formation des équipes
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Thomas Dubois" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold mb-2">Thomas Dubois</h3>
-                        <p class="text-gray-600 mb-2">Directeur Technique</p>
-                        <p class="text-gray-500 text-sm">
-                            Expert en télécommunications et intégration CRM
-                        </p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1551434670-a7e26faf6311?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sophie Martin" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold mb-2">Sophie Martin</h3>
-                        <p class="text-gray-600 mb-2">Responsable Client</p>
-                        <p class="text-gray-500 text-sm">
-                            Passionnée par l'excellence du service client et la satisfaction client
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Stats Section -->
-        <section class="py-20 bg-dark-800 text-white scroll-reveal">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Réalisations</h2>
-                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                        Des chiffres qui témoignent de notre expertise
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="text-5xl font-bold mb-2 gradient-text">
-                            <span class="stats-counter" data-target="500">0</span>+
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">PME Accompagnées</h3>
-                        <p class="text-gray-400">Depuis notre création</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-5xl font-bold mb-2 gradient-text">
-                            <span class="stats-counter" data-target="98">0</span>%
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Taux de Satisfaction</h3>
-                        <p class="text-gray-400">De nos clients</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-5xl font-bold mb-2 gradient-text">
-                            <span class="stats-counter" data-target="24">0</span>/7
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Support Continu</h3>
-                        <p class="text-gray-400">Pour nos clients</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="text-5xl font-bold mb-2 gradient-text">
-                            <span class="stats-counter" data-target="5">0</span>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Pays Desservis</h3>
-                        <p class="text-gray-400">En Europe et Amérique</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section class="py-20 bg-primary-600 text-white scroll-reveal">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Rejoignez Notre Aventure</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">
-                    Vous êtes passionné par la communication et souhaitez aider les PME à grandir ? Découvrez nos opportunités de carrière.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="btn bg-white text-primary-600">
-                        Nous Contacter
-                    </a>
-                    <a href="#" class="btn bg-transparent text-white border-2 border-white">
-                        Voir Nos Offres
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
+    <!-- Load JavaScript asynchronously -->
+    <script src="../assets/reveal.js" defer></script>
+    <script src="../assets/localization.js" defer></script>
     
-    <!-- Custom JavaScript -->
-    <script src="assets/main.js"></script>
-    
-    <!-- Localization JavaScript -->
-    <script src="assets/localization.js"></script>
-    
-    <!-- Page-specific JavaScript -->
+    <!-- Inline script for critical functionality -->
     <script>
-        // Page-specific functionality here
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    
+                    // Set up event listeners for header after it's loaded
+                    setupHeaderEventListeners();
+                    
+                    // Set active navigation
+                    setActiveNavigation();
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            // Load footer
+            fetch('../includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                    
+                    // Set up event listeners for footer after it's loaded
+                    setupFooterEventListeners();
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Initialize animations
+            initCounters();
+            initScrollReveal();
+        });
+        
+        // Set active navigation based on current page
+        function setActiveNavigation() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Set active class based on current page
+            let activeId = '';
+            switch(currentPage) {
+                case 'index.html':
+                    activeId = 'nav-home';
+                    break;
+                case 'services.html':
+                    activeId = 'nav-services';
+                    break;
+                case 'pricing.html':
+                    activeId = 'nav-pricing';
+                    break;
+                case 'faq.html':
+                    activeId = 'nav-faq';
+                    break;
+                case 'blog.html':
+                    activeId = 'nav-blog';
+                    break;
+                case 'contact.html':
+                    activeId = 'nav-contact';
+                    break;
+                case 'about.html':
+                    activeId = 'nav-about';
+                    break;
+                case 'reception.html':
+                case 'emission.html':
+                case 'support.html':
+                case 'crm-lists.html':
+                    activeId = 'nav-services';
+                    break;
+            }
+            
+            // Set active class
+            if (activeId) {
+                document.getElementById(activeId)?.classList.add('active');
+                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+            }
+        }
+        
+        // Initialize counters
+        function initCounters() {
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            if (!statsCounters.length) return;
+            
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+        
+        // Initialize scroll reveal
+        function initScrollReveal() {
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            if (!scrollRevealElements.length) return;
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Set up event listeners for header
+        function setupHeaderEventListeners() {
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            // Language selector
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    langDropdown.classList.toggle('hidden');
+                });
+            }
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+            
+            // Language options
+            if (langOptions) {
+                langOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = option.getAttribute('data-lang');
+                        if (lang === 'en') {
+                            window.location.href = '../en/about.html';
+                        }
+                        if (langDropdown) {
+                            langDropdown.classList.add('hidden');
+                        }
+                    });
+                });
+            }
+            
+            // Mobile menu toggle
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // Set up event listeners for footer
+        function setupFooterEventListeners() {
+            const chatButton = document.getElementById('chatButton');
+            
+            // Chat functionality
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    // Detect if mobile or desktop
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    
+                    if (isMobile) {
+                        // Open WhatsApp on mobile
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        // Open email client on desktop
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
