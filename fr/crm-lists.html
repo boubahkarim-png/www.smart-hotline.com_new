@@ -22,10 +22,12 @@
     <meta property="twitter:description" content="CRM complet avec listes de prospects qualifiés et autocomposeur pour maximiser vos ventes. Solution tout-en-un pour votre équipe commerciale.">
     <meta property="twitter:image" content="https://smart-hotline.com/images/crm-hero.jpg">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-hotline.com/fr/crm-lists.html" />
+    
     <!-- Hreflang tags -->
     <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/crm-lists.html" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/crm-lists.html" />
-    <link rel="canonical" href="https://smart-hotline.com/fr/crm-lists.html" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="../assets/styles.css" as="style">
@@ -1151,6 +1153,7 @@
         }
 
         .feature-description {
+            font-size: 1.125rem;
             color: #4b5563;
             line-height: 1.6;
             margin-bottom: 1.5rem;
@@ -1230,8 +1233,10 @@
         }
 
         .integration-description {
+            font-size: 1.125rem;
             color: #4b5563;
             line-height: 1.6;
+            margin-bottom: 0.75rem;
         }
 
         .integration-list {
@@ -1251,6 +1256,7 @@
             margin-top: 0.25rem;
         }
 
+        /* Pricing Section */
         .pricing-section {
             padding: 5rem 0;
             background: var(--dark-900);
@@ -1318,14 +1324,153 @@
         }
 
         .pricing-feature i {
-            color: var(--primary-600);
-            margin-top: 0.25rem;
-        }
-
-        .pricing-button {
-            margin-top: auto;
-            align-self: flex-start;
-        }
+            color: <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="feature-title">Gestion des Contacts</h3>
+                        <p class="feature-description">
+                            Centralisez toutes vos informations clients dans une base de données sécurisée et accessible.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Historique complet</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Champs personnalisés</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Segmentation des contacts</span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    
+                    <div class="crm-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <h3 class="feature-title">Autocomposeur</h3>
+                        <p class="feature-description">
+                            Composez automatiquement des milliers d'appels avec notre système intelligent.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Détection de répondeur</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Enregistrement des appels</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Scripts d'appel</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Planification des campagnes</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="crm-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-list-ul"></i>
+                        </div>
+                        <h3 class="feature-title">Listes Qualifiées</h3>
+                        <p class="feature-description">
+                            Accédez à des listes de prospects qualifiés et régulièrement mises à jour.
+                        </p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Listes segmentées</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Contacts vérifiés</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Filtres personnalisés</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Histoires de réussite client</h2>
+                    <p class="section-description">
+                        Découvrez comment notre CRM a transformé leur processus de vente
+                    </p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean Dupont" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Jean Dupont</h4>
+                                <p class="testimonial-role">Directeur commercial, Immobilier Pro</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Notre CRM a transformé notre processus de vente. L'autocomposeur nous a permis d'augmenter notre productivité de 300% et les listes de prospects sont d'une qualité exceptionnelle."
+                        </p>
+                    </div>
+                
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Laurent" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Marie Laurent</h4>
+                                <p class="testimonial-role">Responsable, AutoConnect</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "L'intégration avec nos systèmes existants s'est faite sans effort. Le support client est maintenant centralisé et nous pouvons suivre toutes les interactions en temps réel."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Prêt à maximiser vos ventes?</h2>
+                    <p class="cta-description">
+                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre CRM peut transformer votre processus de vente.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
+                        <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
@@ -1359,12 +1504,8 @@
                             Maximisez vos ventes avec notre CRM complet et nos listes de prospects qualifiés. Notre système tout-en-un vous permet de gérer efficacement votre pipeline commercial.
                         </p>
                         <div class="hero-buttons">
-                            <a href="contact.html?service=crm" class="btn-primary">
-                                Demander une Démo
-                            </a>
-                            <a href="pricing.html" class="btn-secondary">
-                                Voir les Tarifs
-                            </a>
+                            <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
+                            <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
                         </div>
                     </div>
                     <div class="hero-image-container">
@@ -1440,9 +1581,6 @@
                                 <span>Synchronisation multi-appareils</span>
                             </li>
                         </ul>
-                        <div class="service-buttons">
-                            <a href="#contact-management" class="btn-primary">En Savoir Plus</a>
-                        </div>
                     </div>
                     
                     <div class="crm-feature">
@@ -1471,9 +1609,6 @@
                                 <span>Planification des campagnes</span>
                             </li>
                         </ul>
-                        <div class="service-buttons">
-                            <a href="#autodialer" class="btn-primary">En Savoir Plus</a>
-                        </div>
                     </div>
                     
                     <div class="crm-feature">
@@ -1482,7 +1617,7 @@
                         </div>
                         <h3 class="feature-title">Listes de Prospects</h3>
                         <p class="feature-description">
-                            Accédez à nos listes de prospects qualifiés et régulièrement mises à jour.
+                            Accédez à des listes de prospects qualifiés et régulièrement mises à jour.
                         </p>
                         <ul class="feature-list">
                             <li class="feature-item">
@@ -1495,22 +1630,6 @@
                             </li>
                             <li class="feature-item">
                                 <i class="fas fa-check"></i>
-                                <span>Synchronisation avec les campagnes</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Intégration avec les outils CRM</span>
-                            </li>
-                        </ul>
-                        <div class="service-buttons">
-                            <a href="#qualified-lists" class="btn-primary">En Savoir Plus</a>
-                                                       
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
-                                <span>Listes segmentées par secteur</span>
-                            </li>
-                            <li class="feature-item">
-                                <i class="fas fa-check"></i>
                                 <span>Filtres de qualification</span>
                             </li>
                             <li class="feature-item">
@@ -1522,10 +1641,403 @@
                                 <span>Intégration avec les outils CRM</span>
                             </li>
                         </ul>
-                        <div class="service-buttons">
-                            <a href="#qualified-lists" class="btn-primary">En Savoir Plus</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- How It Works Section -->
+        <section class="process-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Comment ça marche</h2>
+                    <p class="section-description">
+                        Un processus simple pour maximiser vos ventes
+                    </p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Intégration</h3>
+                        <p class="step-description">
+                            Nous intégrons vos données existantes et configurons le CRM selon vos besoins.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Formation</h3>
+                        <p class="step-description">
+                            Nous formons votre équipe à utiliser efficacement toutes les fonctionnalités.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="number">3</div>
+                        <h3 class="step-title">Lancement</h3>
+                        <p class="step-description">
+                            Votre équipe commence à utiliser le CRM avec nos listes de prospects qualifiés.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Optimisation</h3>
+                        <p class="step-description">
+                            Nous analysons les performances et optimisons continuellement le processus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="benefits-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pourquoi nous choisir?</h2>
+                    <p class="section-description">
+                        Des avantages concrets pour votre entreprise
+                    </p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="benefit-title">Gain de Temps</h3>
+                        <p class="benefit-description">
+                            Économisez jusqu'à 20 heures par semaine grâce à l'automatisation des tâches répétitives.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="benefit-title">Meilleures Conversions</h3>
+                        <p class="benefit-description">
+                            Augmentez votre taux de conversion de 40% avec des prospects qualifiés.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="benefit-title">Collaboration Simplifiée</h3>
+                        <p class="benefit-description">
+                            Travaillez plus efficacement en équipe avec des outils de collaboration intégrés.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Sécurité des Données</h3>
+                        <p class="benefit-description">
+                            Vos données sont sécurisées et sauvegardées conformément au RGPD.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Integration Section -->
+        <section class="integration-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Intégrations Possibles</h2>
+                    <p class="section-description">
+                        Notre CRM s'intègre facilement avec vos outils existants
+                    </p>
+                </div>
+                
+                <div class="integration-grid">
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="integration-title">Email Marketing</h3>
+                        <p class="integration-description">
+                            Intégration avec Mailchimp, Sendinblue et autres plateformes d'emailing
+                        </p>
+                    </div>
+                    
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="integration-title">Agenda Partagé</h3>
+                        <p class="integration-description">
+                            Synchronisation avec Google Calendar, Outlook et autres agendas
+                        </p>
+                    </div>
+                    
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="integration-title">Facturation</h3>
+                        <p class="integration-description">
+                            Connexion avec QuickBooks, Sage et autres logiciels de facturation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Histoires de réussite client</h2>
+                    <p class="section-description">
+                        Découvrez comment notre CRM a transformé leur processus de vente
+                    </p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jean Dupont" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Jean Dupont</h4>
+                                <p class="testimonial-role">Directeur commercial, Immobilier Pro</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Notre CRM a transformé notre processus de vente. L'autocomposeur nous a permis d'augmenter notre productivité de 300% et les listes de prospects sont d'une qualité exceptionnelle."
+                        </p>
+                    </div>
+                
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marie Laurent" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Marie Laurent</h4>
+                                <p class="testimonial-role">Responsable, AutoConnect</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "L'intégration avec nos systèmes existants s'est faite sans effort. Le support client est maintenant centralisé et nous pouvons suivre toutes les interactions en temps réel."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section scroll-reveal">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Prêt à maximiser vos ventes?</h2>
+                    <p class="cta-description">
+                        Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment notre CRM peut transformer votre processus de vente.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html?service=crm" class="btn-primary">Demander une Démo</a>
+                        <a href="pricing.html" class="btn-secondary">Voir les Tarifs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "CRM & Listes de Prospects",
+        "provider": {
+            "@type": "Organization",
+            "name": "Smart Hotline Agency",
+            "url": "https://smart-hotline.com"
+        },
+        "areaServed": "France, Canada, Belgique, Suisse",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Options de CRM & Listes",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard",
+                        "description": "CRM de base avec autocomposeur et listes de prospects"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium",
+                        "description": "CRM avancé avec autocomposeur intelligent et listes qualifiées"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Entreprise",
+                        "description": "CRM sur mesure avec équipe dédiée et intégration complète"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Netlify Identity Widget -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- Load JavaScript asynchronously -->
+    <script src="../assets/main.js" defer></script>
+    <script src="../assets/localization.js" defer></script>
+    
+    <!-- Inline script for critical functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header and footer
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    setupHeaderEventListeners();
+                    setActiveNavigation();
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            fetch('../includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                    setupFooterEventListeners();
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Initialize animations
+            initializeCounters();
+            initializeScrollReveal();
+        });
+
+        // Functions for animations and event listeners
+        function initializeCounters() {
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            if (!statsCounters.length) return;
+            
+            const observerOptions = { threshold: 0.7, rootMargin: '0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            statsCounters.forEach(counter => observer.observe(counter));
+        }
+
+        function initializeScrollReveal() {
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            if (!scrollRevealElements.length) return;
+            
+            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            scrollRevealElements.forEach(element => observer.observe(element));
+        }
+
+        function setupHeaderEventListeners() {
+            const langToggle = document.getElementById('langToggle');
+            const langDropdown = document.getElementById('langDropdown');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (langToggle) {
+                langToggle.addEventListener('click', () => langDropdown.classList.toggle('hidden'));
+                document.addEventListener('click', (e) => {
+                    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.add('hidden');
+                    }
+                });
+                document.querySelector('.lang-option[data-lang="en"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = '../en/crm-lists.html';
+                });
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
+        }
+
+        function setupFooterEventListeners() {
+            const chatButton = document.getElementById('chatButton');
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (isMobile) {
+                        window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                    } else {
+                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                    }
+                });
+            }
+        }
+        
+        function setActiveNavigation() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => link.classList.remove('active'));
+            let activeId = 'nav-services';
+            document.getElementById(activeId)?.classList.add('active');
+            document.getElementById(`mobile-${activeId}`)?.classList.add('active');
+        }
+    </script>
+</body>
+</html>
