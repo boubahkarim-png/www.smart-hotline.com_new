@@ -1,77 +1,63 @@
-<footer class="bg-dark-900 text-white pt-16 pb-8">
-    <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-                <div class="flex items-center mb-4">
-                    <img src="images/logo-white.png" alt="Smart Hotline Agency" class="h-10 mr-3">
-                    <span class="text-xl font-bold">Smart Hotline Agency</span>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon">SH</div>
+                    <span class="logo-text">Smart Hotline Agency</span>
                 </div>
-                <p class="text-gray-400 mb-4" data-i18n="footer.description">
-                    Solutions de communication téléphonique adaptées pour les entrepreneurs et PME.
+                <p class="footer-description" data-translate="footer-description">
+                    Services de communication téléphonique adaptés aux entrepreneurs et PME.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-facebook-f text-xl"></i>
+            </div>
+            
+            <div class="footer-links">
+                <h3 class="footer-title" data-translate="footer-services-title">Services</h3>
+                <ul class="footer-list">
+                    <li><a href="reception.html" class="footer-link" data-translate="footer-services-reception">Réception d'Appels</a></li>
+                    <li><a href="emission.html" class="footer-link" data-translate="footer-services-emission">Émission d'Appels</a></li>
+                    <li><a href="support.html" class="footer-link" data-translate="footer-services-support">Support Client</a></li>
+                    <li><a href="crm-lists.html" class="footer-link" data-translate="footer-services-crm">CRM & Listes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3 class="footer-title" data-translate="footer-company-title">Entreprise</h3>
+                <ul class="footer-list">
+                    <li><a href="about.html" class="footer-link" data-translate="footer-company-about">À Propos</a></li>
+                    <li><a href="blog.html" class="footer-link" data-translate="footer-company-blog">Blog</a></li>
+                    <li><a href="contact.html" class="footer-link" data-translate="footer-company-contact">Contact</a></li>
+                    <li><a href="#" class="footer-link" data-translate="footer-company-careers">Carrières</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3 class="footer-title" data-translate="footer-contact-title">Contact</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/smart-hotline" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin-in text-xl"></i>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://twitter.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smarthotline" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-instagram text-xl"></i>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
                     </a>
                 </div>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.services">Services</h3>
-                <ul class="space-y-2">
-                    <li><a href="fr/reception.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.callReception">Réception d'Appels</a></li>
-                    <li><a href="fr/emission.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.callMaking">Appels Sortants</a></li>
-                    <li><a href="fr/support.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.customerSupport">Support Client</a></li>
-                    <li><a href="fr/crm-lists.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.crmLists">CRM & Listes</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.company">Entreprise</h3>
-                <ul class="space-y-2">
-                    <li><a href="fr/about.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.about">À Propos</a></li>
-                    <li><a href="fr/blog.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.blog">Blog</a></li>
-                    <li><a href="fr/pricing.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.pricing">Tarifs</a></li>
-                    <li><a href="fr/contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contact">Contact</h3>
-                <ul class="space-y-2 text-gray-400">
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-500"></i>
-                        <span data-i18n="footer.address">123 rue de la République, Montréal, QC H3A 2B4</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-phone mr-3 text-primary-500"></i>
-                        <span>+1-514-819-0559</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-envelope mr-3 text-primary-500"></i>
-                        <span>contact@smart-hotline.com</span>
-                    </li>
-                </ul>
+                <p class="contact-info">💬 WhatsApp: +1 514 819 0559</p>
+                <p class="contact-info">📧 direction@smart-hotline.com</p>
+                <p class="contact-info">🌐 smart-hotline.com</p>
+                <p class="contact-info">🗓️ meeting: https://calendly.com/boubah-karim/30min</p>
             </div>
         </div>
         
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0" data-i18n="footer.copyright">
-                © 2023 Smart Hotline Agency. Tous droits réservés.
-            </p>
-            <div class="flex space-x-6 text-sm">
-                <a href="fr/conditions-generales.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.terms">Conditions Générales</a>
-                <a href="fr/politique-confidentialite.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.privacy">Politique de Confidentialité</a>
-            </div>
+        <div class="footer-bottom">
+            <p>© 2023 Smart Hotline Agency. Tous droits réservés.</p>
         </div>
     </div>
 </footer>
+
+<!-- Chat Button -->
+<div class="chat-button" id="chatButton">
+    <i class="fas fa-comments"></i>
+</div>
