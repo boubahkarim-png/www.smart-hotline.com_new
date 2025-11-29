@@ -21,9 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCounters();
     initializeScrollReveal();
     setupEventListeners();
-    
-    // Apply language to page
-    applyLanguage();
 });
 
 // Detect current language from URL
@@ -54,7 +51,9 @@ function loadComponents() {
             initializeElements();
             setupHeaderEventListeners();
             setActiveNavigation();
-            applyLanguage(); // Apply language to newly loaded content
+            
+            // Apply language to newly loaded content
+            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading header:', error));
     
@@ -66,7 +65,9 @@ function loadComponents() {
             
             // After loading footer, initialize its elements
             setupFooterEventListeners();
-            applyLanguage(); // Apply language to newly loaded content
+            
+            // Apply language to newly loaded content
+            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -84,8 +85,8 @@ function initializeElements() {
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 }
 
-// Apply language to the page
-function applyLanguage() {
+// Apply language to content
+function applyLanguageToContent() {
     // Update language selector
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
@@ -98,7 +99,23 @@ function applyLanguage() {
     
     // Show content for current language
     document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(element => {
-        element.style.display = 'inline';
+        // Determine the appropriate display value based on the element
+        const tagName = element.tagName.toLowerCase();
+        let displayValue = 'inline';
+        
+        // Block elements
+        if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
+            displayValue = 'block';
+        }
+        
+        // Flex elements
+        if (element.classList.contains('mobile-nav-group') || 
+            element.classList.contains('footer-grid') ||
+            element.classList.contains('social-links')) {
+            displayValue = 'flex';
+        }
+        
+        element.style.display = displayValue;
     });
     
     // Apply translations using localization.js
