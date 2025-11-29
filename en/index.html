@@ -1132,7 +1132,7 @@
     <!-- Load Google Fonts asynchronously -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
-<body data-lang="en">
+<body>
     <!-- Header will be loaded here -->
     <div id="header-container"></div>
 
@@ -1152,7 +1152,7 @@
                             <a href="contact.html" class="btn-primary">
                                 Request a Free Demo
                             </a>
-                            <a href="services.html" class="btn-secondary">
+                            <a href="../services.html" class="btn-secondary">
                                 Discover Our Services
                             </a>
                         </div>
@@ -1475,198 +1475,11 @@
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
     
-    <!-- Chat Button -->
-    <div class="chat-button" id="chatButton">
-        <i class="fas fa-comments"></i>
-    </div>
-    
     <!-- Netlify Identity Widget -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
     <!-- Load JavaScript asynchronously -->
     <script src="../assets/main.js" defer></script>
     <script src="../assets/localization.js" defer></script>
-    
-    <!-- Inline script for critical functionality -->
-    <script>
-        // DOM Elements
-        let langToggle, langDropdown, currentLangSpan, langOptions;
-        let mobileMenuToggle, mobileMenu;
-        let chatButton;
-        let statsCounters;
-        let scrollRevealElements;
-
-        // Current language
-        let currentLang = 'en';
-
-        // Initialize the website
-        document.addEventListener('DOMContentLoaded', function() {
-            // Detect current language from URL
-            detectLanguage();
-            
-            // Load header and footer
-            loadComponents();
-            
-            // Initialize functionality
-            initializeElements();
-            initializeCounters();
-            initializeScrollReveal();
-            setupEventListeners();
-        });
-
-        // Detect current language from URL
-        function detectLanguage() {
-            const path = window.location.pathname;
-            if (path.includes('/en/')) {
-                currentLang = 'en';
-            } else if (path.includes('/fr/')) {
-                currentLang = 'fr';
-            } else {
-                // Default to English for this page
-                currentLang = 'en';
-            }
-            
-            // Set language on body for CSS targeting
-            document.body.setAttribute('data-lang', currentLang);
-        }
-
-        // Load header and footer components
-        function loadComponents() {
-            // Load header
-            fetch('../partials/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                    
-                    // After loading header, initialize its elements
-                    initializeElements();
-                    setupHeaderEventListeners();
-                    setActiveNavigation();
-                    
-                    // Apply language to newly loaded content
-                    applyLanguageToContent();
-                })
-                .catch(error => console.error('Error loading header:', error));
-            
-            // Load footer
-            fetch('../partials/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                    
-                    // After loading footer, initialize its elements
-                    setupFooterEventListeners();
-                    
-                    // Apply language to newly loaded content
-                    applyLanguageToContent();
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        }
-
-        // Initialize DOM elements
-        function initializeElements() {
-            langToggle = document.getElementById('langToggle');
-            langDropdown = document.getElementById('langDropdown');
-            currentLangSpan = document.getElementById('currentLang');
-            langOptions = document.querySelectorAll('.lang-option');
-            mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            mobileMenu = document.getElementById('mobileMenu');
-            chatButton = document.getElementById('chatButton');
-            statsCounters = document.querySelectorAll('.stats-counter');
-            scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-        }
-
-        // Apply language to content
-        function applyLanguageToContent() {
-            // Update language selector
-            if (currentLangSpan) {
-                currentLangSpan.textContent = currentLang.toUpperCase();
-            }
-            
-            // Hide all language-specific content
-            document.querySelectorAll('[data-lang]').forEach(element => {
-                element.style.display = 'none';
-            });
-            
-            // Show content for current language
-            document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(element => {
-                // Determine the appropriate display value based on the element
-                const tagName = element.tagName.toLowerCase();
-                let displayValue = 'inline';
-                
-                // Block elements
-                if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
-                    displayValue = 'block';
-                }
-                
-                // Flex elements
-                if (element.classList.contains('mobile-nav-group') || 
-                    element.classList.contains('footer-grid') ||
-                    element.classList.contains('social-links')) {
-                    displayValue = 'flex';
-                }
-                
-                element.style.display = displayValue;
-            });
-            
-            // Apply translations using localization.js
-            if (typeof applyTranslations === 'function') {
-                applyTranslations();
-            }
-        }
-
-        // Set active navigation based on current page
-        function setActiveNavigation() {
-            if (!document.getElementById('nav-home')) return; // Header not loaded yet
-            
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            // Remove active class from all nav links
-            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Set active class based on current page
-            let activeId = '';
-            switch(currentPage) {
-                case 'index.html':
-                    activeId = 'nav-home';
-                    break;
-                case 'services.html':
-                    activeId = 'nav-services';
-                    break;
-                case 'price.html':
-                    activeId = 'nav-price';
-                    break;
-                case 'blog.html':
-                    activeId = 'nav-blog';
-                    break;
-                case 'contact.html':
-                    activeId = 'nav-contact';
-                    break;
-                case 'reception.html':
-                case 'emission.html':
-                case 'support.html':
-                case 'crm-lists.html':
-                    activeId = 'nav-services';
-                    break;
-            }
-            
-            // Set active class
-            if (activeId) {
-                document.getElementById(activeId)?.classList.add('active');
-                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
-            }
-        }
-
-        // Initialize counters animation
-        function initializeCounters() {
-            if (!statsCounters || statsCounters.length === 0) return;
-            
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry =>
+</body>
+</html>
