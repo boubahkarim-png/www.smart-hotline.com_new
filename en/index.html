@@ -17,8 +17,8 @@
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="../assets/styles.css" as="style">
-    <link rel="preload" href="../assets/reveal.js" as="script">
+    <link rel="preload" href="../assets/main.css" as="style">
+    <link rel="preload" href="../assets/main.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
@@ -1087,7 +1087,7 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/main.css" media="print" onload="this.media='all'">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -1443,11 +1443,16 @@
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
     
+    <!-- Chat Button -->
+    <div id="chatButton" class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    
     <!-- Netlify Identity Widget -->
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
     <!-- Load JavaScript asynchronously -->
-    <script src="../assets/reveal.js" defer></script>
+    <script src="../assets/main.js" defer></script>
     <script src="../assets/localization.js" defer></script>
     
     <!-- Inline script for critical functionality -->
@@ -1465,7 +1470,7 @@
         // Load header and footer
         document.addEventListener('DOMContentLoaded', function() {
             // Load header
-            fetch('../includes/header.html')
+            fetch('../partials/header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-container').innerHTML = data;
@@ -1479,7 +1484,7 @@
                 .catch(error => console.error('Error loading header:', error));
             
             // Load footer
-            fetch('../includes/footer.html')
+            fetch('../partials/footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-container').innerHTML = data;
