@@ -1,3 +1,5 @@
+// assets/main.js
+
 // DOM Elements
 let langToggle, langDropdown, currentLangSpan, langOptions;
 let mobileMenuToggle, mobileMenu;
@@ -16,11 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load header and footer
     loadComponents();
     
-    // Initialize functionality
-    initializeElements();
-    initializeCounters();
-    initializeScrollReveal();
-    setupEventListeners();
+    // Wait a moment for components to load, then initialize
+    setTimeout(() => {
+        initializeElements();
+        setupEventListeners();
+        setActiveNavigation();
+        initializeCounters();
+        initializeScrollReveal();
+    }, 200); // 200ms delay to ensure DOM is ready
 });
 
 // Detect current language from URL
@@ -31,7 +36,7 @@ function detectLanguage() {
     } else if (path.includes('/fr/')) {
         currentLang = 'fr';
     } else {
-        // Default to French
+        // Default to French if no language is in the path
         currentLang = 'fr';
     }
     
@@ -46,14 +51,6 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;
-            
-            // After loading header, initialize its elements
-            initializeElements();
-            setupHeaderEventListeners();
-            setActiveNavigation();
-            
-            // Apply language to newly loaded content
-            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading header:', error));
     
@@ -62,12 +59,6 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
-            
-            // After loading footer, initialize its elements
-            setupFooterEventListeners();
-            
-            // Apply language to newly loaded content
-            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -83,44 +74,10 @@ function initializeElements() {
     chatButton = document.getElementById('chatButton');
     statsCounters = document.querySelectorAll('.stats-counter');
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-}
-
-// Apply language to content
-function applyLanguageToContent() {
-    // Update language selector
+    
+    // Update language display
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
-    }
-    
-    // Hide all language-specific content
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        element.style.display = 'none';
-    });
-    
-    // Show content for current language
-    document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(element => {
-        // Determine the appropriate display value based on the element
-        const tagName = element.tagName.toLowerCase();
-        let displayValue = 'inline';
-        
-        // Block elements
-        if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
-            displayValue = 'block';
-        }
-        
-        // Flex elements
-        if (element.classList.contains('mobile-nav-group') || 
-            element.classList.contains('footer-grid') ||
-            element.classList.contains('social-links')) {
-            displayValue = 'flex';
-        }
-        
-        element.style.display = displayValue;
-    });
-    
-    // Apply translations using localization.js
-    if (typeof applyTranslations === 'function') {
-        applyTranslations();
     }
 }
 
@@ -230,8 +187,8 @@ function initializeScrollReveal() {
     });
 }
 
-// Set up event listeners for header
-function setupHeaderEventListeners() {
+// Set up all event listeners
+function setupEventListeners() {
     // Language selector
     if (langToggle) {
         langToggle.addEventListener('click', () => {
@@ -254,26 +211,11 @@ function setupHeaderEventListeners() {
                 e.preventDefault();
                 const lang = option.getAttribute('data-lang');
                 
-                // Get current path
-                const currentPath = window.location.pathname;
-                
-                // Determine new path based on language
-                if (lang === 'en' && !currentPath.includes('/en/')) {
-                    // Switch to English
-                    if (currentPath.endsWith('/')) {
-                        window.location.href = currentPath + 'en/index.html';
-                    } else {
-                        const pathParts = currentPath.split('/');
-                        const filename = pathParts[pathParts.length - 1];
-                        window.location.href = currentPath.replace(filename, 'en/' + filename);
-                    }
-                } else if (lang === 'fr' && currentPath.includes('/en/')) {
-                    // Switch to French
-                    window.location.href = currentPath.replace('/en/', '/fr/');
-                }
-                
-                if (langDropdown) {
-                    langDropdown.classList.add('hidden');
+                // Simple, direct navigation
+                if (lang === 'fr') {
+                    window.location.href = '../fr/index.html';
+                } else if (lang === 'en') {
+                    window.location.href = '../en/index.html';
                 }
             });
         });
@@ -294,10 +236,7 @@ function setupHeaderEventListeners() {
             });
         });
     }
-}
 
-// Set up event listeners for footer
-function setupFooterEventListeners() {
     // Chat functionality
     if (chatButton) {
         chatButton.addEventListener('click', () => {
@@ -325,10 +264,4 @@ function setupFooterEventListeners() {
             }
         });
     }
-}
-
-// Set up all event listeners
-function setupEventListeners() {
-    // This will be called after components are loaded
-    // Individual component event listeners are set in their respective functions
 }
