@@ -6,7 +6,7 @@ let statsCounters;
 let scrollRevealElements;
 
 // Current language
-let currentLang = 'en';
+let currentLang = 'fr';
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,8 +31,8 @@ function detectLanguage() {
     } else if (path.includes('/fr/')) {
         currentLang = 'fr';
     } else {
-        // Default to English
-        currentLang = 'en';
+        // Default to French
+        currentLang = 'fr';
     }
     
     // Set language on body for CSS targeting
@@ -52,8 +52,8 @@ function loadComponents() {
             setupHeaderEventListeners();
             setActiveNavigation();
             
-            // Update language display
-            updateLanguageDisplay();
+            // Apply language to newly loaded content
+            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading header:', error));
     
@@ -65,6 +65,9 @@ function loadComponents() {
             
             // After loading footer, initialize its elements
             setupFooterEventListeners();
+            
+            // Apply language to newly loaded content
+            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -82,11 +85,38 @@ function initializeElements() {
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 }
 
-// Update language display
-function updateLanguageDisplay() {
+// Apply language to content
+function applyLanguageToContent() {
+    // Update language selector
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
     }
+    
+    // Apply language-specific display rules
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const elementLang = element.getAttribute('data-lang');
+        if (elementLang === currentLang) {
+            // Determine the appropriate display value based on the element
+            const tagName = element.tagName.toLowerCase();
+            let displayValue = 'inline';
+            
+            // Block elements
+            if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
+                displayValue = 'block';
+            }
+            
+            // Flex elements
+            if (element.classList.contains('mobile-nav-group') || 
+                element.classList.contains('footer-grid') ||
+                element.classList.contains('social-links')) {
+                displayValue = 'flex';
+            }
+            
+            element.style.display = displayValue;
+        } else {
+            element.style.display = 'none';
+        }
+    });
 }
 
 // Set active navigation based on current page
@@ -222,20 +252,20 @@ function setupHeaderEventListeners() {
                 // Get current path
                 const currentPath = window.location.pathname;
                 
-                // Navigate to the appropriate language version
-                if (lang === 'fr') {
-                    // Go to French version
-                    if (currentPath.includes('/en/')) {
-                        window.location.href = currentPath.replace('/en/', '/fr/');
-                    } else {
-                        window.location.href = '../fr/index.html';
-                    }
-                } else if (lang === 'en') {
-                    // Go to English version
+                // Determine new path based on language
+                if (lang === 'en' && !currentPath.includes('/en/')) {
+                    // Switch to English
                     if (currentPath.includes('/fr/')) {
                         window.location.href = currentPath.replace('/fr/', '/en/');
                     } else {
                         window.location.href = '../en/index.html';
+                    }
+                } else if (lang === 'fr' && !currentPath.includes('/fr/')) {
+                    // Switch to French
+                    if (currentPath.includes('/en/')) {
+                        window.location.href = currentPath.replace('/en/', '/fr/');
+                    } else {
+                        window.location.href = '../fr/index.html';
                     }
                 }
                 
