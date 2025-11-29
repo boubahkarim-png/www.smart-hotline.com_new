@@ -6,7 +6,7 @@ let statsCounters;
 let scrollRevealElements;
 
 // Current language
-let currentLang = 'fr';
+let currentLang = 'en';
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,8 +31,8 @@ function detectLanguage() {
     } else if (path.includes('/fr/')) {
         currentLang = 'fr';
     } else {
-        // Default to French
-        currentLang = 'fr';
+        // Default to English
+        currentLang = 'en';
     }
     
     // Set language on body for CSS targeting
@@ -52,8 +52,8 @@ function loadComponents() {
             setupHeaderEventListeners();
             setActiveNavigation();
             
-            // Apply language to newly loaded content
-            applyLanguageToContent();
+            // Update language display
+            updateLanguageDisplay();
         })
         .catch(error => console.error('Error loading header:', error));
     
@@ -65,9 +65,6 @@ function loadComponents() {
             
             // After loading footer, initialize its elements
             setupFooterEventListeners();
-            
-            // Apply language to newly loaded content
-            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -85,42 +82,10 @@ function initializeElements() {
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 }
 
-// Apply language to content
-function applyLanguageToContent() {
-    // Update language selector
+// Update language display
+function updateLanguageDisplay() {
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
-    }
-    
-    // Hide all language-specific content
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        element.style.display = 'none';
-    });
-    
-    // Show content for current language
-    document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(element => {
-        // Determine the appropriate display value based on the element
-        const tagName = element.tagName.toLowerCase();
-        let displayValue = 'inline';
-        
-        // Block elements
-        if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
-            displayValue = 'block';
-        }
-        
-        // Flex elements
-        if (element.classList.contains('mobile-nav-group') || 
-            element.classList.contains('footer-grid') ||
-            element.classList.contains('social-links')) {
-            displayValue = 'flex';
-        }
-        
-        element.style.display = displayValue;
-    });
-    
-    // Apply translations using localization.js
-    if (typeof applyTranslations === 'function') {
-        applyTranslations();
     }
 }
 
@@ -257,52 +222,20 @@ function setupHeaderEventListeners() {
                 // Get current path
                 const currentPath = window.location.pathname;
                 
-                // Determine new path based on language
-                if (lang === 'en' && !currentPath.includes('/en/')) {
-                    // Switch to English
-                    if (currentPath.endsWith('/')) {
-                        window.location.href = currentPath + 'en/index.html';
+                // Navigate to the appropriate language version
+                if (lang === 'fr') {
+                    // Go to French version
+                    if (currentPath.includes('/en/')) {
+                        window.location.href = currentPath.replace('/en/', '/fr/');
                     } else {
-                        const pathParts = currentPath.split('/');
-                        const filename = pathParts[pathParts.length - 1];
-                        
-                        // Handle index.html specially
-                        if (filename === 'index.html' || filename === '') {
-                            if (currentPath.includes('/fr/')) {
-                                window.location.href = currentPath.replace('/fr/', '/en/');
-                            } else {
-                                window.location.href = currentPath.replace(filename, 'en/' + filename);
-                            }
-                        } else {
-                            if (currentPath.includes('/fr/')) {
-                                window.location.href = currentPath.replace('/fr/', '/en/');
-                            } else {
-                                window.location.href = currentPath.replace(filename, 'en/' + filename);
-                            }
-                        }
+                        window.location.href = '../fr/index.html';
                     }
-                } else if (lang === 'fr' && !currentPath.includes('/fr/')) {
-                    // Switch to French
-                    if (currentPath.endsWith('/')) {
-                        window.location.href = currentPath + 'fr/index.html';
+                } else if (lang === 'en') {
+                    // Go to English version
+                    if (currentPath.includes('/fr/')) {
+                        window.location.href = currentPath.replace('/fr/', '/en/');
                     } else {
-                        const pathParts = currentPath.split('/');
-                        const filename = pathParts[pathParts.length - 1];
-                        
-                        // Handle index.html specially
-                        if (filename === 'index.html' || filename === '') {
-                            if (currentPath.includes('/en/')) {
-                                window.location.href = currentPath.replace('/en/', '/fr/');
-                            } else {
-                                window.location.href = currentPath.replace(filename, 'fr/' + filename);
-                            }
-                        } else {
-                            if (currentPath.includes('/en/')) {
-                                window.location.href = currentPath.replace('/en/', '/fr/');
-                            } else {
-                                window.location.href = currentPath.replace(filename, 'fr/' + filename);
-                            }
-                        }
+                        window.location.href = '../en/index.html';
                     }
                 }
                 
