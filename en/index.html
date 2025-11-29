@@ -1084,38 +1084,6 @@
         .text-yellow-400 {
             color: #fbbf24;
         }
-        
-        /* Language-specific content styling */
-        [data-lang] {
-            display: none;
-        }
-
-        /* Show French content when body has data-lang="fr" */
-        body[data-lang="fr"] [data-lang="fr"] {
-            display: inline;
-        }
-
-        /* Show English content when body has data-lang="en" */
-        body[data-lang="en"] [data-lang="en"] {
-            display: inline;
-        }
-
-        /* Handle block elements that need block display */
-        body[data-lang="fr"] [data-lang="fr"].block,
-        body[data-lang="en"] [data-lang="en"].block {
-            display: block;
-        }
-
-        /* Handle flex elements that need flex display */
-        body[data-lang="fr"] [data-lang="fr"].flex,
-        body[data-lang="en"] [data-lang="en"].flex {
-            display: flex;
-        }
-
-        /* For elements that should always be visible (like icons) */
-        .always-visible {
-            display: inline !important;
-        }
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
@@ -1304,10 +1272,10 @@
                     <div class="trial-content">
                         <h2 class="trial-title">Try Our Services Risk-Free</h2>
                         <p class="trial-description">
-                            Discover the benefits of professional communication services with our 2-week trial. No commitment required.
+                            Discover benefits of professional communication services with our 2-week trial. No commitment required.
                         </p>
                         <div class="trial-features">
-                            <h3 class="features-title">What's included in the trial:</h3>
+                            <h3 class="features-title">What's included in trial:</h3>
                             <ul class="features-list">
                                 <li class="feature-item">
                                     <i class="fas fa-check"></i>
@@ -1428,7 +1396,7 @@
                             <i class="fas fa-star text-yellow-400"></i>
                         </div>
                         <p class="testimonial-text">
-                            "The return on investment is incredible. For the cost of half a day's work per month, we have professional call reception that has allowed us to never miss a business opportunity."
+                            "The return on investment is incredible. For cost of half a day's work per month, we have professional call reception that has allowed us to never miss a business opportunity."
                         </p>
                     </div>
                     
