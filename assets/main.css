@@ -3,22 +3,29 @@
     display: none;
 }
 
-[data-lang="fr"] {
-    display: none;
-}
-
-[data-lang="en"] {
-    display: none;
-}
-
-/* Show French content by default */
-html:lang(fr) [data-lang="fr"],
+/* Show French content when body has data-lang="fr" */
 body[data-lang="fr"] [data-lang="fr"] {
     display: inline;
 }
 
-/* Show English content when language is English */
-html:lang(en) [data-lang="en"],
+/* Show English content when body has data-lang="en" */
 body[data-lang="en"] [data-lang="en"] {
     display: inline;
+}
+
+/* Handle block elements that need block display */
+body[data-lang="fr"] [data-lang="fr"].block,
+body[data-lang="en"] [data-lang="en"].block {
+    display: block;
+}
+
+/* Handle flex elements that need flex display */
+body[data-lang="fr"] [data-lang="fr"].flex,
+body[data-lang="en"] [data-lang="en"].flex {
+    display: flex;
+}
+
+/* For elements that should always be visible (like icons) */
+.always-visible {
+    display: inline !important;
 }
