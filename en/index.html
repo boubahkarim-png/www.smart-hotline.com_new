@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Hotline Agency | Communication Services for SMEs</title>
-    <meta name="description" content="Phone communication solutions tailored for entrepreneurs and SMEs. Remote receptionist, telemarketing, outsourced customer support and custom CRM.">
-    <meta name="keywords" content="remote receptionist, virtual secretary, telemarketing, outsourced customer support, SME CRM, outsourced call center">
+    <meta name="description" content="Phone communication solutions adapted for entrepreneurs and SMEs. Remote receptionist, telemarketing, outsourced customer support and customized CRM.">
+    <meta name="keywords" content="remote receptionist, remote secretarial services, telemarketing, outsourced customer support, SME CRM, outsourced call center">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Smart Hotline Agency | Communication Services for SMEs">
-    <meta property="og:description" content="Phone communication solutions tailored for entrepreneurs and SMEs.">
+    <meta property="og:description" content="Phone communication solutions adapted for entrepreneurs and SMEs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smart-hotline.com/en/">
     <meta property="og:image" content="https://smart-hotline.com/images/main-hero.jpg">
     
-    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/" />
+    <link rel="alternate" hreflang="fr" href="https://smart-hotline.com/fr/" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="../assets/styles.css" as="style">
-    <link rel="preload" href="../assets/reveal.js" as="script">
+    <link rel="preload" href="../assets/main.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
@@ -41,7 +41,6 @@
 
     <!-- Critical CSS Inlined -->
     <style>
-        /* Include the same critical CSS as in fr/index.html */
         :root {
             --primary-50: #f0f9ff;
             --primary-100: #e0f2fe;
@@ -1115,7 +1114,7 @@
                             <span class="gradient-text">Custom Communication Services</span>
                         </h1>
                         <p class="hero-description">
-                            Outsource your customer relations and focus on your growth with our solutions tailored for entrepreneurs and SMEs.
+                            Outsource your customer relations and focus on your growth with our solutions adapted for entrepreneurs and SMEs.
                         </p>
                         <div class="hero-buttons">
                             <a href="contact.html" class="btn-primary">
@@ -1243,7 +1242,7 @@
                         <div class="step-number">2</div>
                         <h3 class="step-title">Customization</h3>
                         <p class="step-description">
-                            We tailor our services to your brand and requirements
+                            We adapt our services to your brand and requirements
                         </p>
                     </div>
                     
@@ -1310,7 +1309,7 @@
                 <div class="section-header">
                     <h2 class="section-title">Proven Results</h2>
                     <p class="section-description">
-                        See how our services are transforming SMEs like yours
+                        Discover how our services transform SMEs like yours
                     </p>
                 </div>
                 
@@ -1320,7 +1319,7 @@
                             <span class="stats-counter" data-target="500">0</span>+
                         </div>
                         <h3 class="stat-title">Satisfied SMEs</h3>
-                        <p class="stat-description">Already supported</p>
+                        <p class="stat-description">Already supported by us</p>
                     </div>
                     
                     <div class="stat-item">
@@ -1366,7 +1365,7 @@
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Smith" class="testimonial-avatar" loading="lazy">
                             <div class="testimonial-info">
                                 <h4 class="testimonial-name">John Smith</h4>
-                                <p class="testimonial-role">Founder, TechInnov Canada</p>
+                                <p class="testimonial-role">Founder, TechInnov Inc.</p>
                             </div>
                         </div>
                         <div class="testimonial-rating">
@@ -1403,10 +1402,10 @@
                     
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Brown" class="testimonial-avatar" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mike Williams" class="testimonial-avatar" loading="lazy">
                             <div class="testimonial-info">
-                                <h4 class="testimonial-name">Michael Brown</h4>
-                                <p class="testimonial-role">Owner, Gourmet Restaurant</p>
+                                <h4 class="testimonial-name">Mike Williams</h4>
+                                <p class="testimonial-role">Owner, The Gourmet Restaurant</p>
                             </div>
                         </div>
                         <div class="testimonial-rating">
@@ -1444,237 +1443,7 @@
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
     
-    <!-- Netlify Identity Widget -->
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    
-    <!-- Load JavaScript asynchronously -->
-    <script src="../assets/reveal.js" defer></script>
-    <script src="../assets/localization.js" defer></script>
-    
-    <!-- Inline script for critical functionality -->
-    <script>
-        // DOM Elements
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const currentLangSpan = document.getElementById('currentLang');
-        const langOptions = document.querySelectorAll('.lang-option');
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const chatButton = document.getElementById('chatButton');
-        const statsCounters = document.querySelectorAll('.stats-counter');
-        
-        // Load header and footer
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load header
-            fetch('../includes/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                    
-                    // Set up event listeners for header after it's loaded
-                    setupHeaderEventListeners();
-                    
-                    // Set active navigation
-                    setActiveNavigation();
-                })
-                .catch(error => console.error('Error loading header:', error));
-            
-            // Load footer
-            fetch('../includes/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                    
-                    // Set up event listeners for footer after it's loaded
-                    setupFooterEventListeners();
-                })
-                .catch(error => console.error('Error loading footer:', error));
-            
-            // Initialize animations
-            initCounters();
-            initScrollReveal();
-        });
-        
-        // Set active navigation based on current page
-        function setActiveNavigation() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            // Remove active class from all nav links
-            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Set active class based on current page
-            let activeId = '';
-            switch(currentPage) {
-                case 'index.html':
-                    activeId = 'nav-home';
-                    break;
-                case 'services.html':
-                    activeId = 'nav-services';
-                    break;
-                case 'price.html':
-                    activeId = 'nav-price';
-                    break;
-                case 'blog.html':
-                    activeId = 'nav-blog';
-                    break;
-                case 'contact.html':
-                    activeId = 'nav-contact';
-                    break;
-                case 'reception.html':
-                case 'emission.html':
-                case 'support.html':
-                case 'crm-lists.html':
-                    activeId = 'nav-services';
-                    break;
-            }
-            
-            // Set active class
-            if (activeId) {
-                document.getElementById(activeId)?.classList.add('active');
-                document.getElementById(`mobile-${activeId}`)?.classList.add('active');
-            }
-        }
-        
-        // Initialize counters
-        function initCounters() {
-            if (!statsCounters.length) return;
-            
-            const observerOptions = {
-                threshold: 0.7,
-                rootMargin: '0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000;
-                        const increment = target / (duration / 16);
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.textContent = Math.floor(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
-                        };
-                        
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, observerOptions);
-            
-            statsCounters.forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        
-        // Initialize scroll reveal
-        function initScrollReveal() {
-            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-            if (!scrollRevealElements.length) return;
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            scrollRevealElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Set up event listeners for header
-        function setupHeaderEventListeners() {
-            const langToggle = document.getElementById('langToggle');
-            const langDropdown = document.getElementById('langDropdown');
-            const langOptions = document.querySelectorAll('.lang-option');
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            // Language selector
-            if (langToggle) {
-                langToggle.addEventListener('click', () => {
-                    langDropdown.classList.toggle('hidden');
-                });
-            }
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (langToggle && !langToggle.contains(e.target) && langDropdown && !langDropdown.contains(e.target)) {
-                    langDropdown.classList.add('hidden');
-                }
-            });
-            
-            // Language options
-            if (langOptions) {
-                langOptions.forEach(option => {
-                    option.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const lang = option.getAttribute('data-lang');
-                        if (lang === 'fr') {
-                            window.location.href = '../fr/index.html';
-                        }
-                        if (langDropdown) {
-                            langDropdown.classList.add('hidden');
-                        }
-                    });
-                });
-            }
-            
-            // Mobile menu toggle
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Close mobile menu when clicking a link
-            if (mobileMenu) {
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
-        }
-        
-        // Set up event listeners for footer
-        function setupFooterEventListeners() {
-            const chatButton = document.getElementById('chatButton');
-            
-            // Chat functionality
-            if (chatButton) {
-                chatButton.addEventListener('click', () => {
-                    // Detect if mobile or desktop
-                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                    
-                    if (isMobile) {
-                        // Open WhatsApp on mobile
-                        window.open('https://wa.me/15148190559?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F', '_blank');
-                    } else {
-                        // Open email client on desktop
-                        window.location.href = 'mailto:direction@smart-hotline.com?subject=Information%20Request%20-%20Smart%20Hotline&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F';
-                    }
-                });
-            }
-        }
-    </script>
+    <!-- Load JavaScript -->
+    <script src="../assets/main.js"></script>
 </body>
 </html>
