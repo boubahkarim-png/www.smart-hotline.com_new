@@ -5,8 +5,14 @@ let chatButton;
 let statsCounters;
 let scrollRevealElements;
 
+// Current language
+let currentLang = 'fr';
+
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
+    // Detect current language from URL
+    detectLanguage();
+    
     // Load header and footer
     loadComponents();
     
@@ -15,12 +21,31 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCounters();
     initializeScrollReveal();
     setupEventListeners();
+    
+    // Apply language to page
+    applyLanguage();
 });
+
+// Detect current language from URL
+function detectLanguage() {
+    const path = window.location.pathname;
+    if (path.includes('/en/')) {
+        currentLang = 'en';
+    } else if (path.includes('/fr/')) {
+        currentLang = 'fr';
+    } else {
+        // Default to French
+        currentLang = 'fr';
+    }
+    
+    // Set language on body for CSS targeting
+    document.body.setAttribute('data-lang', currentLang);
+}
 
 // Load header and footer components
 function loadComponents() {
     // Load header
-    fetch('../includes/header.html')
+    fetch('../partials/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;
@@ -29,17 +54,19 @@ function loadComponents() {
             initializeElements();
             setupHeaderEventListeners();
             setActiveNavigation();
+            applyLanguage(); // Apply language to newly loaded content
         })
         .catch(error => console.error('Error loading header:', error));
     
     // Load footer
-    fetch('../includes/footer.html')
+    fetch('../partials/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
             
             // After loading footer, initialize its elements
             setupFooterEventListeners();
+            applyLanguage(); // Apply language to newly loaded content
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -55,6 +82,29 @@ function initializeElements() {
     chatButton = document.getElementById('chatButton');
     statsCounters = document.querySelectorAll('.stats-counter');
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+}
+
+// Apply language to the page
+function applyLanguage() {
+    // Update language selector
+    if (currentLangSpan) {
+        currentLangSpan.textContent = currentLang.toUpperCase();
+    }
+    
+    // Hide all language-specific content
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        element.style.display = 'none';
+    });
+    
+    // Show content for current language
+    document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(element => {
+        element.style.display = 'inline';
+    });
+    
+    // Apply translations using localization.js
+    if (typeof applyTranslations === 'function') {
+        applyTranslations();
+    }
 }
 
 // Set active navigation based on current page
@@ -77,11 +127,8 @@ function setActiveNavigation() {
         case 'services.html':
             activeId = 'nav-services';
             break;
-        case 'pricing.html':
-            activeId = 'nav-pricing';
-            break;
-        case 'faq.html':
-            activeId = 'nav-faq';
+        case 'price.html':
+            activeId = 'nav-price';
             break;
         case 'blog.html':
             activeId = 'nav-blog';
@@ -149,7 +196,7 @@ function initializeScrollReveal() {
     
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -50px 0px"
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -241,11 +288,23 @@ function setupFooterEventListeners() {
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             
             if (isMobile) {
-                // Open WhatsApp on mobile
-                window.open('https://wa.me/15148190559?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F', '_blank');
+                // Open WhatsApp with language-specific message
+                const message = currentLang === 'fr' 
+                    ? 'Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F'
+                    : 'Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F';
+                    
+                window.open(`https://wa.me/15148190559?text=${message}`, '_blank');
             } else {
-                // Open email client on desktop
-                window.location.href = 'mailto:direction@smart-hotline.com?subject=Demande%20d\'information%20-%20Smart%20Hotline&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F';
+                // Open email client with language-specific subject
+                const subject = currentLang === 'fr' 
+                    ? 'Demande%20d\'information%20-%20Smart%20Hotline'
+                    : 'Information%20Request%20-%20Smart%20Hotline';
+                    
+                const body = currentLang === 'fr' 
+                    ? 'Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services.%20Pouvez-vous%20m\'aider%3F'
+                    : 'Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20help%20me%3F';
+                    
+                window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`;
             }
         });
     }
