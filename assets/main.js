@@ -6,7 +6,7 @@ let statsCounters;
 let scrollRevealElements;
 
 // Current language
-let currentLang = 'fr';
+let currentLang = 'en'; // Default to English for this file
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,11 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load header and footer
     loadComponents();
     
-    // Initialize functionality
-    initializeElements();
-    initializeCounters();
-    initializeScrollReveal();
-    setupEventListeners();
+    // Initialize functionality after components are loaded
+    setTimeout(() => {
+        initializeElements();
+        initializeCounters();
+        initializeScrollReveal();
+        setupEventListeners();
+        setActiveNavigation();
+        updateLanguageDisplay();
+    }, 100); // Small delay to ensure DOM is ready
 });
 
 // Detect current language from URL
@@ -31,8 +35,8 @@ function detectLanguage() {
     } else if (path.includes('/fr/')) {
         currentLang = 'fr';
     } else {
-        // Default to French
-        currentLang = 'fr';
+        // Default based on the file location
+        currentLang = 'en';
     }
     
     // Set language on body for CSS targeting
@@ -46,14 +50,6 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;
-            
-            // After loading header, initialize its elements
-            initializeElements();
-            setupHeaderEventListeners();
-            setActiveNavigation();
-            
-            // Apply language to newly loaded content
-            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading header:', error));
     
@@ -62,12 +58,6 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
-            
-            // After loading footer, initialize its elements
-            setupFooterEventListeners();
-            
-            // Apply language to newly loaded content
-            applyLanguageToContent();
         })
         .catch(error => console.error('Error loading footer:', error));
 }
@@ -85,38 +75,11 @@ function initializeElements() {
     scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 }
 
-// Apply language to content
-function applyLanguageToContent() {
-    // Update language selector
+// Update language display in the dropdown
+function updateLanguageDisplay() {
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLang.toUpperCase();
     }
-    
-    // Apply language-specific display rules
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        const elementLang = element.getAttribute('data-lang');
-        if (elementLang === currentLang) {
-            // Determine the appropriate display value based on the element
-            const tagName = element.tagName.toLowerCase();
-            let displayValue = 'inline';
-            
-            // Block elements
-            if (['div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'li', 'section', 'article', 'header', 'footer'].includes(tagName)) {
-                displayValue = 'block';
-            }
-            
-            // Flex elements
-            if (element.classList.contains('mobile-nav-group') || 
-                element.classList.contains('footer-grid') ||
-                element.classList.contains('social-links')) {
-                displayValue = 'flex';
-            }
-            
-            element.style.display = displayValue;
-        } else {
-            element.style.display = 'none';
-        }
-    });
 }
 
 // Set active navigation based on current page
@@ -225,8 +188,8 @@ function initializeScrollReveal() {
     });
 }
 
-// Set up event listeners for header
-function setupHeaderEventListeners() {
+// Set up event listeners
+function setupEventListeners() {
     // Language selector
     if (langToggle) {
         langToggle.addEventListener('click', () => {
@@ -249,28 +212,11 @@ function setupHeaderEventListeners() {
                 e.preventDefault();
                 const lang = option.getAttribute('data-lang');
                 
-                // Get current path
-                const currentPath = window.location.pathname;
-                
-                // Determine new path based on language
-                if (lang === 'en' && !currentPath.includes('/en/')) {
-                    // Switch to English
-                    if (currentPath.includes('/fr/')) {
-                        window.location.href = currentPath.replace('/fr/', '/en/');
-                    } else {
-                        window.location.href = '../en/index.html';
-                    }
-                } else if (lang === 'fr' && !currentPath.includes('/fr/')) {
-                    // Switch to French
-                    if (currentPath.includes('/en/')) {
-                        window.location.href = currentPath.replace('/en/', '/fr/');
-                    } else {
-                        window.location.href = '../fr/index.html';
-                    }
-                }
-                
-                if (langDropdown) {
-                    langDropdown.classList.add('hidden');
+                // Navigate to the appropriate language version
+                if (lang === 'fr') {
+                    window.location.href = '../fr/index.html';
+                } else if (lang === 'en') {
+                    window.location.href = '../en/index.html';
                 }
             });
         });
@@ -291,10 +237,7 @@ function setupHeaderEventListeners() {
             });
         });
     }
-}
 
-// Set up event listeners for footer
-function setupFooterEventListeners() {
     // Chat functionality
     if (chatButton) {
         chatButton.addEventListener('click', () => {
@@ -322,10 +265,4 @@ function setupFooterEventListeners() {
             }
         });
     }
-}
-
-// Set up all event listeners
-function setupEventListeners() {
-    // This will be called after components are loaded
-    // Individual component event listeners are set in their respective functions
 }
