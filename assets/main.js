@@ -213,7 +213,7 @@ function initializeScrollReveal() {
     
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px"
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -265,11 +265,45 @@ function setupHeaderEventListeners() {
                     } else {
                         const pathParts = currentPath.split('/');
                         const filename = pathParts[pathParts.length - 1];
-                        window.location.href = currentPath.replace(filename, 'en/' + filename);
+                        
+                        // Handle index.html specially
+                        if (filename === 'index.html' || filename === '') {
+                            if (currentPath.includes('/fr/')) {
+                                window.location.href = currentPath.replace('/fr/', '/en/');
+                            } else {
+                                window.location.href = currentPath.replace(filename, 'en/' + filename);
+                            }
+                        } else {
+                            if (currentPath.includes('/fr/')) {
+                                window.location.href = currentPath.replace('/fr/', '/en/');
+                            } else {
+                                window.location.href = currentPath.replace(filename, 'en/' + filename);
+                            }
+                        }
                     }
-                } else if (lang === 'fr' && currentPath.includes('/en/')) {
+                } else if (lang === 'fr' && !currentPath.includes('/fr/')) {
                     // Switch to French
-                    window.location.href = currentPath.replace('/en/', '/fr/');
+                    if (currentPath.endsWith('/')) {
+                        window.location.href = currentPath + 'fr/index.html';
+                    } else {
+                        const pathParts = currentPath.split('/');
+                        const filename = pathParts[pathParts.length - 1];
+                        
+                        // Handle index.html specially
+                        if (filename === 'index.html' || filename === '') {
+                            if (currentPath.includes('/en/')) {
+                                window.location.href = currentPath.replace('/en/', '/fr/');
+                            } else {
+                                window.location.href = currentPath.replace(filename, 'fr/' + filename);
+                            }
+                        } else {
+                            if (currentPath.includes('/en/')) {
+                                window.location.href = currentPath.replace('/en/', '/fr/');
+                            } else {
+                                window.location.href = currentPath.replace(filename, 'fr/' + filename);
+                            }
+                        }
+                    }
                 }
                 
                 if (langDropdown) {
