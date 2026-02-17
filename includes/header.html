@@ -1,100 +1,90 @@
-<header>
-    <div class="container">
-        <nav class="nav-container">
-            <a href="../index.html" class="logo">
-                <div class="logo-icon">SH</div>
-                <span class="logo-text">Smart Hotline</span>
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <div class="desktop-nav">
-                <a href="../index.html" class="nav-link" id="nav-home">Home</a>
-                <!-- Services Dropdown -->
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle" id="nav-services">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="../services.html" class="dropdown-item">
-                            <i class="fas fa-th-large"></i>
-                            <div>
-                                <div class="dropdown-title">All our services</div>
-                                <div class="dropdown-desc">Discover our complete range</div>
-                            </div>
-                        </a>
-                        <a href="reception.html" class="dropdown-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <div class="dropdown-title">Call Reception</div>
-                                <div class="dropdown-desc">Never miss a call</div>
-                            </div>
-                        </a>
-                        <a href="emission.html" class="dropdown-item">
-                            <i class="fas fa-phone-volume"></i>
-                            <div>
-                                <div class="dropdown-title">Outbound Calls</div>
-                                <div class="dropdown-desc">Grow your customer base</div>
-                            </div>
-                        </a>
-                        <a href="support.html" class="dropdown-item">
-                            <i class="fas fa-headset"></i>
-                            <div>
-                                <div class="dropdown-title">Customer Support</div>
-                                <div class="dropdown-desc">Improve satisfaction</div>
-                            </div>
-                        </a>
-                        <a href="crm-lists.html" class="dropdown-item">
-                            <i class="fas fa-database"></i>
-                            <div>
-                                <div class="dropdown-title">CRM & Lists</div>
-                                <div class="dropdown-desc">Maximize your sales</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <a href="price.html" class="nav-link" id="nav-price">Pricing</a>
-                <a href="about.html" class="nav-link" id="nav-about">About</a>
-                <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
-                <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
-            </div>
-            
-            <div class="nav-actions">
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <button id="langToggle" class="lang-btn">
-                        <span id="currentLang">EN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="langDropdown" class="lang-dropdown hidden">
-                        <a href="../fr/index.html" class="lang-option" data-lang="fr">Français</a>
-                        <a href="../en/index.html" class="lang-option" data-lang="en">English</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <button id="mobileMenuToggle" class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </nav>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu hidden">
-        <div class="container">
-            <a href="../index.html" class="mobile-nav-link" id="mobile-nav-home">Home</a>
-            <div class="mobile-nav-group">
-                <div class="mobile-nav-title">Services</div>
-                <a href="../services.html" class="mobile-nav-link">All our services</a>
-                <a href="reception.html" class="mobile-nav-link">Call Reception</a>
-                <a href="emission.html" class="mobile-nav-link">Outbound Calls</a>
-                <a href="support.html" class="mobile-nav-link">Customer Support</a>
-                <a href="crm-lists.html" class="mobile-nav-link">CRM & Lists</a>
-            </div>
-            <a href="price.html" class="mobile-nav-link" id="mobile-nav-price">Pricing</a>
-            <a href="about.html" class="mobile-nav-link" id="mobile-nav-about">About</a>
-            <a href="blog.html" class="mobile-nav-link" id="mobile-nav-blog">Blog</a>
-            <a href="contact.html" class="mobile-nav-link" id="mobile-nav-contact">Contact</a>
+<!-- header include -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <img src="/images/logo.svg" alt="Smart Hotline Agency" class="logo">
+    </a>
+
+    <!-- Nav -->
+    <nav class="main-nav">
+      <button class="nav-link dropdown-toggle" id="nav-services">
+        Services <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <!-- Use services.html (relative) so header works in /fr/ and /en/ -->
+        <a href="services.html" class="dropdown-item">
+          <i class="fas fa-th-large"></i>
+          <div>
+            <div class="dropdown-title">All our services</div>
+            <div class="dropdown-desc">Discover our complete range</div>
+          </div>
+        </a>
+        <a href="reception.html" class="dropdown-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <div class="dropdown-title">Call Reception</div>
+            <div class="dropdown-desc">Never miss a call</div>
+          </div>
+        </a>
+        <a href="emission.html" class="dropdown-item">
+          <i class="fas fa-phone-volume"></i>
+          <div>
+            <div class="dropdown-title">Outbound Calls</div>
+            <div class="dropdown-desc">Grow your customer base</div>
+          </div>
+        </a>
+        <a href="support.html" class="dropdown-item">
+          <i class="fas fa-headset"></i>
+          <div>
+            <div class="dropdown-title">Customer Support</div>
+            <div class="dropdown-desc">Improve satisfaction</div>
+          </div>
+        </a>
+        <a href="crm-lists.html" class="dropdown-item">
+          <i class="fas fa-database"></i>
+          <div>
+            <div class="dropdown-title">CRM & Lists</div>
+            <div class="dropdown-desc">Maximize your sales</div>
+          </div>
+        </a>
+      </div>
+
+      <a href="price.html" class="nav-link" id="nav-price">Pricing</a>
+      <a href="about.html" class="nav-link" id="nav-about">About</a>
+      <a href="blog.html" class="nav-link" id="nav-blog">Blog</a>
+      <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+    </nav>
+
+    <!-- Language selector uses absolute roots -->
+    <div class="nav-actions">
+      <div class="language-selector">
+        <button id="langToggle" class="lang-btn">
+          <span id="currentLang">EN</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="langDropdown" class="lang-dropdown hidden">
+          <a href="/fr/" class="lang-option" data-lang="fr">Français</a>
+          <a href="/en/" class="lang-option" data-lang="en">English</a>
         </div>
+      </div>
+
+      <button id="mobileMenuToggle" class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile menu (relative links) -->
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <div class="container">
+      <a href="index.html" class="mobile-nav-link" id="mobile-nav-home">Home</a>
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-title">Services</div>
+        <a href="services.html" class="mobile-nav-link">All our services</a>
+        <a href="reception.html" class="mobile-nav-link">Call Reception</a>
+        <a href="emission.html" class="mobile-nav-link">Outbound Calls</a>
+        <a href="support.html" class="mobile-nav-link">Customer Support</a>
+      </div>
+    </div>
+  </div>
 </header>
