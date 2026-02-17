@@ -1,31 +1,54 @@
-/* Language-specific content styling */
-[data-lang] {
-    display: none;
+/* assets/main.css - minimal, optimized site styles (responsive + accessible) */
+:root{
+  --primary:#0ea5e9;
+  --muted:#64748b;
+  --text:#0f172a;
+  --bg:#ffffff;
+  --container:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Show French content when body has data-lang="fr" */
-body[data-lang="fr"] [data-lang="fr"] {
-    display: inline;
-}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
 
-/* Show English content when body has data-lang="en" */
-body[data-lang="en"] [data-lang="en"] {
-    display: inline;
-}
+/* Header */
+.header{background:#fff;border-bottom:1px solid #eef2f7}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand svg{display:block}
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{padding:8px 6px;text-decoration:none;color:var(--text)}
+.cta{background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
 
-/* Handle block elements that need block display */
-body[data-lang="fr"] [data-lang="fr"].block,
-body[data-lang="en"] [data-lang="en"].block {
-    display: block;
-}
+/* Mobile nav */
+.mobile-toggle{display:none}
 
-/* Handle flex elements that need flex display */
-body[data-lang="fr"] [data-lang="fr"].flex,
-body[data-lang="en"] [data-lang="en"].flex {
-    display: flex;
-}
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center;padding:48px 0}
+.hero h1{font-size:2rem;margin:0 0 12px}
+.hero p{margin:0 0 16px;color:var(--muted)}
+.hero .actions{margin-top:12px}
 
-/* For elements that should always be visible (like icons) */
-.always-visible {
-    display: inline !important;
-}
+/* Sections */
+.section{padding:42px 0}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+/* Contact quick actions */
+.contact-quick{background:#f8fafc;padding:18px;border-radius:8px;margin-bottom:18px}
+
+/* Footer */
+.footer{background:#0f172a;color:#fff;padding:28px 0;margin-top:36px}
+.footer a{color:#93c5fd}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding:28px 0}
+  .services-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .mobile-toggle{display:inline-block}
+  .mobile-menu{display:none}
+  .mobile-menu.open{display:block;background:#fff;padding:12px;border-radius:8px}
+    }
