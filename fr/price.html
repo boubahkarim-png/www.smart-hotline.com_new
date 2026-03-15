@@ -13,14 +13,14 @@
     <meta property="og:url" content="https://smart-hotline.com/fr/price.html">
     <meta property="og:title" content="Tarifs | Smart Hotline Agency">
     <meta property="og:description" content="Tarifs compétitifs pour services de téléphonie: appels sortants, appels entrants, CRM, support client. Formules flexibles pour PME.">
-    <meta property="og:image" content="https://smart-hotline.com/images/price-hero.jpg">
+    <meta property="og:image" content="https://smart-hotline.com/images/pricing-hero.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://smart-hotline.com/fr/price.html">
     <meta property="twitter:title" content="Tarifs | Smart Hotline Agency">
     <meta property="twitter:description" content="Tarifs compétitifs pour services de téléphonie: appels sortants, appels entrants, CRM, support client. Formules flexibles pour PME.">
-    <meta property="twitter:image" content="https://smart-hotline.com/images/price-hero.jpg">
+    <meta property="twitter:image" content="https://smart-hotline.com/images/pricing-hero.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://smart-hotline.com/fr/price.html" />
@@ -30,8 +30,8 @@
     <link rel="alternate" hreflang="en" href="https://smart-hotline.com/en/price.html" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="../assets/styles.css" as="style">
-    <link rel="preload" href="../assets/reveal.js" as="script">
+<link rel="preload" href="../assets/main.css" as="style">
+<link rel="preload" href="../assets/main.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
@@ -965,7 +965,7 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="../assets/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/main.css" media="print" onload="this.media='all'">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -1000,7 +1000,7 @@
                         </div>
                     </div>
                     <div class="hero-image-container">
-                        <img src="../images/pricing-hero.jpg" alt="Plans Tarifaires" class="hero-image" loading="lazy">
+                        <img src="../images/pricing-hero.png" alt="Plans Tarifaires" class="hero-image" loading="lazy">
                         <div class="hero-badge">
                             <div class="badge-title">7 Jours</div>
                             <div class="badge-subtitle">Essai Gratuit</div>
@@ -1718,7 +1718,7 @@
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     
     <!-- Load JavaScript asynchronously -->
-    <script src="../assets/reveal.js" defer></script>
+    <script src="../assets/main.js" defer></script>
     <script src="../assets/localization.js" defer></script>
     
     <!-- Inline script for critical functionality -->
@@ -1797,9 +1797,9 @@
                 case 'services.html':
                     activeId = 'nav-services';
                     break;
-                case 'pricing.html':
-                    activeId = 'nav-pricing';
-                    break;
+case 'price.html':
+activeId = 'nav-pricing';
+break;
                 case 'faq.html':
                     activeId = 'nav-faq';
                     break;

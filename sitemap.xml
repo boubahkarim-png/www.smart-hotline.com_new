@@ -54,31 +54,37 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- French Core Pages -->
-  <url>
-    <loc>https://smart-hotline.com/fr/price.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/fr/about.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/fr/contact.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/fr/blog.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<!-- French Core Pages -->
+<url>
+<loc>https://smart-hotline.com/fr/price.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/fr/faq.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/fr/about.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/fr/contact.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/fr/blog.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
 
   <!-- English Homepage -->
   <url>
@@ -120,30 +126,36 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- English Core Pages -->
-  <url>
-    <loc>https://smart-hotline.com/en/price.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/en/about.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/en/contact.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://smart-hotline.com/en/blog.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<!-- English Core Pages -->
+<url>
+<loc>https://smart-hotline.com/en/price.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/en/faq.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/en/about.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/en/contact.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://smart-hotline.com/en/blog.html</loc>
+<lastmod>2024-03-15</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
 
 </urlset>
