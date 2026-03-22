@@ -39,7 +39,7 @@ function loadPartial(elementId, filePath) {
                                     <nav class="hidden md:flex space-x-8">
                                         <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Accueil</a>
                                         <a href="services.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Services</a>
-                                        <a href="pricing.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Tarifs</a>
+                                        <a href="price.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Tarifs</a>
                                         <a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">À Propos</a>
                                         <a href="blog.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Blog</a>
                                         <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
@@ -57,7 +57,7 @@ function loadPartial(elementId, filePath) {
                                     <nav class="flex flex-col space-y-2">
                                         <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Accueil</a>
                                         <a href="services.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Services</a>
-                                        <a href="pricing.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Tarifs</a>
+                                        <a href="price.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Tarifs</a>
                                         <a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">À Propos</a>
                                         <a href="blog.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Blog</a>
                                         <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2">Contact</a>
